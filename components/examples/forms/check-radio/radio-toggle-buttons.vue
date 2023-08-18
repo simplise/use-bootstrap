@@ -1,0 +1,28 @@
+<template>
+  <RadioToggleButton
+    name="options"
+    button="secondary"
+    checked
+  >
+    Checked
+  </RadioToggleButton>
+  <RadioToggleButton
+    name="options"
+    button="secondary"
+  >
+    Radio
+  </RadioToggleButton>
+  <RadioToggleButton
+    name="options"
+    button="secondary"
+    disabled
+  >
+    Disabled
+  </RadioToggleButton>
+  <RadioToggleButton
+    name="options"
+    button="secondary"
+  >
+    Radio
+  </RadioToggleButton>
+</template>

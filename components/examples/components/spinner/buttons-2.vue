@@ -1,0 +1,23 @@
+<template>
+  <b-button
+    button="primary"
+    disabled
+  >
+    <Spinner
+      spinner="grow"
+      sm
+      aria-hidden="true"
+    />
+  </b-button>
+  <b-button
+    button="primary"
+    disabled
+  >
+    <Spinner
+      spinner="grow"
+      sm
+      aria-hidden="true"
+    />
+    Loading...
+  </b-button>
+</template>

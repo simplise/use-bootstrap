@@ -1,0 +1,12 @@
+<template>
+  <b-div
+    flex
+    align-items="center"
+  >
+    <strong>Loading...</strong>
+    <Spinner
+      aria-hidden="true"
+      margin="s-auto"
+    />
+  </b-div>
+</template>

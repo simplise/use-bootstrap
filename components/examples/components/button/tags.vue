@@ -1,0 +1,14 @@
+<template>
+  <b-a
+    button="primary"
+    href="#"
+  >
+    Link
+  </b-a>
+  <b-button
+    button="primary"
+    type="submit"
+  >
+    Button
+  </b-button>
+</template>

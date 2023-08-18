@@ -1,0 +1,19 @@
+<template>
+  <b-button
+    button="primary"
+    position="relative"
+  >
+    Inbox
+    <Badge
+      position="absolute"
+      top="0"
+      start="100"
+      translate="middle"
+      rounded="pill"
+      background-color="danger"
+      label="unread messages"
+    >
+      99+
+    </Badge>
+  </b-button>
+</template>

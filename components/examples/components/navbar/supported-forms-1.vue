@@ -1,0 +1,25 @@
+<template>
+  <Navbar
+    theme="light"
+    background-color="light"
+  >
+    <Container type="fluid">
+      <BForm
+        flex
+        role="search"
+      >
+        <BFormInput
+          margin="e-2"
+          type="search"
+          placeholder="Search"
+        />
+        <b-button
+          button="outline-success"
+          type="submit"
+        >
+          Search
+        </b-button>
+      </BForm>
+    </Container>
+  </Navbar>
+</template>

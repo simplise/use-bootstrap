@@ -1,0 +1,34 @@
+<template>
+  <Spinner
+    spinner="grow"
+    text-color="primary"
+  />
+  <Spinner
+    spinner="grow"
+    text-color="secondary"
+  />
+  <Spinner
+    spinner="grow"
+    text-color="success"
+  />
+  <Spinner
+    spinner="grow"
+    text-color="danger"
+  />
+  <Spinner
+    spinner="grow"
+    text-color="warning"
+  />
+  <Spinner
+    spinner="grow"
+    text-color="info"
+  />
+  <Spinner
+    spinner="grow"
+    text-color="light"
+  />
+  <Spinner
+    spinner="grow"
+    text-color="dark"
+  />
+</template>

@@ -1,0 +1,21 @@
+<template>
+  <b-span
+    placeholder
+    placeholder-size="lg"
+    col="12"
+  />
+  <b-span
+    placeholder
+    col="12"
+  />
+  <b-span
+    placeholder
+    placeholder-size="sm"
+    col="12"
+  />
+  <b-span
+    placeholder
+    placeholder-size="xs"
+    col="12"
+  />
+</template>

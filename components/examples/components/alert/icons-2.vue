@@ -1,0 +1,70 @@
+<template>
+  <Alert
+    theme="primary"
+    flex
+    align-items="center"
+  >
+    <Icon
+      v-bootstrap
+      name="bi:info-circle-fill"
+      color="currentColor"
+      flex="shrink-0"
+      margin="e-2"
+      width="24"
+      height="24"
+      aria-label="Info:"
+    />
+    <div>An example alert with an icon</div>
+  </Alert>
+  <Alert
+    theme="success"
+    flex
+    align-items="center"
+  >
+    <Icon
+      v-bootstrap
+      name="bi:check-circle-fill"
+      color="currentColor"
+      flex="shrink-0"
+      margin="e-2"
+      width="24"
+      height="24"
+      aria-label="Success:"
+    />
+    <div>An example success alert with an icon</div>
+  </Alert>
+  <Alert
+    theme="warning"
+    flex
+    align-items="center"
+  >
+    <Icon
+      v-bootstrap
+      name="bi:exclamation-triangle-fill"
+      color="currentColor"
+      flex="shrink-0"
+      margin="e-2"
+      width="24"
+      height="24"
+      aria-label="Warning:"
+    />
+    <div>An example warning alert with an icon</div>
+  </Alert>
+  <Alert
+    theme="danger"
+    flex
+    align-items="center"
+  >
+    <Icon
+      v-bootstrap
+      name="bi:exclamation-triangle-fill"
+      color="currentColor"
+      flex="shrink-0"
+      margin="e-2"
+      width="24"
+      height="24"
+      aria-label="Danger:"
+    />
+    <div>An example danger alert with an icon</div>
+  </Alert>
+</template>

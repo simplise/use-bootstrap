@@ -1,0 +1,19 @@
+<template>
+  <b-button
+    button="primary"
+    position="relative"
+  >
+    Profile
+    <Badge
+      position="absolute"
+      top="0"
+      start="100"
+      translate="middle"
+      background-color="danger"
+      label="New alerts"
+      border-color="light"
+      rounded="circle"
+      padding="2"
+    />
+  </b-button>
+</template>

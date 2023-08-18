@@ -1,0 +1,9 @@
+<template>
+  <Progress>
+    <ProgressBar
+      striped
+      animated
+      :value="75"
+    />
+  </Progress>
+</template>

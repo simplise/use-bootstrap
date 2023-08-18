@@ -1,0 +1,20 @@
+<template>
+  <BvIcon
+    name="bootstrap"
+    iconset="bi"
+    margin="2"
+  />
+  <BvIcon
+    name="alarm"
+    iconset="bi"
+    size="2em"
+    margin="2"
+  />
+  <BvIcon
+    name="toggles"
+    iconset="bi"
+    size="3em"
+    margin="2"
+  />
+  <BvIcon name="shop" />
+</template>

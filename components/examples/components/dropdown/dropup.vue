@@ -1,0 +1,27 @@
+<template>
+  <ButtonGroup placement="dropup">
+    <DropdownToggle button="secondary">
+      Dropup
+    </DropdownToggle>
+    <DropdownMenu>
+      <DropdownItem>Action</DropdownItem>
+      <DropdownItem>Another action</DropdownItem>
+      <DropdownItem>Something else here</DropdownItem>
+      <DropdownItem divider />
+      <DropdownItem>Separated link</DropdownItem>
+    </DropdownMenu>
+  </ButtonGroup>
+  <ButtonGroup placement="dropup">
+    <b-button button="secondary">
+      Split dropup
+    </b-button>
+    <DropdownToggleSplit button="secondary" />
+    <DropdownMenu>
+      <DropdownItem>Action</DropdownItem>
+      <DropdownItem>Another action</DropdownItem>
+      <DropdownItem>Something else here</DropdownItem>
+      <DropdownItem divider />
+      <DropdownItem>Separated link</DropdownItem>
+    </DropdownMenu>
+  </ButtonGroup>
+</template>

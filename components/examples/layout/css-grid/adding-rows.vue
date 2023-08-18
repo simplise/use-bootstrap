@@ -1,0 +1,20 @@
+<template>
+  <Grid
+    :rows="3"
+    :columns="3"
+  >
+    <GridCol>Auto-column</GridCol>
+    <GridCol
+      :colmun-start="2"
+      :row="2"
+    >
+      Auto-column
+    </GridCol>
+    <GridCol
+      :colmun-start="3"
+      :row="3"
+    >
+      Auto-column
+    </GridCol>
+  </Grid>
+</template>

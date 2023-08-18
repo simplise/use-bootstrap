@@ -1,0 +1,26 @@
+<template>
+  <Progress>
+    <ProgressBar
+      background-color="success"
+      :value="25"
+    />
+  </Progress>
+  <Progress>
+    <ProgressBar
+      background-color="info"
+      :value="50"
+    />
+  </Progress>
+  <Progress>
+    <ProgressBar
+      background-color="warning"
+      :value="75"
+    />
+  </Progress>
+  <Progress>
+    <ProgressBar
+      background-color="danger"
+      :value="100"
+    />
+  </Progress>
+</template>

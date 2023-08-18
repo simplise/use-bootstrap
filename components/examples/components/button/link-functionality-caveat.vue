@@ -1,0 +1,20 @@
+<template>
+  <b-a
+    disabled
+    href="#"
+    button="primary"
+    size="lg"
+    tabindex="-1"
+  >
+    Primary link
+  </b-a>
+  <b-a
+    disabled
+    href="#"
+    button="secondary"
+    size="lg"
+    tabindex="-1"
+  >
+    Link
+  </b-a>
+</template>

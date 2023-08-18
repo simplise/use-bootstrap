@@ -1,0 +1,15 @@
+<template>
+  <b-p
+    placeholder
+    col="6"
+  />
+  <br>
+  <b-a
+    href="#"
+    tabindex="-1"
+    button="primary"
+    disabled
+    placeholder
+    col="4"
+  />
+</template>
