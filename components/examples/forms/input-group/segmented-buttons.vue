@@ -21,7 +21,7 @@
       <DropdownItem href="#">
         Something else here
       </DropdownItem>
-      <DropdownItem divider />
+      <DropdownItemDivider />
       <DropdownItem href="#">
         Separated link
       </DropdownItem>
@@ -58,7 +58,7 @@
       <DropdownItem href="#">
         Something else here
       </DropdownItem>
-      <DropdownItem divider />
+      <DropdownItemDivider />
       <DropdownItem href="#">
         Separated link
       </DropdownItem>

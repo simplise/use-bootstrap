@@ -1,33 +1,27 @@
 
 <script setup lang="ts">
 definePageMeta({
-  title: 'フォーム Forms',
-  description: 'さまざまな Forms (フォーム) を作成するための control styles (フォームコントロールスタイル)、layout options (レイアウトオプション)、custom components (カスタムコンポーネント) の例と使用ガイドラインです。 Examples and usage guidelines for form control styles, layout options, and custom components for creating a wide variety of forms.'
+  'title:en': 'Forms',
+  'description:en': `Examples and usage guidelines for form control styles, layout options, and custom components for creating a wide variety of forms.`,
+  'title:ja': 'フォーム',
+  'description:ja': 'さまざまな Forms (フォーム) を作成するための control styles (フォームコントロールスタイル)、layout options (レイアウトオプション)、custom components (カスタムコンポーネント) の例と使用ガイドラインです。'
 })
 </script>
 
 <template>
-  <!---
-title: フォーム Forms
-description: さまざまな Forms (フォーム) を作成するための control styles (フォームコントロールスタイル)、layout options (レイアウトオプション)、custom components (カスタムコンポーネント) の例と使用ガイドラインです。 Examples and usage guidelines for form control styles, layout options, and custom components for creating a wide variety of forms.
---->
-
   <h2>Overview</h2>
 
-  <!-- form controls は our Rebooted form styles を拡張します。これらのクラスを使用して、ブラウザやデバイス間でより一貫したレンダリングを行うために、カスタマイズされた表示にします。
-Bootstrap's form controls expand on [our Rebooted form styles](/content/reboot#forms) with classes. Use these classes to opt into their customized displays for a more consistent rendering across browsers and devices. -->
+  <Localization>
+    <template #en>
+      <p>Be sure to use an appropriate <code>type</code> attribute on all inputs (e.g., <code>email</code> for email address or <code>number</code> for numerical information) to take advantage of newer input controls like email verification, number selection, and more.</p>
+      <p>Here's a quick example to demonstrate Bootstrap's form styles. Keep reading for documentation on required classes, form layout, and more.</p>
+    </template>
+    <template #ja>
+      <p>電子メールの検証や数値選択などの新しい入力コントロールを利用するには、すべての入力に適切な <code>type</code> 属性を使用するようにしてください (例: 電子メールのアドレスには <code>email</code>、数値情報には <code>number</code>)。</p>
+      <p>フォームスタイルの簡単な例です。 必要に応じて、適切なクラス、フォームレイアウトなどのドキュメントを読んでください。</p>
+    </template>
+  </Localization>
 
-  <p>
-    電子メールの検証や数値選択などの新しい入力コントロールを利用するには、すべての入力に適切な <code>type</code> 属性を使用するようにしてください (例: 電子メールのアドレスには <code>email</code>、数値情報には <code>number</code>)。
-    Be sure to use an appropriate <code>type</code> attribute on all inputs (e.g., <code>email</code> for email address or <code>number</code> for numerical information) to take advantage of newer input controls like email verification, number selection, and more.
-  </p>
-
-  <p>
-    フォームスタイルの簡単な例です。 必要に応じて、適切なクラス、フォームレイアウトなどのドキュメントを読んでください。
-    Here's a quick example to demonstrate Bootstrap's form styles. Keep reading for documentation on required classes, form layout, and more.
-  </p>
-
-  
   <Snippet>
     <Example>
       <examples-forms-form-overview />
@@ -38,21 +32,15 @@ Bootstrap's form controls expand on [our Rebooted form styles](/content/reboot#f
     />
   </Snippet>
 
-  <!--:::: code-group
-::: code-group-item useBootstrap
-@[code](@examples/forms/form/overview.vue)
-:::
-::: code-group-item bootstrap5
-@[code](@examples/forms/form/overview.html)
-:::
-:::: -->
-
   <h2>Form text</h2>
-
-  <p>
-    Block-level(ブロックレベル) や inline-level(インラインレベル) のフォームテキストは <code>FormText</code> コンポーネントを用いて作成することができます。
-    Block-level or inline-level form text can be created using <code>FormText</code>.
-  </p>
+  <Localization>
+    <template #en>
+      <p>Block-level or inline-level form text can be created using <code>FormText</code>.</p>
+    </template>
+    <template #ja>
+      <p>Block-level(ブロックレベル) や inline-level(インラインレベル) のフォームテキストは <code>FormText</code> コンポーネントを用いて作成することができます。</p>
+    </template>
+  </Localization>
 
   <!-- ::: warning
 ##### Associating form text with form controls
@@ -61,11 +49,17 @@ Bootstrap's form controls expand on [our Rebooted form styles](/content/reboot#f
 Form text should be explicitly associated with the form control it relates to using the `aria-describedby` attribute. This will ensure that assistive technologies—such as screen readers—will announce this form text when the user focuses or enters the control.
 ::: -->
 
-  <p>
-    入力の下にあるフォームテキストは <code>FormText</code> コンポーネントでスタイルを整えることができます。ブロックレベルの要素を使用する場合は、上の入力項目との間隔が取りやすいように上の余白が追加されます。
-    Form text below inputs can be styled with <code>FormText</code>. If a block-level element will be used, a top margin is added for easy spacing from the inputs above.
-  </p>
-  
+  <Localization>
+    <template #en>
+      <p>Form text below inputs can be styled with <code>FormText</code>. </p>
+      <p>If a block-level element will be used, a top margin is added for easy spacing from the inputs above.</p>
+    </template>
+    <template #ja>
+      <p>入力の下にあるフォームテキストは <code>FormText</code> コンポーネントでスタイルを整えることができます。</p>
+      <p>ブロックレベルの要素を使用する場合は、上の入力項目との間隔が取りやすいように上の余白が追加されます。</p>
+    </template>
+  </Localization>
+
   <Snippet>
     <Example>
       <examples-forms-form-text-1 />
@@ -76,21 +70,15 @@ Form text should be explicitly associated with the form control it relates to us
     />
   </Snippet>
 
-  <!--:::: code-group
-::: code-group-item useBootstrap
-@[code](@examples/forms/form/text-1.vue)
-:::
-::: code-group-item bootstrap5
-@[code](@examples/forms/form/text-1.html)
-:::
-:::: -->
+  <Localization>
+    <template #en>
+      <p>Inline text can use any typical inline HTML element (be it a <code>&lt;span&gt;</code>, <code>&lt;small&gt;</code>, or something else) with nothing more than the <code>.form-text</code> class.</p>
+    </template>
+    <template #ja>
+      <p>インラインテキストは、典型的なインライン HTML 要素（<code>&lt;span&gt;</code>や<code>&lt;small&gt;</code>など）を使用し、<code>.form-text</code>クラス以外は使用しません。</p>
+    </template>
+  </Localization>
 
-  <p>
-    インラインテキストは、典型的なインライン HTML 要素（<code>&lt;span&gt;</code>や<code>&lt;small&gt;</code>など）を使用し、<code>.form-text</code>クラス以外は使用しません。
-    Inline text can use any typical inline HTML element (be it a <code>&lt;span&gt;</code>, <code>&lt;small&gt;</code>, or something else) with nothing more than the <code>.form-text</code> class.
-  </p>
-
-  
   <Snippet>
     <Example>
       <examples-forms-form-text-2 />
@@ -101,23 +89,16 @@ Form text should be explicitly associated with the form control it relates to us
     />
   </Snippet>
 
-  <!--:::: code-group
-::: code-group-item useBootstrap
-@[code](@examples/forms/form/text-2.vue)
-:::
-::: code-group-item bootstrap5
-@[code](@examples/forms/form/text-2.html)
-:::
-:::: -->
-
   <h2>Disabled forms</h2>
+  <Localization>
+    <template #en>
+      <p>Add the <code>disabled</code> attribute on an input to prevent user interactions and make it appear lighter.</p>
+    </template>
+    <template #ja>
+      <p>入力に <code>disabled</code> 属性を追加することができます。下記の例をご覧ください。</p>
+    </template>
+  </Localization>
 
-  <p>
-    入力に <code>disabled</code> 属性を追加することができます。下記の例をご覧ください。
-    Add the <code>disabled</code> attribute on an input to prevent user interactions and make it appear lighter.
-  </p>
-
-  
   <Snippet>
     <Example>
       <examples-forms-form-disabled />
@@ -128,25 +109,21 @@ Form text should be explicitly associated with the form control it relates to us
     />
   </Snippet>
 
-  <!--:::: code-group
-::: code-group-item useBootstrap
-@[code](@examples/forms/form/disabled.vue)
-:::
-::: code-group-item bootstrap5
-@[code](@examples/forms/form/disabled.html)
-:::
-:::: -->
+  <Localization>
+    <template #en>
+      <p>Add the <code>disabled</code> attribute to a <code>&lt;fieldset&gt;</code> to disable all the controls within. </p>
+      <p>Browsers treat all native form controls (<code>FormInput</code>, <code>FormSelect</code>, and <code>Button</code> elements) inside a` <code>&lt;fieldset disabled&gt;</code>as disabled, preventing both keyboard and mouse interactions on them.</p>
+      <p>However, if your form also includes custom button-like elements such as <code>&lt;a class="btn btn-*"&gt;&lt;/a&gt;</code>, these will only be given a style of <code>pointer-events: none</code>, meaning they are still focusable and operable using the keyboard. </p>
+      <p>In this case, you must manually modify these controls by adding <code>tabindex="-1"</code> to prevent them from receiving focus and <code>aria-disabled="disabled"</code> to signal their state to assistive technologies.</p>
+    </template>
+    <template #ja>
+      <p><code>disabled</code>属性を<code>&lt;fieldset&gt;</code>に追加して、その中のすべてのコントロールを無効にします。 </p>
+      <p>ブラウザは、<code>&lt;fieldset disabled&gt;</code>内のすべてのネイティブフォームコントロール（ <code>FormInput</code>、 <code>FormSelect</code>、および <code>Button</code> コンポーネント）を無効として扱い、キーボードとマウスの両方のインタラクションを防ぎます。</p>
+      <p>ただし、フォームに<code>&lt;a class="btn btn-*"&gt;&lt;/a&gt;</code> などのカスタムボタンのような要素も含まれている場合、これらには<code>pointer-events: none</code> の属性のみが与えられます。 </p>
+      <p>つまり、キーボードを使用してフォーカス可能で操作可能です。 この場合、これらのコントロールを手動で変更するには、 <code>tabindex="-1"</code> を追加してフォーカスを受け取らないようにし、<code>aria-disabled="disabled"</code> 属性を追加して状態を支援技術に通知する必要があります。</p>
+    </template>
+  </Localization>
 
-  <p>
-    <code>disabled</code>属性を<code>&lt;fieldset&gt;</code>に追加して、その中のすべてのコントロールを無効にします。 ブラウザは、<code>&lt;fieldset disabled&gt;</code>内のすべてのネイティブフォームコントロール（ <code>FormInput</code>、 <code>FormSelect</code>、および <code>Button</code> コンポーネント）を無効として扱い、キーボードとマウスの両方のインタラクションを防ぎます。
-    Add the <code>disabled</code> attribute to a <code>&lt;fieldset&gt;</code> to disable all the controls within. Browsers treat all native form controls (<code>FormInput</code>, <code>FormSelect</code>, and <code>Button</code> elements) inside a` <code>&lt;fieldset disabled&gt;</code>as disabled, preventing both keyboard and mouse interactions on them.
-  </p>
-  <p>
-    ただし、フォームに<code>&lt;a class="btn btn-*"&gt;&lt;/a&gt;</code> などのカスタムボタンのような要素も含まれている場合、これらには<code>pointer-events: none</code> の属性のみが与えられます。 つまり、キーボードを使用してフォーカス可能で操作可能です。 この場合、これらのコントロールを手動で変更するには、 <code>tabindex="-1"</code> を追加してフォーカスを受け取らないようにし、<code>aria-disabled="disabled"</code> 属性を追加して状態を支援技術に通知する必要があります。
-    However, if your form also includes custom button-like elements such as <code>&lt;a class="btn btn-*"&gt;&lt;/a&gt;</code>, these will only be given a style of <code>pointer-events: none</code>, meaning they are still focusable and operable using the keyboard. In this case, you must manually modify these controls by adding <code>tabindex="-1"</code> to prevent them from receiving focus and <code>aria-disabled="disabled"</code> to signal their state to assistive technologies.
-  </p>
-
-  
   <Snippet>
     <Example>
       <examples-forms-form-disabled-fieldset />
@@ -156,15 +133,6 @@ Form text should be explicitly associated with the form control it relates to us
       lang="vue"
     />
   </Snippet>
-
-  <!--:::: code-group
-::: code-group-item useBootstrap
-@[code](@examples/forms/form/disabled-fieldset.vue)
-:::
-::: code-group-item bootstrap5
-@[code](@examples/forms/form/disabled-fieldset.html)
-:::
-::::-->
 
   <!-- ## Accessibility
 

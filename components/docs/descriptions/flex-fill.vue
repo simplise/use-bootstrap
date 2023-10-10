@@ -1,0 +1,10 @@
+<template>
+  <ul>
+    <li><code>flex="fill"</code></li>
+    <li><code>flex="sm-fill"</code></li>
+    <li><code>flex="md-fill"</code></li>
+    <li><code>flex="lg-fill"</code></li>
+    <li><code>flex="xl-fill"</code></li>
+    <li><code>flex="xxl-fill"</code></li>
+  </ul>
+</template>

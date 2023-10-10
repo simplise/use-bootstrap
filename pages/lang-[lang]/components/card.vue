@@ -281,11 +281,11 @@ definePageMeta({
   </h2>
   <Localization>
     <template #en>
-      <p>Cards assume no specific `width` to start, so they'll be 100% wide unless otherwise stated.</p>
+      <p>Cards assume no specific <code>width</code> to start, so they'll be 100% wide unless otherwise stated.</p>
       <p>You can change this as needed with custom CSS, grid classes, grid Sass mixins, or utilities.</p>
     </template>
     <template #ja>
-      <p>カードの幅 `width` は特に設定がされていない限り 100%に設定されています。</p>
+      <p>カードの幅 <code>width</code> は特に設定がされていない限り 100%に設定されています。</p>
       <p>カスタム CSS、グリッド属性、グリッド Sass ミックスイン、またはユーティリティを使用することで必要に応じて変更できます。</p>
     </template>
   </Localization>
@@ -483,9 +483,18 @@ definePageMeta({
   </Localization>
 
   <h2>Horizontal</h2>
-  <p>
-    Using a combination of grid and utility classes, cards can be made horizontal in a mobile-friendly and responsive way. In the example below, we remove the grid gutters with <code>gutter="0"</code> attributes and use <code>col="md-*"</code> attributes to make the card horizontal at the <code>md</code> breakpoint. Further adjustments may be needed depending on your card content.
-  </p>
+  <Localization>
+    <template #en>
+      <p>
+        Using a combination of grid and utility classes, cards can be made horizontal in a mobile-friendly and responsive way. In the example below, we remove the grid gutters with <code>gutter="0"</code> attributes and use <code>col="md-*"</code> attributes to make the card horizontal at the <code>md</code> breakpoint. Further adjustments may be needed depending on your card content.
+      </p>
+    </template>
+    <template #ja>
+      <p>
+        グリッドとユーティリティ・クラスを組み合わせることで、モバイルフレンドリーでレスポンシブな方法でカードを水平にすることができます。下の例では、<code>gutter="0"</code>属性でグリッドのガターを取り除き、<code>col="md-*"</code>属性を使ってmdブレイクポイントでカードを水平にしています。カードの内容によっては、さらに調整が必要かもしれません。
+      </p>
+    </template>
+  </Localization>
   <Snippet>
     <Example>
       <examples-components-card-horizontal />
@@ -497,19 +506,40 @@ definePageMeta({
   </Snippet>
 
   <h2>Card styles</h2>
-
-  <p>
-    Cards include various options for customizing their backgrounds, borders, and color.
-  </p>
+  <Localization>
+    <template #en>
+      <p>
+        Cards include various options for customizing their backgrounds, borders, and color.
+      </p>
+    </template>
+    <template #ja>
+      <p>
+        カードには、背景、ボーダー、色をカスタマイズできる様々なオプションがあります。
+      </p>
+    </template>
+  </Localization>
 
   <h3>Background and color</h3>
-  <p>
-    Use <LocalLink to="/utilities/colors">
-      text color
-    </LocalLink> and <LocalLink to="/utilities/background">
-      background utilities
-    </LocalLink> to change the appearance of a card.
-  </p>
+  <Localization>
+    <template #en>
+      <p>
+        Use <LocalLink to="/utilities/colors">
+          text color
+        </LocalLink> and <LocalLink to="/utilities/background">
+          background utilities
+        </LocalLink> to change the appearance of a card.
+      </p>
+    </template>
+    <template #ja>
+      <p>
+        <LocalLink to="/utilities/colors">
+          文字色
+        </LocalLink>と<LocalLink to="/utilities/background">
+          背景
+        </LocalLink>のユーティリティを使用して、カードの外観を変更できます。
+      </p>
+    </template>
+  </Localization>
   <Snippet>
     <Example>
       <examples-components-card-background-color />
@@ -541,9 +571,18 @@ definePageMeta({
 
 
   <h3>Mixins utilities</h3>
-  <p>
-    You can also change the borders on the card header and footer as needed, and even remove their <code>background-color</code> with <code>background-color="transparent"</code> attribute.
-  </p>
+  <Localization>
+    <template #en>
+      <p>
+        You can also change the borders on the card header and footer as needed, and even remove their <code>background-color</code> with <code>background-color="transparent"</code> attribute.
+      </p>
+    </template>
+    <template #ja>
+      <p>
+        また、必要に応じて、カードのヘッダーとフッターのボーダーを変更したり、<code>background-color="transparent"</code>属性で背景色を削除することもできます。
+      </p>
+    </template>
+  </Localization>
 
   <Snippet>
     <Example>
@@ -557,13 +596,32 @@ definePageMeta({
 
 
   <h2>Card layout</h2>
-  <p>
-    In addition to styling the content within cards, Bootstrap includes a few options for laying out series of cards. For the time being, <b>these layout options are not yet responsive</b>
-  </p>
+  <Localization>
+    <template #en>
+      <p>
+        In addition to styling the content within cards, Bootstrap includes a few options for laying out series of cards. For the time being, <b>these layout options are not yet responsive</b>
+      </p>
+    </template>
+    <template #ja>
+      <p>
+        カード内のコンテンツのスタイリングに加えて、Bootstrapには、一連のカードをレイアウトするためのいくつかのオプションがあります。いまのところ、<b>これらのレイアウトオプションはまだレスポンシブではありません。</b>
+      </p>
+    </template>
+  </Localization>
+  
   <h3>Card groups</h3>
-  <p>
-    Use card groups to render cards as a single, attached element with equal width and height columns. Card groups start off stacked and use <code>display: flex;</code> to become attached with uniform dimensions starting at the <code>sm</code> breakpoint.
-  </p>
+  <Localization>
+    <template #en>
+      <p>
+        Use card groups to render cards as a single, attached element with equal width and height columns. Card groups start off stacked and use <code>display: flex;</code> to become attached with uniform dimensions starting at the <code>sm</code> breakpoint.
+      </p>
+    </template>
+    <template #ja>
+      <p>
+        カードグループを使って、カードを幅と高さの等しいカラムを持つ１つのくっついた要素としてレンダリングします。カードグループは積み重ねられた状態から始まり、<code>display: flex;</code>をつかって、<code>sm</code>ブレークポイントから始まる均一の寸法でくっついた状態になります。
+      </p>
+    </template>
+  </Localization>
   <Snippet>
     <Example>
       <examples-components-card-group />
@@ -574,10 +632,19 @@ definePageMeta({
     />
   </Snippet>
 
+  <Localization>
+    <template #en>
+      <p class="mt-3">
+        When using card groups with footers, their content will automatically line up.
+      </p>
+    </template>
+    <template #ja>
+      <p>
+        フッター付きのカードグループを使用すると、コンテンツが自動的に並びます。
+      </p>
+    </template>
+  </Localization>
 
-  <p class="mt-3">
-    When using card groups with footers, their content will automatically line up.
-  </p>
   <Snippet>
     <Example>
       <examples-components-card-group-footer />
@@ -591,11 +658,22 @@ definePageMeta({
   <h3 class="mt-3">
     Grid cards
   </h3>
-  <p>
-    Use the Bootstrap grid system and its <LocalLink to="/layout/grid#row-columns">
-      Row components with columns
-    </LocalLink> to control how many grid columns (wrapped around your cards) you show per row. For example, here's <code>columns="1 md-2"</code> laying out the cards on one column, and <code>columns="md-2"</code> splitting four cards to equal width across multiple rows, from the medium breakpoint up.
-  </p>
+  <Localization>
+    <template #en>
+      <p>
+        Use the Bootstrap grid system and its <LocalLink to="/layout/grid#row-columns">
+          Row components with columns
+        </LocalLink> to control how many grid columns (wrapped around your cards) you show per row. For example, here's <code>columns="1 md-2"</code> laying out the cards on one column, and <code>columns="md-2"</code> splitting four cards to equal width across multiple rows, from the medium breakpoint up.
+      </p>
+    </template>
+    <template #ja>
+      <p>
+        Bootstrapのグリッドシステムと<LocalLink to="/layout/grid#row-columns">
+          Rowコンポーネントのcolumns
+        </LocalLink>を使用して、1行に表示するグリッドカラム（カードを含む）の数を制御します。ここでは、<code>columns="1 md-2"</code>は、1つの列にカードをレイアウトし、<code>columns="md-2"</code>は、中間のブレイクポイントから上に、複数の行にわたって4つのカードを同じ幅に分割します。
+      </p>
+    </template>
+  </Localization>
 
   <Snippet>
     <Example>
@@ -607,10 +685,18 @@ definePageMeta({
     />
   </Snippet>
 
-
-  <p class="mt-3">
-    Change it to <code>columns="3"</code> and you'll see the fourth card wrap.
-  </p>
+  <Localization>
+    <template #en>
+      <p class="mt-3">
+        Change it to <code>columns="3"</code> and you'll see the fourth card wrap.
+      </p>
+    </template>
+    <template #ja>
+      <p class="mt-3">
+        <code>columns="3"</code>に変更すると、4枚目のカードが折り返されます。
+      </p>
+    </template>
+  </Localization>
 
   <Snippet>
     <Example>
@@ -621,10 +707,19 @@ definePageMeta({
       lang="vue"
     />
   </Snippet>
-
-  <p class="mt-3">
-    When you need equal height, add <code>height="100"</code> attributes to the cards. If you want equal heights by default, you can set <code>$card-height: 100%</code> in Sass.
-  </p>
+  
+  <Localization>
+    <template #en>
+      <p class="mt-3">
+        When you need equal height, add <code>height="100"</code> attributes to the cards. If you want equal heights by default, you can set <code>$card-height: 100%</code> in Sass.
+      </p>
+    </template>
+    <template #ja>
+      <p class="mt-3">
+        同じ高さが必要な場合は、カードに<code>height="100"</code>属性を追加します。デフォルトで同じ高さが必要な場合は、Sassで<code>$card-height: 100%;</code>を設定します。
+      </p>
+    </template>
+  </Localization>
 
   <Snippet>
     <Example>

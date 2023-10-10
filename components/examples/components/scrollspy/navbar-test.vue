@@ -30,7 +30,7 @@
           <DropdownItem href="#scrollspyHeading4">
             Fourth
           </DropdownItem>
-          <DropdownItem divider />
+          <DropdownItemDivider />
           <DropdownItem href="#scrollspyHeading5">
             Fifth
           </DropdownItem>

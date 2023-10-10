@@ -93,12 +93,9 @@ definePageMeta({
     </b-div>
   </main>
 </template>
-<!-- <script>
- import './navbar-top.css'
-</script> -->
 
-<style scoped>
+<!-- <style scoped>
 .theme-default-content:not(.custom) {
   max-width: none;
 }
-</style>
+</style> -->

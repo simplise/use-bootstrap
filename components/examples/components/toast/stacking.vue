@@ -1,5 +1,5 @@
 <template>
-  <ToastContainer>
+  <ToastContainer position="static">
     <Toast show>
       <ToastHeader>
         <b-img

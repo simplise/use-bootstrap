@@ -127,7 +127,7 @@ definePageMeta({
     </header>
   </div>
 
-  <div class="b-example-b-divider" />
+  <div class="b-example-divider" />
 
   <div class="container">
     <header class="d-flex justify-content-center py-3">

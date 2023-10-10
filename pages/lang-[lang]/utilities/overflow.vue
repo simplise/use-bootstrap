@@ -1,28 +1,25 @@
 <script setup lang="ts">
 definePageMeta({
-  title: `オーバーフロー Overflow`,
-  description: `要素のオーバフローを管理しましょう。 Use these shorthand utilities for quickly configuring how content overflows an element.`
+  'title:en': 'Overflow',
+  'description:en': `Use these shorthand utilities for quickly configuring how content overflows an element.`,
+  'title:ja': 'オーバーフロー',
+  'description:ja': '要素のオーバフローを簡単に管理します。'
 })
 </script>
 
 <template>
-  <!---
-title:  オーバーフロー Overflow
-description:  要素のオーバフローを管理しましょう。 Use these shorthand utilities for quickly configuring how content overflows an element.
---->
+  <Localization>
+    <template #en>
+      <p>Adjust the <code>overflow</code> attribute on the fly with four default values and classes. These classes are not responsive by default.</p>
+    </template>
+    <template #ja>
+      <p>4つのデフォルト値とクラスを使用して、 <code>overflow</code> 属性をその場で調整します。これらのクラスはデフォルトでは応答しません。</p>
+    </template>
+  </Localization>
 
-  <p>
-    4つのデフォルト値とクラスを使用して、 <code>overflow</code> 属性をその場で調整します。これらのクラスはデフォルトでは応答しません。
-  </p>
-
-  <p>
-    Adjust the <code>overflow</code> attribute on the fly with four default values and classes. These classes are not responsive by default.
-  </p>
-
-  
   <Snippet>
     <Example>
-      <examples-utilities-overflow-example-1 />    
+      <examples-utilities-overflow-example-1 />
     </Example>
     <ExamplesCode
       path="/utilities/overflow/example-1.vue"
@@ -30,14 +27,6 @@ description:  要素のオーバフローを管理しましょう。 Use these s
     />
   </Snippet>
 
-  <!--:::: code-group
-::: code-group-item useBootstrap
-@[code](@examples/utilities/overflow/example-1.vue)
-:::
-::: code-group-item bootstrap5
-@[code](@examples/utilities/overflow/example-1.html)
-:::
-:::: -->
 
   <!--:::: code-group
 ::: code-group-item useBootstrap

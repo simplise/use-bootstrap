@@ -1,35 +1,53 @@
 <script setup lang="ts">
 definePageMeta({
-  title: 'グリッドシステム Grid system',
-  description: 'グリッドシステムは、12 カラムのシステムと 5 段階のレスポンシブ、Sass と mixin、いくつかの定義されたクラスですべての図形とサイズのレイアウトを作成可能です。      Use our powerful mobile-first flexbox grid to build layouts of all shapes and sizes thanks to a twelve column system, six default responsive tiers, Sass variables and mixins, and dozens of predefined classes.'
+  'title:en': 'Grid system',
+  'description:en': `Use our powerful mobile-first flexbox grid to build layouts of all shapes and sizes thanks to a twelve column system, six default responsive tiers, Sass variables and mixins, and dozens of predefined classes.`,
+  'title:ja': 'グリッドシステム',
+  'description:ja': 'グリッドシステムは、12 カラムのシステムと 5 段階のレスポンシブ、Sass と mixin、いくつかの定義されたクラスですべての図形とサイズのレイアウトを作成可能です。'
 })
 </script>
 
 <template>
-  <!---
-title: グリッドシステム Grid system
-description: グリッドシステムは、12 カラムのシステムと 5 段階のレスポンシブ、Sass と mixin、いくつかの定義されたクラスですべての図形とサイズのレイアウトを作成可能です。Use our powerful mobile-first flexbox grid to build layouts of all shapes and sizes thanks to a twelve column system, six default responsive tiers, Sass variables and mixins, and dozens of predefined classes.
---->
   <h2>Example</h2>
-  <p>
-    グリッドシステムは、一連のコンテナ、行、列を使用してコンテンツをレイアウトし、整列させます。<NuxtLink to="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox">
-      flexbox
-    </NuxtLink> で構築されており、完全にレスポンシブです。以下に、グリッドシステムがどのように組み合わされているかの例と詳細な説明を示します。
-    Bootstrap's grid system uses a series of containers, rows, and columns to layout and align content. It's built with <NuxtLink to="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox">
-      flexbox
-    </NuxtLink> and is fully responsive. Below is an example and an in-depth explanation for how the grid system comes together.
-  </p>
+  <Localization>
+    <template #en>
+      <p>Bootstrap's grid system uses a series of containers, rows, and columns to layout and align content. </p>
+      <p>
+        It's built with <NuxtLink to="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox">
+          flexbox
+        </NuxtLink> and is fully responsive.
+      </p>
+      <p>Below is an example and an in-depth explanation for how the grid system comes together.</p>
+    </template>
+    <template #ja>
+      <p>グリッドシステムは、一連のコンテナ、行、列を使用してコンテンツをレイアウトし、整列させます。 </p>
+      <p>
+        <NuxtLink to="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox">
+          flexbox
+        </NuxtLink> で構築されており、完全にレスポンシブです。
+      </p>
+      <p>以下に、グリッドシステムがどのように組み合わされているかの例と詳細な説明を示します。</p>
+    </template>
+  </Localization>
 
   <h5>tip</h5>
-  <p>
-    flexbox を初めてご利用になる方は <NuxtLink to="https://css-tricks.com/snippets/css/a-guide-to-flexbox/#flexbox-background">
-      Read this CSS Tricks flexbox guide
-    </NuxtLink>をご参照ください。
-    <b>New to or unfamiliar with flexbox? </b>
-    <NuxtLink to="https://css-tricks.com/snippets/css/a-guide-to-flexbox/#flexbox-background">
-      Read this CSS Tricks flexbox guide
-    </NuxtLink> for background, terminology, guidelines, and code snippets.
-  </p>
+
+  <Localization>
+    <template #en>
+      <p>
+        <b>New to or unfamiliar with flexbox? </b>
+        <NuxtLink to="https://css-tricks.com/snippets/css/a-guide-to-flexbox/#flexbox-background">
+          Read this CSS Tricks flexbox guide
+        </NuxtLink> for background, terminology, guidelines, and code snippets.
+      </p>
+    </template>
+    <template #ja>
+      <p>
+        flexbox を初めてご利用になる方は <NuxtLink to="https://css-tricks.com/snippets/css/a-guide-to-flexbox/#flexbox-background" />Read this CSS Tricks flexbox guide
+        をご参照ください。
+      </p>
+    </template>
+  </Localization>
 
   <Snippet>
     <Example row>
@@ -41,20 +59,18 @@ description: グリッドシステムは、12 カラムのシステムと 5 段�
     />
   </Snippet>
 
+  <Localization>
+    <template #en>
+      <p>The above example creates three equal-width columns across all devices and viewports using our predefined grid classes. </p>
+      <p>Those columns are centered in the page with the parent <code>Container</code>.</p>
+    </template>
+    <template #ja>
+      <p>上の例では、定義済みのグリッドクラスを使用して、すべてのデバイスとビューポートに等幅のカラムを3つ作成しています。</p>
+      <p>これらのカラムは親の <code>Container</code> を中心にしてページの中央に配置されます。</p>
+    </template>
+  </Localization>
 
 
-  <!--:::: code-group
-    ::: code-group-item useBootstrap
-    @[code](@examples/layout/grid/row.vue)
-    :::
-    ::: code-group-item bootstrap5
-    @[code](@examples/layout/grid/row.html)
-    :::
-    :::: -->
-  <p>
-    上の例では、定義済みのグリッドクラスを使用して、すべてのデバイスとビューポートに等幅のカラムを3つ作成しています。これらのカラムは親の <code>Container</code> を中心にしてページの中央に配置されます。
-    The above example creates three equal-width columns across all devices and viewports using our predefined grid classes. Those columns are centered in the page with the parent <code>Container</code>.
-  </p>
   <!-- ## How it works
 
 Breaking it down, here's how the grid system comes together:
@@ -79,9 +95,17 @@ Breaking it down, here's how the grid system comes together:
 仕様やBugに注意が必要です。Be aware of the limitations and [bugs around flexbox](https://github.com/philipwalton/flexbugs), like the [inability to use some HTML elements as flex containers](https://github.com/philipwalton/flexbugs#flexbug-9). -->
 
   <h2>Grid options</h2>
-  <p>
-    グリッドシステムは、6つのデフォルトのブレークポイントと、カスタマイズしたブレークポイントのすべてに適応できます。6つのデフォルトのグリッド階層は以下の通りです。Bootstrap's grid system can adapt across all six default breakpoints, and any breakpoints you customize. The six default grid tiers are as follow:
-  </p>
+  <Localization>
+    <template #en>
+      <p>Bootstrap's grid system can adapt across all six default breakpoints, and any breakpoints you customize. </p>
+      <p>The six default grid tiers are as follow:</p>
+    </template>
+    <template #ja>
+      <p>グリッドシステムは、6つのデフォルトのブレークポイントと、カスタマイズしたブレークポイントのすべてに適応できます。</p>
+      <p>6つのデフォルトのグリッド階層は以下の通りです。</p>
+    </template>
+  </Localization>
+
   <ul>
     <li> Extra small (xs)</li>
     <li> Small (sm)</li>
@@ -91,23 +115,42 @@ Breaking it down, here's how the grid system comes together:
     <li> Extra extra large (xxl)</li>
   </ul>
 
-  <p>
-    上で述べたように、これらのブレークポイントはそれぞれ独自のコンテナ、固有のクラスプレフィックス、および修飾子を持っています。以下に、ブレークポイント間でグリッドがどのように変化するかを示します。As noted above, each of these breakpoints have their own container, unique class prefix, and modifiers. Here's how the grid changes across these breakpoints:
-  </p>
+  <Localization>
+    <template #en>
+      <p>As noted above, each of these breakpoints have their own container, unique class prefix, and modifiers. </p>
+      <p>Here's how the grid changes across these breakpoints:</p>
+    </template>
+    <template #ja>
+      <p>上で述べたように、これらのブレークポイントはそれぞれ独自のコンテナ、固有のクラスプレフィックス、および修飾子を持っています。</p>
+      <p>以下に、ブレークポイント間でグリッドがどのように変化するかを示します。</p>
+    </template>
+  </Localization>
 
   <docs-descriptions-grid-options />
 
   <h2>Auto-layout columns</h2>
 
-  <p>
-    <code>sm="6"</code> のような明示的な番号付き属性を使用せずに、ブレークポイント固有のカラム属性を利用して簡単にカラムのサイズを決定します。Utilize breakpoint-specific column properties for easy column sizing without an explicit numbered properties like <code>sm="6"</code>.
-  </p>
+  <Localization>
+    <template #en>
+      <p>Utilize breakpoint-specific column properties for easy column sizing without an explicit numbered properties like <code>sm="6"</code>.</p>
+    </template>
+    <template #ja>
+      <p><code>sm="6"</code> のような明示的な番号付き属性を使用せずに、ブレークポイント固有のカラム属性を利用して簡単にカラムのサイズを決定します。</p>
+    </template>
+  </Localization>
 
   <h2>Equal-width</h2>
-  <p>
-    例えば、<code>xs</code> から <code>xxl</code> までのすべてのデバイスとビューポートに適用される 2 つのグリッドレイアウトを以下に示します。必要なブレークポイントごとに任意の数のユニットレスプロパティを追加すると、すべての列が同じ幅になります。For example, here are two grid layouts that apply to every device and viewport, from <code>xs</code> to <code>xxl</code>. Add any number of unit-less properties for each breakpoint you need and every column will be the same width.
-  </p>
-  ---
+  <Localization>
+    <template #en>
+      <p>For example, here are two grid layouts that apply to every device and viewport, from <code>xs</code> to <code>xxl</code>. </p>
+      <p>Add any number of unit-less properties for each breakpoint you need and every column will be the same width.</p>
+    </template>
+    <template #ja>
+      <p>例えば、<code>xs</code> から <code>xxl</code> までのすべてのデバイスとビューポートに適用される 2 つのグリッドレイアウトを以下に示します。</p>
+      <p>必要なブレークポイントごとに任意の数のユニットレスプロパティを追加すると、すべての列が同じ幅になります。</p>
+    </template>
+  </Localization>
+
   <Snippet>
     <Example row>
       <examples-layout-grid-equal-width />
@@ -117,19 +160,19 @@ Breaking it down, here's how the grid system comes together:
       lang="vue"
     />
   </Snippet>
-  <!--:::: code-group
-    ::: code-group-item useBootstrap
-    @[code](@examples/layout/grid/equal-width.vue)
-    :::
-    ::: code-group-item bootstrap5
-    @[code](@examples/layout/grid/equal-width.html)
-    :::
-    :::: -->
 
   <h2>Setting one column width </h2>
-  <p>
-    flexbox グリッド カラムの自動レイアウトは、1 つのカラムの幅を設定して、その周りにある兄弟カラムのサイズを自動的に変更することもできます。定義済みのグリッド属性 (以下に示すように)、グリッド ミックスイン、インライン幅を使用できます。中央のカラムの幅に関係なく、他のカラムのサイズが変更されることに注意してください。Auto-layout for flexbox grid columns also means you can set the width of one column and have the sibling columns automatically resize around it. You may use predefined grid properties (as shown below), grid mixins, or inline widths. Note that the other columns will resize no matter the width of the center column.
-  </p>
+  <Localization>
+    <template #en>
+      <p>Auto-layout for flexbox grid columns also means you can set the width of one column and have the sibling columns automatically resize around it. </p>
+      <p>You may use predefined grid properties (as shown below), grid mixins, or inline widths. Note that the other columns will resize no matter the width of the center column.</p>
+    </template>
+    <template #ja>
+      <p>flexbox グリッド カラムの自動レイアウトは、1 つのカラムの幅を設定して、その周りにある兄弟カラムのサイズを自動的に変更することもできます。</p>
+      <p>定義済みのグリッド属性 (以下に示すように)、グリッド ミックスイン、インライン幅を使用できます。中央のカラムの幅に関係なく、他のカラムのサイズが変更されることに注意してください。</p>
+    </template>
+  </Localization>
+
   <Snippet>
     <Example row>
       <examples-layout-grid-column-width />
@@ -139,19 +182,21 @@ Breaking it down, here's how the grid system comes together:
       lang="vue"
     />
   </Snippet>
-  <!-- :::: code-group
-    ::: code-group-item useBootstrap
-    @[code](@examples/layout/grid/column-width.vue)
-    :::
-    ::: code-group-item bootstrap5
-    @[code](@examples/layout/grid/column-width.html)
-    :::
-    :::: -->
 
   <h2>Variable width content</h2>
-  <p>
-    <code>size="auto"</code> 属性もしくは<code>{breakpoint}="auto"</code>属性を使って、内容の自然な幅に基づいてカラムのサイズを調整します。Use <code>size="auto"</code> property or <code>{breakpoint}="auto"</code> properties to size columns based on the natural width of their content.
-  </p>
+
+  <Localization>
+    <template #en>
+      <p>
+        Use <code>size="auto"</code> property or <code>{breakpoint}="auto"</code> properties to size columns based on the natural width of their content.
+      </p>
+    </template>
+    <template #ja>
+      <p>
+        <code>size="auto"</code> 属性もしくは<code>{breakpoint}="auto"</code>属性を使って、内容の自然な幅に基づいてカラムのサイズを調整します。
+      </p>
+    </template>
+  </Localization>
 
   <Snippet>
     <Example row>
@@ -162,28 +207,34 @@ Breaking it down, here's how the grid system comes together:
       lang="vue"
     />
   </Snippet>
-  <!--:::: code-group
-    ::: code-group-item useBootstrap
-    @[code](@examples/layout/grid/variable-width.vue)
-    :::
-    ::: code-group-item bootstrap5
-    @[code](@examples/layout/grid/variable-width.html)
-    :::
-    :::: -->
 
   <!-- ::: tip
 プロパティに`<col :md="3">`とコロンが付けられるときと`<Col md="auto">`とコロンが付けられないときがあります。これはvueの機能で[v-vindの省略記法](https://v3.ja.vuejs.org/guide/template-syntax.html#%E7%9C%81%E7%95%A5%E8%A8%98%E6%B3%95)に当たります。プロパティに指定する値が数値の場合は必ずコロンを付けるようにしてください。There are times when a property can have a colon with `<col :md="3">` and times when it cannot have a colon with `<Col md="auto">`.This is a feature of vue, and corresponds to the [v-vind shorthand notation](https://vuejs.org/guide/essentials/template-syntax.html#directives) .If the value specified for a property is a number, be sure to add a colon.
 ::: -->
 
   <h2>Responsive classes</h2>
-  <p>
-    Bootstrapのグリッドには、複雑なレスポンシブレイアウトを構築するための事前定義された属性の6つの層が含まれています。extra small, small, medium, large, or extra large(特大、小、中、大、または特大) のデバイスで、適切と思われる方法で列のサイズをカスタマイズします。Bootstrap's grid includes six tiers of predefined classes for building complex responsive layouts. Customize the size of your columns on extra small, small, medium, large, or extra large devices however you see fit.
-  </p>
-
+  <Localization>
+    <template #en>
+      <p>Bootstrap's grid includes six tiers of predefined classes for building complex responsive layouts. </p>
+      <p>Customize the size of your columns on extra small, small, medium, large, or extra large devices however you see fit.</p>
+    </template>
+    <template #ja>
+      <p>Bootstrapのグリッドには、複雑なレスポンシブレイアウトを構築するための事前定義された属性の6つの層が含まれています。</p>
+      <p>extra small, small, medium, large, or extra large(特大、小、中、大、または特大) のデバイスで、適切と思われる方法で列のサイズをカスタマイズします。</p>
+    </template>
+  </Localization>
   <h2>All breakpoints</h2>
-  <p>
-    最小のデバイスから最大のデバイスまで同じグリッドの場合、<code>Col</code> コンポーネントや、 <code>size=""</code> 属性を使います。特定のサイズの列が必要な場合は、番号付きの属性を指定します; それ以外の場合は <code>col</code> を使用してください。For grids that are the same from the smallest of devices to the largest, use the <code>col</code> tag. Specify a numbered properties when you need a particularly sized column; otherwise, feel free to stick to <code>col</code>.
-  </p>
+  <Localization>
+    <template #en>
+      <p>For grids that are the same from the smallest of devices to the largest, use the <code>col</code> tag. </p>
+      <p>Specify a numbered properties when you need a particularly sized column; otherwise, feel free to stick to <code>col</code>.</p>
+    </template>
+    <template #ja>
+      <p>最小のデバイスから最大のデバイスまで同じグリッドの場合、<code>Col</code> コンポーネントや、 <code>size=""</code> 属性を使います。</p>
+      <p>特定のサイズの列が必要な場合は、番号付きの属性を指定します; それ以外の場合は <code>col</code> を使用してください。</p>
+    </template>
+  </Localization>
+
   <Snippet>
     <Example row>
       <examples-layout-grid-breakpoints-all />
@@ -193,21 +244,17 @@ Breaking it down, here's how the grid system comes together:
       lang="vue"
     />
   </Snippet>
-  <!-- :::: code-group
-    ::: code-group-item useBootstrap
-    @[code](@examples/layout/grid/breakpoints-all.vue)
-    :::
-    ::: code-group-item bootstrap5
-    @[code](@examples/layout/grid/breakpoints-all.html)
-    :::
-    :::: -->
 
   <h2>Stacked to horizontal</h2>
 
-  <p>
-    <code>&lt;Col sm=""&gt;</code>コンポーネントの単一のセットを使用して、積み重ねられて始まり、小さなブレークポイント（<code>sm</code>）で水平になる基本的なグリッドシステムを作成できます。Using a single set of
-    <code>&lt;Col sm=""&gt;</code> tags, you can create a basic grid system that starts out stacked and becomes horizontal at the small breakpoint (<code>sm</code>).
-  </p>
+  <Localization>
+    <template #en>
+      <p>Using a single set of <code>&lt;Col sm=""&gt;</code> tags, you can create a basic grid system that starts out stacked and becomes horizontal at the small breakpoint (<code>sm</code>).</p>
+    </template>
+    <template #ja>
+      <p><code>&lt;Col sm=""&gt;</code>コンポーネントの単一のセットを使用して、積み重ねられて始まり、小さなブレークポイント（<code>sm</code>）で水平になる基本的なグリッドシステムを作成できます。</p>
+    </template>
+  </Localization>
 
   <Snippet>
     <Example row>
@@ -218,19 +265,18 @@ Breaking it down, here's how the grid system comes together:
       lang="vue"
     />
   </Snippet>
-  <!--:::: code-group
-    ::: code-group-item useBootstrap
-    @[code](@examples/layout/grid/breakpoints-stacked.vue)
-    :::
-    ::: code-group-item bootstrap5
-    @[code](@examples/layout/grid/breakpoints-stacked.html)
-    :::
-    :::: -->
 
   <h2>Mix and match</h2>
-  <p>
-    必要に応じて、層ごとに異なる属性の組み合わせを使用します。 どのように機能するかについては、以下の例をご覧ください。Don't want your columns to simply stack in some grid tiers? Use a combination of different properties for each tier as needed. See the example below for a better idea of how it all works.
-  </p>
+  <Localization>
+    <template #en>
+      <p>Don't want your columns to simply stack in some grid tiers? </p>
+      <p>Use a combination of different properties for each tier as needed. See the example below for a better idea of how it all works.</p>
+    </template>
+    <template #ja>
+      <p>必要に応じて、層ごとに異なる属性の組み合わせを使用します。 </p>
+      <p>どのように機能するかについては、以下の例をご覧ください。</p>
+    </template>
+  </Localization>
 
   <Snippet>
     <Example row>
@@ -242,24 +288,28 @@ Breaking it down, here's how the grid system comes together:
     />
   </Snippet>
 
-  <!--:::: code-group
-    ::: code-group-item useBootstrap
-    @[code](@examples/layout/grid/mix-match.vue)
-    :::
-    ::: code-group-item bootstrap5
-    @[code](@examples/layout/grid/mix-match.html)
-    :::
-    :::: -->
-
   <h2>Row columns</h2>
-  <p>
-    レスポンシブな &lt;Col columns=""&gt;コンポーネントを使用して、コンテンツとレイアウトを最適にレンダリングする列の数をすばやく設定します。 通常の <code>Col</code>コンポーネントは個々の列（たとえば、
-    <code>&lt;Col :md="4"&gt;</code>）に適用されますが、行列クラスはショートカットとして親の <code>Row</code>に設定されます。 <code>&lt;Row columns="auto"&gt;</code>で列に自然な幅を与えることができます。Use the responsive <code>&lt;Row columns=""&gt;</code> classes to quickly set the number of columns that best render your content and layout. Whereas normal <code>Col</code> classes apply to the individual columns (e.g.,
-    <code>&lt;Col :md="4"&gt;</code>）, the row columns classes are set on the parent <code>Row</code> as a shortcut. With <code>&lt;bsGridRow columns="auto"&gt;</code>） you can give the columns their natural width.
-  </p>
-  <p>
-    これらの行列クラスを使用して、基本的なグリッドレイアウトをすばやく作成したり、カードレイアウトを制御したりします。Use these row columns classes to quickly create basic grid layouts or to control your card layouts.
-  </p>
+  <Localization>
+    <template #en>
+      <p>Use the responsive <code>&lt;Row columns=""&gt;</code> classes to quickly set the number of columns that best render your content and layout. </p>
+      <p>Whereas normal <code>Col</code> classes apply to the individual columns (e.g.,<code>&lt;Col :md="4"&gt;</code>）, the row columns classes are set on the parent <code>Row</code> as a shortcut. </p>
+      <p>With <code>&lt;bsGridRow columns="auto"&gt;</code>） you can give the columns their natural width.</p>
+    </template>
+    <template #ja>
+      <p>レスポンシブな &lt;Col columns=""&gt;コンポーネントを使用して、コンテンツとレイアウトを最適にレンダリングする列の数をすばやく設定します。 </p>
+      <p>通常の <code>Col</code>コンポーネントは個々の列（たとえば、<code>&lt;Col :md="4"&gt;</code>）に適用されますが、行列クラスはショートカットとして親の <code>Row</code>に設定されます。</p>
+      <p><code>&lt;Row columns="auto"&gt;</code>で列に自然な幅を与えることができます。</p>
+    </template>
+  </Localization>
+
+  <Localization>
+    <template #en>
+      <p>Use these row columns classes to quickly create basic grid layouts or to control your card layouts.</p>
+    </template>
+    <template #ja>
+      <p>これらの行列クラスを使用して、基本的なグリッドレイアウトをすばやく作成したり、カードレイアウトを制御したりします。</p>
+    </template>
+  </Localization>
 
   <Snippet>
     <Example row>
@@ -270,14 +320,7 @@ Breaking it down, here's how the grid system comes together:
       lang="vue"
     />
   </Snippet>
-  <!--:::: code-group
-    ::: code-group-item useBootstrap
-    @[code](@examples/layout/grid/row-columns.vue)
-    :::
-    ::: code-group-item bootstrap5
-    @[code](@examples/layout/grid/row-columns.html)
-    :::
-    :::: -->
+
   <Snippet>
     <Example row>
       <examples-layout-grid-row-columns-1 />
@@ -288,14 +331,6 @@ Breaking it down, here's how the grid system comes together:
     />
   </Snippet>
 
-  <!--:::: code-group
-    ::: code-group-item useBootstrap
-    @[code](@examples/layout/grid/row-columns-1.vue)
-    :::
-    ::: code-group-item bootstrap5
-    @[code](@examples/layout/grid/row-columns-1.html)
-    :::
-    :::: -->
   <Snippet>
     <Example row>
       <examples-layout-grid-row-columns-2 />
@@ -305,14 +340,7 @@ Breaking it down, here's how the grid system comes together:
       lang="vue"
     />
   </Snippet>
-  <!--:::: code-group
-    ::: code-group-item useBootstrap
-    @[code](@examples/layout/grid/row-columns-2.vue)
-    :::
-    ::: code-group-item bootstrap5
-    @[code](@examples/layout/grid/row-columns-2.html)
-    :::
-    :::: -->
+
   <Snippet>
     <Example row>
       <examples-layout-grid-row-columns-3 />
@@ -322,14 +350,7 @@ Breaking it down, here's how the grid system comes together:
       lang="vue"
     />
   </Snippet>
-  <!--:::: code-group
-    ::: code-group-item useBootstrap
-    @[code](@examples/layout/grid/row-columns-3.vue)
-    :::
-    ::: code-group-item bootstrap5
-    @[code](@examples/layout/grid/row-columns-3.html)
-    :::
-    :::: -->
+
   <Snippet>
     <Example row>
       <examples-layout-grid-row-columns-4 />
@@ -340,14 +361,6 @@ Breaking it down, here's how the grid system comes together:
     />
   </Snippet>
 
-  <!--:::: code-group
-    ::: code-group-item useBootstrap
-    @[code](@examples/layout/grid/row-columns-4.vue)
-    :::
-    ::: code-group-item bootstrap5
-    @[code](@examples/layout/grid/row-columns-4.html)
-    :::
-    :::: -->
   <Snippet>
     <Example row>
       <examples-layout-grid-row-columns-5 />
@@ -358,14 +371,6 @@ Breaking it down, here's how the grid system comes together:
     />
   </Snippet>
 
-  <!--:::: code-group
-    ::: code-group-item useBootstrap
-    @[code](@examples/layout/grid/row-columns5.vue)
-    :::
-    ::: code-group-item bootstrap5
-    @[code](@examples/layout/grid/row-columns5.html)
-    :::
-    :::: -->
 
   <!-- 付随するSassミックスイン、 `row-cols()`を使用することもできます。You can also use the accompanying Sass mixin, `row-cols()`:
 
@@ -382,13 +387,25 @@ Breaking it down, here's how the grid system comes together:
 ``` -->
 
   <h2>Nesting</h2>
-  <p>
-    コンテンツをデフォルトのグリッドにネストするには、新しい <code>&lt;Row&gt;</code>と一連の
-    <code>&lt;Col sm=""&gt;</code>列を既存の
-    <code>&lt;Col sm=""&gt;</code>列内に追加します。 ネストされた行には、最大で12以下の一連の列が含まれている必要があります（使用可能な12の列すべてを使用する必要はありません）。To nest your content with the default grid, add a new <code>&lt;Row&gt;</code> and set of
-    <code>&lt;Col sm=""&gt;</code> columns within an existing
-    <code>&lt;Col sm=""&gt;</code> column. Nested rows should include a set of columns that add up to 12 or fewer (it is not required that you use all 12 available columns).
-  </p>
+  <Localization>
+    <template #en>
+      <p>
+        To nest your content with the default grid, add a new <code>&lt;Row&gt;</code> and set of
+        <code>&lt;Col sm=""&gt;</code> columns within an existing
+        <code>&lt;Col sm=""&gt;</code> column.
+      </p>
+      <p>Nested rows should include a set of columns that add up to 12 or fewer (it is not required that you use all 12 available columns).</p>
+    </template>
+    <template #ja>
+      <p>
+        コンテンツをデフォルトのグリッドにネストするには、新しい <code>&lt;Row&gt;</code>と一連の
+        <code>&lt;Col sm=""&gt;</code>列を既存の
+        <code>&lt;Col sm=""&gt;</code>列内に追加します。
+      </p>
+      <p>ネストされた行には、最大で12以下の一連の列が含まれている必要があります（使用可能な12の列すべてを使用する必要はありません）。</p>
+    </template>
+  </Localization>
+
   <!-- ## Sass
 
 Sassファイルを使用する場合、Sass変数とミックスインを使用して、カスタム、セマンティック、レスポンシブなページレイアウトを作成するオプションがあります。 事前定義されたグリッドクラスは、これらと同じ変数とミックスインを使用して、高速応答レイアウト用のすぐに使用できるクラスのスイート全体を提供します。When using Bootstrap's source Sass files, you have the option of using Sass variables and mixins to create custom, semantic, and responsive page layouts. Our predefined grid classes use these same variables and mixins to provide a whole suite of ready-to-use classes for fast responsive layouts.
@@ -507,4 +524,3 @@ $container-max-widths: (
 
 Sass変数またはマップに変更を加える場合は、変更を保存して再コンパイルする必要があります。 これを行うと、列幅、オフセット、および順序付けのための事前定義されたグリッドクラスの新しいセットが出力されます。 レスポンシブ可視性ユーティリティも、カスタムブレークポイントを使用するように更新されます。 グリッド値は必ず pxに設定してください（ rem、 em、％ではありません）。When making any changes to the Sass variables or maps, you'll need to save your changes and recompile. Doing so will output a brand new set of predefined grid classes for column widths, offsets, and ordering. Responsive visibility utilities will also be updated to use the custom breakpoints. Make sure to set grid values in `px` (not `rem`, `em`, or `%`). -->
 </template>
-

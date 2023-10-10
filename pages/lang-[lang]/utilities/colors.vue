@@ -1,39 +1,35 @@
 <script setup lang="ts">
 definePageMeta({
-  title: `カラーColors`,
-  description: `クラスを使ってセマンティックカラーを表現できます。リンクのホバースタイルもサポートしています。Convey meaning through 'color' with a handful of color utility classes. Includes support for styling links with hover states, too.`
+  'title:en': 'Colors',
+  'description:en': `Convey meaning through 'color' with a handful of color utility classes. Includes support for styling links with hover states, too.`,
+  'title:ja': 'カラー',
+  'description:ja': 'クラスを使ってセマンティックカラーを表現できます。リンクのホバースタイルもサポートしています。'
 })
 </script>
  
 <template>
-  <!---
-title: カラーColors
-description: クラスを使ってセマンティックカラーを表現できます。リンクのホバースタイルもサポートしています。Convey meaning through `color` with a handful of color utility classes. Includes support for styling links with hover states, too.
---->
-
-  <h2>カラーColors</h2>
-
-  <p>
-    属性を使ってセマンティックカラーを表現できます。リンクのホバースタイルもサポートしています。Convey meaning through <code>color</code> with a handful of color utility classes. Includes support for styling links with hover states, too.
-  </p>
-
   <h3>Colors</h3>
-
-  <p>
-    color utilities を使ってテキストに色をつけます。リンクの場合は、<code>:hover</code> と <code>:focus</code> の状態を持つ <LocalLink to="/helpers/colored-links">
-      link helper 属性
-    </LocalLink>を使うことができます。
-    Colorize text with color utilities. If you want to colorize links, you can use the <LocalLink to="/helpers/colored-links">
-      link helper attributes
-    </LocalLink> which have <code>:hover</code> and <code>:focus</code> states.
-  </p>
-  ---
-
-  
+  <Localization>
+    <template #en>
+      <p>
+        Colorize text with color utilities. If you want to colorize links, you can use the <LocalLink to="/helpers/colored-links">
+          link helper attributes
+        </LocalLink> which have <code>:hover</code> and <code>:focus</code> states.
+      </p>
+    </template>
+    <template #ja>
+      <p>color utilities を使ってテキストに色をつけます。</p>
+      <p>
+        リンクの場合は、<code>:hover</code> と <code>:focus</code> の状態を持つ <LocalLink to="/helpers/colored-links/">
+          link helper 属性
+        </LocalLink>を使うことができます。
+      </p>
+    </template>
+  </Localization>
 
   <Snippet>
     <Example>
-      <examples-utilities-color-colors />    
+      <examples-utilities-color-colors />
     </Example>
     <ExamplesCode
       path="/utilities/color/colors.vue"
@@ -41,22 +37,13 @@ description: クラスを使ってセマンティックカラーを表現でき�
     />
   </Snippet>
 
-  <!--:::: code-group
-::: code-group-item useBootstrap
-@[code](@examples/utilities/color/colors.vue)
-:::
-::: code-group-item bootstrap5
-@[code](@examples/utilities/color/colors.html)
-:::
-:::: -->
-
-  <!--黄色の枠で囲む-->
-  <div style="background-color: antiquewhite;">
+  
+  <!-- <div style="background-color: antiquewhite;">
     <h5>warning</h5>
     <p>
-      <!--太字--><b>Deprecation:</b> With the addition of <code>text-opacity*</code> attribute and CSS variables for text utilities, <code>text-color="black-50"</code> and <code>text-color="white-50"</code> are deprecated as of v5.1.0. They'll be removed in v6.0.0.
+      <b>Deprecation:</b> With the addition of <code>text-opacity*</code> attribute and CSS variables for text utilities, <code>text-color="black-50"</code> and <code>text-color="white-50"</code> are deprecated as of v5.1.0. They'll be removed in v6.0.0.
     </p>
-  </div>
+  </div> -->
 
   <!-- {{< callout info >}}
 {{< partial "callout-warning-color-assistive-technologies.md" >}}
@@ -106,7 +93,7 @@ We use an RGB version of our `--bs-primary` (with the value of `13, 110, 253`) C
   <!-- Or, choose from any of the `.text-opacity` utilities: -->
 
 
-  
+
   <Snippet>
     <Example>
       <examples-utilities-color-opacity-2 />

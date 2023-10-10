@@ -33,18 +33,35 @@ definePageMeta({
   <h5 class="mt-3">
     warning
   </h5>
-  <h5> Ensure correct <code>role</code> and provide a label</h5>
-  <p>
-    In order for assistive technologies (such as screen readers) to convey that a series of buttons is grouped, an appropriate <code>role</code> attribute needs to be provided. For button groups, this would be <code>role="group"</code>, while toolbars should have a <code>role="toolbar"</code>.
-  </p>
-  <p>
-    In addition, groups and toolbars should be given an explicit label, as most assistive technologies will otherwise not announce them, despite the presence of the correct role attribute. In the examples provided here, we use <code>aria-label</code>, but alternatives such as <code>aria-labelledby</code> can also be used.
-  </p>
-  <p>
-    These classes can also be added to groups of links, as an alternative to the <LocalLink to="/components/navs-tabs">
-      nav navigation components
-    </LocalLink>.
-  </p>
+  <Localization>
+    <template #en>
+      <h5>Ensure correct <code>role</code> and provide a label</h5>
+      <p>
+        In order for assistive technologies (such as screen readers) to convey that a series of buttons is grouped, an appropriate <code>role</code> attribute needs to be provided. For button groups, this would be <code>role="group"</code>, while toolbars should have a <code>role="toolbar"</code>.
+      </p>
+      <p>
+        In addition, groups and toolbars should be given an explicit label, as most assistive technologies will otherwise not announce them, despite the presence of the correct role attribute. In the examples provided here, we use <code>aria-label</code>, but alternatives such as <code>aria-labelledby</code> can also be used.
+      </p>
+      <p>
+        These classes can also be added to groups of links, as an alternative to the <LocalLink to="/components/navs-tabs">
+          nav navigation components
+        </LocalLink>.
+      </p>
+    </template>
+    <template #ja>
+      <h5><code>role</code>が正しいことを確認し、ラベルをつける。</h5>
+      <p>支援技術（スクリーン・リーダーなど）が、一連のボタンがグループ化されていることを伝えるためには、適切な<code>role属性</code>を提供する必要があります。 ボタングループの場合は<code>role="group"</code>となり、ツールバーの場合は<code>role="toolbar"</code>となります。</p>
+    
+      <p>加えて、グループやツールバーには明示的なラベルをつけるべきです。そうしないと、正しい役割属性があるにもかかわらず、ほとんどの支援技術がそれを告知しないからです。ここで提供される例では、<code>earia-label</code>を使用していますが、<code>aria-labelledby</code>のような代替も使用できます。</p>
+ 
+      <p>
+        これらのクラスは、 の代わりに、リンクのグループに追加することもできます。<LocalLink to="/components/navs-tabs"> 
+          navナビゲーション・コンポーネント 
+        </LocalLink>.
+      </p>
+    </template>
+  </Localization>
+
   <Snippet>
     <Example>
       <examples-components-button-group-basic-example-2 />
@@ -166,9 +183,15 @@ definePageMeta({
 
 
   <h2>Sizing</h2>
-  <p>
-    Instead of applying button sizing classes to every button in a group, just add <code>.btn-group-*</code> to each <code>.btn-group</code>, including each one when nesting multiple groups.
-  </p>
+  <Localization>
+    <template #en>
+      <p>Instead of applying button sizing classes to every button in a group, just add <code>.btn-group-*</code> to each <code>.btn-group</code>, including each one when nesting multiple groups.</p>
+    </template>
+    <template #ja>
+      <p>グループ内のすべてのボタンにボタンのサイズクラスを適用する代わりに、<code>.btn-group-*</code>を各<code>.btn-group</code>に追加するだけです。</p>
+    </template>
+  </Localization>
+
   <Snippet>
     <Example>
       <examples-components-button-group-sizing />

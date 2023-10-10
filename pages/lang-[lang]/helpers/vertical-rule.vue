@@ -1,7 +1,9 @@
 <script setup lang="ts">
 definePageMeta({
-  title: `Vertical rule`,
-  description: `Use the custom vertical rule helper to create vertical dividers like the 'Vr' component.`
+  'title:en': 'Vertical rule',
+  'description:en': `Use the custom vertical rule helper to create vertical dividers like the Vr component.`,
+  'title:ja': 'Vertical rule',
+  'description:ja': 'カスタム垂直ルールヘルパーを使用して、Vrコンポーネントのような垂直の仕切りを作成します。'
 })
 </script>
 
@@ -12,13 +14,46 @@ description: Use the custom vertical rule helper to create vertical dividers lik
 
   <h2>How it works</h2>
 
-  Vertical rules are inspired by the <code>Vr</code> component, allowing you to create vertical dividers in common layouts. They're styled just like <code>Vr</code> component:
+  <Localization>
+    <template #en>
+      <p>
+        Vertical rules are inspired by the <code>Vr</code> component, allowing you to create vertical dividers in common layouts. They're styled just like <code>Vr</code> component:
+      </p>
+    </template>
+    <template #ja>
+      <p>
+        垂直罫線は、Vrコンポーネントにインスパイアされたもので、一般的なレイアウトで垂直の仕切りを作ることができます。Vrコンポーネントと同じスタイルです。
+      </p>
+    </template>
+  </Localization>
+
   <ul>
-    <li> They're <code>1px</code> wide </li>
-    <li> They have <code>min-height</code> of <code>1em</code> </li>
-    <li> Their color is set via <code>currentColor</code> and <code>opacity</code> </li>
+    <Localization>
+      <template #en>
+        <li> They're <code>1px</code> wide </li>
+        <li> They have <code>min-height</code> of <code>1em</code> </li>
+        <li> Their color is set via <code>currentColor</code> and <code>opacity</code> </li>
+      </template>
+      <template #ja>
+        <li> 幅は<code>1px</code></li>
+        <li> <code>min-height</code>は<code>1em</code></li>
+        <li> 色は<code>currentColor</code>と<code>opacity</code>で設定されます。</li>
+      </template>
+    </Localization>
   </ul>
-  Customize them with additional styles as needed.
+
+  <Localization>
+    <template #en>
+      <p>
+        Customize them with additional styles as needed.
+      </p>
+    </template>
+    <template #ja>
+      <p>
+        必要に応じてスタイルを追加してカスタマイズしてください。
+      </p>
+    </template>
+  </Localization>
 
   <h2>Example</h2>
 
@@ -42,9 +77,18 @@ description: Use the custom vertical rule helper to create vertical dividers lik
 :::
 :::: -->
 
-  <p>
-    Vertical rules scale their height in flex layouts:
-  </p>
+  <Localization>
+    <template #en>
+      <p>
+        Vertical rules scale their height in flex layouts:
+      </p>
+    </template>
+    <template #ja>
+      <p>
+        縦罫線はフレックスレイアウトで高さをスケーリングします。
+      </p>
+    </template>
+  </Localization>
   <Snippet>
     <Example>
       <examples-helpers-vertical-rule-example-2 />
@@ -65,11 +109,23 @@ description: Use the custom vertical rule helper to create vertical dividers lik
 :::: -->
 
   <h2>With stacks</h2>
-  <p>
-    They can also be used in <LocalLink to="/helpers/stacks">
-      stacks
-    </LocalLink>:
-  </p>
+
+  <Localization>
+    <template #en>
+      <p>
+        They can also be used in <LocalLink to="/helpers/stacks">
+          stacks
+        </LocalLink>:
+      </p>
+    </template>
+    <template #ja>
+      <p>
+        <LocalLink to="/helpers/stacks">
+          stacks
+        </LocalLink>での利用も可能です。
+      </p>
+    </template>
+  </Localization>
 
 
   <Snippet>

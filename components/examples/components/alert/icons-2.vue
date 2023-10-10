@@ -10,8 +10,6 @@
       color="currentColor"
       flex="shrink-0"
       margin="e-2"
-      width="24"
-      height="24"
       aria-label="Info:"
     />
     <div>An example alert with an icon</div>
@@ -27,8 +25,6 @@
       color="currentColor"
       flex="shrink-0"
       margin="e-2"
-      width="24"
-      height="24"
       aria-label="Success:"
     />
     <div>An example success alert with an icon</div>
@@ -44,8 +40,6 @@
       color="currentColor"
       flex="shrink-0"
       margin="e-2"
-      width="24"
-      height="24"
       aria-label="Warning:"
     />
     <div>An example warning alert with an icon</div>
@@ -61,8 +55,6 @@
       color="currentColor"
       flex="shrink-0"
       margin="e-2"
-      width="24"
-      height="24"
       aria-label="Danger:"
     />
     <div>An example danger alert with an icon</div>

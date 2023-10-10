@@ -1,25 +1,42 @@
 <script setup lang="ts">
 definePageMeta({
-  title: `Placeholders`,
-  description: `Use loading placeholders for your components or pages to indicate something may still be loading.`
+  'title:en' : `Placeholders`,
+  'description:en' : `Use loading placeholders for your components or pages to indicate something may still be loading.`,
+  'title:ja' : 'Placeholders',
+  'description:ja' : 'コンポーネントやページのローディングプレイスホルダーを使用して、何かがまだローディング中であることを示します。'
 })
 </script>
 
 <template>
-  <!---
-title: Placeholders
-description: Use loading placeholders for your components or pages to indicate something may still be loading.
---->
-
   <h2>About</h2>
-  <p>
-    Placeholders can be used to enhance the experience of your application. They're built only with HTML and CSS, meaning you don't need any JavaScript to create them. You will, however, need some custom JavaScript to toggle their visibility. Their appearance, color, and sizing can be easily customized with our utility classes.
-  </p>
+  <Localization>
+    <template #en>
+      <p>
+        Placeholders can be used to enhance the experience of your application. They're built only with HTML and CSS, meaning you don't need any JavaScript to create them. You will, however, need some custom JavaScript to toggle their visibility. Their appearance, color, and sizing can be easily customized with our utility classes.
+      </p>
+    </template>
+    <template #ja>
+      <p>
+        プレイスホルダーは、アプリケーションの体験を向上させるために使用できます。プレイスホルダーはHTMLとCSSだけで作られているので、JavaScriptは必要ありません。ただし、表示/非表示を切り替えるにはカスタムJavaScriptが必要です。外観、色、サイズはユーティリティクラスで簡単にカスタマイズできます。
+      </p>
+    </template>
+  </Localization>
 
   <h2>Example</h2>
-  <p>
-    In the example below, we take a typical card component and recreate it with placeholders applied to create a "loading card". Size and proportions are the same between the two.
-  </p>
+
+  <Localization>
+    <template #en>
+      <p>
+        In the example below, we take a typical card component and recreate it with placeholders applied to create a "loading card". Size and proportions are the same between the two.
+      </p>
+    </template>
+    <template #ja>
+      <p>
+        下の例では、典型的なカードコンポーネントにプレイスホルダーを適用して、「ローディングカード」を作成します。サイズと比率は両者で同じです。
+      </p>
+    </template>
+  </Localization>
+
   <Snippet>
     <Example>
       <examples-components-placeholder-example />
@@ -30,25 +47,36 @@ description: Use loading placeholders for your components or pages to indicate s
     />
   </Snippet>
 
-
-  <!--:::: code-group
-::: code-group-item useBootstrap
-@[code](@examples/components/placeholder/example.vue)
-:::
-::: code-group-item bootstrap5
-@[code](@examples/components/placeholder/example.html)
-:::
-:::: -->
-
   <h2 class="mt-3">
     How it works
   </h2>
-  <p>
-    Create placeholders with the <code>placeholder</code> attribute and a grid column attribute (e.g., <code>col="6"</code>) to set the <code>width</code>. They can replace the text inside an element or be added as a modifier class to an existing component.
-  </p>
-  <p>
-    We apply additional styling to <code>button</code> attributes via <code>::before</code> to ensure the <code>height</code> is respected. You may extend this pattern for other situations as needed, or add a <code /> within the element to reflect the height when actual text is rendered in its place.
-  </p>
+
+  <Localization>
+    <template #en>
+      <p>
+        Create placeholders with the <code>placeholder</code> attribute and a grid column attribute (e.g., <code>col="6"</code>) to set the <code>width</code>. They can replace the text inside an element or be added as a modifier class to an existing component.
+      </p>
+    </template>
+    <template #ja>
+      <p>
+        <code>placeholder</code>属性とグリッドカラム属性（例：<code>col="6"</code>）でプレイスホルダーを作成し、<code>width</code>を設定します。これらは、要素内のテキストを置き換えたり、既存のコンポーネントに就職クラスとして追加することができます。
+      </p>
+    </template>
+  </Localization>
+
+  <Localization>
+    <template #en>
+      <p>
+        We apply additional styling to <code>button</code> attributes via <code>::before</code> to ensure the <code>height</code> is respected. You may extend this pattern for other situations as needed, or add a <code /> within the element to reflect the height when actual text is rendered in its place.
+      </p>
+    </template>
+    <template #ja>
+      <p>
+        <code>button</code>属性には、<code>::before</code>を介して追加のスタイルを適用し、<code>height</code>が尊重されるようにしています。必要に応じてほかの状況用にこのパターンを拡張したり、実際のテキストがその場所にレンダリングされるときに高さを反映するために要素内に追加したりできます。
+      </p>
+    </template>
+  </Localization>
+
   <Snippet>
     <Example>
       <examples-components-placeholder-howitworks />
@@ -59,26 +87,36 @@ description: Use loading placeholders for your components or pages to indicate s
     />
   </Snippet>
 
-
-  <!--:::: code-group
-::: code-group-item useBootstrap
-@[code](@examples/components/placeholder/howitworks.vue)
-:::
-::: code-group-item bootstrap5
-@[code](@examples/components/placeholder/howitworks.html)
-:::
-:::: -->
-
   <h5>tip</h5>
-  <p>
-    The use of <code>aria-hidden="true"</code> only indicates that the element should be hidden to screen readers. The <var>loading</var> behavior of the placeholder depends on how authors will actually use the placeholder styles, how they plan to update things, etc. Some JavaScript code may be needed to <var>swap</var> the state of the placeholder and inform AT users of the update.
-  </p>
+  
+  <Localization>
+    <template #en>
+      <p>
+        The use of <code>aria-hidden="true"</code> only indicates that the element should be hidden to screen readers. The <var>loading</var> behavior of the placeholder depends on how authors will actually use the placeholder styles, how they plan to update things, etc. Some JavaScript code may be needed to <var>swap</var> the state of the placeholder and inform AT users of the update.
+      </p>
+    </template>
+    <template #ja>
+      <p>
+        <code>aria-hidden="true"</code>の使用は、要素がスクリーンリーダーに隠されるべきことを示すだけです。プレイスホルダーの読み込み動作は、作者が実際にどのようにプレイスホルダーのスタイルを使うか、どのように更新するかなどに依存します。プレイスホルダーの状態を入れ替え、ATユーザーに更新を知らせるために、JavaScriptのコードが必要になるかもしれません。
+      </p>
+    </template>
+  </Localization>
 
 
   <h3>Width</h3>
-  <p>
-    You can change the <code>width</code> through grid column classes, width utilities, or inline styles.
-  </p>
+  <Localization>
+    <template #en>
+      <p>
+        You can change the <code>width</code> through grid column classes, width utilities, or inline styles.
+      </p>
+    </template>
+    <template #ja>
+      <p>
+        グリッドのカラムクラス、widthユーティリティ、インラインスタイルで<code>width</code>を変更できます。
+      </p>
+    </template>
+  </Localization>
+
   <Snippet>
     <Example>
       <examples-components-placeholder-width />
@@ -89,21 +127,20 @@ description: Use loading placeholders for your components or pages to indicate s
     />
   </Snippet>
 
-
-  <!--:::: code-group
-::: code-group-item useBootstrap
-@[code](@examples/components/placeholder/width.vue)
-:::
-::: code-group-item bootstrap5
-@[code](@examples/components/placeholder/width.html)
-:::
-:::: -->
-
-
   <h3>Color</h3>
-  <p>
-    By default, the <code>placeholder</code> uses <code>currentColor</code>. This can be overridden with a custom color or utility class.
-  </p>
+
+  <Localization>
+    <template #en>
+      <p>
+        By default, the <code>placeholder</code> uses <code>currentColor</code>. This can be overridden with a custom color or utility class.
+      </p>
+    </template>
+    <template #ja>
+      <p>
+        デフォルトでは、<code>placeholder</code>は<code>currentColor</code>を使用します。これは、カスタムカラーまたはユーティリティクラスでオーバーライドできます。
+      </p>
+    </template>
+  </Localization>
   <Snippet>
     <Example>
       <examples-components-placeholder-color />
@@ -113,16 +150,6 @@ description: Use loading placeholders for your components or pages to indicate s
       lang="vue"
     />
   </Snippet>
-
-
-  <!--:::: code-group
-::: code-group-item useBootstrap
-@[code](@examples/components/placeholder/color.vue)
-:::
-::: code-group-item bootstrap5
-@[code](@examples/components/placeholder/color.html)
-:::
-:::: -->
 
 
   <!-- 

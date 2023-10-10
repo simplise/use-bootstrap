@@ -1,33 +1,42 @@
 
 <script setup lang="ts">
 definePageMeta({
-  title: `ポップオーバー Popovers`,
-  description: `ポップオーバーをサイト上の任意の要素に追加するためのドキュメントと例を示します。 Documentation and examples for adding Bootstrap popovers, like those found in iOS, to any element on your site.`
+  'title:en': 'Popovers',
+  'description:en': `Documentation and examples for adding Bootstrap popovers, like those found in iOS, to any element on your site.`,
+  'title:ja': 'ポップオーバー',
+  'description:ja': 'ポップオーバーをサイト上の任意の要素に追加するためのドキュメントと例を示します。'
 })
 </script>
 <template>
-  <!---
-title: ポップオーバー Popovers
-description: ポップオーバーをサイト上の任意の要素に追加するためのドキュメントと例を示します。 Documentation and examples for adding Bootstrap popovers, like those found in iOS, to any element on your site.
---->
-
   <h2>Overview</h2>
-  <p>
-    popoverプラグインを使うときに知っておきたいこと
-    Things to know when using the popover plugin:
-  </p>
-  <ul>
-    <!-- - Popovers rely on the 3rd party library [Popper](https://popper.js.org/) for positioning. You must include [popper.min.js](cdn.popper) before bootstrap.js or use `bootstrap.bundle.min.js` / `bootstrap.bundle.js` which contains Popper in order for popovers to work! -->
-    <!-- - Popovers require the [tooltip plugin](/components/tooltips) as a dependency. -->
-    <!-- - Popovers are opt-in for performance reasons, so **you must initialize them yourself**. -->
-    <li> Zero-length <code>title</code> and <code>content</code> attributes will never show a popover.</li>
-    <!-- - Specify `container: 'body'` to avoid rendering problems in more complex components (like our input groups, button groups, etc). -->
-    <li> Triggering popovers on hidden elements will not work.</li>
-    <li> Popovers for <code>disabled</code> elements must be triggered on a wrapper element.</li>
-    <li> When triggered from anchors that wrap across multiple lines, popovers will be centered between the anchors' overall width. Use <code>textNowrap</code> on your <code>b-a</code> components to avoid this behavior.</li>
-    <li> Popovers must be hidden before their corresponding elements have been removed from the DOM.</li>
-    <li> Popovers can be triggered thanks to an element inside a shadow DOM.</li>
-  </ul>
+
+  <Localization>
+    <template #en>
+      <ul>
+        <!-- - Popovers rely on the 3rd party library [Popper](https://popper.js.org/) for positioning. You must include [popper.min.js](cdn.popper) before bootstrap.js or use `bootstrap.bundle.min.js` / `bootstrap.bundle.js` which contains Popper in order for popovers to work! -->
+        <!-- - Popovers require the [tooltip plugin](/components/tooltips) as a dependency. -->
+        <!-- - Popovers are opt-in for performance reasons, so **you must initialize them yourself**. -->
+        <li> Zero-length <code>title</code> and <code>content</code> attributes will never show a popover.</li>
+        <!-- - Specify `container: 'body'` to avoid rendering problems in more complex components (like our input groups, button groups, etc). -->
+        <li> Triggering popovers on hidden elements will not work.</li>
+        <li> Popovers for <code>disabled</code> elements must be triggered on a wrapper element.</li>
+        <li> When triggered from anchors that wrap across multiple lines, popovers will be centered between the anchors' overall width. Use <code>textNowrap</code> on your <code>b-a</code> components to avoid this behavior.</li>
+        <li> Popovers must be hidden before their corresponding elements have been removed from the DOM.</li>
+        <li> Popovers can be triggered thanks to an element inside a shadow DOM.</li>
+      </ul>
+    </template>
+    <template #ja>
+      <ul>
+        <li>長さがゼロの<code>title</code>属性と<code>content</code>属性はポップオーバーを表示しません。</li>
+        <li>非表示要素のポップオーバーは動作しません。</li>
+        <li><code>disabled</code>要素のポップオーバーはwrapper要素でトリガーされなければなりません。</li>
+        <li>複数行にまたがるアンカーからトリガーされた場合、ポップオーバーはアンカー全体の幅の中央に配置されます。この動作を避けるために、<code>b-a</code>コンポーネントで <code>textNowrap</code>を使用してください。</li>
+        <li>ポップオーバーは、対応する要素がDOMから削除される前に隠されなければなりません。</li>
+        <li>ポップオーバーは、shadowDOM内の要素によってトリガーすることができます。</li>
+      </ul>
+    </template>
+  </Localization>
+
   <!-- {{< callout info >}}
 {{< partial "callout-info-sanitizer.md" >}}
 {{< /callout >}} -->
@@ -70,20 +79,21 @@ var popover = new bootstrap.Popover(document.querySelector('.example-popover'), 
     />
   </Snippet>
 
-
-  <!--:::: code-group
-::: code-group-item useBootstrap
-@[code](@examples/components/popover/example.vue)
-:::
-::: code-group-item bootstrap5
-@[code](@examples/components/popover/example.html)
-:::
-:::: -->
-
   <h3>Four directions</h3>
-  <p>
-    Four options are available: top, right, bottom, and left aligned. Directions are mirrored when using Bootstrap in RTL.
-  </p>
+
+  <Localization>
+    <template #en>
+      <p>
+        Four options are available: top, right, bottom, and left aligned. Directions are mirrored when using Bootstrap in RTL.
+      </p>
+    </template>
+    <template #ja>
+      <p>
+        top、right、bottom、left alignedの4つのオプションがあります。BootstrapをRTLで使用する場合、方向はミラーリングされます。
+      </p>
+    </template>
+  </Localization>
+
   <Snippet>
     <Example>
       <examples-components-popover-directions />
@@ -94,27 +104,28 @@ var popover = new bootstrap.Popover(document.querySelector('.example-popover'), 
     />
   </Snippet>
 
-
-  <!--:::: code-group
-::: code-group-item useBootstrap
-@[code](@examples/components/popover/directions.vue)
-:::
-::: code-group-item bootstrap5
-@[code](@examples/components/popover/directions.html)
-:::
-:::: -->
-
   <h3>Dismiss on next click</h3>
-  <p>
-    Use the <code>focus</code> trigger to dismiss popovers on the user's next click of a different element than the toggle element.
-  </p>
-  <div style="background-color: salmon;">
+
+  <Localization>
+    <template #en>
+      <p>
+        Use the <code>focus</code> trigger to dismiss popovers on the user's next click of a different element than the toggle element.
+      </p>
+    </template>
+    <template #ja>
+      <p>
+        <code>focus</code>トリガーを使用して、ユーザーが次にトグル要素とは異なる要素をクリックしたときにポップオーバーを解除します。
+      </p>
+    </template>
+  </Localization>
+
+  <!-- <div style="background-color: salmon;">
     <h5>danger</h5>
     <h4>Specific markup required for dismiss-on-next-click</h4>
     <p>
       For proper cross-browser and cross-platform behavior, you must use the <code>b-a</code> component, _not_ the <code>Button</code> component, and you also must include a <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/tabindex">taibindex</a> attribute.
     </p>
-  </div>
+  </div> -->
   <Snippet>
     <Example>
       <examples-components-popover-dismiss />
@@ -125,25 +136,34 @@ var popover = new bootstrap.Popover(document.querySelector('.example-popover'), 
     />
   </Snippet>
 
-
-  <!--:::: code-group
-::: code-group-item useBootstrap
-@[code](@examples/components/popover/dismiss.vue)
-:::
-::: code-group-item bootstrap5
-@[code](@examples/components/popover/dismiss.html)
-:::
-:::: -->
-
-
-
   <h3>Disabled elements</h3>
-  <p>
-    Elements with the <code>disabled</code> attribute aren't interactive, meaning users cannot hover or click them to trigger a popover (or tooltip). As a workaround, you'll want to trigger the popover from a wrapper <code>b-div</code> component or <code>span</code> tag, ideally made keyboard-focusable using <code>tabindex="0"</code>.
-  </p>
-  <p>
-    For disabled popover triggers, you may also prefer <code>trigger="hover focus"</code> so that the popover appears as immediate visual feedback to your users as they may not expect to _click_ on a disabled element.
-  </p>
+
+  <Localization>
+    <template #en>
+      <p>
+        Elements with the <code>disabled</code> attribute aren't interactive, meaning users cannot hover or click them to trigger a popover (or tooltip). As a workaround, you'll want to trigger the popover from a wrapper <code>b-div</code> component or <code>span</code> tag, ideally made keyboard-focusable using <code>tabindex="0"</code>.
+      </p>
+    </template>
+    <template #ja>
+      <p>
+        <code>disabled</code>属性を持つ要素は、インタラクティブではありません。つまり、ユーザーがポップオーバー（またはツールチップ）をトリガーするためにカーソルを合わせたり、クリックしたりすることはできません。回避策として、wrapperの<code>b-div</code>コンポーネントまたは<code>span</code>タグからポップオーバーをトリガーする必要があります。
+      </p>
+    </template>
+  </Localization>
+
+  <Localization>
+    <template #en>
+      <p>
+        For disabled popover triggers, you may also prefer <code>trigger="hover focus"</code> so that the popover appears as immediate visual feedback to your users as they may not expect to _click_ on a disabled element.
+      </p>
+    </template>
+    <template #ja>
+      <p>
+        無効化されたポップオーバートリガーでは、<code>trigger="hover focus"</code>を好むかもしれません、そうすることで、ユーザーは無効化された要素をクリックすることを期待しないかもしれないので、ポップオーバーが即座に視覚的なフィードバックとして表示されます。
+      </p>
+    </template>
+  </Localization>
+
   <Snippet>
     <Example>
       <examples-components-popover-disabled />
@@ -178,7 +198,7 @@ Enable popovers via JavaScript:
 var exampleEl = document.getElementById('example')
 var popover = new bootstrap.Popover(exampleEl, options)
 ``` -->
-  <div style="background-color: antiquewhite;">
+  <!-- <div style="background-color: antiquewhite;">
     <h5>warning</h5>
     <h3>Making popovers work for keyboard and assistive technology users</h3>
     <p>
@@ -192,7 +212,7 @@ var popover = new bootstrap.Popover(exampleEl, options)
       :::
     </p>
   </div>
-  <h3>Options</h3>
+  <h3>Options</h3> -->
 
   <!-- Options can be passed via data attributes or JavaScript. For data attributes, append the option name to `data-bs-`, as in `data-bs-animation=""`. Make sure to change the case type of the option name from camelCase to kebab-case when passing the options via data attributes. For example, instead of using `data-bs-customClass="beautifier"`, use `data-bs-custom-class="beautifier"`. -->
 
@@ -220,33 +240,33 @@ var popover = new bootstrap.Popover(element, {
 })
 ``` -->
 
-  <h3>Methods</h3>
+  <!-- <h3>Methods</h3> -->
 
   <!-- ::: danger
 {{< partial "callout-danger-async-methods.md" >}}
 :: -->
 
-  <h4>show</h4>
+  <!-- <h4>show</h4>
   <p>
     Reveals an element's popover. <b>Returns to the caller before the popover has actually been shown</b> (i.e. before the <code>shown.bs.popover</code> event occurs). This is considered a "manual" triggering of the popover. Popovers whose title and content are both zero-length are never displayed.
-  </p>
+  </p> -->
   <!-- ```js
 myPopover.show()
 ``` -->
 
-  <h4>hide</h4>
+  <!-- <h4>hide</h4>
   <p>
     Hides an element's popover. <b>Returns to the caller before the popover has actually been hidden</b> (i.e. before the <code>hidden.bs.popover</code> event occurs). This is considered a "manual" triggering of the popover.
-  </p>
+  </p> -->
   <!-- ```js
 myPopover.hide()
 ``` -->
 
-  <h4>toggle</h4>
+  <!-- <h4>toggle</h4>
   <p>
     Toggles an element's popover.
     <b>Returns to the caller before the popover has actually been shown or hidden</b> (i.e. before the <code>shown.bs.popover</code> or <code>hidden.bs.popover</code> event occurs). This is considered a "manual" triggering of the popover.
-  </p>
+  </p> -->
   <!-- ```js
 myPopover.toggle()
 ``` -->
@@ -259,34 +279,34 @@ Hides and destroys an element's popover (Removes stored data on the DOM element)
 myPopover.dispose()
 ``` -->
 
-  <h4>enable</h4>
+  <!-- <h4>enable</h4>
   <p>
     Gives an element's popover the ability to be shown. <b>Popovers are enabled by default.</b>
-  </p>
+  </p> -->
   <!-- ```js
 myPopover.enable()
 ``` -->
 
-  <h4>disable</h4>
+  <!-- <h4>disable</h4>
   <p>
     Removes the ability for an element's popover to be shown. The popover will only be able to be shown if it is re-enabled.
-  </p>
+  </p> -->
   <!-- ```js
 myPopover.disable()
 ``` -->
 
-  <h4>toggleEnabled</h4>
+  <!-- <h4>toggleEnabled</h4>
   <p>
     Toggles the ability for an element's popover to be shown or hidden.
-  </p>
+  </p> -->
   <!-- ```js
 myPopover.toggleEnabled()
 ``` -->
 
-  <h4>update</h4>
+  <!-- <h4>update</h4>
   <p>
     Updates the position of an element's popover.
-  </p>
+  </p> -->
   <!-- ```js
 myPopover.update()
 ``` -->
@@ -309,7 +329,7 @@ var exampleTriggerEl = document.getElementById('example')
 var popover = bootstrap.Popover.getOrCreateInstance(exampleTriggerEl) // Returns a Bootstrap popover instance
 ``` -->
 
-  <h3>Events</h3>
+  <!-- <h3>Events</h3> -->
 
   <!-- <docs-events-popover /> -->
 

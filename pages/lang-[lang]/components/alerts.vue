@@ -134,10 +134,10 @@ definePageMeta({
   
   <Snippet>
     <Example>
-      <examples-components-alert-dismimssing />
+      <examples-components-alert-dismissing />
     </Example>
     <ExamplesCode
-      path="/components/alert/dismimssing.vue"
+      path="/components/alert/dismissing.vue"
       lang="vue"
     />
   </Snippet>
@@ -187,9 +187,19 @@ See the [triggers](#triggers) section for more details.
 {{< /callout >}} -->
 
   <h3>Triggers</h3>
-  <p>
-    Dismissal can be achieved with the data attribute on a button within the alert as demonstrated below:
-  </p>
+  <Localization>
+    <template #en>
+      <p>
+        Dismissal can be achieved with the data attribute on a button within the alert as demonstrated below:
+      </p>
+    </template>
+    <template #ja>
+      <p>
+        解除は、以下に示すように、アラート内のボタンのdata属性で行うことができます。
+      </p>
+    </template>
+  </Localization>
+
 
   <Snippet>
     <Example>
@@ -211,10 +221,18 @@ See the [triggers](#triggers) section for more details.
 ```
 :::
 :::: -->
-  <p>
-    or on a button outside the alert using the data-bs-target as demonstrated below:
-  </p>
-
+  <Localization>
+    <template #en>
+      <p>
+        or on a button outside the alert using the data-bs-target as demonstrated below:
+      </p>
+    </template>
+    <template #ja>
+      <p>
+        または、以下のようにdata-bs-targetを使用してアラートの外側のボタンに表示します。
+      </p>
+    </template>
+  </Localization>
 
   <Snippet>
     <Example>

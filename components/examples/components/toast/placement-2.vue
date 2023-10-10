@@ -2,13 +2,10 @@
   <b-div
     aria-live="polite"
     aria-atomic="true"
-    background-color="dark"
     position="relative"
-    style="min-height: 240px"
   >
     <ToastContainer
       padding="3"
-      position="absolute"
       top="0"
       end="0"
     >

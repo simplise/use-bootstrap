@@ -49,7 +49,7 @@ definePageMeta({
     </template>
   </Localization>
   <BashSnippet>
-    npm i --save-dev sass nuxt-icon
+    npm i --save-dev @vueuse/nuxt sass nuxt-icon
   </BashSnippet>
 
   <Localization>

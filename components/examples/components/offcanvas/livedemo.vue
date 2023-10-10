@@ -11,7 +11,7 @@
     placement="start"
   >
     <OffcanvasHeader>
-      <OffcanvasTitle>Colored with scrolling</OffcanvasTitle>
+      <OffcanvasTitle>Offcanvas</OffcanvasTitle>
       <CloseButton dismiss="offcanvas" />
     </OffcanvasHeader>
     <OffcanvasBody>

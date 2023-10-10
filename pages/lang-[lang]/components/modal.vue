@@ -1,23 +1,17 @@
 <script setup lang="ts">
 definePageMeta({
-  title: `モーダル Modal`,
-  description: `モーダルでは, JavaScript modal プラグインを使用して, ライトボックス, 通知, カスタムダイアログを作成できます。モーダルの使い方の例を示します。 Use Bootstrap's JavaScript modal plugin to add dialogs to your site for lightboxes, user notifications, or completely custom content.`
+  'title:en': 'Modal',
+  'description:en': ` Use Bootstrap's Vue modal components to add dialogs to your site for lightboxes, user notifications, or completely custom content.`,
+  'title:ja': 'モーダル',
+  'description:ja': 'モーダルでは、 Vue modal コンポーネント を使用して、ライトボックス、 通知、 カスタムダイアログを作成できます。'
 })
 </script>
 
 <template>
-  <!---
-title: モーダル Modal
-description: モーダルでは, JavaScript modal プラグインを使用して, ライトボックス, 通知, カスタムダイアログを作成できます。モーダルの使い方の例を示します。 Use Bootstrap's JavaScript modal plugin to add dialogs to your site for lightboxes, user notifications, or completely custom content.
---->
+  <!-- <h2>How it works</h2>
 
-  <h2>How it works</h2>
 
-  <!-- Bootstrapのモーダルコンポーネントを使い始める前に、メニューオプションが変更されたので、以下を読んでください。
-Before getting started with Bootstrap's modal component, be sure to read the following as our menu options have recently changed. -->
 
-  <!-- モーダルは HTML、CSS、JavaScript で構築されます。モーダルはドキュメント内の他のすべてのものの上に配置され、`<body>` からスクロールを取り除き、モーダルのコンテンツがスクロールするようにします。
-- Modals are built with HTML, CSS, and JavaScript. They're positioned over everything else in the document and remove scroll from the `<body>` so that modal content scrolls instead. -->
   <p>
     モーダルの「背景」をクリックすると、自動的にモーダルが閉じます。
   </p>
@@ -27,7 +21,7 @@ Before getting started with Bootstrap's modal component, be sure to read the fol
       Bootstrapは、一度に1つのモーダルウィンドウしかサポートしていません。ネスト(入れ子)になったモーダルはユーザーエクスペリエンスが低いと考えられるためサポートされていません。
     </li>
     <li> Bootstrap only supports one modal window at a time. Nested modals aren't supported as we believe them to be poor user experiences.</li>
-  </ul>
+  </ul> -->
   <!-- モーダルは position: fixed を使用します。可能な限り、他の要素との干渉を避けるために、モーダルHTMLをトップレベルの位置に配置してください。別の固定要素の中に .modal を入れ子にすると、問題が発生する可能性があります。
 - Modals use `position: fixed`, which can sometimes be a bit particular about its rendering. Whenever possible, place your modal HTML in a top-level position to avoid potential interference from other elements. You'll likely run into issues when nesting a `.modal` within another fixed element. -->
   <!-- 繰り返しになりますが、position: fixedのため、モバイルデバイスでモーダルを使用する際にはいくつかの注意点があります。詳細は See our browser support docs を参照してください。
@@ -79,35 +73,15 @@ Keep reading for demos and usage guidelines. -->
 :::: -->
 
   <h3>Live demo</h3>
-  <p>
-    下のボタンをクリックして、モーダルデモをトグルします。ページの上からスライドダウンしてフェードインします。
-    Toggle a working modal demo by clicking the button below. It will slide down and fade in from the top of the page.
-  </p>
-  <!--
-<div class="modal fade" id="exampleModalLive" tabindex="-1" aria-labelledby="exampleModalLiveLabel" aria-hidden="true">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLiveLabel">Modal title</h5>
-        <b-button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></b-button>
-      </div>
-      <div class="modal-body">
-        <p>Woohoo, you're reading this text in a modal!</p>
-      </div>
-      <div class="modal-footer">
-        <b-button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</b-button>
-        <b-button type="button" class="btn btn-primary">Save changes</b-button>
-      </div>
-    </div>
-  </div>
-</div>
+  <Localization>
+    <template #en>
+      <p>Toggle a working modal demo by clicking the button below. It will slide down and fade in from the top of the page.</p>
+    </template>
+    <template #ja>
+      <p>下のボタンをクリックして、モーダルデモをトグルします。ページの上からスライドダウンしてフェードインします。</p>
+    </template>
+  </Localization>
 
-<div class="bd-example">
-  <b-button type="button" class="btn btn-primary" toggle="modal" data-bs-target="#exampleModalLive">
-    Launch demo modal
-  </b-button>
-</div>
--->
   <Snippet>
     <Example>
       <examples-components-modal-live />
@@ -119,25 +93,18 @@ Keep reading for demos and usage guidelines. -->
   </Snippet>
 
 
-
-  <!--:::: code-group
-::: code-group-item useBootstrap
-@[code](@examples/components/modal/live.vue)
-:::
-::: code-group-item bootstrap5
-@[code](@examples/components/modal/live.html)
-:::
-:::: -->
-
   <h3 class="mt-2">
     Static backdrop
   </h3>
-  <p>
-    <code>backdrop="static"</code>属性を設定していると、その外側をクリックしてもモーダルが閉じません。下のボタンをクリックして試してみてください。
-  </p>
-  <p>
-    When <code>backdrop="static"</code>attribute is setted, the modal will not close when clicking outside it. Click the button below to try it.
-  </p>
+  <Localization>
+    <template #en>
+      <p>When <code>backdrop="static"</code>attribute is setted, the modal will not close when clicking outside it. Click the button below to try it.</p>
+    </template>
+    <template #ja>
+      <p><code>backdrop="static"</code>属性を設定していると、その外側をクリックしてもモーダルが閉じません。下のボタンをクリックして試してみてください。</p>
+    </template>
+  </Localization>
+
   <Snippet>
     <Example>
       <examples-components-modal-static-backdrop />
@@ -148,24 +115,18 @@ Keep reading for demos and usage guidelines. -->
     />
   </Snippet>
 
-
-
-  <!---:::: code-group
-::: code-group-item useBootstrap
-@[code](@examples/components/modal/static-backdrop.vue)
-:::
-::: code-group-item bootstrap5
-@[code](@examples/components/modal/static-backdrop.html)
-:::
-:::: -->
-
   <h3 class="mt-2">
     Scrolling long content
   </h3>
-  <p>
-    モーダルがユーザーのビューポートやデバイスに対して長すぎると、ページ自体から独立してスクロールします。以下のデモを試してみてください。
-    When modals become too long for the user's viewport or device, they scroll independent of the page itself. Try the demo below to see what we mean.
-  </p>
+  <Localization>
+    <template #en>
+      <p>When modals become too long for the user's viewport or device, they scroll independent of the page itself. Try the demo below to see what we mean.</p>
+    </template>
+    <template #ja>
+      <p>モーダルがユーザーのビューポートやデバイスに対して長すぎると、ページ自体から独立してスクロールします。以下のデモを試してみてください。</p>
+    </template>
+  </Localization>
+
   <Snippet>
     <Example>
       <examples-components-modal-scroll-1 />
@@ -176,20 +137,15 @@ Keep reading for demos and usage guidelines. -->
     />
   </Snippet>
 
+  <Localization>
+    <template #en>
+      <p>You can also create a scrollable modal that allows scroll the modal body by adding <code>scrollable</code> attribute to <code>ModalDialog</code> component.</p>
+    </template>
+    <template #ja>
+      <p>また、<code>ModalDialog</code> コンポーネントに <code>scrollable</code> 属性を追加することで、モーダル本体をスクロールできるスクロール可能なモーダルを作成することもできます。</p>
+    </template>
+  </Localization>
 
-
-  <!--:::: code-group
-::: code-group-item useBootstrap
-@[code](@examples/components/modal/scroll-1.vue)
-:::
-::: code-group-item bootstrap5
-@[code](@examples/components/modal/scroll-1.html)
-:::
-:::: -->
-  <p class="mt-2">
-    また、<code>ModalDialog</code> コンポーネントに <code>scrollable</code> 属性を追加することで、モーダル本体をスクロールできるスクロール可能なモーダルを作成することもできます。
-    You can also create a scrollable modal that allows scroll the modal body by adding <code>scrollable</code> attribute to <code>ModalDialog</code> component.
-  </p>
   <Snippet>
     <Example>
       <examples-components-modal-scroll-2 />
@@ -201,24 +157,18 @@ Keep reading for demos and usage guidelines. -->
   </Snippet>
 
 
-
-  <!--:::: code-group
-::: code-group-item useBootstrap
-@[code](@examples/components/modal/scroll-2.vue)
-:::
-::: code-group-item bootstrap5
-@[code](@examples/components/modal/scroll-2.html)
-:::
-:::: -->
-
-
   <h3 class="mt-2">
     Vertically centered
   </h3>
-  <p>
-    モーダルを垂直方向に中央に配置するために <code>centered</code> 属性を <code>ModalDialog</code> コンポーネント に追加します。
-    Add <code>centered</code> attribute to <code>ModalDialog</code> component to vertically center the modal.
-  </p>
+  <Localization>
+    <template #en>
+      <p>Add <code>centered</code> attribute to <code>ModalDialog</code> component to vertically center the modal.</p>
+    </template>
+    <template #ja>
+      <p>モーダルを垂直方向に中央に配置するために <code>centered</code> 属性を <code>ModalDialog</code> コンポーネント に追加します。</p>
+    </template>
+  </Localization>
+
   <Snippet>
     <Example>
       <examples-components-modal-vertically-centered />
@@ -229,33 +179,30 @@ Keep reading for demos and usage guidelines. -->
     />
   </Snippet>
 
-
-
-  <!--:::: code-group
-::: code-group-item useBootstrap
-@[code](@examples/components/modal/vertically-centered.vue)
-:::
-::: code-group-item bootstrap5
-@[code](@examples/components/modal/vertically-centered.html)
-:::
-:::: -->
-
-
   <h3 class="mt-2">
     Tooltips and popovers
   </h3>
-  <p>
-    <LocalLink to="/components/tooltips">
-      Tooltips
-    </LocalLink>と <LocalLink to="/components/popovers">
-      popovers
-    </LocalLink>は、必要に応じてモーダル内に配置することができます。モーダルが閉じられると、その中にあるツールチップやポップオーバーも自動的に削除されます。
-    <LocalLink to="/components/tooltips">
-      Tooltips
-    </LocalLink> and <LocalLink to="/components/popovers">
-      popovers
-    </LocalLink>can be placed within modals as needed. When modals are closed, any tooltips and popovers within are also automatically dismissed.
-  </p>
+
+  <Localization>
+    <template #en>
+      <p>
+        <LocalLink to="/components/tooltips">
+          Tooltips
+        </LocalLink> and <LocalLink to="/components/popovers">
+          popovers
+        </LocalLink>can be placed within modals as needed. When modals are closed, any tooltips and popovers within are also automatically dismissed.
+      </p>
+    </template>
+    <template #ja>
+      <p>
+        <LocalLink to="/components/tooltips">
+          Tooltips
+        </LocalLink>と <LocalLink to="/components/popovers">
+          popovers
+        </LocalLink>は、必要に応じてモーダル内に配置することができます。モーダルが閉じられると、その中にあるツールチップやポップオーバーも自動的に削除されます。
+      </p>
+    </template>
+  </Localization>
   <Snippet>
     <Example>
       <examples-components-modal-tooltips />
@@ -266,24 +213,18 @@ Keep reading for demos and usage guidelines. -->
     />
   </Snippet>
 
-
-
-  <!--:::: code-group
-::: code-group-item useBootstrap
-@[code](@examples/components/modal/tooltips.vue)
-:::
-::: code-group-item bootstrap5
-@[code](@examples/components/modal/tooltips.html)
-:::
-:::: -->
-
   <h3 class="mt-2">
     Using the grid
   </h3>
-  <p>
-    <code>ModalBody</code> コンポーネントの中に <code>fluid</code> 属性の <code>Container</code> コンポーネントを入れ子にすることで、モーダル内の グリッドシステムを利用します。
-    Utilize the Bootstrap grid system within a modal by nesting <code>Container</code> component with <code>fluid</code> attribute within the <code>ModalBody</code> component. Then, use the normal grid system classes as you would anywhere else.
-  </p>
+  <Localization>
+    <template #en>
+      <p>Utilize the Bootstrap grid system within a modal by nesting <code>Container</code> component with <code>fluid</code> attribute within the <code>ModalBody</code> component. Then, use the normal grid system classes as you would anywhere else.</p>
+    </template>
+    <template #ja>
+      <p><code>ModalBody</code> コンポーネントの中に <code>fluid</code> 属性の <code>Container</code> コンポーネントを入れ子にすることで、モーダル内の グリッドシステムを利用します。</p>
+    </template>
+  </Localization>
+
   <Snippet>
     <Example>
       <examples-components-modal-grid />
@@ -295,32 +236,17 @@ Keep reading for demos and usage guidelines. -->
   </Snippet>
 
 
-
-  <!--:::: code-group
-::: code-group-item useBootstrap
-@[code](@examples/components/modal/grid.vue)
-:::
-::: code-group-item bootstrap5
-@[code](@examples/components/modal/grid.html)
-:::
-:::: -->
-
-
   <h3 class="mt-2">
     Varying modal content
   </h3>
-  <p>
-    クリックされたボタンに応じて、モーダルの内容を変更できます。 <code>event.relatedTarget</code> と [HTML <code>data-bs-*</code> <a href="https://developer.mozilla.org/en-US/docs/Learn/HTML/Howto/Use_data_attributes">HTML data-bs * attributes</a> を使用してください。
-    Have a bunch of buttons that all trigger the same modal with slightly different contents? Use <code>event.relatedTarget</code> and <a href="https://developer.mozilla.org/en-US/docs/Learn/HTML/Howto/Use_data_attributes">HTML data-bs * attributes</a> to vary the contents of the modal depending on which button was clicked.
-  </p>
-  <p>
-    以下は、HTMLとJavaScriptの例に続くライブデモです。 <code>relatedTarget</code> の詳細は <a href="#events">
-      read the modal events docs
-    </a> を参考にしてください。
-    Below is a live demo followed by example HTML and JavaScript. For more information, <a href="#events">
-      read the modal events docs
-    </a> for details on `relatedTarget`.
-  </p>
+  <Localization>
+    <template #en>
+      <p>Have a bunch of buttons that all trigger the same modal with slightly different contents? Use <code>event.relatedTarget</code> and <a href="https://developer.mozilla.org/en-US/docs/Learn/HTML/Howto/Use_data_attributes">HTML data-bs * attributes</a> to vary the contents of the modal depending on which button was clicked.</p>
+    </template>
+    <template #ja>
+      <p>クリックされたボタンに応じて、モーダルの内容を変更できます。 <code>event.relatedTarget</code> と HTML <code>data-bs-*</code> <a href="https://developer.mozilla.org/en-US/docs/Learn/HTML/Howto/Use_data_attributes">HTML data-bs * attributes</a> を使用してください。</p>
+    </template>
+  </Localization>
 
   <Snippet>
     <Example>
@@ -332,15 +258,6 @@ Keep reading for demos and usage guidelines. -->
     />
   </Snippet>
 
-
-  <!--:::: code-group
-::: code-group-item useBootstrap
-@[code](@examples/components/modal/varying.vue)
-:::
-::: code-group-item bootstrap5
-@[code](@examples/components/modal/varying.html)
-:::
-:::: -->
 
   <!-- ```js
 var exampleModal = document.getElementById('exampleModal')
@@ -364,10 +281,16 @@ exampleModal.addEventListener('show.bs.modal', function (event) {
   <h3 class="mt-2">
     Toggle between modals
   </h3>
-  <p>
-    <code>data-bs-target</code> 属性と <code>data-bs-toggle</code> 属性を利用して、複数のモーダルを切り替え可能です。 複数のモーダルを同時に開くことはできないことに注意してください —この方法は、2つの別々のモーダルを切り替えるだけです。
-    Toggle between multiple modals with some clever placement of the <code>data-bs-target</code> and <code>data-bs-toggle</code> attributes. For example, you could toggle a password reset modal from within an already open sign in modal. <b>Please note multiple modals cannot be open at the same time</b>—this method simply toggles between two separate modals.
-  </p>
+  <Localization>
+    <template #en>
+      <p>Toggle between multiple modals with some clever placement of the <code>data-bs-target</code> and <code>data-bs-toggle</code> attributes. </p>
+      <p>For example, you could toggle a password reset modal from within an already open sign in modal. <b>Please note multiple modals cannot be open at the same time</b>—this method simply toggles between two separate modals.</p>
+    </template>
+    <template #ja>
+      <p><code>target</code> 属性と <code>toggle</code> 属性を利用して、複数のモーダルを切り替え可能です。 </p>
+      <p>複数のモーダルを同時に開くことはできないことに注意してください —この方法は、2つの別々のモーダルを切り替えるだけです。</p>
+    </template>
+  </Localization>
 
   <Snippet>
     <Example>
@@ -381,66 +304,53 @@ exampleModal.addEventListener('show.bs.modal', function (event) {
 
 
 
-  <!--:::: code-group
-::: code-group-item useBootstrap
-@[code](@examples/components/modal/toggle.vue)
-:::
-::: code-group-item bootstrap5
-@[code](@examples/components/modal/toggle.html)
-:::
-:::: -->
-
-  <h3 class="mt-2">
-    Change animation
-  </h3>
-  <p>
-    変数 <code>$modal-fade-transform</code> はモーダルフェードインアニメーションの前の <code>.modal-dialog</code> のトランスフォーム状態を決定し、変数 <code>$modal-show-transform</code> はモーダルフェードインアニメーションの終了時の <code>.modal-dialog</code> のトランスフォーム状態を決定します。
-    The <code>$modal-fade-transform</code> variable determines the transform state of <code>.modal-dialog</code> before the modal fade-in animation, the <code>$modal-show-transform</code> variable determines the transform of <code>.modal-dialog</code> at the end of the modal fade-in animation.
-  </p>
-  <p>
-    例えばズームインアニメーションを作りたい場合は、$modal-fade-transform: scale(.8)を設定します。
-    If you want for example a zoom-in animation, you can set <code>$modal-fade-transform: scale(.8)</code>.
-  </p>
-
   <h3>Remove animation</h3>
+  <Localization>
+    <template #en>
+      <p>For modals that simply appear rather than fade in to view, remove the <code>.fade</code> class from your modal markup.</p>
+    </template>
+    <template #ja>
+      <p>フェードインして表示するのではなく、単に表示するだけのモーダルの場合は、<code>.fade</code> クラスを削除します。</p>
+    </template>
+  </Localization>
 
-  <p>
-    フェードインして表示するのではなく、単に表示するだけのモーダルの場合は、<code>.fade</code> クラスを削除します。
-    For modals that simply appear rather than fade in to view, remove the <code>.fade</code> class from your modal markup.
-  </p>
-
-  <!--```html
-<div class="modal" tabindex="-1" aria-labelledby="..." aria-hidden="true">
-  ...
-</div>
-``` -->
-
-  <h3>Dynamic heights</h3>
+  <!-- <h3>Dynamic heights</h3>
   <p>
     モーダルの高さが開いている間に変更された場合は、スクロールバーが表示されたときのモーダルの位置を再調整するために <code>myModal.handleUpdate()</code> を呼び出す必要があります。
     If the height of a modal changes while it is open, you should call <code>myModal.handleUpdate()</code> to readjust the modal's position in case a scrollbar appears.
-  </p>
+  </p> -->
   <!-- ### Accessibility
 
 必ず .modal にモーダルのタイトルを参照する aria-labelledby="...." を追加してください。さらに、.modal に aria-describedby を追加することで、モーダルダイアログの説明を与えることができます。JavaScriptで既に追加しているので、role="dialog"を追加する必要はありません。
 Be sure to add `aria-labelledby="..."`, referencing the modal title, to `.modal`. Additionally, you may give a description of your modal dialog with `aria-describedby` on `.modal`. Note that you don't need to add `role="dialog"` since we already add it via JavaScript. -->
 
-  <h3>Embedding YouTube videos</h3>
+  <!-- <h3>Embedding YouTube videos</h3>
   <p>
     YouTubeの動画をモーダルに埋め込むには、BootstrapにはないJavaScriptを追加して自動で再生を停止させるなどの工夫が必要です。詳しくは、<a href="https://stackoverflow.com/questions/18622508/bootstrap-3-and-youtube-in-modal">See this helpful Stack Overflow post</a> を参照にしてください。
     Embedding YouTube videos in modals requires additional JavaScript not in Bootstrap to automatically stop playback and more. <a href="https://stackoverflow.com/questions/18622508/bootstrap-3-and-youtube-in-modal">See this helpful Stack Overflow post</a> for more information.
-  </p>
+  </p> -->
 
   <h2>Optional sizes</h2>
-  <p>
-    モーダルには3つのオプションのサイズがあり、<code>.modal-dialog</code> に配置することができます。これらのサイズは、狭いビューポートでの水平スクロールバーを避けるために、特定のブレークポイントで有効になります。
-    Modals have three optional sizes, available via modifier classes to be placed on a <code>.modal-dialog</code>. These sizes kick in at certain breakpoints to avoid horizontal scrollbars on narrower viewports.
-  </p>
+  <Localization>
+    <template #en>
+      <p>Modals have three optional sizes, available via modifier classes to be placed on a <code>.modal-dialog</code>. </p>
+      <p>These sizes kick in at certain breakpoints to avoid horizontal scrollbars on narrower viewports.</p>
+    </template>
+    <template #ja>
+      <p>モーダルには3つのオプションのサイズがあり、<code>.modal-dialog</code> に配置することができます。</p>
+      <p>これらのサイズは、狭いビューポートでの水平スクロールバーを避けるために、特定のブレークポイントで有効になります。</p>
+    </template>
+  </Localization>
+
   <!-- <docs-descriptions-modal-optinalsizes /> -->
-  <p>
-    デフォルトのモーダルは、“medium” サイズのモーダルを構成します。
-    Our default modal without modifier class constitutes the "medium" size modal.
-  </p>
+  <Localization>
+    <template #en>
+      <p>Our default modal without modifier class constitutes the "medium" size modal.</p>
+    </template>
+    <template #ja>
+      <p>デフォルトのモーダルは、“medium” サイズのモーダルを構成します。</p>
+    </template>
+  </Localization>
 
   <Snippet>
     <Example>
@@ -452,23 +362,18 @@ Be sure to add `aria-labelledby="..."`, referencing the modal title, to `.modal`
     />
   </Snippet>
 
-
-  <!--:::: code-group
-::: code-group-item useBootstrap
-@[code](@examples/components/modal/optinalsizes.vue)
-:::
-::: code-group-item bootstrap5
-@[code](@examples/components/modal/optinalsizes.html)
-:::
-:::: -->
-
   <h2 class="mt-2">
     Fullscreen Modal
   </h2>
-  <p>
-    <code>.modal-dialog</code> には 下記のクラスをついかすることにより、フルスクリーンのモーダルを利用可能です。
-    Another override is the option to pop up a modal that covers the user viewport, available via modifier classes that are placed on a <code>.modal-dialog</code>.
-  </p>
+  <Localization>
+    <template #en>
+      <p>Another override is the option to pop up a modal that covers the user viewport, available via modifier classes that are placed on a <code>.modal-dialog</code>.</p>
+    </template>
+    <template #ja>
+      <p><code>.modal-dialog</code> には 下記のクラスをついかすることにより、フルスクリーンのモーダルを利用可能です。</p>
+    </template>
+  </Localization>
+
   <docs-descriptions-modal-fullscreen />
 
 
@@ -477,7 +382,7 @@ Be sure to add `aria-labelledby="..."`, referencing the modal title, to `.modal`
       <examples-components-modal-fullscreen />
     </Example>
     <ExamplesCode
-      path="/components/modal/.vue"
+      path="/components/modal/fullscreen.vue"
       lang="vue"
     />
   </Snippet>
@@ -509,7 +414,7 @@ Be sure to add `aria-labelledby="..."`, referencing the modal title, to `.modal`
 {{< scss-docs name="modal-fullscreen-loop" file="scss/_modal.scss" >}}
 -->
 
-  <h2 class="mt-2">
+  <!-- <h2 class="mt-2">
     Usage
   </h2>
   <p>
@@ -521,13 +426,13 @@ Be sure to add `aria-labelledby="..."`, referencing the modal title, to `.modal`
   <p>
     モーダルプラグインは、データ属性やJavaScriptを使って、必要に応じて隠しコンテンツを切り替えます。また、デフォルトのスクロール動作を上書きするために <code>.modal-open</code> を <code> body </code> に追加し、モーダルの外側をクリックしたときに表示されたモーダルを削除するためのクリック領域を提供するために <code>.modal-backdrop</code> を生成します。
     Activate a modal without writing JavaScript. Set <code>toggle="modal"</code> on a controller element, like a button, along with a <code>data-bs-target="#foo"</code> or <code>href="#foo"</code> to target a specific modal to toggle.
-  </p>
+  </p> -->
   <!--
 ```html
 <b-button type="button" toggle="modal" data-bs-target="#myModal">Launch modal</b-button>
 ``` -->
 
-  <h4>Dismiss</h4>
+  <!-- <h4>Dismiss</h4> -->
 
   <!--
 {{% js-dismiss "modal" %}}
@@ -548,14 +453,14 @@ Create a modal with a single line of JavaScript:
 var myModal = new bootstrap.Modal(document.getElementById('myModal'), options)
 ``` -->
 
-  <h3>Options</h3>
+  <!-- <h3>Options</h3> -->
 
   <!-- オプションは、データ属性またはJavaScriptで渡すことができます。データ属性の場合は、data-bs-backdrop="" のように data-bs- にオプション名を追加します。
 Options can be passed via data attributes or JavaScript. For data attributes, append the option name to `data-bs-`, as in `data-bs-backdrop=""`. -->
 
   <!-- <docs-options-modal /> -->
 
-  <h3>Methods</h3>
+  <!-- <h3>Methods</h3> -->
 
   <!--
 {{< callout danger >}}
@@ -563,33 +468,33 @@ Options can be passed via data attributes or JavaScript. For data attributes, ap
 {{< /callout >}}
 -->
 
-  <h4>Passing options</h4>
+  <!-- <h4>Passing options</h4>
   <p>
     モーダルとしてコンテンツをアクティブにします。オプションの <code>object</code>を受け取ります。
     Activates your content as a modal. Accepts an optional options <code>object</code>.
-  </p>
+  </p> -->
   <!-- ```js
 var myModal = new bootstrap.Modal(document.getElementById('myModal'), {
   keyboard: false
 })
 ``` -->
 
-  <h4>toggle</h4>
+  <!-- <h4>toggle</h4>
   <p>
     モーダルを手動で切り替えます。モーダルが実際に表示または非表示になる前に呼び出し元に戻ります (<code>shown.bs.modal</code> または <code>hidden.bs.modal</code> イベントが発生する前)。
     Manually toggles a modal.
     <b>Returns to the caller before the modal has actually been shown or hidden</b> (i.e. before the <code>shown.bs.modal</code> or <code>hidden.bs.modal</code> event occurs).
-  </p>
+  </p> -->
   <!-- ```js
 myModal.toggle()
 ``` -->
 
-  <h4>show</h4>
+  <!-- <h4>show</h4>
   <p>
     手動でモーダルを開きます。モーダルが実際に表示される前に呼び出し元に戻ります (<code>shown.bs.modal</code> イベントが発生する前)。
     Manually opens a modal.
     <b>Returns to the caller before the modal has actually been shown</b> (i.e. before the <code>shown.bs.modal</code> event occurs).
-  </p>
+  </p> -->
   <!-- ```js
 myModal.show()
 ``` -->
@@ -601,11 +506,11 @@ var modalToggle = document.getElementById('toggleMyModal') // relatedTarget
 myModal.show(modalToggle)
 ``` -->
 
-  <h4>hide</h4>
+  <!-- <h4>hide</h4>
   <p>
     手動でモーダルを非表示にします。モーダルが実際に隠される前に呼び出し元に戻ります **** (<code>hidden.bs.modal</code> イベントが発生する前)。****
     Manually hides a modal. <b>Returns to the caller before the modal has actually been hidden</b> (i.e. before the <code>hidden.bs.modal</code> event occurs).
-  </p>
+  </p> -->
   <!-- ```js
 myModal.hide()
 ``` -->

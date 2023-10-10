@@ -1,8 +1,6 @@
 <template>
   <DropdownMenu>
-    <DropdownItem text>
-      Dropdown item text
-    </DropdownItem>
+    <DropdownItemText>Dropdown item text</DropdownItemText>
     <DropdownItem>Action</DropdownItem>
     <DropdownItem>Another action</DropdownItem>
     <DropdownItem>Something else here</DropdownItem>

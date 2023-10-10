@@ -10,7 +10,7 @@
       <DropdownItem>Action</DropdownItem>
       <DropdownItem>Another action</DropdownItem>
       <DropdownItem>Something else here</DropdownItem>
-      <DropdownItem divider />
+      <DropdownItemDivider />
       <DropdownItem>Separated link</DropdownItem>
     </DropdownMenu>
   </ButtonGroup>
@@ -29,7 +29,7 @@
       <DropdownItem>Action</DropdownItem>
       <DropdownItem>Another action</DropdownItem>
       <DropdownItem>Something else here</DropdownItem>
-      <DropdownItem divider />
+      <DropdownItemDivider />
       <DropdownItem>Separated link</DropdownItem>
     </DropdownMenu>
   </ButtonGroup>

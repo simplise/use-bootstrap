@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "name": "usebootstrap-module-playground",
+  "scripts": {
+    "builud": "webpack"
+  }
+}

@@ -16,5 +16,9 @@
     size="3em"
     margin="2"
   />
-  <BvIcon name="shop" />
+  <BvIcon 
+    name="shop"
+    iconset="bi"
+    margin="2"
+  />
 </template>

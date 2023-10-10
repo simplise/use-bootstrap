@@ -40,13 +40,10 @@ class="language-sh"
             href="/lang-en/"
             class="btn btn-lg bd-btn-lg btn-bd-primary d-flex align-items-center justify-content-center fw-semibold"
           >
-            <svg
+            <Icon
+              name="uil:github"
               class="bi me-2"
-              aria-hidden="true"
-            >
-              <Icon name="uil:github" />
-              <use xlink:href="#book-half" />
-            </svg>
+            />
             Read the docs
           </a>
         </div>
@@ -157,7 +154,7 @@ class="language-sh"
           Install via package manager
         </h3>
         <p class="pe-lg-5">
-          Install use-bootstrap’s source Vue Components files via npm. Package managed installs don’t include Bootstrap SCSS files. 
+          Install use-bootstrap’s source Vue Components files via npm. Package managed installs don’t include Bootstrap SCSS files.
           <!-- You can also <a href="https://github.com/twbs/examples/">use any demo from our Examples repo</a> to quickly jumpstart Bootstrap projects. -->
         </p>
         <div class="highlight">
@@ -167,7 +164,7 @@ class="language-sh"
           ><code
 class="language-sh"
                                     data-lang="sh"
-          ><span class="line"><span class="cl">npm install usebootstrap</span></span></code></pre>
+          ><span class="line"><span class="cl">npm install bootstrap usebootstrap @vueuse/nuxt</span></span></code></pre>
         </div>
         <p>
           <a href="/docs/5.3/getting-started/download/">Read our installation docs</a> for more info and additional package managers.

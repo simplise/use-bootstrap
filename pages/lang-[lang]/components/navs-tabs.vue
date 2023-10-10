@@ -1,24 +1,39 @@
 <script setup lang="ts">
 definePageMeta({
-  title: `ナブとタブ Navs and tabs`,
-  description: `Bootstrap に含まれるナビゲーションコンポーネントをどのように使用するかのドキュメントと例です。 Documentation and examples for how to use Bootstrap's included navigation components.`
+  'title:en': 'Navs and tabs',
+  'description:en': `Documentation and examples for how to use Bootstrap's included navigation components.`,
+  'title:ja': 'ナブとタブ',
+  'description:ja': 'Bootstrap に含まれるナビゲーションコンポーネントをどのように使用するかのドキュメントと例です。'
 })
 </script>
 
 <template>
-  <!---
-title: ナブとタブ Navs and tabs
-description: Bootstrap に含まれるナビゲーションコンポーネントをどのように使用するかのドキュメントと例です。 Documentation and examples for how to use Bootstrap's included navigation components.
---->
   <h2>Base nav</h2>
-  <p>
-    Bootstrap で利用可能なナビゲーションは、基本的な <code>NavList</code> コンポーネントからアクティブな状態と無効な状態まで、一般的なマークアップとスタイルを共有します。それぞれのスタイルを切り替えるために修飾子クラスを入れ替えます。
-    Navigation available in Bootstrap share general markup and styles, from the base <code>NavList</code> component to the active and disabled states. Swap modifier classes to switch between each style.
-  </p>
-  <p>
-    ベースの <code>NavList</code> コンポーネントは flexbox で構築されており、すべてのタイプのナビゲーションコンポーネントを構築するための強力な基盤を提供します。これには、いくつかのスタイルのオーバーライド (リストを扱うための)、より大きなヒットエリアのためのリンクのパディング、基本的な無効化されたスタイルが含まれています。
-    The base <code>NavList</code> component is built with flexbox and provide a strong foundation for building all types of navigation components. It includes some style overrides (for working with lists), some link padding for larger hit areas, and basic disabled styling.
-  </p>
+  <Localization>
+    <template #en>
+      <p>
+        Navigation available in Bootstrap share general markup and styles, from the base <code>NavList</code> component to the active and disabled states. Swap modifier classes to switch between each style.
+      </p>
+    </template>
+    <template #ja>
+      <p>
+        Bootstrap で利用可能なナビゲーションは、基本的な <code>NavList</code> コンポーネントからアクティブな状態と無効な状態まで、一般的なマークアップとスタイルを共有します。それぞれのスタイルを切り替えるために修飾子クラスを入れ替えます。
+      </p>
+    </template>
+  </Localization>
+
+  <Localization>
+    <template #en>
+      <p>
+        The base <code>NavList</code> component is built with flexbox and provide a strong foundation for building all types of navigation components. It includes some style overrides (for working with lists), some link padding for larger hit areas, and basic disabled styling.
+      </p>
+    </template>
+    <template #ja>
+      <p>
+        ベースの <code>NavList</code> コンポーネントは flexbox で構築されており、すべてのタイプのナビゲーションコンポーネントを構築するための強力な基盤を提供します。これには、いくつかのスタイルのオーバーライド (リストを扱うための)、より大きなヒットエリアのためのリンクのパディング、基本的な無効化されたスタイルが含まれています。
+      </p>
+    </template>
+  </Localization>
   <!-- {{< callout info >}}
 The base `NavList` component does not include any `.active` state. The following examples include the class, mainly to demonstrate that this particular class does not trigger any special styling.
 
@@ -69,24 +84,51 @@ Classes are used throughout, so your markup can be super flexible. Use `<ul>`s l
 
   <h2>Available styles</h2>
 
-  <p>
-    <code>NavList</code> コンポーネントのスタイルを修飾子とユーティリティで変更します。必要に応じて組み合わせて使用することもできますし、独自のスタイルを構築することもできます。
-    Change the style of <code>NavList</code>s component with modifiers and utilities. Mix and match as needed, or build your own.
-  </p>
+  <Localization>
+    <template #en>
+      <p>
+        Change the style of <code>NavList</code>s component with modifiers and utilities. Mix and match as needed, or build your own.
+      </p>
+    </template>
+    <template #ja>
+      <p>
+        <code>NavList</code> コンポーネントのスタイルを修飾子とユーティリティで変更します。必要に応じて組み合わせて使用することもできますし、独自のスタイルを構築することもできます。
+      </p>
+    </template>
+  </Localization>
 
   <h3>Horizontal alignment</h3>
-  <p>
-    <LocalLink to="/layout/grid#horizontal-alignment">
-      flexbox utilities
-    </LocalLink>を使用して、ナビゲーションの水平方向の配置を変更できます。 デフォルトでは、ナビゲーションは左揃えですが、簡単に中央または右揃えに変更できます。
-    Change the horizontal alignment of your nav with <LocalLink to="/layout/grid#horizontal-alignment">
-      flexbox utilities
-    </LocalLink>. By default, navs are left-aligned, but you can easily change them to center or right aligned.
-  </p>
-  <p>
-    <code>justify-content="center"</code> 属性で中央揃えにします。
-    Centered with <code>justify-content="center"</code> attribute:
-  </p>
+
+  <Localization>
+    <template #en>
+      <p>
+        Change the horizontal alignment of your nav with <LocalLink to="/layout/grid#horizontal-alignment">
+          flexbox utilities
+        </LocalLink>. By default, navs are left-aligned, but you can easily change them to center or right aligned.
+      </p>
+    </template>
+    <template #ja>
+      <p>
+        <LocalLink to="/layout/grid#horizontal-alignment">
+          flexbox utilities
+        </LocalLink>を使用して、ナビゲーションの水平方向の配置を変更できます。 デフォルトでは、ナビゲーションは左揃えですが、簡単に中央または右揃えに変更できます。
+      </p>
+    </template>
+  </Localization>
+
+  <Localization>
+    <template #en>
+      <p>
+        Centered with <code>justify-content="center"</code> attribute:
+      </p>
+    </template>
+    <template #ja>
+      <p>
+        <code>justify-content="center"</code> 属性で中央揃えにします。
+      </p>
+    </template>
+  </Localization>
+
   <Snippet>
     <Example>
       <examples-components-nav-tab-horizontal-1 />
@@ -106,10 +148,20 @@ Classes are used throughout, so your markup can be super flexible. Use `<ul>`s l
 @[code](@examples/components/nav-tab/horizontal-1.html)
 :::
 :::: -->
-  <p>
-    <code>justify-content="end"</code> 属性で右揃えにします。
-    Right-aligned with <code>justify-content="end"</code> attribute:
-  </p>
+
+  <Localization>
+    <template #en>
+      <p>
+        Right-aligned with <code>justify-content="end"</code> attribute:
+      </p>
+    </template>
+    <template #ja>
+      <p>
+        <code>justify-content="end"</code> 属性で右揃えにします。
+      </p>
+    </template>
+  </Localization>
+
   <Snippet>
     <Example>
       <examples-components-nav-tab-horizontal-2 />
@@ -131,10 +183,20 @@ Classes are used throughout, so your markup can be super flexible. Use `<ul>`s l
 :::: -->
 
   <h3>Vertical</h3>
-  <p>
-    <code>flex-direction="column"</code> 属性で flex item(フレックスアイテム) の方向を変更してナビゲーションを縦に積み上げることができます。一部のビューポートでは縦にしたいが、他のビューポートでは縦したくない場合は、<code>flex-direction="sm-column"</code> を使用してください。
-    Stack your navigation by changing the flex item direction with the <code>flex-direction="column"</code> attribute. Need to stack them on some viewports but not others? Use the responsive versions (e.g., <code>flex-direction="sm-column"</code>).
-  </p>
+
+  <Localization>
+    <template #en>
+      <p>
+        Stack your navigation by changing the flex item direction with the <code>flex-direction="column"</code> attribute. Need to stack them on some viewports but not others? Use the responsive versions (e.g., <code>flex-direction="sm-column"</code>).
+      </p>
+    </template>
+    <template #ja>
+      <p>
+        <code>flex-direction="column"</code> 属性で flex item(フレックスアイテム) の方向を変更してナビゲーションを縦に積み上げることができます。一部のビューポートでは縦にしたいが、他のビューポートでは縦したくない場合は、<code>flex-direction="sm-column"</code> を使用してください。
+      </p>
+    </template>
+  </Localization>
+
   <Snippet>
     <Example>
       <examples-components-nav-tab-vertical-1 />
@@ -154,10 +216,20 @@ Classes are used throughout, so your markup can be super flexible. Use `<ul>`s l
 @[code](@examples/components/nav-tab/vertical-1.html)
 :::
 :::: -->
-  <p>
-    いつものように、<code>NavItem</code> コンポーネントがなくても縦方向のナビゲーションは可能です。
-    As always, vertical navigation is possible without <code>NavItem</code>s component, too.
-  </p>
+
+  <Localization>
+    <template #en>
+      <p>
+        As always, vertical navigation is possible without <code>NavItem</code>s component, too.
+      </p>
+    </template>
+    <template #ja>
+      <p>
+        いつものように、<code>NavItem</code> コンポーネントがなくても縦方向のナビゲーションは可能です。
+      </p>
+    </template>
+  </Localization>
+
   <Snippet>
     <Example>
       <examples-components-nav-tab-vertical-2 />
@@ -179,14 +251,23 @@ Classes are used throughout, so your markup can be super flexible. Use `<ul>`s l
 :::: -->
 
   <h3>Tabs</h3>
-  <p>
-    <code>nav="tabs"</code> 属性を追加してタブ付きのインターフェイスを生成できます。 <a href="#javascript-behavior">
-      tab JavaScript plugin
-    </a>でタブ可能領域を作成します。
-    Takes the basic nav from above and adds the <code>nav="tabs"</code> attribute to generate a tabbed interface. Use them to create tabbable regions with our <a to="#javascript-behavior">
-      tab JavaScript plugin
-    </a>.
-  </p>
+
+  <Localization>
+    <template #en>
+      <p>
+        Takes the basic nav from above and adds the <code>nav="tabs"</code> attribute to generate a tabbed interface. Use them to create tabbable regions with our <a to="#javascript-behavior">
+          tab JavaScript plugin</a>.
+      </p>
+    </template>
+    <template #ja>
+      <p>
+        <code>nav="tabs"</code> 属性を追加してタブ付きのインターフェイスを生成できます。 <a href="#javascript-behavior">
+          tab JavaScript plugin
+        </a>でタブ可能領域を作成します。
+      </p>
+    </template>
+  </Localization>
+
   <Snippet>
     <Example>
       <examples-components-nav-tab-tabs />
@@ -210,10 +291,19 @@ Classes are used throughout, so your markup can be super flexible. Use `<ul>`s l
   <h3 class="mt-3">
     Pills
   </h3>
-  <p>
-    同じ HTML を使用しますが、代わりに <code>nav="pills"^^</code> 属性を使用します。
-    Take that same HTML, but use <code>nav="pills"</code> attribute instead:
-  </p>
+
+  <Localization>
+    <template #en>
+      <p>
+        Take that same HTML, but use <code>nav="pills"</code> attribute instead:
+      </p>
+    </template>
+    <template #ja>
+      <p>
+        同じ HTML を使用しますが、代わりに <code>nav="pills"^^</code> 属性を使用します。
+      </p>
+    </template>
+  </Localization>
   <Snippet>
     <Example>
       <examples-components-nav-tab-pills />
@@ -237,10 +327,20 @@ Classes are used throughout, so your markup can be super flexible. Use `<ul>`s l
   <h3 class="mt-3">
     Fill and justify
   </h3>
-  <p>
-    <code>NavList</code> の内容が利用可能な幅いっぱいになるように強制します。<code>NavItem</code> コンポーネントで利用可能なすべてのスペースを比例して埋めるには、 <code>fill</code> 属性を使います。すべてのナビゲーションアイテムの幅が同じではないことに注意してください。
-    Force your <code>NavList</code>'s contents to extend the full available width one of two modifier classes. To proportionately fill all available space with your <code>NavItem</code>s component, use <code>fill</code> attribute. Notice that all horizontal space is occupied, but not every nav item has the same width.
-  </p>
+
+  <Localization>
+    <template #en>
+      <p>
+        Force your <code>NavList</code>'s contents to extend the full available width one of two modifier classes. To proportionately fill all available space with your <code>NavItem</code>s component, use <code>fill</code> attribute. Notice that all horizontal space is occupied, but not every nav item has the same width.
+      </p>
+    </template>
+    <template #ja>
+      <p>
+        <code>NavList</code> の内容が利用可能な幅いっぱいになるように強制します。<code>NavItem</code> コンポーネントで利用可能なすべてのスペースを比例して埋めるには、 <code>fill</code> 属性を使います。すべてのナビゲーションアイテムの幅が同じではないことに注意してください。
+      </p>
+    </template>
+  </Localization>
+
   <Snippet>
     <Example>
       <examples-components-nav-tab-fill-justify-1 />
@@ -260,12 +360,19 @@ Classes are used throughout, so your markup can be super flexible. Use `<ul>`s l
 @[code](@examples/components/nav-tab/fill-justify-1.html)
 :::
 :::: -->
-  <p class="mt-2">
-    <code>Nav</code> コンポーネントベースのナビゲーションを使用する場合、<code>NavLink</code> コンポーネントのスタイリングに必要なのは <code>NavLink</code> コンポーネントだけなので、 <code>NavItem</code> コンポーネントを省略しても問題ありません。
-  </p>
-  <p>
-    When using a <code>Nav</code> component-based navigation, you can safely omit <code>NavItem</code> compoentnt as only <code>NavLink</code> comoponent is required for styling <code>NavLink</code> component elements.
-  </p>
+  <Localization>
+    <template #en>
+      <p>
+        When using a <code>Nav</code> component-based navigation, you can safely omit <code>NavItem</code> compoentnt as only <code>NavLink</code> comoponent is required for styling <code>NavLink</code> component elements.
+      </p>
+    </template>
+    <template #ja>
+      <p class="mt-2">
+        <code>Nav</code> コンポーネントベースのナビゲーションを使用する場合、<code>NavLink</code> コンポーネントのスタイリングに必要なのは <code>NavLink</code> コンポーネントだけなので、 <code>NavItem</code> コンポーネントを省略しても問題ありません。
+      </p>
+    </template>
+  </Localization>
+
   <Snippet>
     <Example>
       <examples-components-nav-tab-fill-justify-2 />
@@ -285,10 +392,19 @@ Classes are used throughout, so your markup can be super flexible. Use `<ul>`s l
 @[code](@examples/components/nav-tab/fill-justify-2.html)
 :::
 ::::-->
-  <p class="mt-3">
-    アイテムを等しいサイズにしたい場合は <code>justified</code> 属性を使用します。 すべての水平方向のスペースはナビゲーションリンクで占められますが、上記の <code>fill</code> 属性とは異なり、すべてのナビゲーションアイテムは同じ幅になります。
-    For equal-width elements, use <code>justified</code> attribute. All horizontal space will be occupied by nav links, but unlike the <code>fill</code> attribute above, every nav item will be the same width.
-  </p>
+  <Localization>
+    <template #en>
+      <p>
+        For equal-width elements, use <code>justified</code> attribute. All horizontal space will be occupied by nav links, but unlike the <code>fill</code> attribute above, every nav item will be the same width.
+      </p>
+    </template>
+    <template #ja>
+      <p class="mt-3">
+        アイテムを等しいサイズにしたい場合は <code>justified</code> 属性を使用します。 すべての水平方向のスペースはナビゲーションリンクで占められますが、上記の <code>fill</code> 属性とは異なり、すべてのナビゲーションアイテムは同じ幅になります。
+      </p>
+    </template>
+  </Localization>
+
   <Snippet>
     <Example>
       <examples-components-nav-tab-fill-justify-3 />
@@ -308,10 +424,19 @@ Classes are used throughout, so your markup can be super flexible. Use `<ul>`s l
 @[code](@examples/components/nav-tab/fill-justify-3.html)
 :::
 :::: -->
-  <p>
-    <code>Nav</code> コンポーネントに <code>fill</code> 属性を適用した場合は
-    Similar to the <code>fill</code> component example using a <code>Nav</code> component-based navigation.
-  </p>
+  <Localization>
+    <template #en>
+      <p>
+        Similar to the <code>fill</code> component example using a <code>Nav</code> component-based navigation.
+      </p>
+    </template>
+    <template #ja>
+      <p>
+        <code>Nav</code> コンポーネントに <code>fill</code> 属性を適用した場合は
+      </p>
+    </template>
+  </Localization>
+
   <Snippet>
     <Example>
       <examples-components-nav-tab-fill-justify-4 />
@@ -335,14 +460,24 @@ Classes are used throughout, so your markup can be super flexible. Use `<ul>`s l
   <h2 class="mt-3">
     Working with flex utilities
   </h2>
-  <p>
-    レスポンシブナブのバリエーションが必要な場合は <LocalLink to="/utilities/flex">
-      flexbox utilities
-    </LocalLink> を使用します。 これらの utilities(ユーティリティ) は冗長ではありますが、レスポンシブブレークポイント間でより大きなカスタマイズが可能です。 下の例では、ナビは最も低いブレークポイントの場合は縦になり、幅をひろげることで、水平レイアウトになります。
-    If you need responsive nav variations, consider using a series of <LocalLink to="/utilities/flex">
-      flexbox utilities
-    </LocalLink>. While more verbose, these utilities offer greater customization across responsive breakpoints. In the example below, our nav will be stacked on the lowest breakpoint, then adapt to a horizontal layout that fills the available width starting from the small breakpoint.
-  </p>
+
+  <Localization>
+    <template #en>
+      <p>
+        If you need responsive nav variations, consider using a series of <LocalLink to="/utilities/flex">
+          flexbox utilities
+        </LocalLink>. While more verbose, these utilities offer greater customization across responsive breakpoints. In the example below, our nav will be stacked on the lowest breakpoint, then adapt to a horizontal layout that fills the available width starting from the small breakpoint.
+      </p>
+    </template>
+    <template #ja>
+      <p>
+        レスポンシブナブのバリエーションが必要な場合は <LocalLink to="/utilities/flex">
+          flexbox utilities
+        </LocalLink> を使用します。 これらの utilities(ユーティリティ) は冗長ではありますが、レスポンシブブレークポイント間でより大きなカスタマイズが可能です。 下の例では、ナビは最も低いブレークポイントの場合は縦になり、幅をひろげることで、水平レイアウトになります。
+      </p>
+    </template>
+  </Localization>
+
   <Snippet>
     <Example>
       <examples-components-nav-tab-flex />
@@ -366,28 +501,56 @@ Classes are used throughout, so your markup can be super flexible. Use `<ul>`s l
   <h2 class="mt-2">
     Regarding accessibility
   </h2>
-  <p>
-    ナビゲーションバーを提供するためにナビゲーションを使っている場合、<code>NavList</code> コンポーネントの親コンテナに <code>role="navigation"</code> を追加するか、<code>Nav</code> コンポーネントをナビゲーション全体にラップしてください。role を <code>NavList</code> コンポーネント自体に追加しないでください。
-    If you're using navs to provide a navigation bar, be sure to add a <code>role="navigation"</code> to the most logical parent container of the <code>NavList</code> component, or wrap a <code>Nav</code> component around the whole navigation. Do not add the role to the <code>NavList</code> component itself, as this would prevent it from being announced as an actual list by assistive technologies.
-  </p>
-  <p>
-    ナビゲーションバーは、<code>nav="tabs"</code> 属性で視覚的にタブとしてスタイリングされていますが、<code>role="tablist"</code> 、<code>role="tab"</code> 、 <code>role="tabpanel"</code> 属性を与えないでください。 これらは <a href="https://www.w3.org/WAI/ARIA/apg/#tabpanel">WAI ARIA Authoring Practices</a> で説明されているように、動的なタブ付きインターフェースにのみ適切です。<a to="#javascript-behavior">
-      JavaScript behavior
-    </a>を参照してください。JavaScript はアクティブなタブに <code>aria-selected="true"</code> 属性を追加することで選択された状態を処理するため、動的なタブ付きインターフェースでは <code>aria-current</code> 属性は必要ありません。
-    Note that navigation bars, even if visually styled as tabs with the <code>nav="tabs"</code> attribute, should **not** be given <code>role="tablist"</code>, <code>role="tab"</code> or <code>role="tabpanel"</code> attributes. These are only appropriate for dynamic tabbed interfaces, as described in the <a href="https://www.w3.org/WAI/ARIA/apg/#tabpanel" />. See <a to="#javascript-behavior">
-      JavaScript behavior
-    </a> for dynamic tabbed interfaces in this section for an example. The <code>aria-current</code> attribute is not necessary on dynamic tabbed interfaces since our JavaScript handles the selected state by adding <code>aria-selected="true"</code> attribute on the active tab.
-  </p>
+
+  <Localization>
+    <template #en>
+      <p>
+        If you're using navs to provide a navigation bar, be sure to add a <code>role="navigation"</code> to the most logical parent container of the <code>NavList</code> component, or wrap a <code>Nav</code> component around the whole navigation. Do not add the role to the <code>NavList</code> component itself, as this would prevent it from being announced as an actual list by assistive technologies.
+      </p>
+    </template>
+    <template #ja>
+      <p>
+        ナビゲーションバーを提供するためにナビゲーションを使っている場合、<code>NavList</code> コンポーネントの親コンテナに <code>role="navigation"</code> を追加するか、<code>Nav</code> コンポーネントをナビゲーション全体にラップしてください。role を <code>NavList</code> コンポーネント自体に追加しないでください。
+      </p>
+    </template>
+  </Localization>
+
+  <Localization>
+    <template #en>
+      <p>
+        Note that navigation bars, even if visually styled as tabs with the <code>nav="tabs"</code> attribute, should **not** be given <code>role="tablist"</code>, <code>role="tab"</code> or <code>role="tabpanel"</code> attributes. These are only appropriate for dynamic tabbed interfaces, as described in the <a href="https://www.w3.org/WAI/ARIA/apg/#tabpanel" />. See <a to="#javascript-behavior">
+          JavaScript behavior
+        </a> for dynamic tabbed interfaces in this section for an example. The <code>aria-current</code> attribute is not necessary on dynamic tabbed interfaces since our JavaScript handles the selected state by adding <code>aria-selected="true"</code> attribute on the active tab.
+      </p>
+    </template>
+    <template #ja>
+      <p>
+        ナビゲーションバーは、<code>nav="tabs"</code> 属性で視覚的にタブとしてスタイリングされていますが、<code>role="tablist"</code> 、<code>role="tab"</code> 、 <code>role="tabpanel"</code> 属性を与えないでください。 これらは <a href="https://www.w3.org/WAI/ARIA/apg/#tabpanel">WAI ARIA Authoring Practices</a> で説明されているように、動的なタブ付きインターフェースにのみ適切です。<a to="#javascript-behavior">
+          JavaScript behavior
+        </a>を参照してください。JavaScript はアクティブなタブに <code>aria-selected="true"</code> 属性を追加することで選択された状態を処理するため、動的なタブ付きインターフェースでは <code>aria-current</code> 属性は必要ありません。
+      </p>
+    </template>
+  </Localization>
+
 
   <h2>Using dropdowns</h2>
-  <p>
-    dropdown menu(ドロップダウンメニュー)に HTML を少し追加して、<LocalLink to="/components/dropdowns#usage">
-      dropdowns JavaScript plugin
-    </LocalLink>でドロップダウンメニューを追加します。
-    Add dropdown menus with a little extra HTML and the <LocalLink to="/components/dropdowns#usage">
-      dropdowns JavaScript plugin
-    </LocalLink>.
-  </p>
+
+  <Localization>
+    <template #en>
+      <p>
+        Add dropdown menus with a little extra HTML and the <LocalLink to="/components/dropdowns#usage">
+          dropdowns JavaScript plugin
+        </LocalLink>.
+      </p>
+    </template>
+    <template #ja>
+      <p>
+        dropdown menu(ドロップダウンメニュー)に HTML を少し追加して、<LocalLink to="/components/dropdowns#usage">
+          dropdowns JavaScript plugin
+        </LocalLink>でドロップダウンメニューを追加します。
+      </p>
+    </template>
+  </Localization>
 
   <h3>Tabs with dropdowns</h3>
   <Snippet>
@@ -491,10 +654,20 @@ To help fit your needs, this works with `<ul>`-based markup, as shown above, or 
 @[code](@examples/components/nav-tab/behavior-2.html)
 :::
 :::: -->
-  <p>
-    タブのプラグインは pills でも動作します。
-    The tabs plugin also works with pills.
-  </p>
+
+  <Localization>
+    <template #en>
+      <p>
+        The tabs plugin also works with pills.
+      </p>
+    </template>
+    <template #ja>
+      <p>
+        タブのプラグインは pills でも動作します。
+      </p>
+    </template>
+  </Localization>
+
   <Snippet>
     <Example>
       <examples-components-nav-tab-behavior-3 />
@@ -514,10 +687,20 @@ To help fit your needs, this works with `<ul>`-based markup, as shown above, or 
 @[code](@examples/components/nav-tab/behavior-3.html)
 :::
 :::: -->
-  <p>
-    縦の pills でも同様です。
-    And with vertical pills.
-  </p>
+
+  <Localization>
+    <template #en>
+      <p>
+        And with vertical pills.
+      </p>
+    </template>
+    <template #ja>
+      <p>
+        縦の pills でも同様です。
+      </p>
+    </template>
+  </Localization>
+
   <Snippet>
     <Example>
       <examples-components-nav-tab-behavior-4 />
@@ -539,10 +722,19 @@ To help fit your needs, this works with `<ul>`-based markup, as shown above, or 
 :::: -->
 
   <h3>Using data attributes</h3>
-  <p>
-    要素に <code>tab</code> 属性または <code>pill</code> 属性を指定するだけで、JavaScript を書かなくてもタブやピルのナビゲーションを有効にすることができます。これらのデータ属性は <code>nav="tabs"</code> 属性や <code>nav="pills"</code> 属性を持った <code>NavList</code> コンポーネントで使用します。
-    You can activate a tab or pill navigation without writing any JavaScript by simply specifying <code>tab</code> attribute or <code>pill</code> attribute on an element. Use these data attributes on <code>NavList</code> component with <code>nav="tabs"</code> attribute or <code>nav="pills"</code> attribute.
-  </p>
+
+  <Localization>
+    <template #en>
+      <p>
+        You can activate a tab or pill navigation without writing any JavaScript by simply specifying <code>tab</code> attribute or <code>pill</code> attribute on an element. Use these data attributes on <code>NavList</code> component with <code>nav="tabs"</code> attribute or <code>nav="pills"</code> attribute.
+      </p>
+    </template>
+    <template #ja>
+      <p>
+        要素に <code>tab</code> 属性または <code>pill</code> 属性を指定するだけで、JavaScript を書かなくてもタブやピルのナビゲーションを有効にすることができます。これらのデータ属性は <code>nav="tabs"</code> 属性や <code>nav="pills"</code> 属性を持った <code>NavList</code> コンポーネントで使用します。
+      </p>
+    </template>
+  </Localization>
 
   <Snippet>
     <Example>
@@ -593,10 +785,19 @@ bootstrap.Tab.getInstance(triggerFirstTabEl).show() // Select first tab
 ``` -->
 
   <h3>Fade effect</h3>
-  <p>
-    タブをフェードインさせるには、<code>TabPane</code> コンポーネントに <code>fade</code> 属性を追加します。最初のタブペインには、最初のコンテンツを表示するために <code>show</code> 属性を追加する必要があります。
-    To make tabs fade in, add <code>fade</code> atribute to each <code>TabPane</code> component. The first tab pane must also have <code>show</code> attribute to make the initial content visible.
-  </p>
+
+  <Localization>
+    <template #en>
+      <p>
+        To make tabs fade in, add <code>fade</code> atribute to each <code>TabPane</code> component. The first tab pane must also have <code>show</code> attribute to make the initial content visible.
+      </p>
+    </template>
+    <template #ja>
+      <p>
+        タブをフェードインさせるには、<code>TabPane</code> コンポーネントに <code>fade</code> 属性を追加します。最初のタブペインには、最初のコンテンツを表示するために <code>show</code> 属性を追加する必要があります。
+      </p>
+    </template>
+  </Localization>
 
   <Snippet>
     <Example>
@@ -626,10 +827,19 @@ bootstrap.Tab.getInstance(triggerFirstTabEl).show() // Select first tab
 ::: -->
 
   <h4>constructor</h4>
-  <p>
-    tab 要素とコンテンツコンテナをアクティブにします。Tab は、DOM 内のコンテナノードをターゲットとする <code>tab</code> 属性か <code>href</code> 属性のいずれかを持つ必要があります。
-    Activates a tab element and content container. Tab should have either a <code>tab</code> attribute or, if using a link, an <code>href</code> attribute, targeting a container node in the DOM.
-  </p>
+
+  <Localization>
+    <template #en>
+      <p>
+        Activates a tab element and content container. Tab should have either a <code>tab</code> attribute or, if using a link, an <code>href</code> attribute, targeting a container node in the DOM.
+      </p>
+    </template>
+    <template #ja>
+      <p>
+        tab 要素とコンテンツコンテナをアクティブにします。Tab は、DOM 内のコンテナノードをターゲットとする <code>tab</code> 属性か <code>href</code> 属性のいずれかを持つ必要があります。
+      </p>
+    </template>
+  </Localization>
 
   <Snippet>
     <Example>
@@ -652,11 +862,20 @@ bootstrap.Tab.getInstance(triggerFirstTabEl).show() // Select first tab
 :::: -->
 
   <h4>show</h4>
-  <p>
-    指定されたタブを選択し、関連するペインを表示します。以前に選択されていた他のタブは非選択状態になり、関連するペインは非表示になります。
-    <b>タブペインが実際に表示される前に呼び出し元に戻ります</b> ( <code>shown.bs.tab</code> イベントが発生する前)。
-    Selects the given tab and shows its associated pane. Any other tab that was previously selected becomes unselected and its associated pane is hidden. <b>Returns to the caller before the tab pane has actually been shown</b> (i.e. before the <code>shown.bs.tab</code> event occurs).
-  </p>
+
+  <Localization>
+    <template #en>
+      <p>
+        Selects the given tab and shows its associated pane. Any other tab that was previously selected becomes unselected and its associated pane is hidden. <b>Returns to the caller before the tab pane has actually been shown</b> (i.e. before the <code>shown.bs.tab</code> event occurs).
+      </p>
+    </template>
+    <template #ja>
+      <p>
+        指定されたタブを選択し、関連するペインを表示します。以前に選択されていた他のタブは非選択状態になり、関連するペインは非表示になります。
+        <b>タブペインが実際に表示される前に呼び出し元に戻ります</b> ( <code>shown.bs.tab</code> イベントが発生する前)。
+      </p>
+    </template>
+  </Localization>
   <!-- ```js
   var someTabTriggerEl = document.querySelector('#someTabTrigger')
   var tab = new bootstrap.Tab(someTabTriggerEl)
@@ -689,20 +908,52 @@ var tab = bootstrap.Tab.getOrCreateInstance(triggerEl) // Returns a Bootstrap ta
 ``` -->
 
   <h3>Events</h3>
-  <p>
-    新しいタブを表示すると、以下の順番でイベントが発生します。
-    When showing a new tab, the events fire in the following order:
-  </p>
-  <ol>
-    <li> <code>hide.bs.tab</code> (現在のアクティブなタブ)(on the current active tab)</li>
-    <li> <code>show.bs.tab</code> (表示されるタブ)(on the to-be-shown tab)</li>
-    <li> <code>hidden.bs.tab</code> (hide.bs.tab イベントと同じ)(on the previous active tab, the same one as for the <code>hide.bs.tab</code> event)</li>
-    <li> <code>shown.bs.tab</code> (show.bs.tab イベントと同じ)(on the newly-active just-shown tab, the same one as for the <code>show.bs.tab</code> event)</li>
-  </ol>
-  <p>
-    既にアクティブなタブがなかった場合、hide.bs.tab および hidden.bs.tab イベントは発生しません。
-    If no tab was already active, then the <code>hide.bs.tab</code> and <code>hidden.bs.tab</code> events will not be fired.
-  </p>
+
+  <Localization>
+    <template #en>
+      <p>
+        When showing a new tab, the events fire in the following order:
+      </p>
+    </template>
+    <template #ja>
+      <p>
+        新しいタブを表示すると、以下の順番でイベントが発生します。
+      </p>
+    </template>
+  </Localization>
+
+  <Localization>
+    <template #en>
+      <ol>
+        <li> <code>hide.bs.tab</code> (on the current active tab)</li>
+        <li> <code>show.bs.tab</code> (on the to-be-shown tab)</li>
+        <li> <code>hidden.bs.tab</code> (on the previous active tab, the same one as for the <code>hide.bs.tab</code> event)</li>
+        <li> <code>shown.bs.tab</code> (on the newly-active just-shown tab, the same one as for the <code>show.bs.tab</code> event)</li>
+      </ol>
+    </template>
+    <template #ja>
+      <ol>
+        <li> <code>hide.bs.tab</code> (現在のアクティブなタブ)</li>
+        <li> <code>show.bs.tab</code> (表示されるタブ)</li>
+        <li> <code>hidden.bs.tab</code> (hide.bs.tab イベントと同じ)</li>
+        <li> <code>shown.bs.tab</code> (show.bs.tab イベントと同じ)</li>
+      </ol>
+    </template>
+  </Localization>
+
+
+  <Localization>
+    <template #en>
+      <p>
+        If no tab was already active, then the <code>hide.bs.tab</code> and <code>hidden.bs.tab</code> events will not be fired.
+      </p>
+    </template>
+    <template #ja>
+      <p>
+        既にアクティブなタブがなかった場合、hide.bs.tab および hidden.bs.tab イベントは発生しません。
+      </p>
+    </template>
+  </Localization>
   <!-- <docs-events-nav-tab /> -->
 
   <!-- ```js

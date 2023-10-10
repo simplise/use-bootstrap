@@ -1,24 +1,13 @@
 <script setup lang="ts">
 definePageMeta({
-  title: `ディスプレイ Display property`,
-  description: `Display を使用して、コンポーネントの表示を素早くレスポンシブに切り替えられます。よく使う値のサポートと、印刷用スタイルの制御が含まれています。 Quickly and responsively toggle the display value of components and more with our display utilities. Includes support for some of the more common values, as well as some extras for controlling display when printing.`
+  'title:en': 'Display property',
+  'description:en': `Quickly and responsively toggle the display value of components and more with our display utilities. Includes support for some of the more common values, as well as some extras for controlling display when printing.`,
+  'title:ja': 'ディスプレイ',
+  'description:ja': 'Display を使用して、コンポーネントの表示を素早くレスポンシブに切り替えられます。よく使う値のサポートと、印刷用スタイルの制御が含まれています。'
 })
 </script>
 
 <template>
-  <!---
-title: ディスプレイ Display property
-description: Display を使用して、コンポーネントの表示を素早くレスポンシブに切り替えられます。よく使う値のサポートと、印刷用スタイルの制御が含まれています。 Quickly and responsively toggle the display value of components and more with our display utilities. Includes support for some of the more common values, as well as some extras for controlling display when printing.
---->
-  <h2>ディスプレイ Display property</h2>
-
-  <p>
-    Display を使用して、コンポーネントの表示を素早くレスポンシブに切り替えられます。よく使う値のサポートと、印刷用スタイルの制御が含まれています。
-  </p>
-
-  <p>
-    Quickly and responsively toggle the display value of components and more with our display utilities. Includes support for some of the more common values, as well as some extras for controlling display when printing.
-  </p>
   <!-- ## How it works
 
 ディスプレイクラスを使用して、コンポーネントの display property をレスポンシブに切り替えられます。 displayのすべての可能な値のサブセットのみを意図的にサポートします。 クラスは、必要に応じてさまざまな効果のために組み合わせることができます。
@@ -31,28 +20,36 @@ xs から xxl までのすべての breakpoints (ブレークポイント) に�
 
 Display utility classes that apply to all [breakpoints](/layout/breakpoints), from `xs` to `xxl`, have no breakpoint abbreviation in them. This is because those classes are applied from `min-width: 0;` and up, and thus are not bound by a media query. The remaining breakpoints, however, do include a breakpoint abbreviation. -->
 
-  <p>
-    クラス名の形式は以下の通りです。
-  </p>
-
-  <p>
-    As such, the classes are named using the format:
-  </p>
+  <Localization>
+    <template #en>
+      <p>As such, the classes are named using the format:</p>
+    </template>
+    <template #ja>
+      <p>クラス名の形式は以下の通りです。</p>
+    </template>
+  </Localization>
 
   <ul>
-    <li>xs の場合は <code>.display={value}</code> というクラス名が付けられます。 <code>.display={value}</code> for <code>xs</code> </li>
-    <li>sm、md、lg、xl、xxl に対して <code>.display="{breakpoint}-{value}"</code> があります。 <code>.display="{breakpoint}-{value}"</code> for <code>sm</code>, <code>md</code>, <code>lg</code>, <code>xl</code>, and <code>xxl</code>. </li>
+    <Localization>
+      <template #en>
+        <li><code>.display={value}</code> for <code>xs</code></li>
+        <li><code>.display="{breakpoint}-{value}"</code> for <code>sm</code>, <code>md</code>, <code>lg</code>, <code>xl</code>, and <code>xxl</code>.</li>
+      </template>
+      <template #ja>
+        <li>xs の場合は <code>.display={value}</code> というクラス名が付けられます。 </li>
+        <li>sm、md、lg、xl、xxl に対して <code>.display="{breakpoint}-{value}"</code> があります。</li>
+      </template>
+    </Localization>
   </ul>
 
-
-  <p>
-    value の種類は以下の通りです。
-  </p>
-
-  <!--valueのフォントが変わっている-->
-  <p>
-    Where *value* is one of:
-  </p>
+  <Localization>
+    <template #en>
+      <p>Where *value* is one of:</p>
+    </template>
+    <template #ja>
+      <p>value の種類は以下の通りです。</p>
+    </template>
+  </Localization>
 
   <ul>
     <li> <code>none</code></li>
@@ -78,7 +75,7 @@ The media queries affect screen widths with the given breakpoint *or larger*. Fo
 
   <!--components上手く表示されていません-->
   <!-----sm、md、lg、xl、xxl に対して .display="{breakpoint}-{value}" があります。 .display="{breakpoint}-{value}" for sm, md, lg, xl, and xxl. -->
-  
+
   <Snippet>
     <Example>
       <examples-utilities-display-block />
@@ -89,17 +86,7 @@ The media queries affect screen widths with the given breakpoint *or larger*. Fo
     />
   </Snippet>
 
-  <!--:::: code-group
-::: code-group-item useBootstrap
-@[code](@examples/utilities/display/block.vue)
-:::
-::: code-group-item bootstrap5
-@[code](@examples/utilities/display/block.html)
-:::
-:::: -->
 
-  ---
-  
   <Snippet>
     <Example>
       <examples-utilities-display-inline />
@@ -110,28 +97,47 @@ The media queries affect screen widths with the given breakpoint *or larger*. Fo
     />
   </Snippet>
 
-  <!--:::: code-group
-::: code-group-item useBootstrap
-@[code](@examples/utilities/display/inline.vue)
-:::
-::: code-group-item bootstrap5
-@[code](@examples/utilities/display/inline.html)
-:::
-:::: -->
 
   <h3>Hiding elements</h3>
 
-  <p>
-    For faster mobile-friendly development, use responsive display attribute for showing and hiding elements by device. Avoid creating entirely different versions of the same site, instead hide elements responsively for each screen size.
-  </p>
+  <Localization>
+    <template #en>
+      <p>
+        For faster mobile-friendly development, use responsive display attribute for showing and hiding elements by device. Avoid creating entirely different versions of the same site, instead hide elements responsively for each screen size.
+      </p>
+    </template>
+    <template #ja>
+      <p>
+        モバイルフレンドリーな開発を迅速に行うには、レスポンシブ表示属性を使用して、デバイスごとに要素を表示したり非表示にしたりします。同じサイトで全く異なるバージョンを作成することは避け、画面サイズごとにレスポンシブに要素を非表示にしましょう。
+      </p>
+    </template>
+  </Localization>
 
-  <p>
-    To hide elements simply use the <code>display="none"</code> class or one of the <code>display="{sm,md,lg,xl,xxl}-none"</code> attribute for any responsive screen variation.
-  </p>
+  <Localization>
+    <template #en>
+      <p>
+        To hide elements simply use the <code>display="none"</code> class or one of the <code>display="{sm,md,lg,xl,xxl}-none"</code> attribute for any responsive screen variation.
+      </p>
+    </template>
+    <template #ja>
+      <p>
+        要素を非表示にするには、単に<code>display="none"</code>クラスか、レスポンシブ画面のバリエーションに対して<code>display="{sm,md,lg,xl,xxl}-none"</code>属性のいずれかを使用します。
+      </p>
+    </template>
+  </Localization>
 
-  <p>
-    To show an element only on a given interval of screen sizes you can combine one <code>display="*-none"</code> class with a <code>display="*-*"</code> class, for example <code>display="none display="md-block display="xl-none display="xxl-none"</code> will hide the element for all screen sizes except on medium and large devices.
-  </p>
+  <Localization>
+    <template #en>
+      <p>
+        To show an element only on a given interval of screen sizes you can combine one <code>display="*-none"</code> class with a <code>display="*-*"</code> class, for example <code>display="none display="md-block display="xl-none display="xxl-none"</code> will hide the element for all screen sizes except on medium and large devices.
+      </p>
+    </template>
+    <template #ja>
+      <p>
+        特定の画面サイズ感覚でのみ要素を表示するには、1つの<code>display="*-none"</code>クラスと<code>display="*-*"</code>クラスを組み合わせることができます。たとえば、<code>display="none display="md-block display="xl-none display="xxl-none"</code>は、中型と大型のデバイスを除くすべての画面サイズに対して要素を非表示にします。
+      </p>
+    </template>
+  </Localization>
 
   <docs-descriptions-display-hiding-elements />
 
@@ -139,7 +145,7 @@ The media queries affect screen widths with the given breakpoint *or larger*. Fo
 <div class="d-lg-none">hide on lg and wider screens</div>
 <div class="d-none d-lg-block">hide on screens smaller than lg</div>
 {{< /example >}} -->
-  
+
   <Snippet>
     <Example>
       <examples-utilities-display-hiding />
@@ -150,20 +156,20 @@ The media queries affect screen widths with the given breakpoint *or larger*. Fo
     />
   </Snippet>
 
-  <!--:::: code-group
-::: code-group-item useBootstrap
-@[code](@examples/utilities/display/hiding.vue)
-:::
-::: code-group-item bootstrap5
-@[code](@examples/utilities/display/hiding.html)
-:::
-:::: -->
-
   <h3>Display in print</h3>
 
-  <p>
-    Change the <code>display</code> value of elements when printing with our print display utility attribute. Includes support for the same <code>display</code> values as our responsive <code>display</code> utilities.
-  </p>
+  <Localization>
+    <template #en>
+      <p>
+        Change the <code>display</code> value of elements when printing with our print display utility attribute. Includes support for the same <code>display</code> values as our responsive <code>display</code> utilities.
+      </p>
+    </template>
+    <template #ja>
+      <p>
+        印刷表示ユーティリティ属性を使用して、印刷時に要素の<code>display</code>値を変更できます。レスポンシブ<code>display</code>値と同じ<code>display</code>値のサポートが含まれています。
+      </p>
+    </template>
+  </Localization>
 
   <ul>
     <li> <code>display="print-none"</code></li>
@@ -178,11 +184,20 @@ The media queries affect screen widths with the given breakpoint *or larger*. Fo
     <li> <code>display="print-inline-flex"</code></li>
   </ul>
 
-  <p>
-    The print and display attribute can be combined.
-  </p>
+  <Localization>
+    <template #en>
+      <p>
+        The print and display attribute can be combined.
+      </p>
+    </template>
+    <template #ja>
+      <p>
+        印刷属性と表示属性を組み合わせることができます。
+      </p>
+    </template>
+  </Localization>
 
-  
+
   <Snippet>
     <Example>
       <examples-utilities-display-print />
@@ -193,14 +208,6 @@ The media queries affect screen widths with the given breakpoint *or larger*. Fo
     />
   </Snippet>
 
-  <!--:::: code-group
-::: code-group-item useBootstrap
-@[code](@examples/utilities/display/print.vue)
-:::
-::: code-group-item bootstrap5
-@[code](@examples/utilities/display/print.html)
-:::
-:::: -->
 
   <!-- ## Sass
 

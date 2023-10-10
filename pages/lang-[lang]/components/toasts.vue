@@ -1,29 +1,35 @@
 <script setup lang="ts">
 definePageMeta({
-  title: `トースト Toasts`,
-  description: `軽量で簡単にカスタマイズできるアラートメッセージをプッシュ通知します。Push notifications to your visitors with a toast, a lightweight and easily customizable alert message.`
+  'title:en': 'Toasts',
+  'description:en': `Push notifications to your visitors with a toast, a lightweight and easily customizable alert message.`,
+  'title:ja': 'トースト',
+  'description:ja': '軽量で簡単にカスタマイズできるアラートメッセージをプッシュ通知します。'
 })
 </script>
 
 <template>
-  <!---
-title: トースト Toasts
-description: 軽量で簡単にカスタマイズできるアラートメッセージをプッシュ通知します。Push notifications to your visitors with a toast, a lightweight and easily customizable alert message.
---->
-  <p>
-    Toasts は、モバイルやデスクトップの OS で普及しているプッシュ通知を模倣して設計された軽量な通知です。flexbox で作られているので、位置合わせや配置が簡単です。
-    Toasts are lightweight notifications designed to mimic the push notifications that have been popularized by mobile and desktop operating systems. They're built with flexbox, so they're easy to align and position.
-  </p>
+  <Localization>
+    <template #en>
+      <p>Toasts are lightweight notifications designed to mimic the push notifications that have been popularized by mobile and desktop operating systems. </p>
+      <p>They're built with flexbox, so they're easy to align and position.</p>
+    </template>
+    <template #ja>
+      <p>Toasts は、モバイルやデスクトップの OS で普及しているプッシュ通知を模倣して設計された軽量な通知です。</p>
+      <p>flexbox で作られているので、位置合わせや配置が簡単です。</p>
+    </template>
+  </Localization>
 
   <h2>Overview</h2>
-  <p>
-    Toasts プラグインを使うときに知っておきたいこと
-    Things to know when using the toast plugin:
-  </p>
-  <ul>
-    <li> Toasts はパフォーマンスのためにオプトインされています。自分で初期化する必要があります。Toasts are opt-in for performance reasons, so <b>you must initialize them yourself</b>.</li>
-    <li> Toasts は <code>autohide: false</code> を指定しないと自動的に非表示になります。Toasts will automatically hide if you do not specify <code>autohide: false</code>.</li>
-  </ul>
+
+  <Localization>
+    <template #en>
+      <p>Toasts will automatically hide if you do not specify <code>autohide: false</code>.</p>
+    </template>
+    <template #ja>
+      <p>Toasts は <code>autohide: false</code> を指定しないと自動的に非表示になります。</p>
+    </template>
+  </Localization>
+
   <!--
 {{< callout info >}}
 {{< partial "callout-info-prefersreducedmotion.md" >}}
@@ -32,14 +38,28 @@ description: 軽量で簡単にカスタマイズできるアラートメッセ�
   <h2>Examples</h2>
 
   <h3>Basic</h3>
-  <p>
-    Toasts の拡張性と予測可能性を高めるために、ヘッダと本文を推奨します。Toasts のヘッダは <code>display: flex</code> を使用しており、 margin と flexbox ユーティリティによりコンテンツを簡単に整列させることができます。
-    To encourage extensible and predictable toasts, we recommend a header and body. Toast headers use <code>display: flex</code>, allowing easy alignment of content thanks to our margin and flexbox utilities.
-  </p>
-  <p>
-    Toasts は必要なマークアップはほとんどありません。最低限、“Toasts” コンテンツを含む要素を 1 つだけ必要とし、却下ボタンを強く推奨します。
-    Toasts are as flexible as you need and have very little required markup. At a minimum, we require a single element to contain your "toasted" content and strongly encourage a dismiss button.
-  </p>
+  <Localization>
+    <template #en>
+      <p>To encourage extensible and predictable toasts, we recommend a header and body. </p>
+      <p>Toast headers use <code>display: flex</code>, allowing easy alignment of content thanks to our margin and flexbox utilities.</p>
+    </template>
+    <template #ja>
+      <p>Toasts の拡張性と予測可能性を高めるために、ヘッダと本文を推奨します。</p>
+      <p>Toasts のヘッダは <code>display: flex</code> を使用しており、 margin と flexbox ユーティリティによりコンテンツを簡単に整列させることができます。</p>
+    </template>
+  </Localization>
+
+  <Localization>
+    <template #en>
+      <p>Toasts are as flexible as you need and have very little required markup.</p>
+      <p>At a minimum, we require a single element to contain your "toasted" content and strongly encourage a dismiss button.</p>
+    </template>
+    <template #ja>
+      <p>Toasts は必要なマークアップはほとんどありません。</p>
+      <p>最低限、“Toasts” コンテンツを含む要素を 1 つだけ必要とし、Dismiss ボタンを強く推奨します。</p>
+    </template>
+  </Localization>
+
   <!--
 {{< callout warning >}}
 Previously, our scripts dynamically added the `.hide` class to completely hide a toast (with `display:none`, rather than just with `opacity:0`). This is now not necessary anymore. However, for backwards compatibility, our script will continue to toggle the class (even though there is no practical need for it) until the next major version.
@@ -47,9 +67,20 @@ Previously, our scripts dynamically added the `.hide` class to completely hide a
 -->
 
   <h5>tip</h5>
-  <p>
-    Previously, our scripts dynamically added the <code>hide</code> attribute to completely hide a toast (with <code>display:none</code>, rather than just with <code>opacity:0</code>). This is now not necessary anymore. However, for backwards compatibility, our script will continue to toggle the class (even though there is no practical need for it) until the next major version.
-  </p>
+
+  <Localization>
+    <template #en>
+      <p>
+        Previously, our scripts dynamically added the <code>hide</code> attribute to completely hide a toast (with <code>display:none</code>, rather than just with <code>opacity:0</code>). This is now not necessary anymore. However, for backwards compatibility, our script will continue to toggle the class (even though there is no practical need for it) until the next major version.
+      </p>
+    </template>
+    <template #ja>
+      <p>
+        以前は、toastを完全に隠すために、スクリプトが動的に<code>hide</code>属性を追加していました（単に<code>opacity:0</code>ではなく、<code>display:none</code>で）。これはもう必要ありません。しかし、後方互換性のために、私たちのスクリプトは、次のメジャーバージョンまで、（実際には必要ないにもかかわらず）クラスをトグルし続けます。
+      </p>
+    </template>
+  </Localization>
+
   <Snippet>
     <Example>
       <examples-components-toast-basic />
@@ -61,22 +92,18 @@ Previously, our scripts dynamically added the `.hide` class to completely hide a
   </Snippet>
 
 
-  <!--:::: code-group
-::: code-group-item useBootstrap
-@[code](@examples/components/toast/basic.vue)
-:::
-::: code-group-item bootstrap5
-@[code](@examples/components/toast/basic.html)
-:::
-:::: -->
-
   <h3 class="mt-3">
     Live example
   </h3>
-  <p>
-    下のボタンをクリックして、デフォルトで <code>hide</code> 属性で非表示になっているトースト（ユーティリティで右下隅に配置）を表示します。
-    Click the button below to show a toast (positioned with our utilities in the lower right corner) that has been hidden by default.
-  </p>
+  <Localization>
+    <template #en>
+      <p>Click the button below to show a toast (positioned with our utilities in the lower right corner) that has been hidden by default.</p>
+    </template>
+    <template #ja>
+      <p>下のボタンをクリックして、デフォルトで <code>hide</code> 属性で非表示になっているトースト（ユーティリティで右下隅に配置）を表示します。</p>
+    </template>
+  </Localization>
+
   <Snippet>
     <Example>
       <examples-components-toast-live />
@@ -87,25 +114,20 @@ Previously, our scripts dynamically added the `.hide` class to completely hide a
     />
   </Snippet>
 
-
-  <!--:::: code-group
-::: code-group-item useBootstrap
-@[code](@examples/components/toast/live.vue)
-:::
-::: code-group-item bootstrap5
-@[code](@examples/components/toast/live.html)
-:::
-:::: -->
-
   <h3 class="mt-3">
     Translucent
   </h3>
-  <p>
-    Toasts は半透明なので、上に表示されるものは何でも溶け込みます。
-    Toasts are slightly translucent to blend in with what's below them.
-  </p>
+  <Localization>
+    <template #en>
+      <p>Toasts are slightly translucent to blend in with what's below them.</p>
+    </template>
+    <template #ja>
+      <p>Toasts は半透明なので、上に表示されるものは何でも溶け込みます。</p>
+    </template>
+  </Localization>
+
   <Snippet>
-    <Example>
+    <Example class="bg-dark">
       <examples-components-toast-translucent />
     </Example>
     <ExamplesCode
@@ -114,23 +136,18 @@ Previously, our scripts dynamically added the `.hide` class to completely hide a
     />
   </Snippet>
 
-
-  <!--:::: code-group
-::: code-group-item useBootstrap
-@[code](@examples/components/toast/translucent.vue)
-:::
-::: code-group-item bootstrap5
-@[code](@examples/components/toast/translucent.html)
-:::
-:::: -->
-
   <h3 class="mt-3">
     Stacking
   </h3>
-  <p>
-    Toast が複数ある場合は、読みやすいように縦に重ねるのがデフォルトになっています。
-    You can stack toasts by wrapping them in a toast container, which will vertically add some spacing.
-  </p>
+  <Localization>
+    <template #en>
+      <p>You can stack toasts by wrapping them in a toast container, which will vertically add some spacing.</p>
+    </template>
+    <template #ja>
+      <p>Toast が複数ある場合は、読みやすいように縦に重ねるのがデフォルトになっています。</p>
+    </template>
+  </Localization>
+
   <Snippet>
     <Example>
       <examples-components-toast-stacking />
@@ -141,27 +158,20 @@ Previously, our scripts dynamically added the `.hide` class to completely hide a
     />
   </Snippet>
 
-
-  <!--:::: code-group
-::: code-group-item useBootstrap
-@[code](@examples/components/toast/stacking.vue)
-:::
-::: code-group-item bootstrap5
-@[code](@examples/components/toast/stacking.html)
-:::
-:::: -->
-
   <h3 class="mt-2">
     Custom content
   </h3>
-  <p>
-    サブコンポーネントを削除したり、utilities を使って調整したり、独自のマークアップを追加したりして、トーストをカスタマイズできます。ここでは、デフォルトの <code>ToastHeader</code> コンポーネントを削除し、Bootstrap Iconsからカスタムの非表示アイコンを追加し、<LocalLink to="/utilities/flex">
-      flexbox utilities
-    </LocalLink> を使ってレイアウトを調整することで、よりシンプルなトーストを作成しています。
-    Customize your toasts by removing sub-components, tweaking them with utilities, or by adding your own markup. Here we've created a simpler toast by removing the default <code>ToastHeader</code> component, adding a custom hide icon from <a href="https://icons.getbootstrap.jp/">Bootstrap Icons</a>, and using some <LocalLink to="/utilities/flex">
-      flexbox utilities
-    </LocalLink> to adjust the layout.
-  </p>
+  <Localization>
+    <template #en>
+      <p>Customize your toasts by removing sub-components, tweaking them with utilities, or by adding your own markup. </p>
+      <p>Here we've created a simpler toast by removing the default <code>ToastHeader</code> component, adding a custom hide icon from Bootstrap Icons, and using some <code> flexbox utilities </code> to adjust the layout.</p>
+    </template>
+    <template #ja>
+      <p>サブコンポーネントを削除したり、utilities を使って調整したり、独自のマークアップを追加したりして、トーストをカスタマイズできます。</p>
+      <p>ここでは、デフォルトの <code>ToastHeader</code> コンポーネントを削除し、Bootstrap Iconsからカスタムの非表示アイコンを追加し、<code> flexbox utilities </code> を使ってレイアウトを調整することで、よりシンプルなトーストを作成しています。</p>
+    </template>
+  </Localization>
+
   <Snippet>
     <Example>
       <examples-components-toast-custom-1 />
@@ -171,19 +181,18 @@ Previously, our scripts dynamically added the `.hide` class to completely hide a
       lang="vue"
     />
   </Snippet>
-
-
-  <!--:::: code-group
-::: code-group-item useBootstrap
-@[code](@examples/components/toast/custom-1.vue)
-:::
-::: code-group-item bootstrap5
-@[code](@examples/components/toast/custom-1.html)
-:::
-:::: -->
-  <p>
-    Alternatively, you can also add additional controls and components to toasts.
-  </p>
+  <Localization>
+    <template #en>
+      <p>
+        Alternatively, you can also add additional controls and components to toasts.
+      </p>
+    </template>
+    <template #ja>
+      <p>
+        また、toastsにコントロールやコンポーネントを追加することも可能です。
+      </p>
+    </template>
+  </Localization>
   <Snippet>
     <Example>
       <examples-components-toast-custom-2 />
@@ -194,33 +203,25 @@ Previously, our scripts dynamically added the `.hide` class to completely hide a
     />
   </Snippet>
 
-
-  <!--:::: code-group
-::: code-group-item useBootstrap
-@[code](@examples/components/toast/custom-2.vue)
-:::
-::: code-group-item bootstrap5
-@[code](@examples/components/toast/custom-2.html)
-:::
-:::: -->
-
   <h3 class="mt-3">
     Color schemes
   </h3>
-  <p>
-    上記の例に基づいて、 <LocalLink to="/utilities/colors">
-      color
-    </LocalLink> と <LocalLink to="/utilities/background">
-      background
-    </LocalLink> ユーティリティを使用して、さまざまなトーストのカラースキームを作成することができます。ここでは、<code>Toast</code> コンポーネントに .bg-primary と <code>text-color="white"</code> 属性を追加しています。鮮明なエッジを出すために、<code>border="0"</code> 属性でデフォルトのボーダーを削除しています。
-    Building on the above example, you can create different toast color schemes with our <LocalLink to="/utilities/colors">
-      color
-    </LocalLink> and <LocalLink to="/utilities/background">
-      background
-    </LocalLink> utilities. Here we've added <code>.bg-primary</code> and <code>text-color="white"</code> attribute to the <code>Toast</code> component. For a crisp edge, we remove the default border with <code>border="0"</code> attribute.
-    <!-- 上記の例に基づいて、 [color](/utilities/colors) と [background](/utilities/background) ユーティリティを使用して、さまざまなトーストのカラースキームを作成することができます。ここでは、`Toast` コンポーネントに .bg-primary と `text-color="white"` 属性を追加し、クローズボタンに `.btn-close-white` を追加しています。鮮明なエッジを出すために、`border="0"` 属性でデフォルトのボーダーを削除しています。
+  <Localization>
+    <template #en>
+      <p>Building on the above example, you can create different toast color schemes with our <code> color </code> and <code> background </code> utilities. </p>
+      <p>Here we've added <code>.bg-primary</code> and <code>text-color="white"</code> attribute to the <code>Toast</code> component. </p>
+      <p>For a crisp edge, we remove the default border with <code>border="0"</code> attribute.</p>
+    </template>
+    <template #ja>
+      <p>上記の例に基づいて、 <code> color </code> と <code> background </code> ユーティリティを使用して、さまざまなトーストのカラースキームを作成することができます。</p>
+      <p>ここでは、<code>Toast</code> コンポーネントに .bg-primary と <code>text-color="white"</code> 属性を追加しています。</p>
+      <p>鮮明なエッジを出すために、<code>border="0"</code> 属性でデフォルトのボーダーを削除しています。</p>
+    </template>
+  </Localization>
+
+  <!-- 上記の例に基づいて、 [color](/utilities/colors) と [background](/utilities/background) ユーティリティを使用して、さまざまなトーストのカラースキームを作成することができます。ここでは、`Toast` コンポーネントに .bg-primary と `text-color="white"` 属性を追加し、クローズボタンに `.btn-close-white` を追加しています。鮮明なエッジを出すために、`border="0"` 属性でデフォルトのボーダーを削除しています。
 Building on the above example, you can create different toast color schemes with our [color](/utilities/colors) and [background](/utilities/background) utilities. Here we've added `.bg-primary` and `text-color="white"` attribute to the `Toast` component, and then added `.btn-close-white` to our close button. For a crisp edge, we remove the default border with `border="0"` attribute. -->
-  </p>
+
   <Snippet>
     <Example>
       <examples-components-toast-color />
@@ -231,23 +232,20 @@ Building on the above example, you can create different toast color schemes with
     />
   </Snippet>
 
-
-  <!--:::: code-group
-::: code-group-item useBootstrap
-@[code](@examples/components/toast/color.vue)
-:::
-::: code-group-item bootstrap5
-@[code](@examples/components/toast/color.html)
-:::
-:::: -->
-
   <h2 class="mt-2">
     Placement
   </h2>
-  <p>
-    必要に応じてカスタム CSS で配置します。右上は通知によく使用されます。一度に 1 つの Toast しか表示しない場合は、配置スタイルを <code>Toast</code> コンポーネントに配置してください。
-    Place toasts with custom CSS as you need them. The top right is often used for notifications, as is the top middle. If you're only ever going to show one toast at a time, put the positioning styles right on the <code>Toast</code> component.
-  </p>
+  <Localization>
+    <template #en>
+      <p>Place toasts with custom CSS as you need them. The top right is often used for notifications, as is the top middle.</p>
+      <p>If you're only ever going to show one toast at a time, put the positioning styles right on the <code>Toast</code> component.</p>
+    </template>
+    <template #ja>
+      <p>必要に応じてカスタム CSS で配置します。右上は通知によく使用されます。</p>
+      <p>一度に 1 つの Toast しか表示しない場合は、配置スタイルを <code>Toast</code> コンポーネントに配置してください。</p>
+    </template>
+  </Localization>
+
   <Snippet>
     <Example>
       <examples-components-toast-placement-1 />
@@ -258,21 +256,20 @@ Building on the above example, you can create different toast color schemes with
     />
   </Snippet>
 
+  <Localization>
+    <template #en>
+      <p>For systems that generate more notifications, consider using a wrapping element so they can easily stack.</p>
+    </template>
+    <template #ja>
+      <p>多くの通知を生成するシステムでは、簡単にスタックできるようにラッピング要素を使用することを検討してください。</p>
+    </template>
+  </Localization>
 
-  <!--:::: code-group
-::: code-group-item useBootstrap
-@[code](@examples/components/toast/placement-1.vue)
-:::
-::: code-group-item bootstrap5
-@[code](@examples/components/toast/placement-1.html)
-:::
-:::: -->
-  <p class="mt-2">
-    多くの通知を生成するシステムでは、簡単にスタックできるようにラッピング要素を使用することを検討してください。
-    For systems that generate more notifications, consider using a wrapping element so they can easily stack.
-  </p>
   <Snippet>
-    <Example>
+    <Example
+      toasts
+      padding="0"
+    >
       <examples-components-toast-placement-2 />
     </Example>
     <ExamplesCode
@@ -281,21 +278,20 @@ Building on the above example, you can create different toast color schemes with
     />
   </Snippet>
 
+  <Localization>
+    <template #en>
+      <p>You can also get fancy with flexbox utilities to align toasts horizontally and/or vertically.</p>
+    </template>
+    <template #ja>
+      <p>flexbox ユーティリティを使って、Toast を水平方向や垂直方向に整列させることもできます。</p>
+    </template>
+  </Localization>
 
-  <!--:::: code-group
-::: code-group-item useBootstrap
-@[code](@examples/components/toast/placement-2.vue)
-:::
-::: code-group-item bootstrap5
-@[code](@examples/components/toast/placement-2.html)
-:::
-:::: -->
-  <p class="mt-2">
-    flexbox ユーティリティを使って、Toast を水平方向や垂直方向に整列させることもできます。
-    You can also get fancy with flexbox utilities to align toasts horizontally and/or vertically.
-  </p>
   <Snippet>
-    <Example>
+    <Example
+      toasts
+      class="d-flex"
+    >
       <examples-components-toast-placement-3 />
     </Example>
     <ExamplesCode
@@ -304,15 +300,6 @@ Building on the above example, you can create different toast color schemes with
     />
   </Snippet>
 
-
-  <!--:::: code-group
-::: code-group-item useBootstrap
-@[code](@examples/components/toast/placement-3.vue)
-:::
-::: code-group-item bootstrap5
-@[code](@examples/components/toast/placement-3.html)
-:::
-:::: -->
 
   <!-- ## Accessibility
 
@@ -370,21 +357,26 @@ When using `autohide: false`, you must add a close button to allow users to dism
 @[code](@examples/components/toast/access.html)
 :::
 :::: -->
-  <p class="mt-2">
-    技術的には、Toast の中にフォーカスやアクションが可能なコントロール（追加のボタンやリンクなど）を追加することは可能ですが、自動非表示の Toast ではこれを避けるべきです。 Toast に長い<a href="#options">
-      delay timeout
-    </a>を与えたとしても、キーボードや支援技術のユーザーが行動を起こすために Toast にたどり着くのは難しいかもしれません（ Toast は表示された時点ではフォーカスを受けないため）。 コントロールが必要な場合は、<code>autohide: false</code> のトーストを使用することをお勧めします。
-    While technically it's possible to add focusable/actionable controls (such as additional buttons or links) in your toast, you should avoid doing this for autohiding toasts. Even if you give the toast a long <a href="#options">
-      delay timeout
-    </a>, keyboard and assistive technology users may find it difficult to reach the toast in time to take action (since toasts don't receive focus when they are displayed). If you absolutely must have further controls, we recommend using a toast with <code>autohide: false</code>.
-  </p>
+  <Localization>
+    <template #en>
+      <p>While technically it's possible to add focusable/actionable controls (such as additional buttons or links) in your toast, you should avoid doing this for autohiding toasts. </p>
+      <p>Even if you give the toast a long <code> delay timeout </code>, keyboard and assistive technology users may find it difficult to reach the toast in time to take action (since toasts don't receive focus when they are displayed). </p>
+      <p>If you absolutely must have further controls, we recommend using a toast with <code>autohide: false</code>.</p>
+    </template>
+    <template #ja>
+      <p>技術的には、Toast の中にフォーカスやアクションが可能なコントロール（追加のボタンやリンクなど）を追加することは可能ですが、自動非表示の Toast ではこれを避けるべきです。</p>
+      <p>Toast に長い<code> delay timeout </code>を与えたとしても、キーボードや支援技術のユーザーが行動を起こすために Toast にたどり着くのは難しいかもしれません（ Toast は表示された時点ではフォーカスを受けないため）。 </p>
+      <p>コントロールが必要な場合は、<code>autohide: false</code> のトーストを使用することをお勧めします。</p>
+    </template>
+  </Localization>
+
   <!-- ## Sass
 
 ### Variables -->
   <!--
 {{< scss-docs name="toast-variables" file="scss/_variables.scss" >}}
 -->
-  <h2>Usage</h2>
+  <!-- <h2>Usage</h2> -->
 
   <!-- JavaScript で Toast を初期化します。
 Initialize toasts via JavaScript:
@@ -396,38 +388,38 @@ var toastList = toastElList.map(function (toastEl) {
 })
 ``` -->
 
-  <h3>Triggers</h3>
+  <!-- <h3>Triggers</h3> -->
   <!--
 {{% js-dismiss "toast" %}}
 -->
-  <h3>Options</h3>
+  <!-- <h3>Options</h3> -->
 
   <!-- オプションは、データ属性または JavaScript で渡すことができます。データ属性の場合は、 data-bs-animation =" "のように、オプション名を data-bs-に追加します。
 Options can be passed via data attributes or JavaScript. For data attributes, append the option name to `data-bs-`, as in `data-bs-animation=""`. -->
 
   <!-- <docs-options-toast /> -->
 
-  <h3>Methods</h3>
+  <!-- <h3>Methods</h3> -->
   <!--
 {{< callout danger >}}
 {{< partial "callout-danger-async-methods.md" >}}
 {{< /callout >}}
 -->
-  <h4>show</h4>
+  <!-- <h4>show</h4>
   <p>
     Toast 要素を表示します。<b>トーストが実際に表示される前に呼び出し元に戻ります。</b>(<code>shown.bs.toast</code> イベントが発生する前)。 メソッドは手動で呼び出す必要があります。
     Reveals an element's toast. <b>Returns to the caller before the toast has actually been shown</b> (i.e. before the <code>shown.bs.toast</code> event occurs).
     You have to manually call this method, instead your toast won't show.
-  </p>
+  </p> -->
   <!-- ```js
 toast.show()
 ``` -->
 
-  <h4>hide</h4>
+  <!-- <h4>hide</h4>
   <p>
     Toast 要素を非表示します。 <b>トーストが実際に隠される前に呼び出し元に戻ります。</b> ( <code>hidden.bs.toast</code> が発生します。)。 <code>autohide</code> を <code>false</code> にした場合は、このメソッドを手動で呼び出す必要がある。
     Hides an element's toast. <b>Returns to the caller before the toast has actually been hidden</b> (i.e. before the <code>hidden.bs.toast</code> event occurs). You have to manually call this method if you made <code>autohide</code> to <code>false</code>.
-  </p>
+  </p> -->
   <!-- ```js
 toast.hide()
 ``` -->
@@ -459,7 +451,7 @@ var myToastEl = document.getElementById('myToastEl')
 var myToast = bootstrap.Toast.getOrCreateInstance(myToastEl) // Returns a Bootstrap toast instance
 ``` -->
 
-  <h3>vents</h3>
+  <!-- <h3>vents</h3> -->
 
   <!-- <docs-events-toast /> -->
 

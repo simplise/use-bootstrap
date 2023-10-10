@@ -1,0 +1,19 @@
+ div > div {
+    background-color: rgba(86,61,124,0.15);
+    border: 1px solid rgba(86,61,124,0.2);
+ }
+
+.bd-example-ratios{
+   .ratio {
+      .div{
+         display: flex;
+         align-items: center;
+         justify-content: center;
+      }
+      display: inline-block;
+      width: 10rem;
+      color: #6c757d;
+      background-color: #f8f9fa;
+      border: 1px solid #dee2e6;
+   }
+}

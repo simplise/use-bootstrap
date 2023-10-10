@@ -1,53 +1,34 @@
 <script setup lang="ts">
 definePageMeta({
-  title: `ポジション Position`,
-  description: `素早くポジションを設定します。 Use these shorthand utilities for quickly configuring the position of an element.`
+  'title:en': 'Position',
+  'description:en': `Use these shorthand utilities for quickly configuring the position of an element.`,
+  'title:ja': 'ポジション',
+  'description:ja': '素早くポジションを設定します。'
 })
 </script>
 
 <template>
-  <!---
-title: ポジション Position
-description: 素早くポジションを設定します。 Use these shorthand utilities for quickly configuring the position of an element.
---->
-
   <h2>Position values</h2>
-
-  <p>
-    レスポンシブではありませんが、Position クラスを利用できます。
-  </p>
-
-  <p>
-    Quick positioning classes are available, though they are not responsive.
-  </p>
-
-
-  <!--:::: code-group
-::: code-group-item useBootstrap
-@[code](@examples/utilities/position/values.vue)
-:::
-::: code-group-item bootstrap5
-@[code](@examples/utilities/position/values.html)
-:::
-:::: -->
+  <Localization>
+    <template #en>
+      <p>Quick positioning classes are available, though they are not responsive.</p>
+    </template>
+    <template #ja>
+      <p>レスポンシブではありませんが、Position クラスを利用できます。</p>
+    </template>
+  </Localization>
 
   <h2>Arrange elements </h2>
-
-  <p>
-    edge positioning attribute を使用して、要素を簡単に配置できます。 形式は <code>position="{position}"</code>です。
-  </p>
-
-  <p>
-    Arrange elements easily with the edge positioning utilities. The format is <code>position="{position}"</code>.
-  </p>
-
-  <p>
-    property は次のいずれかです。
-  </p>
-
-  <p>
-    Where <var>property</var> is one of:
-  </p>
+  <Localization>
+    <template #en>
+      <p>Arrange elements easily with the edge positioning utilities. The format is <code>position="{position}"</code>.</p>
+      <p>Where <var>property</var> is one of:</p>
+    </template>
+    <template #ja>
+      <p>edge positioning attribute を使用して、要素を簡単に配置できます。 形式は <code>position="{position}"</code>です。</p>
+      <p>property は次のいずれかです。</p>
+    </template>
+  </Localization>
 
   <ul>
     <li> <code>top</code> - for the vertical <code>top</code> position </li>
@@ -56,14 +37,15 @@ description: 素早くポジションを設定します。 Use these shorthand u
     <li> <code>end</code> - for the horizontal <code>right</code> position (in LTR) </li>
   </ul>
 
-  <p>
-    position は次のいずれかです。
-  </p>
+  <Localization>
+    <template #en>
+      <p>Where <b>position</b> is one of:</p>
+    </template>
+    <template #ja>
+      <p>position は次のいずれかです。</p>
+    </template>
+  </Localization>
 
-  <!--フォントが変わっている-->
-  <p>
-    Where <b>position</b> is one of:
-  </p>
   <ul>
     <li> <code>0</code> - for <code>0</code> edge position</li>
     <li> <code>50</code> - for <code>50%</code> edge position</li>
@@ -84,33 +66,17 @@ description: 素早くポジションを設定します。 Use these shorthand u
     />
   </Snippet>
 
-  <!---:::: code-group
-::: code-group-item useBootstrap
-@[code](@examples/utilities/position/arrange.vue)
-:::
-::: code-group-item bootstrap5
-@[code](@examples/utilities/position/arrange.html)
-:::
-:::: -->
-
   <h2>Center elements</h2>
-
-  <p>
-    transform utility attribute <code>translate="middle"</code>を使用して要素を中央に配置することもできます。
-  </p>
-
-  <p>
-    In addition, you can also center the elements with the transform utility attribute <code>translate="middle"</code>.
-  </p>
-
-  <p>
-    このクラスは、<code>translateX(-50%)</code> および <code>translateY(-50%)</code> を要素に適用します。edge positioning utilities と組み合わせて、要素を絶対的に中央に配置できます。
-  </p>
-
-  <p>
-    This class applies the transformations <code>translateX(-50%)</code> and <code>translateY(-50%)</code> to the element which, in combination with the edge positioning utilities, allows you to absolute center an element.
-  </p>
-
+  <Localization>
+    <template #en>
+      <p>In addition, you can also center the elements with the transform utility attribute <code>translate="middle"</code>.</p>
+      <p> This class applies the transformations <code>translateX(-50%)</code> and <code>translateY(-50%)</code> to the element which, in combination with the edge positioning utilities, allows you to absolute center an element. </p>
+    </template>
+    <template #ja>
+      <p>transform utility attribute <code>translate="middle"</code>を使用して要素を中央に配置することもできます。</p>
+      <p> このクラスは、<code>translateX(-50%)</code> および <code>translateY(-50%)</code> を要素に適用します。edge positioning utilities と組み合わせて、要素を絶対的に中央に配置できます。 </p>
+    </template>
+  </Localization>
 
   <Snippet>
     <Example>
@@ -122,20 +88,14 @@ description: 素早くポジションを設定します。 Use these shorthand u
     />
   </Snippet>
 
-  <!--:::: code-group
-::: code-group-item useBootstrap
-@[code](@examples/utilities/position/center-1.vue)
-:::
-::: code-group-item bootstrap5
-@[code](@examples/utilities/position/center-1.html)
-:::
-:::: -->
-  <p>
-    <code>translate="middle-x"` または `translate="middle-y"` クラスを追加することにより、要素は水平方向または垂直方向にのみ配置できます。</code>
-  </p>
-  <p>
-    <code>By adding <code>translate="middle-x"</code> or <code>translate="middle-y"</code> classes, elements can be positioned only in horizontal or vertical direction.</code>
-  </p>
+  <Localization>
+    <template #en>
+      <p><code>By adding <code>translate="middle-x"</code> or <code>translate="middle-y"</code> classes, elements can be positioned only in horizontal or vertical direction.</code></p>
+    </template>
+    <template #ja>
+      <p><code>translate="middle-x"</code> または <code>translate="middle-y"</code> クラスを追加することにより、要素は水平方向または垂直方向にのみ配置できます。</p>
+    </template>
+  </Localization>
 
   <Snippet>
     <Example>
@@ -147,26 +107,17 @@ description: 素早くポジションを設定します。 Use these shorthand u
     />
   </Snippet>
 
-  <!--:::: code-group
-::: code-group-item useBootstrap
-@[code](@examples/utilities/position/center-2.vue)
-:::
-::: code-group-item bootstrap5
-@[code](@examples/utilities/position/center-2.html)
-:::
-:::: -->
 
   <h2>Examples</h2>
+  <Localization>
+    <template #en>
+      <p>Here are some real life examples of these classes:</p>
+    </template>
+    <template #ja>
+      <p>実際の例を次に示します。</p>
+    </template>
+  </Localization>
 
-  <p>
-    実際の例を次に示します。
-  </p>
-
-  <p>
-    Here are some real life examples of these classes:
-  </p>
-
-  
   <Snippet>
     <Example>
       <examples-utilities-position-1 />
@@ -177,24 +128,15 @@ description: 素早くポジションを設定します。 Use these shorthand u
     />
   </Snippet>
 
-  <!--:::: code-group
-::: code-group-item useBootstrap
-@[code](@examples/utilities/position/examples-1.vue)
-:::
-::: code-group-item bootstrap5
-@[code](@examples/utilities/position/examples-1.html)
-:::
-:::: -->
+  <Localization>
+    <template #en>
+      <p>You can use these classes with existing components to create new ones. Remember that you can extend its functionality by adding entries to the <code>$position-values</code> variable.</p>
+    </template>
+    <template #ja>
+      <p>既存のコンポーネントとともに使用して、新しいコンポーネントを作成できます。 $position-values 変数にエントリを追加することで、その機能を拡張できます。</p>
+    </template>
+  </Localization>
 
-  <p>
-    既存のコンポーネントとともに使用して、新しいコンポーネントを作成できます。 $position-values 変数にエントリを追加することで、その機能を拡張できます。
-  </p>
-
-  <p>
-    You can use these classes with existing components to create new ones. Remember that you can extend its functionality by adding entries to the <code>$position-values</code> variable.
-  </p>
-
-  
   <Snippet>
     <Example>
       <examples-utilities-position-2 />
@@ -204,15 +146,6 @@ description: 素早くポジションを設定します。 Use these shorthand u
       lang="vue"
     />
   </Snippet>
-
-  <!--:::: code-group
-::: code-group-item useBootstrap
-@[code](@examples/utilities/position/examples-2.vue)
-:::
-::: code-group-item bootstrap5
-@[code](@examples/utilities/position/examples-2.html)
-:::
-:::: -->
 
   <!-- ## Sass
 

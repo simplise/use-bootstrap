@@ -9,8 +9,6 @@
       name="bi:exclamation-triangle-fill"
       flex="shrink-0"
       margin="e-2"
-      width="24"
-      height="24"
       aria-label="Warning:"
     />
     <div>An example alert with an icon</div>

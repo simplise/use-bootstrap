@@ -1,27 +1,37 @@
 <script setup lang="ts">
 definePageMeta({
-  title: `Background`,
-  description: `Convey meaning through 'background-color' and add decoration with gradients.`
+  'title:en': 'Background',
+  'description:en': `Convey meaning through 'background-color' and add decoration with gradients.`,
+  'title:ja': 'バックグラウンド（背景）',
+  'description:ja': `background-colorで意味を伝え、グラデーションで装飾を加えます。`
 })
 </script>
 <template>
-  <!---
-title: Background
-description: Convey meaning through `background-color` and add decoration with gradients.
---->
-
   <h2>Background color</h2>
 
-  <p>
-    Similar to the contextual text color classes, set the background of an element to any contextual class. Background utilities <b>do not set <code>color</code></b>, so in some cases you'll want to use <code>background-color=</code> <LocalLink to="/utilities/colors">
-      color utilities
-    </LocalLink>.
-  </p>
+  <Localization>
+    <template #en>
+      <p>
+        Similar to the contextual text color classes, set the background of an element to any contextual class. Background utilities <b>do not set <code>color</code></b>, so in some cases you'll want to use <code>background-color=</code>
+        <LocalLink to="/utilities/colors">
+          color utilities
+        </LocalLink>.
+      </p>
+    </template>
+    <template #ja>
+      <p>
+        contextual text color クラスと同様に、要素の背景を任意の contextual クラスに設定します。背景ユーティリティは<b><code>color</code>を設定しないので</b>、場合によっては<code>background-color=</code>
+        <LocalLink to="/utilities/colors">
+          color utilities
+        </LocalLink>を使用したいでしょう。
+      </p>
+    </template>
+  </Localization>
 
-  
+
   <Snippet>
     <Example>
-      <examples-utilities-background-color />    
+      <examples-utilities-background-color />
     </Example>
     <ExamplesCode
       path="/utilities/background/color.vue"
@@ -29,24 +39,33 @@ description: Convey meaning through `background-color` and add decoration with g
     />
   </Snippet>
 
-  <!--:::: code-group
-::: code-group-item useBootstrap
-@[code](@examples/utilities/background/color.vue)
-:::
-::: code-group-item bootstrap5
-@[code](@examples/utilities/background/color.html)
-:::
-::::-->
 
   <h2>Background gradient</h2>
 
-  <p>
-    By adding a <code>background-gradient</code> attribute, a linear gradient is added as background image to the backgrounds. This gradient starts with a semi-transparent white which fades out to the bottom.
-  </p>
+  <Localization>
+    <template #en>
+      <p>
+        By adding a <code>background-gradient</code> attribute, a linear gradient is added as background image to the backgrounds. This gradient starts with a semi-transparent white which fades out to the bottom.
+      </p>
+    </template>
+    <template #ja>
+      <p>
+        <code>background-gradient</code>属性を追加すると、背景画像として線形グラデーションが追加されます。このグラデーションは半透明の白から始まり、下に向かってフェードアウトしていきます。
+      </p>
+    </template>
+  </Localization>
 
-  <p>
-    Do you need a gradient in your custom CSS? Just add <code>background-image: var(--bs-gradient);</code>.
-  </p>
+  <Localization>
+    <template #en>
+      <p>
+        Do you need a gradient in your custom CSS? Just add <code>background-image: var(--bs-gradient);</code>.
+      </p>
+    </template>
+    <template #ja>
+      カスタムCSSにグラデーションが必要ですか？<code>background-image: var(--bs-gradient);</code>を追加するだけです。
+    </template>
+  </Localization>
+
   <!--
 {{< markdown >}}
 {{< colors.inline >}}
@@ -57,7 +76,7 @@ description: Convey meaning through `background-color` and add decoration with g
 {{< /markdown >}}
 -->
 
-  
+
   <Snippet>
     <Example>
       <examples-utilities-background-gradient />
@@ -68,26 +87,38 @@ description: Convey meaning through `background-color` and add decoration with g
     />
   </Snippet>
 
-  <!--:::: code-group
-::: code-group-item useBootstrap
-@[code](@examples/utilities/background/gradient.vue)
-:::
-::: code-group-item bootstrap5
-@[code](@examples/utilities/background/gradient.html)
-:::
-:::: -->
-
   <h2>Opacity</h2>
 
   <small class="d-inline-flex px-2 py-1 font-monospace text-muted border rounded-3">Added in v5.1.0</small>
 
-  <p>
-    As of v5.1.0, <code>background-color</code> utilities are generated with Sass using CSS variables. This allows for real-time color changes without compilation and dynamic alpha transparency changes.
-  </p>
+  <Localization>
+    <template #en>
+      <p>
+        As of v5.1.0, <code>background-color</code> utilities are generated with Sass using CSS variables. This allows for real-time color changes without compilation and dynamic alpha transparency changes.
+      </p>
+    </template>
+    <template #ja>
+      <p>
+        v5.1.0より、<code>background-color</code>ユーティリティはCSSっを使ってSassで生成されるようになりました。これにより、コンパイルなしでリアルタイムに色を変更したり、アルファの透明度をダイナミックに変更することができます。
+      </p>
+    </template>
+  </Localization>
+
   <h3>How it works</h3>
-  <p>
-    Consider our default <code>background-color="success"</code> utility.
-  </p>
+
+  <localization>
+    <template #en>
+      <p>
+        Consider our default <code>background-color="success"</code> utility.
+      </p>
+    </template>
+    <template #ja>
+      <p>
+        デフォルトの<code>background-color="success"</code>ユーティリティを考えてみましょう
+      </p>
+    </template>
+  </localization>
+
   <!-- ```css
 .bg-success {
  --bs-bg-opacity: 1;
@@ -99,20 +130,30 @@ We use an RGB version of our `--bs-success` (with the value of `25, 135, 84`) CS
 
   <h3>Example</h3>
 
-  <p>
-    To change that opacity, override <code>--bs-bg-opacity</code> via custom styles or inline styles.
-  </p>
+  <Localization>
+    <template #en>
+      <p>
+        To change that opacity, override <code>--bs-bg-opacity</code> via custom styles or inline styles.
+      </p>
+    </template>
+    <template #ja>
+      <p>
+        この不透明度を変更するには、カスタムスタイルまたはインラインスタイルで<code>--bs-bg-opacity</code>をオーバーライドする。
+      </p>
+    </template>
+  </Localization>
+
   <!--
 {{< example >}}
 <div class="bg-success p-2 text-white">This is default success background</div>
 <div class="bg-success p-2" style="--bs-bg-opacity: .5;">This is 50% opacity success background</div>
 {{< /example >}}
 -->
-  
+
 
   <Snippet>
     <Example>
-      <examples-utilities-background-example-1 />    
+      <examples-utilities-background-example-1 />
     </Example>
     <ExamplesCode
       path="/utilities/background/example-1.vue"
@@ -120,39 +161,30 @@ We use an RGB version of our `--bs-success` (with the value of `25, 135, 84`) CS
     />
   </Snippet>
 
-  <!--:::: code-group
-::: code-group-item useBootstrap
-@[code](@examples/utilities/background/example-1.vue)
-:::
-::: code-group-item bootstrap5
-@[code](@examples/utilities/background/example-1.html)
-:::
-:::: -->
+  <Localization>
+    <template #en>
+      <p>
+        Or, choose from any of the <code>background-opacity</code> attribute:
+      </p>
+    </template>
+    <template #ja>
+      <p>
+        または、<code>background-opacity</code>属性から選んでください。
+      </p>
+    </template>
+  </Localization>
 
-  <p>
-    Or, choose from any of the <code>background-opacity</code> attribute:
-  </p>
 
-  
 
   <Snippet>
     <Example>
-      <examples-utilities-background-example-2 />    
+      <examples-utilities-background-example-2 />
     </Example>
     <ExamplesCode
       path="/utilities/background/example-2.vue"
       lang="vue"
     />
   </Snippet>
-
-  <!--:::: code-group
-::: code-group-item useBootstrap
-@[code](@examples/utilities/background/example-2.vue)
-:::
-::: code-group-item bootstrap5
-@[code](@examples/utilities/background/example-2.html)
-:::
-:::: -->
 
   <!-- ## Sass
 

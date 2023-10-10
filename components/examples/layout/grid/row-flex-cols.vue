@@ -1,32 +1,32 @@
 <template>
   <Container class="doc-container">
     <Badge>items-start</Badge>
-    <Row align="items-start">
+    <Row align-items="start">
       <Col>One of three cols</Col>
       <Col>One of three cols</Col>
       <Col>One of three cols</Col>
     </Row>
     <Badge>items-center</Badge>
-    <Row align="items-center">
+    <Row align-items="center">
       <Col>One of three cols</Col>
       <Col>One of three cols</Col>
       <Col>One of three cols</Col>
     </Row>
     <Badge>items-end</Badge>
-    <Row align="items-end">
+    <Row align-items="end">
       <Col>One of three cols</Col>
       <Col>One of three cols</Col>
       <Col>One of three cols</Col>
     </Row>
     <Badge>self-*</Badge>
     <Row>
-      <Col align="self-start">
+      <Col align-self="start">
         .self-start
       </Col>
-      <Col align="self-center">
+      <Col align-self="center">
         .self-center
       </Col>
-      <Col align="self-end">
+      <Col align-self="end">
         .self-end
       </Col>
     </Row>

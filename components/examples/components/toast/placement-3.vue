@@ -2,12 +2,10 @@
   <b-div
     aria-live="polite"
     aria-atomic="true"
-    background-color="dark"
     flex
     justify-content="center"
     align-items="center"
     relative-width="100"
-    style="min-height: 240px"
   >
     <Toast show>
       <ToastHeader>

@@ -1,23 +1,24 @@
 <script setup lang="ts">
 definePageMeta({
- title: `サイジング Sizing`,
- description: `width と height のユーティリティを使用して、要素のサイズを簡単に設定できます。 Easily make an element as wide or as tall with our width and height utilities.`
+  'title:en': 'Sizing',
+  'description:en': `Easily make an element as wide or as tall with our width and height utilities.`,
+  'title:ja': 'サイジング ',
+  'description:ja': 'width と height のユーティリティを使用して、要素のサイズを簡単に設定できます。'
 })
 </script>
 
 <template>
-  <!---
-title: サイジング Sizing
-description: width と height のユーティリティを使用して、要素のサイズを簡単に設定できます。 Easily make an element as wide or as tall with our width and height utilities.
---->
-
   <h2>Relative to the parent</h2>
 
-  <p>width と height のユーティリティは <code>_utilities.scss</code> から生成されます。デフォルトでは <code>25%</code>, <code>50%</code>, <code>75%</code>, <code>100%</code>, <code>auto</code> がサポートされています。カスタムしたい場合は、これらの値を変更してください。</p>
+  <Localization>
+    <template #en>
+      <p>Width and height utilities are generated from the utility API in <code>_utilities.scss</code>. Includes support for <code>25%</code>, <code>50%</code>, <code>75%</code>, <code>100%</code>, and <code>auto</code> by default. Modify those values as you need to generate different utilities here.</p>
+    </template>
+    <template #ja>
+      <p>width と height のユーティリティは <code>_utilities.scss</code> から生成されます。デフォルトでは <code>25%</code>, <code>50%</code>, <code>75%</code>, <code>100%</code>, <code>auto</code> がサポートされています。カスタムしたい場合は、これらの値を変更してください。</p>
+    </template>
+  </Localization>
 
-  <p>Width and height utilities are generated from the utility API in <code>_utilities.scss</code>. Includes support for <code>25%</code>, <code>50%</code>, <code>75%</code>, <code>100%</code>, and <code>auto</code> by default. Modify those values as you need to generate different utilities here.</p>
-
-  
   <Snippet>
     <Example flex>
       <examples-utilities-sizing-relative-1 />
@@ -28,19 +29,9 @@ description: width と height のユーティリティを使用して、要素�
     />
   </Snippet>
 
-  <!--:::: code-group
-::: code-group-item useBootstrap
-@[code](@examples/utilities/sizing/relative-1.vue)
-:::
-::: code-group-item bootstrap5
-@[code](@examples/utilities/sizing/relative-1.html)
-:::
-:::: -->
-
-  
   <Snippet>
     <Example flex>
-      <examples-utilities-sizing-relative-2 />    
+      <examples-utilities-sizing-relative-2 />
     </Example>
     <ExamplesCode
       path="/utilities/sizing/relative-2.vue"
@@ -48,23 +39,18 @@ description: width と height のユーティリティを使用して、要素�
     />
   </Snippet>
 
-  <!--:::: code-group
-::: code-group-item useBootstrap
-@[code](@examples/utilities/sizing/relative-2.vue)
-:::
-::: code-group-item bootstrap5
-@[code](@examples/utilities/sizing/relative-2.html)
-:::
-:::: -->
-  <div class="mt-5">
-    <p>頻繁に使う <code>max-width: 100%;</code> と <code>max-height: 100%;</code> を使うことができます。</p>
-  </div>
-  <p>You can also use <code>max-width: 100%;</code> and <code>max-height: 100%;</code> utilities as needed.</p>
+  <Localization>
+    <template #en>
+      <p>You can also use <code>max-width: 100%;</code> and <code>max-height: 100%;</code> utilities as needed.</p>
+    </template>
+    <template #ja>
+      <p>頻繁に使う <code>max-width: 100%;</code> と <code>max-height: 100%;</code> を使うことができます。</p>
+    </template>
+  </Localization>
 
-  
   <Snippet>
     <Example flex>
-      <examples-utilities-sizing-relative-3 />    
+      <examples-utilities-sizing-relative-3 />
     </Example>
     <ExamplesCode
       path="/utilities/sizing/relative-3.vue"
@@ -72,19 +58,9 @@ description: width と height のユーティリティを使用して、要素�
     />
   </Snippet>
 
-  <!--:::: code-group
-::: code-group-item useBootstrap
-@[code](@examples/utilities/sizing/relative-3.vue)
-:::
-::: code-group-item bootstrap5
-@[code](@examples/utilities/sizing/relative-3.html)
-:::
-:::: -->
-
-  
   <Snippet>
     <Example flex>
-      <examples-utilities-sizing-relative-4 />    
+      <examples-utilities-sizing-relative-4 />
     </Example>
     <ExamplesCode
       path="/utilities/sizing/relative-4.vue"
@@ -92,34 +68,15 @@ description: width と height のユーティリティを使用して、要素�
     />
   </Snippet>
 
-  <!--:::: code-group
-::: code-group-item useBootstrap
-@[code](@examples/utilities/sizing/relative-4.vue)
-:::
-::: code-group-item bootstrap5
-@[code](@examples/utilities/sizing/relative-4.html)
-:::
-:::: -->
-
   <h2>Relative to the viewport</h2>
-
-  <p>
-    Viewport 単位の width や height を指定できます。
-  </p>
-
-  <p>
-    You can also use utilities to set the width and height relative to the viewport.
-  </p>
-
-
-  <!--:::: code-group
-::: code-group-item useBootstrap
-@[code](@examples/example/sizing/viewport.vue)
-:::
-::: code-group-item bootstrap5
-@[code](@examples/example/sizing/viewport.html)
-:::
-:::: -->
+  <Localization>
+    <template #en>
+      <p>You can also use utilities to set the width and height relative to the viewport.</p>
+    </template>
+    <template #ja>
+      <p>Viewport 単位の width や height を指定できます。</p>
+    </template>
+  </Localization>
 
   <!-- ## Sass
 

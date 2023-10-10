@@ -26,7 +26,7 @@
             <DropdownMenu>
               <DropdownItem>Action</DropdownItem>
               <DropdownItem>Another action</DropdownItem>
-              <DropdownItem divider />
+              <DropdownItemDivider />
               <DropdownItem>Something else here</DropdownItem>
             </DropdownMenu>
           </NavItemDropdown>

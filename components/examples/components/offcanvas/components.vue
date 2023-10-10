@@ -1,7 +1,11 @@
 <template>
-  <Offcanvas placement="start">
+  <Offcanvas
+    placement="start"
+    show
+    :backdrop="false"
+  >
     <OffcanvasHeader>
-      <OffcanvasTitle>Colored with scrolling</OffcanvasTitle>
+      <OffcanvasTitle>Offcanvas</OffcanvasTitle>
       <CloseButton dismiss="offcanvas" />
     </OffcanvasHeader>
     <OffcanvasBody>

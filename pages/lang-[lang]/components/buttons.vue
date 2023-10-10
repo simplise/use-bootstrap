@@ -68,9 +68,18 @@ definePageMeta({
   <h2 class="mt-3">
     Outline buttons
   </h2>
-  <p>
-    In need of a button, but not the hefty background colors they bring? <code>button="outline-*"</code> を適用すると枠線を残してボタンの背景色を透過することができます。 Replace the default modifier classes with the <code>button="outline-*"</code> ones to remove all background images and colors on any button.
-  </p>
+  <Localization>
+    <template #en>
+      <p>
+        In need of a button, but not the hefty background colors they bring? Replace the default modifier classes with the <code>button="outline-*"</code> ones to remove all background images and colors on any button.
+      </p>
+    </template>
+    <template #ja>
+      <p>
+        ボタンが必要、背景色が多くて困ったときは <code>button="outline-*"</code> を適用すると枠線を残してボタンの背景色を透過することができます。
+      </p>
+    </template>
+  </Localization>
   <!-- {{< callout info >}}
 Some of the button styles use a relatively light foreground color, and should only be used on a dark background in order to have sufficient contrast.
 {{< /callout >}} -->
@@ -262,7 +271,7 @@ Some of the button styles use a relatively light foreground color, and should on
 
   <Localization>
     <template #en>
-      <p />
+      <p>Button plug-ins allow you to create simple on/off toggle buttons.</p>
     </template>
     <template #ja>
       <p>ボタンのプラグインでは、シンプルなオン/オフのトグルボタンを作成することができます。</p>
@@ -274,11 +283,22 @@ Visually, these toggle buttons are identical to the [checkbox toggle buttons]({{
 {{< /callout >}} -->
 
   <h5>tip</h5>
-  <p>
-    Visually, these toggle buttons are identical to the <LocalLink to="/forms/checks-radios#checkbox-toggle-buttons">
-      checkbox toggle button
-    </LocalLink>. However, they are conveyed differently by assistive technologies: the checkbox toggles will be announced by screen readers as "checked"/"not checked" (since, despite their appearance, they are fundamentally still checkboxes), whereas these toggle buttons will be announced as "button"/"button pressed". The choice between these two approaches will depend on the type of toggle you are creating, and whether or not the toggle will make sense to users when announced as a checkbox or as an actual button.
-  </p>
+  <Localization>
+    <template #en>
+      <p>
+        Visually, these toggle buttons are identical to the <LocalLink to="/forms/checks-radios#checkbox-toggle-buttons">
+          checkbox toggle button
+        </LocalLink>. However, they are conveyed differently by assistive technologies: the checkbox toggles will be announced by screen readers as "checked"/"not checked" (since, despite their appearance, they are fundamentally still checkboxes), whereas these toggle buttons will be announced as "button"/"button pressed". The choice between these two approaches will depend on the type of toggle you are creating, and whether or not the toggle will make sense to users when announced as a checkbox or as an actual button.
+      </p>
+    </template>
+    <template #ja>
+      <p>
+        視覚的には、これらのトグルボタンは<LocalLink to="/forms/checks-radios#checkbox-toggle-buttons">
+          チェックボックスのトグルボタン
+        </LocalLink>と同じです。チェックボックスのトグルは、スクリーンリーダーによって、"checked"/"not checked"とアナウンスされます（外見にかかわらず、基本的にはチェックボックスであるためです。）。これら2つのアプローチのどちらを選択するかは、作成するトグルのタイプ、およびトグルがチェックボックスとしてアナウンスされた時と実際のボタンとしてアナウンスされた時のどちらがユーザーにとって意味があるかによって決まります。
+      </p>
+    </template>
+  </Localization>
 
   <h3>Toggle states</h3>
   <Localization>

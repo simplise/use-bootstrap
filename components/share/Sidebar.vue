@@ -2,9 +2,8 @@
 
 onMounted(() => {
   const route = useRoute();
-  const el = document.getElementById(`#${route.path}`)
-  if(el)
-  {
+  const el = document.getElementById(`sl${route.path.replace('/lang-en', '').replace('/lang-jp', '')}`)
+  if (el) {
     el.scrollIntoView(true)
   }
 })
@@ -25,7 +24,6 @@ const routes = [
       }
     ]
   },
-
   {
     name: 'Components',
     icon: 'bi:menu-button-wide-fill',
@@ -371,6 +369,17 @@ const routes = [
     ]
   },
   {
+    name: 'Extend',
+    icon: 'bi:tools',
+    color: 'blue',
+    children: [
+      {
+        name: 'Icons',
+        path: '/extend/icons/',
+      }
+    ]
+  },
+  {
     name: 'About',
     icon: 'bi:globe2',
     color: 'indigo',
@@ -394,28 +403,16 @@ const routes = [
 
 <template>
   <aside class="bd-sidebar">
-    <div
+    <Offcanvas
       id="bdSidebar"
-      class="offcanvas-lg offcanvas-start"
-      tabindex="-1"
-      aria-labelledby="bdSidebarOffcanvasLabel"
+      type="lg"
+      placement="start"
     >
-      <div class="offcanvas-header border-bottom">
-        <h5
-          id="bdSidebarOffcanvasLabel"
-          class="offcanvas-title"
-        >
-          Browse docs
-        </h5>
-        <button
-          type="button"
-          class="btn-close"
-          data-bs-dismiss="offcanvas"
-          aria-label="Close"
-          data-bs-target="#bdSidebar"
-        />
-      </div>
-      <div class="offcanvas-body">
+      <OffcanvasHeader border="bottom">
+        <OffcanvasTitle>Browse docs</OffcanvasTitle>
+        <CloseButton dismiss="offcanvas" />
+      </OffcanvasHeader>
+      <OffcanvasBody>
         <nav
           id="bd-docs-nav"
           class="bd-links w-100"
@@ -442,7 +439,7 @@ const routes = [
                   :key="secondItem.path"
                 >
                   <LocalLink
-                    :id="secondItem.path"
+                    :id="`sl${secondItem.path}`"
                     :to="secondItem.path"
                     class="bd-links-link d-inline-block rounded"
                     :class="[useLocalization(secondItem.path) == $route.path ? 'active' : '']"
@@ -455,7 +452,7 @@ const routes = [
             </li>
           </ul>
         </nav>
-      </div>
-    </div>
+      </OffcanvasBody>
+    </Offcanvas>
   </aside>
 </template>

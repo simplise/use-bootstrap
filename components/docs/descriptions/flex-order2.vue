@@ -1,0 +1,16 @@
+<template>
+  <ul>
+    <li><code>flex-order="first"</code></li>
+    <li><code>flex-order="last"</code></li>
+    <li><code>flex-order="sm-first"</code></li>
+    <li><code>flex-order="sm-last"</code></li>
+    <li><code>flex-order="md-first"</code></li>
+    <li><code>flex-order="md-last"</code></li>
+    <li><code>flex-order="lg-first"</code></li>
+    <li><code>flex-order="lg-last"</code></li>
+    <li><code>flex-order="xl-first"</code></li>
+    <li><code>flex-order="xl-last"</code></li>
+    <li><code>flex-order="xxl-first"</code></li>
+    <li><code>flex-order="xxl-last"</code></li>
+  </ul>
+</template>

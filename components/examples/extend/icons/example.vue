@@ -1,0 +1,18 @@
+<template>
+  <BIcon
+    icon="bi:bootstrap"
+    margin="2"
+  />
+  <BIcon
+    icon="bi:alarm"
+    margin="2"
+  />
+  <BIcon
+    icon="bi:toggles"
+    margin="2"
+  />
+  <BIcon 
+    icon="bi:shop"
+    margin="2"
+  />
+</template>

@@ -3,7 +3,7 @@
     <Row
       size="lg-auto"
       columuns="lg-auto"
-      align="item-center"
+      align-item="center"
       gutter="3"
     >
       <Col col="12">

@@ -1,59 +1,45 @@
 <script setup lang="ts">
 definePageMeta({
-  title: `フロート Float`,
-  description: `レスポンシブなフロートを使用して、ブレークポイントを越えて要素のフロートをコントロールします。 Toggle floats on any element, across any breakpoint, using our responsive float utilities.`
+  'title:en': 'Float',
+  'description:en': `Toggle floats on any element, across any breakpoint, using our responsive float utilities.`,
+  'title:ja': 'フロート',
+  'description:ja': 'レスポンシブなフロートを使用して、ブレークポイントを越えて要素のフロートをコントロールします。'
 })
 </script>
 
 <template>
-  <!---
-title: フロート Float
-description: レスポンシブなフロートを使用して、ブレークポイントを越えて要素のフロートをコントロールします。 Toggle floats on any element, across any breakpoint, using our responsive float utilities.
---->
-
   <h2>Overview</h2>
+  <Localization>
+    <template #en>
+      <p>These utility classes float an element to the left or right, or disable floating, based on the current viewport size using the CSS float property <code>!important</code> is included to avoid specificity issues. </p>
+      <p>These use the same viewport breakpoints as our grid system. Please be aware float utilities have no effect on flex items.</p>
+    </template>
+    <template #ja>
+      <p>これらのユーティリティクラスは、 CSS float プロパティ を使用して、現在のビューポートサイズに基づいて要素を左右にフロートしたり、無効にします。</p>
+      <p><code>重要!</code> これらは Grid システムと同じビューポートブレークポイントを使用しています。float utilities は Flex アイテム には影響しないことに注意してください。</p>
+    </template>
+  </Localization>
 
-  <p>
-    これらのユーティリティクラスは、<a href="https://developer.mozilla.org/en-US/docs/Web/CSS/float">CSS float プロパティ</a>を使用して、現在のビューポートサイズに基づいて要素を左右にフロートしたり、無効にします。
-    <code>重要!</code> これらは Grid システムと同じビューポートブレークポイントを使用しています。float utilities は Flex アイテム には影響しないことに注意してください。
-  </p>
-
-  <p>
-    These utility classes float an element to the left or right, or disable floating, based on the current viewport size using the <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/float">CSS float property</a> <code>!important</code> is included to avoid specificity issues. These use the same viewport breakpoints as our grid system. Please be aware float utilities have no effect on flex items.
-  </p>
-
-
-  
   <Snippet>
     <Example>
-      <examples-utilities-float-overview />    
+      <examples-utilities-float-overview />
     </Example>
     <ExamplesCode
       path="/utilities/float/overview.vue"
       lang="vue"
     />
   </Snippet>
-  <!--:::: code-group
-::: code-group-item useBootstrap
-@[code](@examples/utilities/float/overview.vue)
-:::
-::: code-group-item bootstrap5
-@[code](@examples/utilities/float/overview.html)
-:::
-:::: -->
 
   <h2>Responsive</h2>
+  <Localization>
+    <template #en>
+      <p>Responsive variations also exist for each <code>float</code> value.</p>
+    </template>
+    <template #ja>
+      <p><code>float</code> にはレスポンシブ utilities があります。</p>
+    </template>
+  </Localization>
 
-  <p>
-    <code>float</code> にはレスポンシブ utilities があります。
-  </p>
-
-  <p>
-    Responsive variations also exist for each <code>float</code> value.
-  </p>
-
-
-  
   <Snippet>
     <Example>
       <examples-utilities-float-responsive />
@@ -64,22 +50,14 @@ description: レスポンシブなフロートを使用して、ブレークポ�
     />
   </Snippet>
 
-  <!--:::: code-group
-::: code-group-item useBootstrap
-@[code](@examples/utilities/float/responsive.vue)
-:::
-::: code-group-item bootstrap5
-@[code](@examples/utilities/float/responsive.html)
-:::
-:::: -->
-
-  <p>
-    サポートしているクラスは以下の通りです。
-  </p>
-
-  <p>
-    Here are all the support classes:
-  </p>
+  <Localization>
+    <template #en>
+      <p>Here are all the support classes:</p>
+    </template>
+    <template #ja>
+      <p>サポートしているクラスは以下の通りです。</p>
+    </template>
+  </Localization>
 
   <!-- {{< markdown >}}
 {{< float.inline >}}

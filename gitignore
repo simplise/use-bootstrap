@@ -1,0 +1,19 @@
+# 
+*
+!*/
+# 
+!/pages/**/*.vue
+!/components/**/*.vue
+!/README.md
+# 
+/components/docs/**/*.vue
+.DS_Store
+Thumbs.db
+
+# Nuxt
+.nuxt
+.output
+.vercel_build_output
+.build-*
+.env
+.netlify

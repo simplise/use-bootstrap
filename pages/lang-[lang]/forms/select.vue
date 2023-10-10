@@ -2,24 +2,26 @@
 <script setup lang="ts">
 
 definePageMeta({
- title: 'Select',
- description: `ネイティブの\`<select>\`をカスタムCSSでカスタマイズして、要素の初期表示を変更することができます。Customize the native \`<select>\`s with custom CSS that changes the element's initial appearance.`
+
+  'title:en': 'Select',
+  'description:en': `Customize the native select elements with custom CSS that changes the element's initial appearance.`,
+  'title:ja': 'セレクト',
+  'description:ja': 'ネイティブの select 要素をカスタムCSSでカスタマイズして、要素の初期表示を変更することができます。'
 })
 
 </script>
 
 <template>
-  <!---
-title: Select
-description: ネイティブの`<select>`をカスタムCSSでカスタマイズして、要素の初期表示を変更することができます。Customize the native `<select>`s with custom CSS that changes the element's initial appearance.
---->
-
   <h2>Default</h2>
 
-  <p>
-    カスタムスタイルは <code>FormSelect</code> の最初の外観に限定され、ブラウザの制限により <code>Option</code> を変更することはできません。
-    Custom styles are limited to the <code>FormSelect</code>'s initial appearance and cannot modify the <code>Option</code>s due to browser limitations.
-  </p>
+  <Localization>
+    <template #en>
+      <p>Custom styles are limited to the <code>FormSelect</code>'s initial appearance and cannot modify the <code>Option</code>s due to browser limitations.</p>
+    </template>
+    <template #ja>
+      <p>カスタムスタイルは <code>FormSelect</code> の最初の外観に限定され、ブラウザの制限により <code>Option</code> を変更することはできません。</p>
+    </template>
+  </Localization>
   
   <Snippet>
     <Example>
@@ -31,24 +33,19 @@ description: ネイティブの`<select>`をカスタムCSSでカスタマイズ
     />
   </Snippet>
 
-  <!--:::: code-group
-::: code-group-item useBootstrap
-@[code](@examples/forms/select/default.vue)
-:::
-::: code-group-item bootstrap5
-@[code](@examples/forms/select/default.html)
-:::
-:::: -->
-
   <h2 class="mt-3">
     Sizing
   </h2>
 
-  <p>
-    また、同サイズのテキスト入力に合わせて、大小のカスタムセレクトを選択することもできます。
-    You may also choose from small and large custom selects to match our similarly sized text inputs.
-  </p>
-  
+  <Localization>
+    <template #en>
+      <p>You may also choose from small and large custom selects to match our similarly sized text inputs.</p>
+    </template>
+    <template #ja>
+      <p>また、同サイズのテキスト入力に合わせて、大小のカスタムセレクトを選択することもできます。</p>
+    </template>
+  </Localization>
+
   <Snippet>
     <Example>
       <examples-forms-select-sizing-1 />
@@ -59,20 +56,15 @@ description: ネイティブの`<select>`をカスタムCSSでカスタマイズ
     />
   </Snippet>
 
-  <!--:::: code-group
-::: code-group-item useBootstrap
-@[code](@examples/forms/select/sizing-1.vue)
-:::
-::: code-group-item bootstrap5
-@[code](@examples/forms/select/sizing-1.html)
-:::
-:::: -->
+  <Localization>
+    <template #en>
+      <p>The <code>multiple</code> attribute is also supported:</p>
+    </template>
+    <template #ja>
+      <p>また、<code>multiple</code> 属性もサポートされています。:</p>
+    </template>
+  </Localization>
 
-  <p class="mt-3">
-    また、<code>multiple</code> 属性もサポートされています。:
-    The `multiple` attribute is also supported:
-  </p>
-  
   <Snippet>
     <Example>
       <examples-forms-select-sizing-2 />
@@ -83,20 +75,15 @@ description: ネイティブの`<select>`をカスタムCSSでカスタマイズ
     />
   </Snippet>
 
-  <!--:::: code-group
-::: code-group-item useBootstrap
-@[code](@examples/forms/select/sizing-2.vue)
-:::
-::: code-group-item bootstrap5
-@[code](@examples/forms/select/sizing-2.html)
-:::
-::::-->
+  <Localization>
+    <template #en>
+      <p>As is the <code>length</code> attribute:</p>
+    </template>
+    <template #ja>
+      <p><code>length</code> 属性もサポートされています。:</p>
+    </template>
+  </Localization>
 
-  <p class="mt-3">
-    <code>length</code> 属性もサポートされています。:
-    As is the <code>length</code> attribute:
-  </p>
-  
   <Snippet>
     <Example>
       <examples-forms-select-sizing-3 />
@@ -107,24 +94,18 @@ description: ネイティブの`<select>`をカスタムCSSでカスタマイズ
     />
   </Snippet>
 
-  <!--:::: code-group
-::: code-group-item useBootstrap
-@[code](@examples/forms/select/sizing-3.vue)
-:::
-::: code-group-item bootstrap5
-@[code](@examples/forms/select/sizing-3.html)
-:::
-:::: -->
-
   <h2 class="mt-3">
     Disabled
   </h2>
+  <Localization>
+    <template #en>
+      <p>Add the <code>disabled</code> boolean attribute on a select to give it a grayed out appearance and remove pointer events.</p>
+    </template>
+    <template #ja>
+      <p>ブール属性の<code>disabled</code>をセレクトに追加すると、グレーアウトした外観になり、ポインターイベントが削除されます。</p>
+    </template>
+  </Localization>
 
-  <p>
-    ブール属性の<code>disabled</code>をセレクトに追加すると、グレーアウトした外観になり、ポインターイベントが削除されます。
-    Add the <code>disabled</code> boolean attribute on a select to give it a grayed out appearance and remove pointer events.
-  </p>
-  
   <Snippet>
     <Example>
       <examples-forms-select-disabled />
@@ -134,15 +115,6 @@ description: ネイティブの`<select>`をカスタムCSSでカスタマイズ
       lang="vue"
     />
   </Snippet>
-
-  <!---:::: code-group
-::: code-group-item useBootstrap
-@[code](@examples/forms/select/disabled.vue)
-:::
-::: code-group-item bootstrap5
-@[code](@examples/forms/select/disabled.html)
-:::
-:::: -->
 
   <!-- ## Sass
 

@@ -1,0 +1,22 @@
+<template>
+  <ul>
+    <li><code>float="start"</code></li>
+    <li><code>float="end"</code></li>
+    <li><code>float="none"</code></li>
+    <li><code>float="sm-start"</code></li>
+    <li><code>float="sm-end"</code></li>
+    <li><code>float="sm-none"</code></li>
+    <li><code>float="md-start"</code></li>
+    <li><code>float="md-end"</code></li>
+    <li><code>float="md-none"</code></li>
+    <li><code>float="lg-start"</code></li>
+    <li><code>float="lg-end"</code></li>
+    <li><code>float="lg-none"</code></li>
+    <li><code>float="xl-start"</code></li>
+    <li><code>float="xl-end"</code></li>
+    <li><code>float="xl-none"</code></li>
+    <li><code>float="xxl-start"</code></li>
+    <li><code>float="xxl-end"</code></li>
+    <li><code>float="xxl-none"</code></li>
+  </ul>
+</template>

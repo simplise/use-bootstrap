@@ -26,7 +26,7 @@
         Submit
       </b-button>
     </BForm>
-    <DropdownItem divider />
+    <DropdownItemDivider />
     <DropdownItem>New around here? Sign up</DropdownItem>
     <DropdownItem>Forgot password?</DropdownItem>
   </DropdownMenu>

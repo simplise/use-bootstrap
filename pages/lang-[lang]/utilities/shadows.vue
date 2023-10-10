@@ -1,46 +1,32 @@
 <script setup lang="ts">
 definePageMeta({
- title: `シャドウ Shadows`,
- description: `ボックスシャドウを追加または削除できます。 Add or remove shadows to elements with box-shadow utilities.`
+  'title:en': 'Shadows',
+  'description:en': `Add or remove shadows to elements with box-shadow utilities.`,
+  'title:ja': 'シャドウ',
+  'description:ja': 'ボックスシャドウを追加または削除できます。'
 })
 </script>
 
 <template>
-  <!--
-title: シャドウ Shadows
-description: ボックスシャドウを追加または削除できます。 Add or remove shadows to elements with box-shadow utilities.
---->
-
   <h2>Examples</h2>
+  <Localization>
+    <template #en>
+      <p>While shadows on components are disabled by default in Bootstrap and can be enabled via <code>$enable-shadows</code>, you can also quickly add or remove a shadow with our <code>shadow</code> attribute. Includes support for <code>shadow="none"</code> and three default sizes (which have associated variables to match).</p>
+    </template>
+    <template #ja>
+      <p>shadow(components) はデフォルトで無効になっており、 <code>$enable-shadows</code>で有効にできますが、<code>shadow</code> 属性を使用して shadow を追加や削除することもできます。 <code>shadow="none"</code> と3つのデフォルトサイズ（一致する変数が関連付けられている）のサポートが含まれています。</p>
+    </template>
+  </Localization>
 
-  <p>
-    shadow(components) はデフォルトで無効になっており、 <code>$enable-shadows</code>で有効にできますが、<code>shadow</code> 属性を使用して shadow を追加や削除することもできます。 <code>shadow="none"</code> と3つのデフォルトサイズ（一致する変数が関連付けられている）のサポートが含まれています。
-  </p>
-
-  <p>
-    While shadows on components are disabled by default in Bootstrap and can be enabled via <code>$enable-shadows</code>, you can also quickly add or remove a shadow with our <code>shadow</code> attribute. Includes support for <code>shadow="none"</code> and three default sizes (which have associated variables to match).
-  </p>
-
-
-  
   <Snippet>
     <Example>
-      <examples-utilities-shadow />    
+      <examples-utilities-shadow />
     </Example>
     <ExamplesCode
       path="/utilities/shadow/shadow.vue"
       lang="vue"
     />
   </Snippet>
-
-  <!--:::: code-group
-::: code-group-item useBootstrap
-@[code](@examples/utilities/shadow/examples.vue)
-:::
-::: code-group-item bootstrap5
-@[code](@examples/utilities/shadow/examples.html)
-:::
-:::: -->
 
   <!-- ## Sass
 

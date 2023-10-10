@@ -15,14 +15,18 @@
             </NavLink>
           </NavItem>
           <NavItem>
-            <NavLink>Link</NavLink>
+            <NavLink to="/lang-en/components/navbar/">
+              Link
+            </NavLink>
           </NavItem>
           <NavItemDropdown>
             <NavItemDropdownToggle>Dropdown</NavItemDropdownToggle>
             <DropdownMenu>
               <DropdownItem>Action</DropdownItem>
-              <DropdownItem>Another action</DropdownItem>
-              <DropdownItem divider />
+              <DropdownItem to="/lang-en/components/navbar/">
+                Another action
+              </DropdownItem>
+              <DropdownItemDivider />
               <DropdownItem>Something else here</DropdownItem>
             </DropdownMenu>
           </NavItemDropdown>

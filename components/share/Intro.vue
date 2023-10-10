@@ -20,6 +20,6 @@
 </template>
 <script setup lang="ts">
 const route = useRoute()
-const title = computed(() => (route.meta['title:en'] || route.meta.title) as string)
-const description = computed(() => (route.meta['description:en'] || route.meta.description) as string)
+const title = computed(() => (route.meta[`title:${route.params.lang}`] || route.meta.title) as string)
+const description = computed(() => (route.meta[`description:${route.params.lang}`] || route.meta.description) as string)
 </script>

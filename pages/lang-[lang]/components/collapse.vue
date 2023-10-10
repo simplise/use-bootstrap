@@ -1,41 +1,57 @@
 
 <script setup lang="ts">
 definePageMeta({
-  title: `コラプス Collapse`,
-  description: `いくつかのクラスと JavaScript プラグインを使用して、プロジェクト全体のコンテンツの表示を切り替えます。 Toggle the visibility of content across your project with a few classes and our JavaScript plugins.`
+  'title:en': 'Collapse',
+  'description:en': `Toggle the visibility of content across your project with a few classes and attributes.`,
+  'title:ja': 'コラプス ',
+  'description:ja': 'いくつかのクラスと属性を使用して、プロジェクト全体のコンテンツの表示を切り替えます。'
 })
 </script>
 
 <template>
-  <!---
-title: コラプス Collapse
-description: いくつかのクラスと JavaScript プラグインを使用して、プロジェクト全体のコンテンツの表示を切り替えます。 Toggle the visibility of content across your project with a few classes and our JavaScript plugins.
---->
-
   <h2>How it works</h2>
-  <p>
-    collapse JavaScript プラグインは、コンテンツの表示と非表示に使用されます。 ボタンやアンカーは、トグルする特定の要素にマッピングされたトリガーとして使われます。 要素を折りたたむと <code>height</code> が現在の値から <code>0</code> にアニメーションします。 CSSがアニメーションをどのように扱うかを考えると、<code>collapse</code> 属性に <code>padding</code> 属性を使うことはできません。 代わりに、このクラスを独立したラッピング要素として使用します。
-    The collapse JavaScript plugin is used to show and hide content. Buttons or anchors are used as triggers that are mapped to specific elements you toggle. Collapsing an element will animate the <code>height</code> from its current value to <code>0</code>. Given how CSS handles animations, you cannot use <code>padding</code> attribute on a <code>collapse</code> attribute. Instead, use the class as an independent wrapping element.
-  </p>
+  <Localization>
+    <template #en>
+      <p>The collapse JavaScript plugin is used to show and hide content.</p>
+      <p>Buttons or anchors are used as triggers that are mapped to specific elements you toggle.</p>
+      <p>Collapsing an element will animate the <code>height</code> from its current value to <code>0</code>.</p>
+      <p>Given how CSS handles animations, you cannot use <code>padding</code> attribute on a <code>collapse</code> attribute.</p>
+      <p>Instead, use the class as an independent wrapping element.</p>
+    </template>
+    <template #ja>
+      <p>collapse JavaScript プラグインは、コンテンツの表示と非表示に使用されます。</p>
+      <p>ボタンやアンカーは、トグルする特定の要素にマッピングされたトリガーとして使われます。</p>
+      <p>要素を折りたたむと <code>height</code> が現在の値から <code>0</code> にアニメーションします。</p>
+      <p>CSSがアニメーションをどのように扱うかを考えると、<code>collapse</code> 属性に <code>padding</code> 属性を使うことはできません。</p>
+      <p>代わりに、このクラスを独立したラッピング要素として使用します。</p>
+    </template>
+  </Localization>
+
   <!-- {{< callout info >}}
 {{< partial "callout-info-prefersreducedmotion.md" >}}
 {{< /callout >}} -->
 
   <h2>Example</h2>
-  <p>
-    下のボタンをクリックすると、クラス変更による別の要素の表示・非表示を切り替えることができます。
-    Click the buttons below to show and hide another element via class changes:
-  </p>
-  <ul>
-    <li> <code>collapse</code> コンテンツを非表示にします <code>collapse</code> hides content</li>
-    <li> <code>collapsing</code> 移行中に適用されます <code>collapsing</code> is applied during transitions</li>
-    <li> <code>show</code> コンテンツを表示します <code>show</code> shows content</li>
-  </ul>
+  <Localization>
+    <template #en>
+      <p>Click the buttons below to show and hide another element.</p>
+    </template>
+    <template #ja>
+      <p>下のボタンをクリックすると、別の要素の表示・非表示を切り替えることができます。</p>
+    </template>
+  </Localization>
+  <Localization>
+    <template #en>
+      <p>Generally, we recommend using a button with the <code>target</code> attribute.</p>
+      <p>While not recommended from a semantic point of view, you can also use a link with the href attribute (and a role="button"). </p>
+      <p>In both cases, the <code>toggle="collapse"</code> attribute is required.</p>
+    </template>
+    <template #ja>
+      <p>href属性を持つリンク、または <code>data-bs-target</code> 属性を持つボタンを使用できます。</p>
+      <p>どちらの場合も、 <code>toggle="collapse"</code> 属性が必要です。</p>
+    </template>
+  </Localization>
 
-  <p>
-    href属性を持つリンク、または <code>data-bs-target</code> 属性を持つボタンを使用できます。 どちらの場合も、 <code>toggle="collapse"</code> 属性が必要です。
-    Generally, we recommend using a button with the <code>data-bs-target</code> attribute. While not recommended from a semantic point of view, you can also use a link with the href attribute (and a role="button"). In both cases, the <code>toggle="collapse"</code> attribute is required.
-  </p>
   <Snippet>
     <Example>
       <examples-components-collapse-example />
@@ -47,21 +63,16 @@ description: いくつかのクラスと JavaScript プラグインを使用し�
   </Snippet>
 
 
-  <!--:::: code-group
-::: code-group-item useBootstrap
-@[code](@examples/components/collapse/example.vue)
-:::
-::: code-group-item bootstrap5
-@[code](@examples/components/collapse/example.html)
-:::
-:::: -->
-
   <h2>Horizontal</h2>
-  <p>
-    The collapse plugin also supports horizontal collapsing. Add the <code>horizontal</code> attribute modifier class to transition the <code>width</code> instead of <code>height</code> and set a <code>width</code> on the immediate child element. Feel free to write your own custom Sass, use inline styles, or use our <LocalLink to="/utilities/sizing">
-      width utilities
-    </LocalLink>
-  </p>
+  <Localization>
+    <template #en>
+      <p>The collapse plugin also supports horizontal collapsing.</p>
+    </template>
+    <template #ja>
+      <p>水平方向の折りたたみもサポートしています。</p>
+    </template>
+  </Localization>
+
   <!-- {{< callout info >}}
 Please note that while the example below has a `min-height` set to avoid excessive repaints in our docs, this is not explicitly required. **Only the `width` on the child element is required.**
 {{< /callout >}} -->
@@ -75,23 +86,18 @@ Please note that while the example below has a `min-height` set to avoid excessi
     />
   </Snippet>
 
-
-  <!--:::: code-group
-::: code-group-item useBootstrap
-@[code](@examples/components/collapse/horizontal.vue)
-:::
-::: code-group-item bootstrap5
-@[code](@examples/components/collapse/horizontal.html)
-
-:::
-:::: -->
-
   <h2>Multiple targets</h2>
-  <p>
-    <code>&lt;Button&gt;</code>または <code>&lt;b-a&gt;</code> は、href属性 または <code>target</code> 属性のセレクターで参照することにより、複数の要素を表示および非表示にすることができます。 複数の <code>&lt;Button&gt;</code>または <code>&lt;b-a&gt;</code> は、それぞれがhrefまたは <code>target</code> 属性で要素を参照する場合、要素を表示および非表示にすることができます
-    A <code>&lt;Button&gt;</code> or <code>&lt;b-a&gt;</code> can show and hide multiple elements by referencing them with a selector in its <code>href</code> or <code>target</code> attribute.
-    Multiple <code>&lt;Button&gt;</code> or <code>&lt;b-a&gt;</code> can show and hide an element if they each reference it with their <code>href</code> or <code>target</code> attribute
-  </p>
+  <Localization>
+    <template #en>
+      <p>A <code>&lt;Button&gt;</code> or <code>&lt;b-a&gt;</code> can show and hide multiple elements by referencing them with a selector in its <code>href</code> or <code>target</code> attribute.</p>
+      <p>Multiple <code>&lt;Button&gt;</code> or <code>&lt;b-a&gt;</code> can show and hide an element if they each reference it with their <code>href</code> or <code>target</code> attribute</p>
+    </template>
+    <template #ja>
+      <p><code>&lt;Button&gt;</code>または <code>&lt;b-a&gt;</code> は、href属性 または <code>target</code> 属性のセレクターで参照することにより、複数の要素を表示および非表示にすることができます。</p>
+      <p>複数の <code>&lt;Button&gt;</code>または <code>&lt;b-a&gt;</code> は、それぞれがhrefまたは <code>target</code> 属性で要素を参照する場合、要素を表示および非表示にすることができます</p>
+    </template>
+  </Localization>
+  
   <Snippet>
     <Example>
       <examples-components-collapse-multiple-targets />
@@ -103,14 +109,6 @@ Please note that while the example below has a `min-height` set to avoid excessi
   </Snippet>
 
 
-  <!--:::: code-group
-::: code-group-item useBootstrap
-@[code](@examples/components/collapse/multiple-targets.vue)
-:::
-::: code-group-item bootstrap5
-@[code](@examples/components/collapse/multiple-targets.html)
-:::
-:::: -->
   <!-- 
 ## Accessibility
 
@@ -136,7 +134,7 @@ Collapse transition classes can be found in `scss/_transitions.scss` as these ar
 
   <!-- {{< scss-docs name="collapse-classes" file="scss/_transitions.scss" >}} -->
 
-  <h2>Usage</h2>
+  <!-- <h2>Usage</h2>
   <p>
     collapse プラグインは、いくつかのクラスを利用して重い作業を処理します。
     The collapse plugin utilizes a few classes to handle the heavy lifting:
@@ -160,7 +158,7 @@ Collapse transition classes can be found in `scss/_transitions.scss` as these ar
     To add accordion-like group management to a collapsible area, add the data attribute <code>AccordionCollapse</code> component. Refer to the <LocalLink to="/components/accordion">
       accordion page
     </LocalLink> for more information.
-  </p>
+  </p> -->
   <!-- ### Via JavaScript
 
 手動で有効にする場合
@@ -173,25 +171,25 @@ var collapseList = collapseElementList.map(function (collapseEl) {
 })
 ``` -->
 
-  <h3>Options</h3>
+  <!-- <h3>Options</h3> -->
 
   <!-- オプションは、データ属性またはJavaScriptで渡すことができます。データ属性の場合は、data-bs-parent=""のように data-bs-にオプション名を追加します。
 Options can be passed via data attributes or JavaScript. For data attributes, append the option name to `data-bs-`, as in `data-bs-parent=""`. -->
 
   <!-- <docs-options-collapse /> -->
 
-  <h3>Methods</h3>
+  <!-- <h3>Methods</h3>
 
-  <h5>danger</h5>
+  <h5>danger</h5> -->
   <!-- {{< partial "callout-danger-async-methods.md" >}} -->
-  <p>
+  <!-- <p>
     折りたたみ可能な要素としてコンテンツをアクティブにします。オプションの <code>object</code> を受け取ります。
     Activates your content as a collapsible element. Accepts an optional options <code>object</code>.
   </p>
   <p>
     コンストラクタを使用して、例えばcollapseのインスタンスを作成することができます。
     You can create a collapse instance with the constructor, for example:
-  </p>
+  </p> -->
   <!-- ```js
 var myCollapse = document.getElementById('myCollapse')
 var bsCollapse = new bootstrap.Collapse(myCollapse, {
@@ -201,11 +199,11 @@ var bsCollapse = new bootstrap.Collapse(myCollapse, {
 
   <!-- <docs-methods-collapse /> -->
 
-  <h3>Events</h3>
+  <!-- <h3>Events</h3>
   <p>
     Bootstrapのcollapseクラスは、collapse機能にフックするためのいくつかのイベントがあります。
     Bootstrap's collapse class exposes a few events for hooking into collapse functionality.
-  </p>
+  </p> -->
   <!-- <docs-events-collapse /> -->
 
   <!-- ```js

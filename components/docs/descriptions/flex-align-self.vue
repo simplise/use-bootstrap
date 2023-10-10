@@ -1,0 +1,34 @@
+<template>
+  <ul>
+    <li><code>align-self="start"</code></li>
+    <li><code>align-self="end"</code></li>
+    <li><code>align-self="center"</code></li>
+    <li><code>align-self="baseline"</code></li>
+    <li><code>align-self="stretch"</code></li>
+    <li><code>align-self="sm-start"</code></li>
+    <li><code>align-self="sm-end"</code></li>
+    <li><code>align-self="sm-center"</code></li>
+    <li><code>align-self="sm-baseline"</code></li>
+    <li><code>align-self="sm-stretch"</code></li>
+    <li><code>align-self="md-start"</code></li>
+    <li><code>align-self="md-end"</code></li>
+    <li><code>align-self="md-center"</code></li>
+    <li><code>align-self="md-baseline"</code></li>
+    <li><code>align-self="md-stretch"</code></li>
+    <li><code>align-self="lg-start"</code></li>
+    <li><code>align-self="lg-end"</code></li>
+    <li><code>align-self="lg-center"</code></li>
+    <li><code>align-self="lg-baseline"</code></li>
+    <li><code>align-self="lg-stretch"</code></li>
+    <li><code>align-self="xl-start"</code></li>
+    <li><code>align-self="xl-end"</code></li>
+    <li><code>align-self="xl-center"</code></li>
+    <li><code>align-self="xl-baseline"</code></li>
+    <li><code>align-self="xl-stretch"</code></li>
+    <li><code>align-self="xxl-start"</code></li>
+    <li><code>align-self="xxl-end"</code></li>
+    <li><code>align-self="xxl-center"</code></li>
+    <li><code>align-self="xxl-baseline"</code></li>
+    <li><code>align-self="xxl-stretch"</code></li>
+  </ul>
+</template>

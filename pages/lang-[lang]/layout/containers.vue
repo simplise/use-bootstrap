@@ -1,87 +1,101 @@
 <script setup lang="ts">
 definePageMeta({
-  title: 'Containers',
-  description: 'コンテナは、Bootstrap 基本的なレイアウト要素であり、特定のデバイスやビューポート内のコンテンツに適切な余白を与え整列させることができます。   Containers are a fundamental building block of Bootstrap that contain, pad, and align your content within a given device or viewport.'
+  'title:en': 'Containers',
+  'description:en': `Containers are a fundamental building block of Bootstrap that contain, pad, and align your content within a given device or viewport.`,
+  'title:ja': 'コンテナ',
+  'description:ja': 'コンテナは、Bootstrap 基本的なレイアウト要素であり、特定のデバイスやビューポート内のコンテンツに適切な余白を与え整列させることができます。'
 })
 </script>
 
 <template>
   <h2>How they work</h2>
-  <p>
-    コンテナは、Bootstrap の基本的なレイアウト要素であり、デフォルトのグリッドシステムを使用する際には必須です。コンテナは内部にコンテンツを格納したり、適切な余白を与えたり(場合によっては)中央に配置したりするために使われます。コンテナはネストできますが、ほとんどのレイアウトではネストする必要はありません。
-    Containers are the most basic layout element in Bootstrap and are <b>required when using our default grid system</b>. Containers are used to contain, pad, and (sometimes) center the content within them. While containers _can_ be nested, most layouts do not require a nested container.
-  </p>
-  <p>
-    Bootstrapには3つの異なるコンテナがあります。
-    Bootstrap comes with three different containers:
-  </p>
+  <Localization>
+    <template #en>
+      <p>Containers are the most basic layout element in Bootstrap and are <b>required when using our default grid system</b>. </p>
+      <p>Containers are used to contain, pad, and (sometimes) center the content within them. While containers _can_ be nested, most layouts do not require a nested container.</p>
+    </template>
+    <template #ja>
+      <p>コンテナは、Bootstrap の基本的なレイアウト要素であり、デフォルトのグリッドシステムを使用する際には必須です。</p>
+      <p>コンテナは内部にコンテンツを格納したり、適切な余白を与えたり(場合によっては)中央に配置したりするために使われます。コンテナはネストできますが、ほとんどのレイアウトではネストする必要はありません。</p>
+    </template>
+  </Localization>
+  <Localization>
+    <template #en>
+      <p>Bootstrap comes with three different containers:</p>
+    </template>
+    <template #ja>
+      <p>Bootstrapには3つの異なるコンテナがあります。</p>
+    </template>
+  </Localization>
+
   <ul>
-    <li> <code>Container</code> コンポーネントは各レスポンシブブレークポイントで <code>max-width</code> を設定します。<code>Container</code>, which sets a <code>max-width</code> at each responsive breakpoint </li>
-    <li> <code>type="fluid"</code> 属性を指定した場合、すべてのブレークポイントで <code>width: 100%</code> となります。<code>type="fluid"</code>, which is <code>width: 100%</code> at all breakpoints </li>
-    <li> <code>type="{breakpoint}"</code> は、指定されたブレークポイントまで <code>width: 100%</code> になります。<code>type="{breakpoint}"</code>, which is <code>width: 100%</code> until the specified breakpoint </li>
+    <Localization>
+      <template #en>
+        <li><code>Container</code>, which sets a <code>max-width</code> at each responsive breakpoint.</li>
+        <li><code>type="fluid"</code>, which is <code>width: 100%</code> at all breakpoints </li>
+        <li><code>type="{breakpoint}"</code>, which is <code>width: 100%</code> until the specified breakpoint </li>
+      </template>
+      <template #ja>
+        <li><code>Container</code> コンポーネントは各レスポンシブブレークポイントで <code>max-width</code> を設定します。</li>
+        <li><code>type="fluid"</code> 属性を指定した場合、すべてのブレークポイントで <code>width: 100%</code> となります。</li>
+        <li><code>type="{breakpoint}"</code> は、指定されたブレークポイントまで <code>width: 100%</code> になります。</li>
+      </template>
+    </Localization>
   </ul>
-  <p>
-    下の表は、各コンテナの <code>max-width</code> と元の <code>Container</code> および <code>type="fluid"</code> との比較を各ブレークポイントで示しています。
-    The table below illustrates how each container's <code>max-width</code> compares to the original <code>Container</code> and <code>type="fluid"</code> across each breakpoint.
-  </p>
-  <!-- <p>
-    これらを実際に見て比較するには、<LocalLink to="/examples/grid#containers">
-      グリッドの例
-    </LocalLink>を参照してください。
-    See them in action and compare them in our <LocalLink to="/examples/grid#containers">
-      Grid example
-    </LocalLink>.
-  </p> -->
+
+  <Localization>
+    <template #en>
+      <p>The table below illustrates how each container's <code>max-width</code> compares to the original <code>Container</code> and <code>type="fluid"</code> across each breakpoint.</p>
+    </template>
+    <template #ja>
+      <p>下の表は、各コンテナの <code>max-width</code> と元の <code>Container</code> および <code>type="fluid"</code> との比較を各ブレークポイントで示しています。</p>
+    </template>
+  </Localization>
+
 
   <docs-descriptions-containers-how />
 
   <h2>Default container</h2>
-  <p>
-    デフォルトの <code>Container</code> 固定幅でレスポンシブなコンテナです。
-    Our default <code>Container</code> class is a responsive, fixed-width container, meaning its <code>max-width</code> changes at each breakpoint.
-  </p>
+  <Localization>
+    <template #en>
+      <p>Our default <code>Container</code> class is a responsive, fixed-width container, meaning its <code>max-width</code> changes at each breakpoint.</p>
+    </template>
+    <template #ja>
+      <p>デフォルトの <code>Container</code> 固定幅でレスポンシブなコンテナです。</p>
+    </template>
+  </Localization>
+
   <examples-layout-container-default />
 
-  <!--:::: code-group
-  ::: code-group-item useBootstrap
-  @[code](@examples/layout/container/default.vue)
-  :::
-  ::: code-group-item bootstrap5
-  @[code](@examples/layout/container/default.html)
-  :::
-  :::: -->
 
   <h2>Responsive containers</h2>
-  <p>
-    レスポンシブコンテナは、指定したブレークポイントに到達するまで 100% の幅を持つクラスを指定することができます。その後はより高いブレークポイントごとに<code>max-width</code>が適用されます。 例えば <code>type="sm"</code> 属性は <code>sm</code> ブレークポイントに到達するまで 100% の幅で始まり、<code>md</code>、<code>lg</code>、<code>xl</code>、<code>xxl</code> とスケールアップしていきます。
-    Responsive containers allow you to specify a class that is 100% wide until the specified breakpoint is reached, after which we apply <code>max-width</code>s for each of the higher breakpoints. For example, <code>type="sm"</code> is 100% wide to start until the <code>sm</code> breakpoint is reached, where it will scale up with <code>md</code>, <code>lg</code>, <code>xl</code>, and <code>xxl</code>.
-  </p>
+
+  <Localization>
+    <template #en>
+      <p>Responsive containers allow you to specify a class that is 100% wide until the specified breakpoint is reached, after which we apply <code>max-width</code>s for each of the higher breakpoints. </p>
+      <p>For example, <code>type="sm"</code> is 100% wide to start until the <code>sm</code> breakpoint is reached, where it will scale up with <code>md</code>, <code>lg</code>, <code>xl</code>, and <code>xxl</code>.</p>
+    </template>
+    <template #ja>
+      <p>レスポンシブコンテナは、指定したブレークポイントに到達するまで 100% の幅を持つクラスを指定することができます。その後はより高いブレークポイントごとに<code>max-width</code>が適用されます。 </p>
+      <p>例えば <code>type="sm"</code> 属性は <code>sm</code> ブレークポイントに到達するまで 100% の幅で始まり、<code>md</code>、<code>lg</code>、<code>xl</code>、<code>xxl</code> とスケールアップしていきます。</p>
+    </template>
+  </Localization>
+
   <examples-layout-container-responsive />
 
-  <!--:::: code-group
-  ::: code-group-item useBootstrap
-  @[code](@examples/layout/container/responsive.vue)
-  :::
-  ::: code-group-item bootstrap5
-  @[code](@examples/layout/container/responsive.html)
-  :::
-  :::: -->
 
   <h2>Fluid containers</h2>
-  <p>
-    ビューポート幅のコンテナを使うには<code>Container</code> に <code>type="fluid"</code> 属性を追加してください。
-    Use <code>type="fluid"</code> for a full width container, spanning the entire width of the viewport.
-  </p>
+  <Localization>
+    <template #en>
+      <p>Use <code>type="fluid"</code> for a full width container, spanning the entire width of the viewport.</p>
+    </template>
+    <template #ja>
+      <p>ビューポート幅のコンテナを使うには<code>Container</code> に <code>type="fluid"</code> 属性を追加してください。</p>
+    </template>
+  </Localization>
+
   <examples-layout-container-fluid />
 
-  <!--:::: code-group
-  ::: code-group-item useBootstrap
-  @[code](@examples/layout/container/fluid.vue)
-  :::
-  ::: code-group-item bootstrap5
-  @[code](@examples/layout/container/fluid.html)
-  :::
-  :::: -->
 
 
   <!-- ## Sass -->

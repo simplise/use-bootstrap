@@ -44,7 +44,7 @@
   <b-div
     aria-live="polite"
     aria-atomic="true"
-    background-color="dark"
+    background-color="body-secondary"
     position="relative"
     class="bd-example-toasts"
   >

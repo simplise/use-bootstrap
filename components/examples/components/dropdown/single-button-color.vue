@@ -7,7 +7,7 @@
       <DropdownItem>Action</DropdownItem>
       <DropdownItem>Another action</DropdownItem>
       <DropdownItem>Something else here</DropdownItem>
-      <DropdownItem divider />
+      <DropdownItemDivider />
       <DropdownItem>Separated DropdownItemnk</DropdownItem>
     </DropdownMenu>
   </Dropdown>
@@ -20,7 +20,7 @@
       <DropdownItem>Action</DropdownItem>
       <DropdownItem>Another action</DropdownItem>
       <DropdownItem>Something else here</DropdownItem>
-      <DropdownItem divider />
+      <DropdownItemDivider />
       <DropdownItem>Separated DropdownItemnk</DropdownItem>
     </DropdownMenu>
   </Dropdown>
@@ -33,7 +33,7 @@
       <DropdownItem>Action</DropdownItem>
       <DropdownItem>Another action</DropdownItem>
       <DropdownItem>Something else here</DropdownItem>
-      <DropdownItem divider />
+      <DropdownItemDivider />
       <DropdownItem>Separated DropdownItemnk</DropdownItem>
     </DropdownMenu>
   </Dropdown>
@@ -46,7 +46,7 @@
       <DropdownItem>Action</DropdownItem>
       <DropdownItem>Another action</DropdownItem>
       <DropdownItem>Something else here</DropdownItem>
-      <DropdownItem divider />
+      <DropdownItemDivider />
       <DropdownItem>Separated DropdownItemnk</DropdownItem>
     </DropdownMenu>
   </Dropdown>
@@ -59,7 +59,7 @@
       <DropdownItem>Action</DropdownItem>
       <DropdownItem>Another action</DropdownItem>
       <DropdownItem>Something else here</DropdownItem>
-      <DropdownItem divider />
+      <DropdownItemDivider />
       <DropdownItem>Separated DropdownItemnk</DropdownItem>
     </DropdownMenu>
   </Dropdown>
@@ -72,7 +72,7 @@
       <DropdownItem>Action</DropdownItem>
       <DropdownItem>Another action</DropdownItem>
       <DropdownItem>Something else here</DropdownItem>
-      <DropdownItem divider />
+      <DropdownItemDivider />
       <DropdownItem>Separated DropdownItemnk</DropdownItem>
     </DropdownMenu>
   </Dropdown>

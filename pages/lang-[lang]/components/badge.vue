@@ -67,9 +67,19 @@ definePageMeta({
   </p> -->
 
   <h3>Positioned</h3>
-  <p>
-    Use utilities to modify a <code>Badge</code> and position it in the corner of a link or button.
-  </p>
+  <Localization>
+    <template #en>
+      <p>
+        Use utilities to modify a <code>Badge</code> and position it in the corner of a link or button.
+      </p>
+    </template>
+    <template #ja>
+      <p>
+        ユーティリティを使って<code>バッジ</code>を修正し、リンクやボタンの隅に配置します。
+      </p>
+    </template>
+  </Localization>
+
   <Snippet>
     <Example>
       <examples-components-badge-positioned-1 />
@@ -80,7 +90,14 @@ definePageMeta({
     />
   </Snippet>
 
-
+  <Localization>
+    <template #en>
+      <p />
+    </template>
+    <template #ja>
+      <p />
+    </template>
+  </Localization>
 
   <!--:::: code-group
 ::: code-group-item useBootstrap
@@ -90,9 +107,16 @@ definePageMeta({
 @[code](@examples/components/badge/positioned1.html)
 :::
 :::: -->
-  <p class="mt-3">
-    You can also modify the <code>Badge</code> component with a few more utilities without a count for a more generic indicator.
-  </p>
+  <Localization>
+    <template #en>
+      <p class="mt-3">
+        You can also modify the <code>Badge</code> component with a few more utilities without a count for a more generic indicator.
+      </p>
+    </template>
+    <template #ja>
+      <p>また、<code>Badge</code>コンポーネントを、より一般的なインジケータのために、カウントなしで、さらにいくつかのユーティリティで変更することもできます。</p>
+    </template>
+  </Localization>
   <Snippet>
     <Example>
       <examples-components-badge-positioned-2 />

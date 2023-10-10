@@ -1,13 +1,13 @@
 <template>
-  <ul inline>
-    <li inline>
+  <List inline>
+    <ListItem inline>
       This is a list item.
-    </li>
-    <li inline>
+    </ListItem>
+    <ListItem inline>
       And another one.
-    </li>
-    <li inline>
+    </ListItem>
+    <ListItem inline>
       But they're displayed inline.
-    </li>
-  </ul>
+    </ListItem>
+  </List>
 </template>

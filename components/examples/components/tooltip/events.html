@@ -1,0 +1,44 @@
+<table class="table">
+  <thead>
+    <tr>
+      <th style="width: 150px;">Event type</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code>show.bs.tooltip</code></td>
+      <td>showインスタンスメソッドが呼び出されたときにすぐに発生します。This event fires immediately when the <code>show</code> instance method is
+        called.</td>
+    </tr>
+    <tr>
+      <td><code>shown.bs.tooltip</code></td>
+      <td>tooltip がユーザーに表示されたときに発生します（CSS トランジションが完了するのを待ちます）。This event is fired when the tooltip has been made visible
+        to the user (will wait for CSS transitions to complete).</td>
+    </tr>
+    <tr>
+      <td><code>hide.bs.tooltip</code></td>
+      <td>hideインスタンスメソッドが呼び出されたときに発生します。This event is fired immediately when the <code>hide</code> instance method has
+        been called.</td>
+    </tr>
+    <tr>
+      <td><code>hidden.bs.tooltip</code></td>
+      <td>tooltip の非表示が完了したときに発生します（CSS トランジションが完了するのを待ちます）。This event is fired when the tooltip has finished being
+        hidden from the user (will wait for CSS transitions to complete).</td>
+    </tr>
+    <tr>
+      <td><code>inserted.bs.tooltip</code></td>
+      <td>tooltip が DOM に追加されて、show.bs.tooltip イベントの後に発生します。This event is fired after the <code>show.bs.tooltip</code>
+        event when the tooltip template has been added to the DOM.</td>
+    </tr>
+  </tbody>
+</table>
+<script>
+  var myTooltipEl = document.getElementById('myTooltip')
+  var tooltip = new bootstrap.Tooltip(myTooltipEl)
+
+  myTooltipEl.addEventListener('hidden.bs.tooltip', function () {
+    // do something...
+  })
+  tooltip.hide()
+</script>
