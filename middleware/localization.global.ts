@@ -1,4 +1,4 @@
-import trim from 'lodash/trim'
+import { trim } from 'lodash-es'
 export default defineNuxtRouteMiddleware((to) => {
  const router = useRouter();
  if (to.fullPath.startsWith('/lang-')) {

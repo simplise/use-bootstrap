@@ -394,7 +394,7 @@ definePageMeta({
     <footer class="pt-4 my-md-5 pt-md-5 border-top">
       <b-div class="row">
         <b-div class="col-12 col-md">
-          <b-img
+          <img
             class="mb-2"
             alt=""
             width="24"

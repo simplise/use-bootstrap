@@ -1,34 +1,75 @@
-<h1 align="center">Welcome to use-bootstrap 👋</h1>
-<p>
-  <a href="https://usebootstrap.org" target="_blank">
-    <img alt="Documentation" src="https://img.shields.io/badge/documentation-yes-brightgreen.svg" />
-  </a>
-  <a href="#" target="_blank">
-    <img alt="License: MIT" src="https://img.shields.io/badge/License-MIT-yellow.svg" />
-  </a>
-</p>
+# Nuxt 3 Minimal Starter
 
-> Use bootstrap for  Nuxt Module
+Look at the [Nuxt 3 documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
 
-### 🏠 [Homepage](https://usebootstrap.org)
+## Setup
 
-### ✨ [Demo](https://usebootstrap.org)
+Make sure to install the dependencies:
 
-## Install
-
-```sh
+```bash
+# npm
 npm install
+
+# pnpm
+pnpm install
+
+# yarn
+yarn install
+
+# bun
+bun install
 ```
 
-## Author
+## Development Server
 
-👤 **Kouji Sano**
+Start the development server on `http://localhost:3000`:
 
-* Github: [@koujisano](https://github.com/koujisano)
+```bash
+# npm
+npm run dev
 
-## Show your support
+# pnpm
+pnpm run dev
 
-Give a ⭐️ if this project helped you!
+# yarn
+yarn dev
 
-***
-_This README was generated with ❤️ by [readme-md-generator](https://github.com/kefranabg/readme-md-generator)_
+# bun
+bun run dev
+```
+
+## Production
+
+Build the application for production:
+
+```bash
+# npm
+npm run build
+
+# pnpm
+pnpm run build
+
+# yarn
+yarn build
+
+# bun
+bun run build
+```
+
+Locally preview production build:
+
+```bash
+# npm
+npm run preview
+
+# pnpm
+pnpm run preview
+
+# yarn
+yarn preview
+
+# bun
+bun run preview
+```
+
+Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.

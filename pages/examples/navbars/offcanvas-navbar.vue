@@ -113,13 +113,13 @@ definePageMeta({
 
   <main class="container">
     <b-div class="d-flex align-items-center p-3 my-3 text-white bg-purple rounded shadow-sm">
-      <b-img
+      <img
         class="me-3"
         alt=""
         width="48"
         height="38"
       />
-      <!-- <b-img class="me-3" src="/docs/{{< param docs_version >}}/assets/brand/bootstrap-logo-white.svg" alt="" width="48" height="38" /> -->
+      <!-- <img class="me-3" src="/docs/{{< param docs_version >}}/assets/brand/bootstrap-logo-white.svg" alt="" width="48" height="38" /> -->
       <b-div class="lh-1">
         <b-h
           level="1"

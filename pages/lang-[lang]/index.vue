@@ -25,7 +25,7 @@ definePageMeta({
     </template>
   </Localization>
   <BashSnippet>
-    npm init nuxt-app project-name
+    npx nuxi@latest init project-name
   </BashSnippet>
 
   <Localization>
@@ -49,7 +49,7 @@ definePageMeta({
     </template>
   </Localization>
   <BashSnippet>
-    npm i --save-dev @vueuse/nuxt sass nuxt-icon
+    npm i --save-dev @vueuse/nuxt sass nuxt-icon @nuxt/image
   </BashSnippet>
 
   <Localization>
@@ -67,7 +67,12 @@ definePageMeta({
   <BashSnippet>
     <pre>
 export default defineNuxtConfig({
-  modules: ['usebootstrap'],
+  modules: [
+    'usebootstrap',
+    'nuxt-icon',
+    '@nuxt/image',
+    '@vueuse/nuxt'
+    ],
   usebootstrap: {
     bootstrap: {
       prefix: ``

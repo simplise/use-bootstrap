@@ -42,6 +42,18 @@ definePageMeta({
     />
   </Snippet>
 
+  <h2>Custom value Model Binding</h2>
+
+  <Snippet>
+    <Example>
+      <examples-forms-check-radio-checks-custom />
+    </Example>
+    <ExamplesCode
+      path="/forms/check-radio/checks-custom.vue"
+      lang="vue"
+    />
+  </Snippet>
+
   <h2 class="mt-3">
     Indeterminate
   </h2>
@@ -53,9 +65,9 @@ definePageMeta({
       <p>チェックボックスは、<code>indeterminate</code> 属性を利用することができます。</p>
     </template>
   </Localization>
-  
+
   <Snippet>
-    <Example>
+    <Example indeterminate>
       <examples-forms-check-radio-checks-indeterminate />
     </Example>
     <ExamplesCode
@@ -75,7 +87,7 @@ definePageMeta({
       <p><code>disabled</code> 属性を追加すると、関連付けられた <code>FormCheckLabel</code> は、入力の状態を示すように自動的にスタイル設定されます。下記の例を参考にしてください。</p>
     </template>
   </Localization>
-  
+
   <Snippet>
     <Example>
       <examples-forms-check-radio-checks-disabled />
@@ -195,6 +207,26 @@ definePageMeta({
     />
   </Snippet>
 
+  <h2>Reverse</h2>
+  <Localization>
+    <template #en>
+      <p>Put your checkboxes, radios, and switches on the opposite side with the <code>reverse</code> modifier class.</p>
+    </template>
+    <template #ja>
+      <p>反転させるには <code>reverse</code> クラスを追加します。 </p>
+    </template>
+  </Localization>
+
+  <Snippet>
+    <Example>
+      <examples-forms-check-radio-reverse />
+    </Example>
+    <ExamplesCode
+      path="/forms/check-radio/reverse.vue"
+      lang="vue"
+    />
+  </Snippet>
+
   <h2>Without labels</h2>
   <Localization>
     <template #en>
@@ -253,15 +285,6 @@ definePageMeta({
     />
   </Snippet>
 
-  <Snippet>
-    <Example>
-      <examples-forms-check-radio-toggle-buttons-3 />
-    </Example>
-    <ExamplesCode
-      path="/forms/check-radio/toggle-buttons-3.vue"
-      lang="vue"
-    />
-  </Snippet>
 
   <!-- {{< callout info >}}
 視覚的には、これらのチェックボックス・トグル・ボタンは、button plugin toggle buttonsと同じです。チェックボックスのトグルボタンはスクリーンリーダーによって “checked”/“not checked” と表示されるのに対し（見た目に反して基本的にはチェックボックスであるため）、ボタンプラグインのトグルボタンは “button”/“button pressed” と表示されます。これらの 2 つのアプローチのどちらを選択するかは、あなたが作成しようとしているトグルのタイプと、そのトグルがチェックボックスとして発表されたときと実際のボタンとして発表されたときのどちらがユーザーにとって意味を持つかによります。
@@ -273,10 +296,20 @@ Visually, these checkbox toggle buttons are identical to the [button plugin togg
 
   <Snippet>
     <Example>
-      <examples-forms-check-radio-toggle-buttons />
+      <examples-forms-check-radio-toggle-buttons-radio-1 />
     </Example>
     <ExamplesCode
-      path="/forms/check-radio/radio-toggle-buttons.vue"
+      path="/forms/check-radio/toggle-buttons-radio-1.vue"
+      lang="vue"
+    />
+  </Snippet>
+
+  <Snippet>
+    <Example>
+      <examples-forms-check-radio-toggle-buttons-radio-2 />
+    </Example>
+    <ExamplesCode
+      path="/forms/check-radio/toggle-buttons-radio-2.vue"
       lang="vue"
     />
   </Snippet>

@@ -3120,7 +3120,7 @@ definePageMeta({
                 class="navbar-brand"
                 href="#"
               >
-                <b-img
+                <img
                   width="38"
                   height="30"
                   class="d-inline-block align-top"
@@ -3241,7 +3241,7 @@ definePageMeta({
                 class="navbar-brand"
                 href="#"
               >
-                <b-img
+                <img
                   width="38"
                   height="30"
                   class="d-inline-block align-top"

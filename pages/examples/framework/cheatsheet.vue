@@ -22,7 +22,7 @@ definePageMeta({
             alt="Bootstrap"
             src="https://dummyimage.com/38x30/000000/fff"
           >
-          <!-- <b-img src="/docs/{{< param docs_version >}}/assets/brand/bootstrap-logo-white.svg" width="38" height="30" class="me-3" alt="Bootstrap"> -->
+          <!-- <img src="/docs/{{< param docs_version >}}/assets/brand/bootstrap-logo-white.svg" width="38" height="30" class="me-3" alt="Bootstrap"> -->
           Cheatsheet
         </b-h>
         <b-a
@@ -757,9 +757,9 @@ definePageMeta({
           <!-- {{< example show_markup="false" >}} -->
           <BForm>
             <b-div class="mb-3">
-              <BFormlabel for="exampleInputEmail1">
+              <BFormLabel for="exampleInputEmail1">
                 Email address
-              </BFormlabel>
+              </BFormLabel>
               <BFormInput
                 id="exampleInputEmail1"
                 type="email"
@@ -773,9 +773,9 @@ definePageMeta({
               </b-div>
             </b-div>
             <b-div class="mb-3">
-              <BFormlabel for="exampleInputPassword1">
+              <BFormLabel for="exampleInputPassword1">
                 Password
-              </BFormlabel>
+              </BFormLabel>
               <BFormInput
                 id="exampleInputPassword1"
                 type="password"
@@ -786,9 +786,9 @@ definePageMeta({
                 id="exampleCheck1"
                 type="checkbox"
               />
-              <BFormlabel for="exampleCheck1">
+              <BFormLabel for="exampleCheck1">
                 Check me out
-              </BFormlabel>
+              </BFormLabel>
             </b-div>
             <BFieldset class="mb-3">
               <legend>Radios buttons</legend>
@@ -798,9 +798,9 @@ definePageMeta({
                   type="radio"
                   name="radios"
                 />
-                <BFormlabel for="exampleRadio1">
+                <BFormLabel for="exampleRadio1">
                   Default radio
-                </BFormlabel>
+                </BFormLabel>
               </b-div>
               <b-div class="mb-3 form-check">
                 <BFormInput
@@ -808,15 +808,15 @@ definePageMeta({
                   type="radio"
                   name="radios"
                 />
-                <BFormlabel for="exampleRadio2">
+                <BFormLabel for="exampleRadio2">
                   Another radio
-                </BFormlabel>
+                </BFormLabel>
               </b-div>
             </BFieldset>
             <b-div class="mb-3">
-              <BFormlabel for="customFile">
+              <BFormLabel for="customFile">
                 Upload
-              </BFormlabel>
+              </BFormLabel>
               <BFormInput
                 id="customFile"
                 type="file"
@@ -829,14 +829,14 @@ definePageMeta({
                 role="switch"
                 checked
               />
-              <BFormlabel for="flexSwitchCheckChecked">
+              <BFormLabel for="flexSwitchCheckChecked">
                 Checked switch checkbox input
-              </BFormlabel>
+              </BFormLabel>
             </b-div>
             <b-div class="mb-3">
-              <BFormlabel for="customRange3">
+              <BFormLabel for="customRange3">
                 Example range
-              </BFormlabel>
+              </BFormLabel>
               <BFormInput
                 id="customRange3"
                 type="range"
@@ -3054,7 +3054,7 @@ definePageMeta({
                 class="navbar-brand"
                 href="#"
               >
-                <b-img
+                <img
                   width="38"
                   height="30"
                   class="d-inline-block align-top"
@@ -3062,7 +3062,7 @@ definePageMeta({
                   loading="lazy"
                   style="filter: invert(1) grayscale(100%) brightness(200%);"
                 />
-                <!-- <b-img src="/docs/{{< param docs_version >}}/assets/brand/bootstrap-logo-white.svg" width="38" height="30" class="d-inline-block align-top" alt="Bootstrap" loading="lazy"
+                <!-- <img src="/docs/{{< param docs_version >}}/assets/brand/bootstrap-logo-white.svg" width="38" height="30" class="d-inline-block align-top" alt="Bootstrap" loading="lazy"
                      style="filter: invert(1) grayscale(100%) brightness(200%);"> -->
               </b-a>
               <b-button
@@ -3175,14 +3175,14 @@ definePageMeta({
                 class="navbar-brand"
                 href="#"
               >
-                <b-img
+                <img
                   width="38"
                   height="30"
                   class="d-inline-block align-top"
                   alt="Bootstrap"
                   loading="lazy"
                 />
-                <!-- <b-img src="/docs/{{< param docs_version >}}/assets/brand/bootstrap-logo-white.svg" width="38" height="30" class="d-inline-block align-top" alt="Bootstrap" loading="lazy"> -->
+                <!-- <img src="/docs/{{< param docs_version >}}/assets/brand/bootstrap-logo-white.svg" width="38" height="30" class="d-inline-block align-top" alt="Bootstrap" loading="lazy"> -->
               </b-a>
               <b-button
                 class="navbar-toggler"

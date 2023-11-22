@@ -1,15 +1,19 @@
 <template>
   <BFormCheck>
-    <BFormCheckInput v-model="checkbox1" />
+    <BFormCheckInput
+      v-model="checkbox1"
+      true-value="ok"
+      false-value="ng"
+    />
     <BFormCheckLabel>Default checkbox</BFormCheckLabel>
   </BFormCheck>
   <BFormCheck>
-    <BFormCheckInput v-model="checkbox2" />
+    <BFormCheckInput
+      v-model="checkbox2"
+      true-value="ok"
+      false-value="ng"
+    />
     <BFormCheckLabel>Checked checkbox</BFormCheckLabel>
-  </BFormCheck>
-  <BFormCheck>
-    <BFormCheckInput checked />
-    <BFormCheckLabel>Static checked checkbox</BFormCheckLabel>
   </BFormCheck>
   <b-dl margin="t-5">
     <b-dt col="sm-3">
@@ -27,6 +31,6 @@
   </b-dl>
 </template>
 <script setup>
-const checkbox1 = ref(false)
-const checkbox2 = ref(true)
+const checkbox1 = ref('ng')
+const checkbox2 = ref('ok')
 </script>

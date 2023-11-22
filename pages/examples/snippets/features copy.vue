@@ -138,23 +138,36 @@ definePageMeta({
   <main>
     <b-h
       level="1"
-      class="visually-hidden"
+      visually="hidden"
     >
       Features examples
     </b-h>
-    <b-div
-      id="featured-3"
-      class="container px-4 py-5"
-    >
+    <!-- Features 1 start -->
+    <Container padding="x-4 y-5">
       <b-h
         level="2"
-        class="pb-2 border-bottom"
+        padding="b-2"
+        border="bottom"
       >
         <br>Columns with icons
       </b-h>
-      <b-div class="row g-4 py-5 row-cols-1 row-cols-lg-3">
-        <b-div class="feature col">
-          <b-div class="feature-icon d-inline-flex align-items-center justify-content-center bg-primary bg-gradient text-white fs-2 mb-3">
+      <Row
+        gap="4"
+        padding="y-5"
+        colmuns="1 lg-3"
+      >
+        <Col feature>
+          <b-div
+            feature="icon"
+            display="inline-flex"
+            align-items="center"
+            justify-content="center"
+            background-color="primary"
+            background-gradient
+            text-color="white"
+            font-size="2"
+            margin="b-3"
+          >
             <svg
               class="bi"
               width="1em"
@@ -167,9 +180,10 @@ definePageMeta({
             Featured title
           </b-h>
           <b-p>Paragraph of text beneath the heading to explain the heading. We'll add onto it with another sentence and probably just keep going until we run out of words.</b-p>
-          <b-a
+          <icon-link
+            display="inline-flex"
+            align-items="center"
             href="#"
-            class="icon-link d-inline-flex align-items-center"
           >
             Call to action
             <svg
@@ -179,11 +193,59 @@ definePageMeta({
             >
               <use xlink:href="#chevron-right" />
             </svg>
-          </b-a>
-        </b-div>
-        
-        <b-div class="feature col">
-          <b-div class="feature-icon d-inline-flex align-items-center justify-content-center bg-primary bg-gradient text-white fs-2 mb-3">
+          </icon-link>
+        </Col>
+        <Col feature>
+          <b-div
+            feature="icon"
+            display="inline-flex"
+            align-items="center"
+            justify-content="center"
+            background-color="primary"
+            background-gradient
+            text-color="white"
+            font-size="2"
+            margin="b-3"
+          >
+            <svg
+              class="bi"
+              width="1em"
+              height="1em"
+            >
+              <use xlink:href="#people-circle" />
+            </svg>
+          </b-div>
+          <b-h level="2">
+            Featured title
+          </b-h>
+          <b-p>Paragraph of text beneath the heading to explain the heading. We'll add onto it with another sentence and probably just keep going until we run out of words.</b-p>
+          <icon-link
+            display="inline-flex"
+            align-items="center"
+            href="#"
+          >
+            Call to action
+            <svg
+              class="bi"
+              width="1em"
+              height="1em"
+            >
+              <use xlink:href="#chevron-right" />
+            </svg>
+          </icon-link>
+        </Col>
+        <Col feature>
+          <b-div
+            feature="icon"
+            display="inline-flex"
+            align-items="center"
+            justify-content="center"
+            background-color="primary"
+            background-gradient
+            text-color="white"
+            font-size="2"
+            margin="b-3"
+          >
             <svg
               class="bi"
               width="1em"
@@ -196,9 +258,10 @@ definePageMeta({
             Featured title
           </b-h>
           <b-p>Paragraph of text beneath the heading to explain the heading. We'll add onto it with another sentence and probably just keep going until we run out of words.</b-p>
-          <b-a
+          <icon-link
+            display="inline-flex"
+            align-items="center"
             href="#"
-            class="icon-link d-inline-flex align-items-center"
           >
             Call to action
             <svg
@@ -208,26 +271,44 @@ definePageMeta({
             >
               <use xlink:href="#chevron-right" />
             </svg>
-          </b-a>
-        </b-div>
-      </b-div>
-    </b-div>
-
+          </icon-link>
+        </Col>
+      </Row>
+    </Container>
+    <!-- Features 1 end -->
     <b-div class="b-example-b-divider" />
-
-    <b-div
-      id="hanging-icons"
-      class="container px-4 py-5"
+    <!-- Features 2 start -->
+    <Container
+      id="handing-icons"
+      padding="x-4 y-5"
     >
       <b-h
         level="2"
-        class="pb-2 border-bottom"
+        padding="b-2"
+        border="bottom"
       >
-        Hanging icons
+        Handing icons
       </b-h>
-      <b-div class="row g-4 py-5 row-cols-1 row-cols-lg-3">
-        <b-div class="col d-flex align-items-start">
-          <b-div class="icon-square bg-light text-dark d-inline-flex align-items-center justify-content-center fs-4 flex-shrink-0 me-3">
+      <Row
+        colmuns="1 lg-3"
+        gap="4"
+        padding="y-5"
+      >
+        <Col
+          display="flex"
+          align-items="start"
+        >
+          <b-icon
+            icon-square
+            background-color="light"
+            text-color="dark"
+            display="inline-flex"
+            align-items="center"
+            justify-content="center"
+            font-size="4"
+            flex="shrink-0"
+            margin="e-3"
+          >
             <svg
               class="bi"
               width="1em"
@@ -235,7 +316,7 @@ definePageMeta({
             >
               <use xlink:href="#toggles2" />
             </svg>
-          </b-div>
+          </b-icon>
           <b-div>
             <b-h level="2">
               Featured title
@@ -243,14 +324,28 @@ definePageMeta({
             <b-p>Paragraph of text beneath the heading to explain the heading. We'll add onto it with another sentence and probably just keep going until we run out of words.</b-p>
             <b-a
               href="#"
-              class="btn btn-primary"
+              type="button"
+              button="primary"
             >
               Primary button
             </b-a>
           </b-div>
-        </b-div>
-        <b-div class="col d-flex align-items-start">
-          <b-div class="icon-square bg-light text-dark d-inline-flex align-items-center justify-content-center fs-4 flex-shrink-0 me-3">
+        </Col>
+        <Col
+          display="flex"
+          align-items="start"
+        >
+          <b-icon
+            icon-square
+            background-color="light"
+            text-color="dark"
+            display="inline-flex"
+            align-items="center"
+            justify-content="center"
+            font-size="4"
+            flex="shrink-0"
+            margin="e-3"
+          >
             <svg
               class="bi"
               width="1em"
@@ -258,7 +353,7 @@ definePageMeta({
             >
               <use xlink:href="#cpu-fill" />
             </svg>
-          </b-div>
+          </b-icon>
           <b-div>
             <b-h level="2">
               Featured title
@@ -266,14 +361,28 @@ definePageMeta({
             <b-p>Paragraph of text beneath the heading to explain the heading. We'll add onto it with another sentence and probably just keep going until we run out of words.</b-p>
             <b-a
               href="#"
-              class="btn btn-primary"
+              type="button"
+              button="primary"
             >
               Primary button
             </b-a>
           </b-div>
-        </b-div>
-        <b-div class="col d-flex align-items-start">
-          <b-div class="icon-square bg-light text-dark d-inline-flex align-items-center justify-content-center fs-4 flex-shrink-0 me-3">
+        </Col>
+        <Col
+          display="flex"
+          align-items="start"
+        >
+          <b-icon
+            icon-square
+            background-color="light"
+            text-color="dark"
+            display="inline-flex"
+            align-items="center"
+            justify-content="center"
+            font-size="4"
+            flex="shrink-0"
+            margin="e-3"
+          >
             <svg
               class="bi"
               width="1em"
@@ -281,7 +390,7 @@ definePageMeta({
             >
               <use xlink:href="#tools" />
             </svg>
-          </b-div>
+          </b-icon>
           <b-div>
             <b-h level="2">
               Featured title
@@ -289,17 +398,18 @@ definePageMeta({
             <b-p>Paragraph of text beneath the heading to explain the heading. We'll add onto it with another sentence and probably just keep going until we run out of words.</b-p>
             <b-a
               href="#"
-              class="btn btn-primary"
+              type="button"
+              button="primary"
             >
               Primary button
             </b-a>
           </b-div>
-        </b-div>
-      </b-div>
-    </b-div>
-
+        </Col>
+      </Row>
+    </Container>
+    <!-- Features 2 end -->
     <b-div class="b-example-b-divider" />
-
+    <!-- Features 3 start -->
     <b-div
       id="custom-cards"
       class="container px-4 py-5"
@@ -311,8 +421,37 @@ definePageMeta({
         Custom cards
       </b-h>
 
-      <b-div class="row row-cols-1 row-cols-lg-3 align-items-stretch g-4 py-5">
-        <b-div class="col">
+      <Row
+        colmns="1 lg-3"
+        align-items="stretch"
+        gap="4"
+        padding="y-5"
+      >
+        <Col>
+          <Card
+            card="cover"
+            height="100%"
+            overflow="hidden"
+            text-color="white"
+            background-color="dark"
+            rounded="4"
+            shadow="lg"
+            style="background-image: url('unsplash-photo-1.jpg');"
+          >
+            <CardImg />
+            <CardImgOverlay>
+              <CardTitle
+                level="2"
+                padding="t-5"
+                margin="t-5 b-4"
+                display="6"
+                line-height="1"
+                font-weight="bold"
+              >
+                Short title, long jacket
+              </CardTitle>
+            </CardImgOverlay>
+          </Card>
           <b-div
             class="card card-cover h-100 overflow-hidden text-white bg-dark rounded-4 shadow-lg"
             style="background-image: url('unsplash-photo-1.jpg');"
@@ -357,7 +496,7 @@ definePageMeta({
               </ul>
             </b-div>
           </b-div>
-        </b-div>
+        </Col>
 
         <b-div class="col">
           <b-div
@@ -452,9 +591,9 @@ definePageMeta({
             </b-div>
           </b-div>
         </b-div>
-      </b-div>
+      </Row>
     </b-div>
-
+    <!-- Features 3 end -->
     <b-div class="b-example-b-divider" />
 
     <b-div
