@@ -1,6 +1,5 @@
 <template>
   <div
-    class="bd-example"
     style="height: 25px"
   >
     <b-h

@@ -15,6 +15,7 @@
         type="password"
       />
     </BFormControl>
+    <input v-model="password">
     <BFormCheck>
       <BFormCheckInput v-model="checked" />
       <BFormCheckLabel>Check me out</BFormCheckLabel>
@@ -37,7 +38,7 @@
       Password
     </b-dt>
     <b-dd col="sm-9">
-      {{ password }}
+      <span>{{ password }}</span>
     </b-dd>
     <b-dt col="sm-3">
       Checked
@@ -48,7 +49,7 @@
   </b-dl>
 </template>
 <script setup>
-const email = ref('')
+const email = ref('email')
 const password = ref('')
 const checked = ref(false)
 </script>

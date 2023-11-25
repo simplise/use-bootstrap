@@ -1,22 +1,20 @@
 <template>
-  <!-- <DocsShareSkippy></DocsShareSkippy>
-  <DocsShareIcons></DocsShareIcons> -->
   <ShareHeader />
-  <main
+  <b-main
     id="content"
-    class="bd-content order-1 py-5"
+    flex-order="1"
+    padding="y-5"
+    class="bd-content"
   >
-    <div class="container-xxl bd-gutter">
+    <Container
+      type="xxl"
+      class="bd-gutter"
+    >
       <slot />
-    </div>
-  </main>
+    </Container>
+  </b-main>
   <ShareFooter />
 </template>
 <script setup lang="ts">
-// useHead({
-//   htmlAttrs: {
-//     'data-bs-theme': 'light'
-//   }
-// })
 </script>
 

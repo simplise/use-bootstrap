@@ -2,7 +2,8 @@
   <b-div flex>
     <b-img
       src="https://dummyimage.com/144x144/868e96/868e96"
-      class="flex-shrink-0 me-3"
+      flex-grow="shrink-0"
+      margin="e-3"
       alt="Generic placeholder image"
     />
     <b-div position="relative">

@@ -17,14 +17,6 @@ definePageMeta({
     </template>
   </Localization>
 
-
-  <!--黄色の枠を作る-->
-  <!-- <div style="background-color: antiquewhite;">
-    <h5>warning</h5>
-    <p>
-      Elements with the <code>invisible</code> attribute will be hidden <b>both</b> visually and for assistive technology/screen reader users.
-    </p>
-  </div> -->
   <Localization>
     <template #en>
       <p>Apply <code>visible</code> or <code>invisible</code> as needed.</p>
@@ -34,35 +26,13 @@ definePageMeta({
     </template>
   </Localization>
 
-  <!-- 
-```scss
-// Class
-.visible {
- visibility: visible !important;
-}
-.invisible {
- visibility: hidden !important;
-}
-``` -->
-
-  <!-- ## Sass
-
-### Utilities API
-
-Visibility utilities は scss/_utilities.scss で宣言されています. Learn how to use the utilities API.
-
-Visibility utilities are declared in our utilities API in `scss/_utilities.scss`. [Learn how to use the utilities API.](/utilities/api#using-the-api) -->
-
-  <!-- {{< scss-docs name="utils-visibility" file="scss/_utilities.scss" >}} -->
-  <!-- 
-```scss
- "visibility": (
-   property: visibility,
-   class: null,
-   values: (
-     visible: visible,
-     invisible: hidden,
-   )
- )
-``` -->
+  <Snippet>
+    <Example>
+      <examples-utilities-visibility />
+    </Example>
+    <ExamplesCode
+      path="/utilities/visibility/visibility.vue"
+      lang="vue"
+    />
+  </Snippet>
 </template>

@@ -1,10 +1,7 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   modules: [
-    'usebootstrap',
-    'nuxt-icon',
-    '@vueuse/nuxt',
-    "@nuxt/image"
+    'usebootstrap'
     ],
   usebootstrap: {
     bootstrap: {

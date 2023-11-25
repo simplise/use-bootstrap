@@ -3061,7 +3061,7 @@ definePageMeta({
                   alt="Bootstrap"
                   loading="lazy"
                   style="filter: invert(1) grayscale(100%) brightness(200%);"
-                />
+                >
                 <!-- <img src="/docs/{{< param docs_version >}}/assets/brand/bootstrap-logo-white.svg" width="38" height="30" class="d-inline-block align-top" alt="Bootstrap" loading="lazy"
                      style="filter: invert(1) grayscale(100%) brightness(200%);"> -->
               </b-a>
@@ -3181,7 +3181,7 @@ definePageMeta({
                   class="d-inline-block align-top"
                   alt="Bootstrap"
                   loading="lazy"
-                />
+                >
                 <!-- <img src="/docs/{{< param docs_version >}}/assets/brand/bootstrap-logo-white.svg" width="38" height="30" class="d-inline-block align-top" alt="Bootstrap" loading="lazy"> -->
               </b-a>
               <b-button

@@ -1,5 +1,5 @@
 <template>
-  <b-div position="fixed-top">
-    ...
+  <b-div fixed="top">
+    fixed-top
   </b-div>
 </template>

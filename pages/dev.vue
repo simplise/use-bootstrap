@@ -24,7 +24,7 @@
       <examples-components-toast-live />
     </Example>
   </Snippet> -->
-  <img src="~/assets/img/img1.jpg">
+  <!-- <img src="~/assets/img/img1.jpg">
   <b-img
     src="~/assets/img/img1.jpg"
     margin="s-2"
@@ -32,12 +32,13 @@
   <b-img
     src="/img/img1.jpg"
     margin="s-2"
-  />
+  /> -->
   <Snippet>
     <Example>
       <examples-components-offcanvas-livedemo />
     </Example>
   </Snippet>
+  <examples-forms-form-overview />
 </template>
 
 

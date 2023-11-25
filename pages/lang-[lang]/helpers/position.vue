@@ -15,9 +15,16 @@ definePageMeta({
       <p>Be sure you understand the ramifications of fixed position in your project; you may need to add additional CSS.</p>
     </template>
     <template #ja>
-      <p>viewportの上部に要素を配置します。(追加でCSSを必要がある場合があります)</p>
+      <p>viewportの上部に要素を配置します。(追加でCSSを必要となる場合があります)</p>
     </template>
   </Localization>
+
+  <Snippet>
+    <ExamplesCode
+      path="/helpers/position/fixed-top.vue"
+      lang="vue"
+    />
+  </Snippet>
 
   <h2>Fixed bottom</h2>
   <Localization>
@@ -26,9 +33,16 @@ definePageMeta({
       <p>Be sure you understand the ramifications of fixed position in your project; you may need to add additional CSS.</p>
     </template>
     <template #ja>
-      <p>viewportの下部に要素を配置します。(追加でCSSを必要がある場合があります)</p>
+      <p>viewportの下部に要素を配置します。(追加でCSSを必要となる場合があります)</p>
     </template>
   </Localization>
+
+  <Snippet>
+    <ExamplesCode
+      path="/helpers/position/fixed-bottom.vue"
+      lang="vue"
+    />
+  </Snippet>
 
   <h2>Sticky top</h2>
   <Localization>
@@ -42,6 +56,13 @@ definePageMeta({
     </template>
   </Localization>
 
+  <Snippet>
+    <ExamplesCode
+      path="/helpers/position/sticky-top.vue"
+      lang="vue"
+    />
+  </Snippet>
+
   <h2>Responsive sticky top</h2>
   <Localization>
     <template #en>
@@ -51,4 +72,11 @@ definePageMeta({
       <p>レスポンシブなバリエーションは <code>sticky-top</code> の下記を参考にしてください。</p>
     </template>
   </Localization>
+
+  <Snippet>
+    <ExamplesCode
+      path="/helpers/position/responsive-sticky-top.vue"
+      lang="vue"
+    />
+  </Snippet>
 </template>

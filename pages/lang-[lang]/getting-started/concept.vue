@@ -8,7 +8,7 @@ definePageMeta({
 </script>
 
 <template>
-  <h3>Pure Bootstrap5 CSS</h3>
+  <h2>Pure Bootstrap5 CSS</h2>
   <Localization>
     <template #en>
       <p>Only Bootstrap5 CSS is being used without the original CSS. Bootstrap5 CSS is not included. </p>
@@ -19,7 +19,7 @@ definePageMeta({
       <p>Bootstrap5 SASSソースファイルを利用して、カスタマイズされた独自のBootstrap5 CSSを利用可能です。 RFSに対応しています </p>
     </template>
   </Localization>
-  <h3>Pure Vue.js Scripts</h3>
+  <h2>Pure Vue.js Scripts</h2>
   <Localization>
     <template #en>
       <p>It is described by the script used Vue3 Composition API. </p>
@@ -31,7 +31,7 @@ definePageMeta({
     </template>
   </Localization>
 
-  <h3>Pure Components</h3>
+  <h2>Pure Components</h2>
   <Localization>
     <template #en>
       <p>use-bootstrap consists of properties set in the component, and is different from Bootstrap5 which consists of values set in the Class attribute or the Data attribute.</p>
@@ -66,12 +66,14 @@ definePageMeta({
 
   <Localization>
     <template #en>
-      <h2>Correspondence to nuxt-link</h2>
+      <h2>Correspondence to nuxt-link , nuxt-image and nuxt-icon</h2>
       <p>It corresponds to nuxt-link by using the to-attribute.</p>
+      <p>It also corresponds to nuxt-image , nuxt-icon , vue-use.</p>
     </template>
     <template #ja>
       <h2>nuxt-link 対応</h2>
       <p>to属性を利用することで、nuxt-link に対応します。</p>
+      <p>nuxt-image , nuxt-icon , vue-use にも対応します.</p>
     </template>
   </Localization>
   <Localization>

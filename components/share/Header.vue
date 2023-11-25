@@ -9,7 +9,10 @@
       flex-wrap="wrap lg-nowrap"
       class="bd-gutter"
     >
-      <div class="bd-navbar-toggle">
+      <div
+        v-if="hasNavbar"
+        class="bd-navbar-toggle"
+      >
         <NavbarToggler
           target="#bdSidebar"
           icon="bi:list"
@@ -18,10 +21,14 @@
       </div>
       <NavbarBrand
         to="/"
-        :padding="0"
-        margin="e-0 e-lg-2"
+        padding="0"
+        margin="0 e-2"
       >
-        use-bootstrap
+        <img
+          src="~/assets/img/logo/logo3.svg"
+          alt="use-bootstrap"
+          height="30"
+        >
       </NavbarBrand>
 
       <b-div flex>
@@ -193,12 +200,23 @@
 
 const route = useRoute()
 
+const hasNavbar = ref(true)
+
+watch(() => route.path, () => {
+  if (route.path.startsWith('/lang-')) {
+    hasNavbar.value = true
+  }
+  else {
+    hasNavbar.value = false
+  }
+}, { immediate: true })
+
 const isDark = useDark({
-    selector: 'html',
-    attribute: 'data-bs-theme',
-    valueDark: 'dark',
-    valueLight: 'light',
-  })
+  selector: 'html',
+  attribute: 'data-bs-theme',
+  valueDark: 'dark',
+  valueLight: 'light',
+})
 const changeLocale = (lang: string) => {
   navigateTo(`/lang-${lang}/`)
 }

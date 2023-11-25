@@ -21,6 +21,10 @@ const routes = [
       {
         name: 'Concept',
         path: '/getting-started/concept/',
+      },
+      {
+        name: 'Migration',
+        path: '/getting-started/migration/',
       }
     ]
   },
@@ -418,8 +422,13 @@ const routes = [
           class="bd-links w-100"
           aria-label="Docs navigation"
         >
-          <ul class="bd-links-nav list-unstyled mb-0 pb-3 pb-md-2 pe-lg-2">
-            <li
+          <List
+            unstyled
+            margin="b-0"
+            padding="b-3 b-md-2 e-lg-2"
+            class="bd-links-nav"
+          >
+            <ListItem
               v-for="item in routes"
               :key="item.name"
               class="bd-links-group py-2"
@@ -433,8 +442,13 @@ const routes = [
                 />
                 {{ item.name }}
               </strong>
-              <ul class="list-unstyled fw-normal pb-2 small">
-                <li
+              <List
+                unstyled
+                font-weight="normal"
+                padding="b-2"
+                small
+              >
+                <ListItem
                   v-for="secondItem in item.children"
                   :key="secondItem.path"
                 >
@@ -447,10 +461,10 @@ const routes = [
                   >
                     {{ secondItem.name }}
                   </LocalLink>
-                </li>
-              </ul>
-            </li>
-          </ul>
+                </ListItem>
+              </List>
+            </ListItem>
+          </List>
         </nav>
       </OffcanvasBody>
     </Offcanvas>

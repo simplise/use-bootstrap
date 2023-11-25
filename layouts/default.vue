@@ -1,27 +1,29 @@
 <template>
-  <!-- <DocsShareSkippy></DocsShareSkippy>
-  <DocsShareIcons></DocsShareIcons> -->
   <ShareHeader />
-  <div class="container-xxl bd-gutter mt-3 my-md-4 bd-layout">
+  <Container
+    type="xxl"
+    margin="t-3 y-md-4"
+    class="bd-gutter bd-layout"
+  >
     <ShareSidebar />
-    <main class="bd-main order-1">
+    <b-main
+      flex-order="1"
+      class="bd-main"
+    >
       <ShareIntro />
       <ShareToc />
-      <div
+      <b-div
         id="bd-content"
-        class="bd-content ps-lg-2"
+        padding="s-lg-2"
+        class="bd-content"
       >
         <slot />
-      </div>
-    </main>
-  </div>
+      </b-div>
+    </b-main>
+  </Container>
   <ShareFooter />
 </template>
 <script setup lang="ts">
-//useHead({
-//   htmlAttrs: {
-//     'data-bs-theme': 'light'
-//   }
-// })
+
 </script>
 

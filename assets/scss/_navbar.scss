@@ -12,11 +12,11 @@
     background-image: linear-gradient(rgba(var(--bd-violet-rgb), 1), rgba(var(--bd-violet-rgb), .95));
   }
 
-  .bd-navbar-toggle {
-    @include media-breakpoint-down(lg) {
-      width: 4.25rem;
-    }
-  }
+  // .bd-navbar-toggle {
+  //   @include media-breakpoint-down(lg) {
+  //     width: 4.25rem;
+  //   }
+  // }
 
   .navbar-toggler {
     padding: 0;

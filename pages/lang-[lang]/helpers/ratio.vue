@@ -123,8 +123,17 @@ This CSS variable makes it easy to modify the aspect ratio across breakpoints. T
      }
  }
 ``` -->
-  <h3>※sample domo code vew </h3>
 
+  <Localization>
+    <template #en>
+      <p>This CSS variable makes it easy to modify the aspect ratio across breakpoints.</p>
+      <p>The following is 4x3 to start, but changes to a custom 2x1 at the medium breakpoint.</p>
+    </template>
+    <template #ja>
+      <p>この CSS 変数は、ブレークポイント間のアスペクト比を簡単に変更できるようにします。</p>
+      <p>以下は、最初は 4x3 ですが、中段のブレークポイントではカスタム 2x1 に変更されます。</p>
+    </template>
+  </Localization>
 
   <Snippet>
     <Example
