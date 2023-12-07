@@ -1,3 +1,0 @@
-<template>
-  <CloseButton />
-</template>
