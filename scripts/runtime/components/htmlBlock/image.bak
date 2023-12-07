@@ -1,0 +1,34 @@
+<script setup>
+import { defineProps } from "vue";
+import { hProps } from "../../utils/useProps";
+import { useImage, ImageProps } from "../../composables/html/useImage";
+import { BlockProps, useBlock } from "../../composables/base/useBlock";
+
+const props = defineProps({
+ ...BlockProps,
+ ...ImageProps,
+ src: {
+  type: String,
+  default: undefined
+ }
+})
+
+const block = useBlock(props);
+const image = useImage(props);
+
+const attr = hProps(image, block)
+
+// https://github.com/rollup/plugins/tree/master/packages/dynamic-import-vars#limitations
+// https://qiita.com/AngelCase/items/f5bcc7d9f6e131e979a3
+// https://vue-loader.vuejs.org/options.html#transformasseturls
+const path = ref("")
+try {
+ path.value = await import(props.src)
+}
+catch {}
+
+
+</script>
+<template>
+ <img v-bind="attr" :src="path?.default" />
+</template>
