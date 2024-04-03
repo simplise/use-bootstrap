@@ -13,7 +13,7 @@ We recommend browsing the official site [here](https://usebootstrap.org/). The o
 Installation of Bootstrap5 and use-bootstrap NPM Package
 
 ```
-npm i usebootstrap
+npx nuxi@latest module add use-bootstrap
 ```
 
 Add a usebootstrap section in your nuxt.config.
