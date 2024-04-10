@@ -16,16 +16,6 @@ Installation of Bootstrap5 and use-bootstrap NPM Package
 npx nuxi@latest module add use-bootstrap
 ```
 
-Add a usebootstrap section in your nuxt.config.
-
-```
-export default defineNuxtConfig({
-  modules: [
-    'usebootstrap'
-    ],
-})
-```
-
 ## Concept 🎤
 
 use-bootstrap is the front-end framework based on Nuxt3 and Bootstrap5.
