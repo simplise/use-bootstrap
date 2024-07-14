@@ -1,5 +1,9 @@
 {
   "name": "use-bootstrap",
   "configKey": "usebootstrap",
-  "version": "0.1.101"
+  "version": "3.5.19",
+  "builder": {
+    "@nuxt/module-builder": "0.8.1",
+    "unbuild": "2.0.0"
+  }
 }

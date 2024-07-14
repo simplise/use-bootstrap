@@ -1,16 +1,1 @@
-
-import type { ModuleOptions } from './module'
-
-
-declare module '@nuxt/schema' {
-  interface NuxtConfig { ['usebootstrap']?: Partial<ModuleOptions> }
-  interface NuxtOptions { ['usebootstrap']?: ModuleOptions }
-}
-
-declare module 'nuxt/schema' {
-  interface NuxtConfig { ['usebootstrap']?: Partial<ModuleOptions> }
-  interface NuxtOptions { ['usebootstrap']?: ModuleOptions }
-}
-
-
-export type { ModuleOptions, default } from './module'
+export { type IApiSetOption, type IProtocolOption, type IServerApi, type ModuleOptions, default } from './module.js'

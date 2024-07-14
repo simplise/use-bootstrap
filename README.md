@@ -13,18 +13,28 @@ We recommend browsing the official site [here](https://usebootstrap.org/). The o
 Installation of Bootstrap5 and use-bootstrap NPM Package
 
 ```
-npx nuxi@latest module add use-bootstrap
+npx nuxi@latest module add usebootstrap
+```
+
+Add a usebootstrap section in your nuxt.config.
+
+```
+export default defineNuxtConfig({
+  modules: [
+    'usebootstrap'
+    ],
+})
 ```
 
 ## Concept 🎤
 
 use-bootstrap is the front-end framework based on Nuxt3 and Bootstrap5.
 
-- _Pure Bootstrap5 CSS_
+- _Extended Bootstrap5 SCSS_
 - _Pure Vue.js Scripts_
 - _Pure Components_
 - _Flexible Property Specification_
-- _Correspondence to nuxt-link , nuxt-image and nuxt-icon_
+- _Correspondence to UnoCSS , nuxt-link , nuxt-image and nuxt-icon_
 - _Animation support_
 - _Moderate Abstraction and Automation_
 

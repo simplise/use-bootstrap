@@ -1,0 +1,12 @@
+:root,
+[data-bs-theme="light"] {
+ --#{$prefix}font-size-base: #{$font-size-base};
+ --#{$prefix}font-size-sm: #{$font-size-sm};
+ --#{$prefix}font-size-lg: #{$font-size-lg};
+ --#{$prefix}font-size-h1: #{$h1-font-size};
+ --#{$prefix}font-size-h2: #{$h2-font-size};
+ --#{$prefix}font-size-h3: #{$h3-font-size};
+ --#{$prefix}font-size-h4: #{$h4-font-size};
+ --#{$prefix}font-size-h5: #{$h5-font-size};
+ --#{$prefix}font-size-h6: #{$h6-font-size};
+}

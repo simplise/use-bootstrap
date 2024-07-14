@@ -1,0 +1,41 @@
+import { h, defineComponent, watch } from "#imports";
+import type { PropType } from "#imports";
+import { EditorContent, useEditor } from '@tiptap/vue-3'
+import StarterKit from '@tiptap/starter-kit'
+
+// https://mattboldt.github.io/typed.js/
+// https://github.com/duskmoon314/vue3-typed-js
+export default defineComponent({
+  name: "Editor",
+  props: {
+    modelValue: {
+      type: Object as PropType<string>, // Type Annotation
+      default: () => (''),
+    },
+  },
+  emits: ['update:modelValue'],
+  setup(props, context) {
+    //
+    const editor = useEditor({
+      content: props.modelValue,
+      extensions: [StarterKit],
+      onUpdate: () => {
+        context.emit('update:modelValue', editor.value?.getJSON())
+      }
+    })
+
+    watch(props, () => {
+      console.log(props.modelValue)
+      editor.value?.commands.setContent(props.modelValue)
+    })
+    
+    //
+    return () => h(
+      EditorContent,
+      {
+        editor: editor.value,
+      },
+      undefined
+    );
+  },
+});

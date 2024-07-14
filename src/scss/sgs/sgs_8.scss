@@ -1,0 +1,378 @@
+@if $enable-sgs {
+ $custom-gutter-widths: (
+  sm: 4px,
+  md: 6px,
+  lg: 6px,
+  xl: 12px,
+  xxl: 12px,
+ );
+
+:root {
+ --sgs-spacer: 4px;
+}
+
+.ma-sgs {
+ margin-right: 4px;
+ margin-left: 4px;
+ margin-top: 4px;
+ margin-bottom: 4px;
+}
+
+.mx-sgs {
+ margin-right: 4px;
+ margin-left: 4px;
+}
+
+.ms-sgs {
+ margin-left: 4px;
+}
+
+.me-sgs {
+ margin-right: 4px;
+}
+
+.pa-sgs {
+ padding-right: 4px;
+ padding-left: 4px;
+ padding-top: 4px;
+ padding-bottom: 4px;
+}
+
+.px-sgs {
+ padding-right: 4px;
+ padding-left: 4px;
+}
+
+.ps-sgs {
+ padding-left: 4px;
+}
+
+.pe-sgs {
+ padding-right: 4px;
+}
+
+@media (min-width: 576px) {
+ :root {
+  --sgs-spacer: 6px;
+ }
+
+ .ma-sgs {
+  margin-right: 6px;
+  margin-left: 6px;
+  margin-top: 6px;
+  margin-bottom: 6px;
+ }
+
+ .mx-sgs {
+  margin-right: 6px;
+  margin-left: 6px;
+ }
+
+ .ms-sgs {
+  margin-left: 6px;
+ }
+
+ .me-sgs {
+  margin-right: 6px;
+ }
+
+ .pa-sgs {
+  padding-right: 4px;
+  padding-left: 4px;
+  padding-top: 4px;
+  padding-bottom: 4px;
+ }
+
+ .px-sgs {
+  padding-right: 6px;
+  padding-left: 6px;
+ }
+
+ .ps-sgs {
+  padding-left: 6px;
+ }
+
+ .pe-sgs {
+  padding-right: 6px;
+ }
+}
+
+@media (min-width: 768px) {
+ :root {
+  --sgs-spacer: 6px;
+ }
+
+ .ma-sgs {
+  margin-right: 6px;
+  margin-left: 6px;
+  margin-top: 6px;
+  margin-bottom: 6px;
+ }
+
+ .mx-sgs {
+  margin-right: 6px;
+  margin-left: 6px;
+ }
+
+ .ms-sgs {
+  margin-left: 6px;
+ }
+
+ .me-sgs {
+  margin-right: 6px;
+ }
+
+ .pa-sgs {
+  padding-right: 6px;
+  padding-left: 6px;
+  padding-top: 6px;
+  padding-bottom: 6px;
+ }
+
+ .px-sgs {
+  padding-right: 6px;
+  padding-left: 6px;
+ }
+
+ .ps-sgs {
+  padding-left: 6px;
+ }
+
+ .pe-sgs {
+  padding-right: 6px;
+ }
+}
+
+@media (min-width: 992px) {
+ :root {
+  --sgs-spacer: 6px;
+ }
+
+ .ma-sgs {
+  margin-right: 6px;
+  margin-left: 6px;
+  margin-top: 6px;
+  margin-bottom: 6px;
+ }
+
+ .mx-sgs {
+  margin-right: 6px;
+  margin-left: 6px;
+ }
+
+ .ms-sgs {
+  margin-left: 6px;
+ }
+
+ .me-sgs {
+  margin-right: 6px;
+ }
+
+ .pa-sgs {
+  padding-right: 6px;
+  padding-left: 6px;
+  padding-top: 6px;
+  padding-bottom: 6px;
+ }
+
+ .px-sgs {
+  padding-right: 6px;
+  padding-left: 6px;
+ }
+
+ .ps-sgs {
+  padding-left: 6px;
+ }
+
+ .pe-sgs {
+  padding-right: 6px;
+ }
+}
+
+@media (min-width: 1200px) {
+ :root {
+  --sgs-spacer: 12px;
+ }
+
+ .ma-sgs {
+  margin-right: 12px;
+  margin-left: 12px;
+  margin-top: 12px;
+  margin-bottom: 12px;
+ }
+
+ .mx-sgs {
+  margin-right: 12px;
+  margin-left: 12px;
+ }
+
+ .ms-sgs {
+  margin-left: 12px;
+ }
+
+ .me-sgs {
+  margin-right: 12px;
+ }
+
+ .pa-sgs {
+  padding-right: 12px;
+  padding-left: 12px;
+  padding-top: 12px;
+  padding-bottom: 12px;
+ }
+
+ .px-sgs {
+  padding-right: 12px;
+  padding-left: 12px;
+ }
+
+ .ps-sgs {
+  padding-left: 12px;
+ }
+
+ .pe-sgs {
+  padding-right: 12px;
+ }
+}
+
+@media (min-width: 1400px) {
+ :root {
+  --sgs-spacer: 12px;
+ }
+
+ .ma-sgs {
+  margin-right: 12px;
+  margin-left: 12px;
+  margin-top: 12px;
+  margin-bottom: 12px;
+ }
+
+ .mx-sgs {
+  margin-right: 12px;
+  margin-left: 12px;
+ }
+
+ .ms-sgs {
+  margin-left: 12px;
+ }
+
+ .me-sgs {
+  margin-right: 12px;
+ }
+
+ .pa-sgs {
+  padding-right: 12px;
+  padding-left: 12px;
+  padding-top: 12px;
+  padding-bottom: 12px;
+ }
+
+ .px-sgs {
+  padding-right: 12px;
+  padding-left: 12px;
+ }
+
+ .ps-sgs {
+  padding-left: 12px;
+ }
+
+ .pe-sgs {
+  padding-right: 12px;
+ }
+}
+
+
+@each $breakpoint, $gutterwidth in $custom-gutter-widths {
+ $container-padding-x: $gutterwidth;
+ $grid-gutter-width: $gutterwidth;
+
+ @include media-breakpoint-up($breakpoint, $grid-breakpoints) {
+  .container {
+   @include make-container();
+  }
+
+  .row {
+   @include make-row();
+
+   >* {
+    @include make-col-ready();
+   }
+  }
+
+  @include make-grid-columns();
+
+ }
+}
+
+.container-10 {
+ margin-left: auto;
+
+ @media (min-width: 576px) {
+  // max-width: 1140px;
+ }
+
+ @media (min-width: 768px) {
+  // max-width: 540px;
+ }
+
+ @media (min-width: 992px) {
+  max-width: 786px;
+  padding-left: 3px;
+  padding-right: 3px;
+  margin-right: -3px;
+ }
+
+ @media (min-width: 1200px) {
+  max-width: 960px;
+  padding-left: 3px;
+  padding-right: 3px;
+  margin-right: -3px;
+ }
+
+ @media (min-width: 1400px) {
+  max-width: 1092px;
+  padding-left: 6px;
+  padding-right: 6px;
+  margin-right: -6px;
+ }
+}
+
+.container-8 {
+ @media (min-width: 576px) {
+  // max-width: 1140px;
+ }
+
+ @media (min-width: 768px) {
+  // max-width: 540px;
+ }
+
+ @media (min-width: 992px) {
+  max-width: 630px;
+  margin-right: auto;
+ }
+
+ @media (min-width: 1200px) {
+  max-width: 744px;
+  margin-right: auto;
+ }
+
+ @media (min-width: 1400px) {
+  max-width: 864px;
+  margin-right: auto;
+ }
+}
+
+// Singleレイアウトで水平スクロールが表示される問題
+.container,
+.container-fluid,
+.container-xxl,
+.container-xl,
+.container-lg,
+.container-md,
+.container-sm {
+ padding-right: calc(calc(var(--bs-gutter-x)* 0.5) + 2px);
+ padding-left: calc(calc(var(--bs-gutter-x)* 0.5) + 2px);
+}
+
+// End if
+}

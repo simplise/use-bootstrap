@@ -1,0 +1,153 @@
+// https://getbootstrap.jp/docs/5.3/customize/color/#%e3%83%a6%e3%83%bc%e3%83%86%e3%82%a3%e3%83%aa%e3%83%86%e3%82%a3%e3%81%ae%e4%bd%9c%e6%88%90
+
+
+$theme-subtles: (
+  "primary-subtle": $primary-bg-subtle,
+  "secondary-subtle": $secondary-bg-subtle,
+  "success-subtle": $success-bg-subtle,
+  "info-subtle": $info-bg-subtle,
+  "warning-subtle": $warning-bg-subtle,
+  "danger-subtle": $danger-bg-subtle,
+  "light-subtle": $light-bg-subtle,
+  "dark-subtle": $dark-bg-subtle) !default;
+
+:root,
+[data-bs-theme="light"] {
+
+  // 全てのカラーを変数にセット
+  // https://getbootstrap.jp/docs/5.3/customize/color/
+  @each $color, $value in $theme-subtles {
+    --#{$prefix}#{$color}: #{$value};
+  }
+  @each $color, $value in $blues {
+    --#{$prefix}#{$color}: #{$value};
+  }
+  @each $color, $value in $indigos {
+    --#{$prefix}#{$color}: #{$value};
+  }
+  @each $color, $value in $purples {
+    --#{$prefix}#{$color}: #{$value};
+  }
+  @each $color, $value in $pinks {
+    --#{$prefix}#{$color}: #{$value};
+  }
+  @each $color, $value in $reds {
+    --#{$prefix}#{$color}: #{$value};
+  }
+  @each $color, $value in $oranges {
+    --#{$prefix}#{$color}: #{$value};
+  }
+  @each $color, $value in $yellows {
+    --#{$prefix}#{$color}: #{$value};
+  }
+  @each $color, $value in $greens {
+    --#{$prefix}#{$color}: #{$value};
+  }
+  @each $color, $value in $teals {
+    --#{$prefix}#{$color}: #{$value};
+  }
+  @each $color, $value in $cyans {
+    --#{$prefix}#{$color}: #{$value};
+  }
+
+  // 背景カラー用文字色
+  // https://getbootstrap.jp/docs/5.3/customize/color/
+  @each $color, $value in $colors {
+    --#{$prefix}contrast-#{$color}: #{color-contrast($value)};
+  }
+  @each $color, $value in $theme-colors {
+    --#{$prefix}contrast-#{$color}: #{color-contrast($value)};
+  }
+
+  --#{$prefix}contrast-primary-subtle:  var(--bs-primary-text-emphasis);
+  --#{$prefix}contrast-secondary-subtle:  var(--bs-secondary-text-emphasis);
+  --#{$prefix}contrast-success-subtle:  var(--bs-success-text-emphasis);
+  --#{$prefix}contrast-info-subtle:  var(--bs-info-text-emphasis);
+  --#{$prefix}contrast-warning-subtle:  var(--bs-warning-text-emphasis);
+  --#{$prefix}contrast-danger-subtle:  var(--bs-danger-text-emphasis);
+  --#{$prefix}contrast-light-subtle:  var(--bs-light-text-emphasis);
+  --#{$prefix}contrast-dark-subtle:  var(--bs-dark-text-emphasis);
+    // @each $color, $value in $theme-subtles {
+  //   --#{$prefix}contrast-#{$color}: #{color-contrast($value)};
+  // }
+  @each $color, $value in $blues {
+    --#{$prefix}contrast-#{$color}: #{color-contrast($value)};
+  }
+  @each $color, $value in $indigos {
+    --#{$prefix}contrast-#{$color}: #{color-contrast($value)};
+  }
+  @each $color, $value in $purples {
+    --#{$prefix}contrast-#{$color}: #{color-contrast($value)};
+  }
+  @each $color, $value in $pinks {
+    --#{$prefix}contrast-#{$color}: #{color-contrast($value)};
+  }
+  @each $color, $value in $reds {
+    --#{$prefix}contrast-#{$color}: #{color-contrast($value)};
+  }
+  @each $color, $value in $oranges {
+    --#{$prefix}contrast-#{$color}: #{color-contrast($value)};
+  }
+  @each $color, $value in $yellows {
+    --#{$prefix}contrast-#{$color}: #{color-contrast($value)};
+  }
+  @each $color, $value in $greens {
+    --#{$prefix}contrast-#{$color}: #{color-contrast($value)};
+  }
+  @each $color, $value in $teals {
+    --#{$prefix}contrast-#{$color}: #{color-contrast($value)};
+  }
+  @each $color, $value in $cyans {
+    --#{$prefix}contrast-#{$color}: #{color-contrast($value)};
+  }
+  @each $color, $value in $grays {
+    --#{$prefix}contrast-#{$color}: #{color-contrast($value)};
+  }
+  // Active color 
+  // 
+  @each $color, $value in $colors {
+    --#{$prefix}active-#{$color}: #{shade-color($value, $btn-active-bg-shade-amount)}; //#{if($color == $color-contrast-light, shade-color($value, $btn-active-bg-shade-amount), tint-color($value, $btn-active-bg-tint-amount))};
+  }
+   // Themes
+  //  @each $color, $value in $theme-colors {
+  //   --#{$prefix}active-#{$color}: #{if($color == $color-contrast-light, shade-color($value, $btn-active-bg-shade-amount), tint-color($value, $btn-active-bg-tint-amount))};
+  // }
+  // Themes-subtle
+  @each $color, $value in $theme-subtles {
+    --#{$prefix}active-#{$color}: #{shade-color($value, $btn-active-bg-shade-amount)};
+  }
+  //
+  @each $color, $value in $blues {
+    --#{$prefix}active-#{$color}: #{shade-color($value, $btn-active-bg-shade-amount)};
+  }
+  @each $color, $value in $indigos {
+    --#{$prefix}active-#{$color}: #{shade-color($value, $btn-active-bg-shade-amount)};
+  }
+  @each $color, $value in $purples {
+    --#{$prefix}active-#{$color}: #{shade-color($value, $btn-active-bg-shade-amount)};
+  }
+  @each $color, $value in $pinks {
+    --#{$prefix}active-#{$color}: #{shade-color($value, $btn-active-bg-shade-amount)};
+  }
+  @each $color, $value in $reds {
+    --#{$prefix}active-#{$color}: #{shade-color($value, $btn-active-bg-shade-amount)};
+  }
+  @each $color, $value in $oranges {
+    --#{$prefix}active-#{$color}: #{shade-color($value, $btn-active-bg-shade-amount)};
+  }
+  @each $color, $value in $yellows {
+    --#{$prefix}active-#{$color}: #{shade-color($value, $btn-active-bg-shade-amount)};
+  }
+  @each $color, $value in $greens {
+    --#{$prefix}active-#{$color}: #{shade-color($value, $btn-active-bg-shade-amount)};
+  }
+  @each $color, $value in $teals {
+    --#{$prefix}active-#{$color}: #{shade-color($value, $btn-active-bg-shade-amount)};
+  }
+  @each $color, $value in $cyans {
+    --#{$prefix}active-#{$color}: #{shade-color($value, $btn-active-bg-shade-amount)};
+  }
+  @each $color, $value in $grays {
+    --#{$prefix}active-#{$color}: #{shade-color($value, $btn-active-bg-shade-amount)};
+  }
+}

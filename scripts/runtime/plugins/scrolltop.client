@@ -1,8 +1,0 @@
-import { defineNuxtPlugin } from '#app'
-
-export default defineNuxtPlugin((nuxtApp) => {
-  nuxtApp.hook("page:finish", () => {
-    console.log('log')
-    window.scrollTo({ left: 0, top: 0 });
-  });
-})
