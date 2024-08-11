@@ -1,4 +1,3 @@
-import { defineComponent, h, ref } from "#imports";
 import { hProps } from "../../utils/useProps.js";
 import { useList, ListProps } from "../../composables/html/useList.js";
 import { BlockProps, useBlock } from "../../composables/base/useBlock.js";
@@ -11,6 +10,7 @@ import {
   ScrollSpyProps,
   useScrollSpy
 } from "../../composables/bootstrap/useScrollSpy.js";
+import { defineComponent, h, ref } from "#imports";
 export default defineComponent({
   name: "HtmlList",
   props: {
@@ -34,7 +34,7 @@ export default defineComponent({
       props,
       context,
       elementRef
-      /*, "list"*/
+      /* , "list" */
     );
     const current = {
       ref: elementRef

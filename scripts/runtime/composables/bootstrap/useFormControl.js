@@ -3,7 +3,7 @@ import { addProp, hasValue } from "../../utils/useProps.js";
 export const FormControlProps = {
   size: {
     type: String
-    //sm, lg
+    // sm, lg
   },
   disabled: {
     type: [Boolean, String]

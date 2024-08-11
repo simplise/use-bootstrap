@@ -1,11 +1,4 @@
-import {
-  computed,
-  nextTick,
-  ref,
-  onMounted,
-  watch,
-  h
-} from "vue";
+import { computed, nextTick, ref, onMounted, watch, h } from "vue";
 import { useEvent } from "../../utils/useEvent.js";
 import {
   querySelectorToID,
@@ -192,7 +185,7 @@ export function useCarousel(props, elementRef, eventSuffix) {
   return {
     class: computed(() => {
       return {
-        slide: props.slide,
+        "slide": props.slide,
         "carousel-fade": props.fade,
         "carousel-dark": props.dark
       };

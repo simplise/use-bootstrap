@@ -1,4 +1,3 @@
-import { defineComponent, h, ref } from "#imports";
 import { useBlock, BlockProps } from "../../../composables/base/useBlock.js";
 import { NavTabProps, useNavTab } from "../../../composables/bootstrap/useNavTab.js";
 import {
@@ -11,6 +10,7 @@ import {
   ScrollSpyProps,
   useScrollSpy
 } from "../../../composables/bootstrap/useScrollSpy.js";
+import { defineComponent, h, ref } from "#imports";
 export default defineComponent({
   name: "BsNav",
   props: {

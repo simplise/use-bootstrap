@@ -1,7 +1,7 @@
-import { defineComponent, h } from "#imports";
 import { hProps } from "../../utils/useProps.js";
 import { useImage, ImageProps } from "../../composables/html/useImage.js";
 import { BlockProps, useBlock } from "../../composables/base/useBlock.js";
+import { defineComponent, h } from "#imports";
 import { NuxtImg } from "#components";
 export default defineComponent({
   name: "HtmlImage",

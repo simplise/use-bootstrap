@@ -1,10 +1,10 @@
-import { defineComponent, h, ref } from "#imports";
 import { hProps } from "../../../utils/useProps.js";
 import { useBlock, BlockProps } from "../../../composables/base/useBlock.js";
 import {
   DropdownMenuProps,
   useDropdownMenu
 } from "../../../composables/bootstrap/useDropdownMenu.js";
+import { defineComponent, h, ref } from "#imports";
 export default defineComponent({
   name: "BsDropdownMenu",
   props: {

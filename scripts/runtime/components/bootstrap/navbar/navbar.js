@@ -1,10 +1,9 @@
-import { defineComponent, h, computed, ref } from "#imports";
 import { useBlock, BlockProps } from "../../../composables/base/useBlock.js";
-import { hProps } from "../../../utils/useProps.js";
+import { hProps, addProp } from "../../../utils/useProps.js";
 import { ActiveProps, useActive } from "../../../composables/bootstrap/useItemsActive.js";
 import { IDProps, useID } from "../../../composables/attributes/useID.js";
 import { ScrolledProps, useScrolled } from "../../../composables/extend/useScrolled.js";
-import { addProp } from "../../../utils/useProps.js";
+import { defineComponent, h, computed, ref } from "#imports";
 export default defineComponent({
   name: "BsNavbar",
   props: {

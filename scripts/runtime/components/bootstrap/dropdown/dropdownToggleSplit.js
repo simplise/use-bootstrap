@@ -1,4 +1,3 @@
-import { defineComponent, h, ref, inject } from "#imports";
 import { hProps, hSlots } from "../../../utils/useProps.js";
 import { useBlock, BlockProps } from "../../../composables/base/useBlock.js";
 import {
@@ -11,6 +10,7 @@ import {
   useVisuallyHiddenContent,
   VisuallyHiddenContentProps
 } from "../../../composables/bootstrap/useVisuallyHiddenContent.js";
+import { defineComponent, h, ref, inject } from "#imports";
 export default defineComponent({
   name: "BsDropdownToggleSplit",
   props: {

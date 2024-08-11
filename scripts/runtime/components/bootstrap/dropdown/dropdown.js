@@ -1,7 +1,7 @@
-import { defineComponent, h, ref } from "#imports";
 import { hProps, exposeMethods } from "../../../utils/useProps.js";
 import { useBlock, BlockProps } from "../../../composables/base/useBlock.js";
 import { DropdownProps, useDropdown } from "../../../composables/bootstrap/useDropdown.js";
+import { defineComponent, h, ref } from "#imports";
 export default defineComponent({
   name: "BsDropdown",
   props: {

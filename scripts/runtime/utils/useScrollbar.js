@@ -1,4 +1,5 @@
 import { defaultDocument } from "@vueuse/core";
+import { omit } from "lodash-es";
 import { camelCase } from "./helpers.js";
 const SELECTOR_FIXED_CONTENT = ".fixed-top, .fixed-bottom, .is-fixed, .sticky-top";
 const SELECTOR_STICKY_CONTENT = ".sticky-top";
@@ -82,7 +83,7 @@ export function useScrollbar(options = {}) {
       }
       return;
     }
-    delete current.dataset[styleProperty];
+    omit(current.dataset, styleProperty);
     current.style.setProperty(styleProperty, value);
   }
   return {

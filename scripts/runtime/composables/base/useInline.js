@@ -1,4 +1,5 @@
 import { computed } from "vue";
+import { toString } from "lodash-es";
 import {
   addClassNames,
   addProp,
@@ -89,30 +90,30 @@ export const InlineProps = {
   },
   visuallyHidden: {
     type: [Boolean, String]
-    //focusable
+    // focusable
   },
   verticalAlign: {
     type: String
-    //baseline, top, middle, bottom , text-top, text-bottom
+    // baseline, top, middle, bottom , text-top, text-bottom
   },
   invisible: {
     type: Boolean
   },
   userSelect: {
     type: String
-    //all, auto, none
+    // all, auto, none
   },
   pointerEvents: {
     type: String
-    //none, auto
+    // none, auto
   },
   backgroundColor: {
     type: String
-    //as PropType<ThemeColors>,
+    // as PropType<ThemeColors>,
   },
   backgroundTheme: {
     type: String
-    //as PropType<ThemeColors>,
+    // as PropType<ThemeColors>,
   },
   backgroundGradient: {
     type: Boolean
@@ -152,11 +153,11 @@ export const InlineProps = {
   },
   placeholder: {
     type: [Boolean, String]
-    //input tagで競合
+    // input tagで競合
   },
   placeholderSize: {
     type: String
-    //input tagで競合
+    // input tagで競合
   },
   col: {
     type: [Number, String, Array, Boolean]
@@ -164,7 +165,7 @@ export const InlineProps = {
   },
   position: {
     type: String
-    //static, relative absolute fixed sticky
+    // static, relative absolute fixed sticky
   },
   top: {
     type: [Number, String]
@@ -193,7 +194,7 @@ export const InlineProps = {
   },
   borderColor: {
     type: String
-    //as PropType<ThemeColors>,
+    // as PropType<ThemeColors>,
   },
   borderWidth: {
     type: [String, Number]
@@ -234,16 +235,16 @@ export function useInline(props) {
         [`text-${props.textTransform}`]: props.textTransform,
         [`text-bg-${props.textBackground}`]: props.textBackground,
         [`h${props.headings}`]: props.headings,
-        lead: props.lead,
-        mark: props.mark,
-        small: props.small,
+        "lead": props.lead,
+        "mark": props.mark,
+        "small": props.small,
         [`text-${props.textColor}`]: props.textColor,
         ...addClassNames(props.padding, (n) => spacing(n, "p")),
         ...addClassNames(props.margin, (n) => spacing(n, "m")),
         ...addClassNames(props.gap, (n) => `gap-${n}`),
         [`visually-hidden${hasValue(props.visuallyHidden) ? `-${props.visuallyHidden}` : ""}`]: props.visuallyHidden,
         [`align-${props.verticalAlign}`]: props.verticalAlign,
-        invisible: props.invisible,
+        "invisible": props.invisible,
         [`user-select-${props.userSelect}`]: props.userSelect,
         [`pe-${props.pointerEvents}`]: props.pointerEvents,
         [`bg-${props.backgroundColor}`]: props.backgroundColor,
@@ -261,7 +262,7 @@ export function useInline(props) {
         [`opacity-${props.opacity}`]: props.opacity,
         [`placeholder${hasValue(props.placeholder) ? `-${props.placeholder}` : ""}`]: (props.placeholder || props.placeholderSize) && !["input", "textarea"].includes(props.tag || ""),
         [`placeholder-${props.placeholderSize}`]: props.placeholderSize && !["input", "textarea"].includes(props.tag || ""),
-        col: props.col && !hasValue(props.col),
+        "col": props.col && !hasValue(props.col),
         ...addClassNames(hasValue(props.col), (n) => `col-${n}`),
         [`position-${props.position}`]: props.position,
         [`top-${props.top}`]: props.top,
@@ -269,9 +270,9 @@ export function useInline(props) {
         [`end-${props.end}`]: props.end,
         [`bottom-${props.bottom}`]: props.bottom,
         [`translate-${props.translate}`]: props.translate,
-        initialism: props.initialism,
+        "initialism": props.initialism,
         "focus-ring": props.focusRing,
-        border: !hasValue(props.border) && (props.borderColor || props.borderWidth || props.borderSubtractive),
+        "border": !hasValue(props.border) && (props.borderColor || props.borderWidth || props.borderSubtractive),
         ...addClassNames(hasValue(props.border), (n) => `border-${n}`),
         // [`border${hasValue(props.border) ? `-${props.border}` : ""}`]:  props.border || props.borderColor || props.borderWidth,
         [`border-${props.borderColor}`]: props.borderColor,
@@ -298,7 +299,8 @@ export function useInline(props) {
     }),
     attr: computed(() => {
       return {
-        ...addProp(props.placeholder, "aria-hidden", "true")
+        ...addProp(props.tag != "input" && props.placeholder, "aria-hidden", "true"),
+        ...addProp(props.tag == "input" && props.placeholder && isString(props.placeholder), "placeholder", toString(props.placeholder))
       };
     })
   };

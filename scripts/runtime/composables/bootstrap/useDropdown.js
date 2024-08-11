@@ -1,4 +1,9 @@
-import { computed, ref, watch, provide } from "vue";
+import {
+  computed,
+  ref,
+  watch,
+  provide
+} from "vue";
 import { useEvent } from "../../utils/useEvent.js";
 import { useRoute } from "#app";
 export const DropdownProps = {
@@ -34,9 +39,12 @@ export function useDropdown(props, context, elementRef) {
     return active.value;
   };
   const route = useRoute();
-  watch(() => route.fullPath, () => {
-    hide();
-  });
+  watch(
+    () => route.fullPath,
+    () => {
+      hide();
+    }
+  );
   const method = expose({ show, hide, toggle });
   exposeState({ active, buttonID, placement, toggleRef });
   const cls = {};

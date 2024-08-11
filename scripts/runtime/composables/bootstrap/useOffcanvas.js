@@ -1,5 +1,4 @@
 import { computed, ref, h, nextTick, onMounted, watch } from "vue";
-import { useRoute } from "#app";
 import {
   useMagicKeys,
   pausableWatch,
@@ -13,10 +12,11 @@ import { addProp } from "../../utils/useProps.js";
 import { useEvent } from "../../utils/useEvent.js";
 import { waitAfterTransition } from "../../utils/useDOM.js";
 import backdrop from "../../components/bootstrap/backdrop/backdrop.js";
+import { useRoute } from "#app";
 export const OffcanvasProps = {
   type: {
     type: String
-    //lg
+    // lg
   },
   placement: {
     type: String,
@@ -48,12 +48,12 @@ export const OffcanvasProps = {
   },
   scroll: {
     type: Boolean,
-    // 
+    //
     default: false
   },
   dark: {
     type: Boolean,
-    // 
+    //
     default: false
   }
 };
@@ -146,7 +146,7 @@ export function useOffcanvas(props, context, elementRef) {
         [`offcanvas-${props.placement}`]: true,
         [`text-bg-dark`]: props.dark,
         show: isShow.value
-        //'pe-none': true,
+        // 'pe-none': true,
       };
     }),
     style: computed(() => {

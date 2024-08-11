@@ -1,6 +1,6 @@
-import { defineComponent, h, computed } from "#imports";
 import { useBlock, BlockProps } from "../../../composables/base/useBlock.js";
 import { addProp, hProps } from "../../../utils/useProps.js";
+import { defineComponent, h, computed } from "#imports";
 export default defineComponent({
   name: "BsProgressBar",
   props: {
@@ -49,7 +49,7 @@ export default defineComponent({
       }),
       attr: computed(() => {
         return {
-          role: "progressbar",
+          "role": "progressbar",
           "aria-valuenow": props.value,
           "aria-valuemin": props.min,
           "aria-valuemax": props.max

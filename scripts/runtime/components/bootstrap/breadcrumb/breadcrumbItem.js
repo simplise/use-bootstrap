@@ -1,6 +1,6 @@
-import { defineComponent, h, computed } from "#imports";
 import { useBlock, BlockProps } from "../../../composables/base/useBlock.js";
 import { hProps, addProp } from "../../../utils/useProps.js";
+import { defineComponent, h, computed } from "#imports";
 export default defineComponent({
   name: "BsBreadcrumbItem",
   props: {
@@ -19,7 +19,7 @@ export default defineComponent({
       class: computed(() => {
         return {
           "breadcrumb-item": true,
-          active: props.active
+          "active": props.active
         };
       }),
       attr: {

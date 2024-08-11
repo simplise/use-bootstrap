@@ -1,4 +1,3 @@
-import { defineComponent, h, ref } from "#imports";
 import { useBlock, BlockProps } from "../../../composables/base/useBlock.js";
 import { hProps } from "../../../utils/useProps.js";
 import { IDProps, useID } from "../../../composables/attributes/useID.js";
@@ -6,6 +5,7 @@ import {
   CurrentProps,
   useItemsCurrent
 } from "../../../composables/bootstrap/useItemsCurrent.js";
+import { defineComponent, h, ref } from "#imports";
 export default defineComponent({
   name: "BsTabContent",
   props: {

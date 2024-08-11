@@ -4,69 +4,53 @@ export function useDirective(element) {
     for (const attr of element.attributes) {
       switch (attr.name) {
         case "text-break":
-          element.classList.add(
-            `text-break`
-          );
+          element.classList.add(`text-break`);
           break;
         case "text-alignment":
-          element.classList.add(
-            `text-${attr.value}`
-          );
+          element.classList.add(`text-${attr.value}`);
           break;
         case "text-wrap":
-          element.classList.add(
-            `text-${attr.value}`
-          );
+          element.classList.add(`text-${attr.value}`);
           break;
         case "align-self":
-          element.classList.add(
-            `align-self-${attr.value}`
-          );
+          element.classList.add(`align-self-${attr.value}`);
           break;
         case "align-items":
-          element.classList.add(
-            `align-items-${attr.value}`
-          );
+          element.classList.add(`align-items-${attr.value}`);
           break;
         case "align-content":
-          element.classList.add(
-            `align-content-${attr.value}`
-          );
+          element.classList.add(`align-content-${attr.value}`);
           break;
         case "flex":
           element.classList.add(
-            ...addClassNames(attr.value, (n) => `d${hasValue(attr.value) ? `-${n}` : ""}-flex`)
+            ...addClassNames(
+              attr.value,
+              (n) => `d${hasValue(attr.value) ? `-${n}` : ""}-flex`
+            )
           );
           break;
         case "flex-direction":
-          element.classList.add(
-            ...addClassNames(attr.value, (n) => `flex-${n}`)
-          );
+          element.classList.add(...addClassNames(attr.value, (n) => `flex-${n}`));
           break;
         case "flex-fill":
           element.classList.add(
-            ...addClassNames(attr.value, (n) => `flex${hasValue(attr.value) ? `-${n}` : ""}-fill`)
+            ...addClassNames(
+              attr.value,
+              (n) => `flex${hasValue(attr.value) ? `-${n}` : ""}-fill`
+            )
           );
           break;
         case "flex-grow":
-          element.classList.add(
-            `flex-${attr.value}`
-          );
+          element.classList.add(`flex-${attr.value}`);
           break;
         case "flex-wrap":
-          element.classList.add(
-            ...addClassNames(attr.value, (n) => `flex-${n}`)
-          );
+          element.classList.add(...addClassNames(attr.value, (n) => `flex-${n}`));
           break;
         case "flex-order":
-          element.classList.add(
-            `order-${attr.value}`
-          );
+          element.classList.add(`order-${attr.value}`);
           break;
         case "float":
-          element.classList.add(
-            `float-${attr.value}`
-          );
+          element.classList.add(`float-${attr.value}`);
           break;
         case "shadow":
           element.classList.add(
@@ -74,24 +58,16 @@ export function useDirective(element) {
           );
           break;
         case "ratio":
-          element.classList.add(
-            `ratio-${attr.value}`
-          );
+          element.classList.add(`ratio-${attr.value}`);
           break;
         case "fixed":
-          element.classList.add(
-            `fixed-${attr.value}`
-          );
+          element.classList.add(`fixed-${attr.value}`);
           break;
         case "sticky":
-          element.classList.add(
-            `sticky-top`
-          );
+          element.classList.add(`sticky-top`);
           break;
         case "overflow":
-          element.classList.add(
-            `overflow-${attr.value}`
-          );
+          element.classList.add(`overflow-${attr.value}`);
           break;
         case "table-responsive":
           element.classList.add(
@@ -99,24 +75,16 @@ export function useDirective(element) {
           );
           break;
         case "justify-content":
-          element.classList.add(
-            `justify-content-${attr.value}`
-          );
+          element.classList.add(`justify-content-${attr.value}`);
           break;
         case "align":
-          element.classList.add(
-            `align-${attr.value}`
-          );
+          element.classList.add(`align-${attr.value}`);
           break;
         case "order":
-          element.classList.add(
-            `order-${attr.value}`
-          );
+          element.classList.add(`order-${attr.value}`);
           break;
         case "offset":
-          element.classList.add(
-            ...addClassNames(attr.value, (n) => `offset-${n}`)
-          );
+          element.classList.add(...addClassNames(attr.value, (n) => `offset-${n}`));
           break;
         case "object-fit":
           element.classList.add(
@@ -124,69 +92,43 @@ export function useDirective(element) {
           );
           break;
         case "z":
-          element.classList.add(
-            ...addClassNames(attr.value, (n) => `z-${n}`)
-          );
+          element.classList.add(...addClassNames(attr.value, (n) => `z-${n}`));
           break;
         case "font-size":
-          element.classList.add(
-            `fs-${attr.value}`
-          );
+          element.classList.add(`fs-${attr.value}`);
           break;
         case "font-weight":
-          element.classList.add(
-            `fw-${attr.value}`
-          );
+          element.classList.add(`fw-${attr.value}`);
           break;
         case "font-style":
-          element.classList.add(
-            `fst-${attr.value}`
-          );
+          element.classList.add(`fst-${attr.value}`);
           break;
         case "line-height":
-          element.classList.add(
-            `lh-${attr.value}`
-          );
+          element.classList.add(`lh-${attr.value}`);
           break;
         case "font-monospace":
-          element.classList.add(
-            `font-monospace`
-          );
+          element.classList.add(`font-monospace`);
           break;
         case "text-reset":
-          element.classList.add(
-            `text-reset`
-          );
+          element.classList.add(`text-reset`);
           break;
         case "text-decoration":
-          element.classList.add(
-            `text-decoration-${attr.value}`
-          );
+          element.classList.add(`text-decoration-${attr.value}`);
           break;
         case "text-truncate":
-          element.classList.add(
-            `text-truncate`
-          );
+          element.classList.add(`text-truncate`);
           break;
         case "text-transform":
-          element.classList.add(
-            `text-${attr.value}`
-          );
+          element.classList.add(`text-${attr.value}`);
           break;
         case "text-background":
-          element.classList.add(
-            `text-bg-${attr.value}`
-          );
+          element.classList.add(`text-bg-${attr.value}`);
           break;
         case "headings":
-          element.classList.add(
-            `h${attr.value}`
-          );
+          element.classList.add(`h${attr.value}`);
           break;
         case "text-color":
-          element.classList.add(
-            `text-${attr.value}`
-          );
+          element.classList.add(`text-${attr.value}`);
           break;
         case "padding":
           element.classList.add(
@@ -199,9 +141,7 @@ export function useDirective(element) {
           );
           break;
         case "gap":
-          element.classList.add(
-            ...addClassNames(attr.value, (n) => `gap-${n}`)
-          );
+          element.classList.add(...addClassNames(attr.value, (n) => `gap-${n}`));
           break;
         case "visually-hidden":
           element.classList.add(
@@ -209,84 +149,52 @@ export function useDirective(element) {
           );
           break;
         case "vertical-Align":
-          element.classList.add(
-            `align-${attr.value}`
-          );
+          element.classList.add(`align-${attr.value}`);
           break;
         case "user-select":
-          element.classList.add(
-            `user-select-${attr.value}`
-          );
+          element.classList.add(`user-select-${attr.value}`);
           break;
         case "pointer-events":
-          element.classList.add(
-            `pe-${attr.value}`
-          );
+          element.classList.add(`pe-${attr.value}`);
           break;
         case "background-color":
-          element.classList.add(
-            `bg-${attr.value}`
-          );
+          element.classList.add(`bg-${attr.value}`);
           break;
         case "background-gradient":
-          element.classList.add(
-            `bg-gradient`
-          );
+          element.classList.add(`bg-gradient`);
           break;
         case "background-opacity":
-          element.classList.add(
-            `bg-opacity-${attr.value}`
-          );
+          element.classList.add(`bg-opacity-${attr.value}`);
           break;
         case "relative-width":
-          element.classList.add(
-            `w-${attr.value}`
-          );
+          element.classList.add(`w-${attr.value}`);
           break;
         case "relative-height":
-          element.classList.add(
-            `h-${attr.value}`
-          );
+          element.classList.add(`h-${attr.value}`);
           break;
         case "max-width":
-          element.classList.add(
-            `mw-100`
-          );
+          element.classList.add(`mw-100`);
           break;
         case "max-height":
-          element.classList.add(
-            `mh-100`
-          );
+          element.classList.add(`mh-100`);
           break;
         case "viewport-width":
-          element.classList.add(
-            `vw-100`
-          );
+          element.classList.add(`vw-100`);
           break;
         case "viewport-height":
-          element.classList.add(
-            `vh-100`
-          );
+          element.classList.add(`vh-100`);
           break;
         case "min-viewport-width":
-          element.classList.add(
-            `min-vw-100`
-          );
+          element.classList.add(`min-vw-100`);
           break;
         case "min-viewport-height":
-          element.classList.add(
-            `min-vh-100`
-          );
+          element.classList.add(`min-vh-100`);
           break;
         case "display":
-          element.classList.add(
-            ...addClassNames(attr.value, (n) => `d-${n}`)
-          );
+          element.classList.add(...addClassNames(attr.value, (n) => `d-${n}`));
           break;
         case "opacity":
-          element.classList.add(
-            `opacity-${attr.value}`
-          );
+          element.classList.add(`opacity-${attr.value}`);
           break;
         case "placeholder":
           element.classList.add(
@@ -294,9 +202,7 @@ export function useDirective(element) {
           );
           break;
         case "placeholder-size":
-          element.classList.add(
-            `placeholder-${attr.value}`
-          );
+          element.classList.add(`placeholder-${attr.value}`);
           break;
         case "col":
           element.classList.add(
@@ -304,39 +210,25 @@ export function useDirective(element) {
           );
           break;
         case "position":
-          element.classList.add(
-            `position-${attr.value}`
-          );
+          element.classList.add(`position-${attr.value}`);
           break;
         case "top":
-          element.classList.add(
-            `top-${attr.value}`
-          );
+          element.classList.add(`top-${attr.value}`);
           break;
         case "start":
-          element.classList.add(
-            `start-${attr.value}`
-          );
+          element.classList.add(`start-${attr.value}`);
           break;
         case "end":
-          element.classList.add(
-            `end-${attr.value}`
-          );
+          element.classList.add(`end-${attr.value}`);
           break;
         case "bottom":
-          element.classList.add(
-            `bottom-${attr.value}`
-          );
+          element.classList.add(`bottom-${attr.value}`);
           break;
         case "translate":
-          element.classList.add(
-            `translate-${attr.value}`
-          );
+          element.classList.add(`translate-${attr.value}`);
           break;
         case "focus-ring":
-          element.classList.add(
-            `focus-ring`
-          );
+          element.classList.add(`focus-ring`);
           break;
         case "border":
           element.classList.add(
@@ -344,14 +236,10 @@ export function useDirective(element) {
           );
           break;
         case "border-color":
-          element.classList.add(
-            `border-${attr.value}`
-          );
+          element.classList.add(`border-${attr.value}`);
           break;
         case "border-width":
-          element.classList.add(
-            `border-${attr.value}`
-          );
+          element.classList.add(`border-${attr.value}`);
           break;
         case "rounded":
           element.classList.add(
@@ -359,21 +247,18 @@ export function useDirective(element) {
           );
           break;
         case "rounded-size":
-          element.classList.add(
-            `rounded-${attr.value}`
-          );
+          element.classList.add(`rounded-${attr.value}`);
           break;
         case "link-opacity":
-          element.classList.add(
-            `link-opacity-${attr.value}`
-          );
+          element.classList.add(`link-opacity-${attr.value}`);
           break;
         case "link-underline":
+          element.classList.add(`link-underline`);
           element.classList.add(
-            `link-underline`
-          );
-          element.classList.add(
-            ...addClassNames(hasValue(attr.value), (n) => `link-underline-opacity-${n}`)
+            ...addClassNames(
+              hasValue(attr.value),
+              (n) => `link-underline-opacity-${n}`
+            )
           );
           break;
         case "link-offset":
@@ -382,14 +267,10 @@ export function useDirective(element) {
           );
           break;
         case "stretched-link":
-          element.classList.add(
-            `stretched-link`
-          );
+          element.classList.add(`stretched-link`);
           break;
         case "link":
-          element.classList.add(
-            `link-${attr.value}`
-          );
+          element.classList.add(`link-${attr.value}`);
           break;
       }
     }

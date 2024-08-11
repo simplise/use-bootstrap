@@ -1,9 +1,6 @@
 import { h } from "vue";
 import { hSlots } from "../../utils/useProps.js";
-import {
-  useAnchor,
-  AnchorProps
-} from "../html/useAnchor.js";
+import { useAnchor, AnchorProps } from "../html/useAnchor.js";
 import BsLink from "../../nuxt/bslink";
 export const DropdownItemProps = {
   ...AnchorProps,
@@ -44,7 +41,7 @@ export function useDropdownItem(props, context) {
           {
             class: {
               "dropdown-item": true,
-              active: props.active,
+              "active": props.active,
               ...Anchor.class
             },
             ...Anchor.attr

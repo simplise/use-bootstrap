@@ -1,4 +1,10 @@
-import { ref, inject, computed, watch, nextTick } from "vue";
+import {
+  ref,
+  inject,
+  computed,
+  watch,
+  nextTick
+} from "vue";
 import { addProp } from "../../utils/useProps.js";
 import { useEvent } from "../../utils/useEvent.js";
 import { waitAfterTransition } from "../../utils/useDOM.js";
@@ -78,15 +84,19 @@ export function useCollapse(props, context, elementRef) {
     context.emit("hidden.collapse");
   };
   const toggle = async () => {
-    isShown.value ? await hide() : await show();
+    if (isShown.value) {
+      await hide();
+    } else {
+      await show();
+    }
   };
   const method = expose({ show, hide, toggle });
   return {
     class: computed(() => {
       return {
-        show: isShow.value,
-        collapse: collapse.value,
-        collapsing: collapsing.value,
+        "show": isShow.value,
+        "collapse": collapse.value,
+        "collapsing": collapsing.value,
         "collapse-horizontal": props.horizontal
       };
     }),

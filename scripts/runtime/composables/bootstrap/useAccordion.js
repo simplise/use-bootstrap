@@ -8,7 +8,7 @@ export function useAccordion(props) {
   return {
     class: computed(() => {
       return {
-        accordion: true,
+        "accordion": true,
         "accordion-flush": props.flush
       };
     })

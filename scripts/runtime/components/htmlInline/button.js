@@ -1,4 +1,3 @@
-import { defineComponent, h, ref } from "#imports";
 import { hProps, hSlots } from "../../utils/useProps.js";
 import { BlockProps, useBlock } from "../../composables/base/useBlock.js";
 import {
@@ -14,6 +13,7 @@ import { useID, IDProps } from "../../composables/attributes/useID.js";
 import { TooltipProps, useTooltip } from "../../composables/bootstrap/useTooltip.js";
 import { PopoverProps, usePopover } from "../../composables/bootstrap/usePopover.js";
 import { ActiveProps, useActive } from "../../composables/bootstrap/useItemsActive.js";
+import { defineComponent, h, ref } from "#imports";
 export default defineComponent({
   name: "HtmlButton",
   props: {

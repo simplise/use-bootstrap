@@ -1,4 +1,3 @@
-import { defineComponent, h, computed, ref, inject } from "#imports";
 import { hProps } from "../../../utils/useProps.js";
 import { useBlock, BlockProps } from "../../../composables/base/useBlock.js";
 import { ToggleProps, useToggle } from "../../../composables/bootstrap/useToggle.js";
@@ -7,6 +6,7 @@ import {
   useButton,
   ButtonProps
 } from "../../../composables/html/useButton.js";
+import { defineComponent, h, computed, ref, inject } from "#imports";
 export default defineComponent({
   name: "BsAccordionButton",
   props: {

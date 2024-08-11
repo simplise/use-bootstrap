@@ -28,8 +28,8 @@ export function usePageItem(props) {
   return {
     class: {
       "page-item": true,
-      active: props.active,
-      disabled: props.disabled
+      "active": props.active,
+      "disabled": props.disabled
     },
     attr: {
       ...addProp(props.active, "aria-current", "page")

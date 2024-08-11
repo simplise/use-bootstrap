@@ -1,6 +1,6 @@
-import { ref, watch, onMounted, useRoute } from "#imports";
 import { defaultDocument } from "@vueuse/core";
 import { camelCase, uniqueId } from "lodash-es";
+import { ref, watch, onMounted, useRoute } from "#imports";
 export function useToc(contentSelector) {
   const route = useRoute();
   const tocs = ref([]);
@@ -57,7 +57,11 @@ export function useToc(contentSelector) {
       });
     });
   };
-  watch(() => route.query, () => render(), { deep: true, immediate: false });
+  watch(
+    () => route.query,
+    () => render(),
+    { deep: true, immediate: false }
+  );
   onMounted(() => render());
   return tocs;
 }

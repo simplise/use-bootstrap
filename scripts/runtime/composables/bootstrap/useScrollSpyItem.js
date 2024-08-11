@@ -1,7 +1,6 @@
 import { computed, inject, ref, watch, nextTick } from "vue";
-import { useIntersectionObserver } from "../../utils/helpers.js";
+import { useIntersectionObserver, unrefElement } from "../../utils/helpers.js";
 import { findOneSelectorRef } from "../../utils/useDOM.js";
-import { unrefElement } from "../../utils/helpers.js";
 export function useScrollSpyItem(props, elementRef) {
   const spy = inject("spy.spy", void 0);
   if (!spy) {
@@ -14,12 +13,9 @@ export function useScrollSpyItem(props, elementRef) {
   const target = findOneSelectorRef(props.target || props.href);
   const refresh = inject("refresh.spy", () => {
   });
-  const registerSpyItem = inject(
-    "registerItem.spy",
-    (id) => {
-      id;
-    }
-  );
+  const registerSpyItem = inject("registerItem.spy", (id) => {
+    id;
+  });
   watch(elementRef, () => {
     const element = unrefElement(elementRef);
     if (!element) {
@@ -38,6 +34,7 @@ export function useScrollSpyItem(props, elementRef) {
       event.preventDefault();
       const top = target.value?.offsetTop - spyElem.value.offsetTop;
       spyElem.value.scrollTo({ top, behavior: "smooth" });
+      return false;
     }
   };
   return {

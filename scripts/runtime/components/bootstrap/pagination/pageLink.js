@@ -1,4 +1,3 @@
-import { defineComponent, h } from "#imports";
 import { InlineProps, useInline } from "../../../composables/base/useInline.js";
 import { usePageLink } from "../../../composables/bootstrap/usePagination.js";
 import { hProps } from "../../../utils/useProps.js";
@@ -7,6 +6,7 @@ import {
   useAnchor
 } from "../../../composables/html/useAnchor.js";
 import BsLink from "../../nuxt/bslink.js";
+import { defineComponent, h } from "#imports";
 export default defineComponent({
   name: "BsPageLink",
   props: {

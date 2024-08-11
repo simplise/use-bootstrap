@@ -48,7 +48,7 @@ export function useButton(props) {
     }),
     attr: computed(() => {
       return {
-        "type": props.type,
+        type: props.type,
         ...addProp(props.disabled, "aria-disabled", "true"),
         ...addProp(props.target, "data-bv-target", props.target)
       };

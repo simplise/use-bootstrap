@@ -1,7 +1,7 @@
-import { defineComponent, h } from "#imports";
 import { hProps } from "../../utils/useProps.js";
 import { HeadingsProps, useHeadings } from "../../composables/html/useHeadings.js";
 import { InlineProps, useInline } from "../../composables/base/useInline.js";
+import { defineComponent, h } from "#imports";
 export default defineComponent({
   name: "HtmlHeadings6",
   props: {

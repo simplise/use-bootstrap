@@ -1,6 +1,6 @@
-import { defineComponent, h, computed } from "#imports";
 import { addClassNames, addProp, hProps } from "../../../utils/useProps.js";
 import { useBlock, BlockProps } from "../../../composables/base/useBlock.js";
+import { defineComponent, h, computed } from "#imports";
 export default defineComponent({
   name: "BsGridCol",
   props: {

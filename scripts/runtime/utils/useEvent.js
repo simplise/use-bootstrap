@@ -1,15 +1,15 @@
 import { provide, computed, onMounted } from "vue";
 import { useEventBus } from "@vueuse/core";
-import { forOwn } from "./helpers.js";
 import { useIDRef } from "../composables/attributes/useID.js";
+import { forOwn } from "./helpers.js";
 export function useEvent(props, elementRef, eventSuffix) {
   const eid = useIDRef(props, elementRef);
-  const exposeEventBus = computed(() => useEventBus(
-    `expose_${eid.value}`
-  ));
-  const emitEventBus = computed(() => useEventBus(
-    `emit_${eid.value}`
-  ));
+  const exposeEventBus = computed(
+    () => useEventBus(`expose_${eid.value}`)
+  );
+  const emitEventBus = computed(
+    () => useEventBus(`emit_${eid.value}`)
+  );
   function expose(exposed) {
     forOwn(exposed, (value, key) => {
       provide(`${key}.${eventSuffix}`, value);

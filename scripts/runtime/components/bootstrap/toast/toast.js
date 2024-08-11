@@ -1,8 +1,8 @@
-import { defineComponent, h, ref } from "#imports";
 import { useBlock, BlockProps } from "../../../composables/base/useBlock.js";
 import { hProps, exposeMethods } from "../../../utils/useProps.js";
 import { useFadeShow, FadeShowProps } from "../../../composables/bootstrap/useFadeShow.js";
 import { IDProps, useID } from "../../../composables/attributes/useID.js";
+import { defineComponent, h, ref } from "#imports";
 export default defineComponent({
   name: "BsToast",
   props: {
@@ -27,7 +27,7 @@ export default defineComponent({
         toast: true
       },
       attr: {
-        role: "alert",
+        "role": "alert",
         "aria-live": "assertive",
         "aria-atomic": "true"
       },

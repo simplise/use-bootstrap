@@ -1,30 +1,28 @@
 <script setup lang="ts">
-  import { computed } from "#imports";
-  //
-  const props = defineProps({
-    virtical: {
-      type: String,
-      default: "sm" 
-    },
-    horizontal: {
-      type: String,
-      default: "sm" 
-    },
-  })
-  //
-  const classObject = computed(() => {
-    return {
-      [`hv-divider`]: true,
-      [`hv-divider-${props.virtical}`]: props.virtical,
-      "align-middle": true,
-    }
-  })
-
+import { computed } from '#imports';
+//
+const props = defineProps({
+ virtical: {
+  type: String,
+  default: 'sm',
+ },
+ horizontal: {
+  type: String,
+  default: 'sm',
+ },
+});
+//
+const classObject = computed(() => {
+ return {
+  [`hv-divider`]: true,
+  [`hv-divider-${props.virtical}`]: props.virtical,
+  'align-middle': true,
+ };
+});
 </script>
 
 <template>
-  <b-span :class="classObject" >
-  </b-span>
+ <b-span :class="classObject" />
 </template>
 
 <style>

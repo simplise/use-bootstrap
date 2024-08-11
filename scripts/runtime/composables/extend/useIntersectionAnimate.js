@@ -28,7 +28,7 @@ export function useIntersectionAnimate(props, _context, elementRef) {
   const root = props.intersectionTarget ? findOneSelectorRef(props.intersectionTarget) : void 0;
   const { stop } = useIntersectionObserver(
     elementRef,
-    async ([{ isIntersecting }], _observerElement) => {
+    async ([{ isIntersecting }]) => {
       targetIsVisible.value = isIntersecting;
       inAnimate.value = true;
       await nextTick();
@@ -52,9 +52,9 @@ export function useIntersectionAnimate(props, _context, elementRef) {
   return {
     class: computed(() => {
       return {
-        "animate__animated": inAnimate.value,
+        animate__animated: inAnimate.value,
         [`animate__${props.animateIn}`]: targetIsVisible.value && props.animateIn,
-        "invisible": invisible.value
+        invisible: invisible.value
       };
     })
   };

@@ -1,35 +1,38 @@
 <script setup lang="ts">
-  import { computed } from "#imports";
-  //
-  const props = defineProps({
-    alignment: {
-      type: String,
-      default: "center" // start end center
-    },
-    title: {
-      type: String,
-      default: "center" // start end center
-    }
-  })
-  //
-  const classObject = computed(() => {
-    return {
-      [`divider-${props.alignment}`]: props.alignment,
-    }
-  })
-  //
-  const styleObject = computed(() => {
-    return {
-      [`--divider-border-width`]: "1px",
-      [`--divider-spacer`]: "1.5em",
-    }
-  })
+import { computed } from '#imports';
+//
+const props = defineProps({
+ alignment: {
+  type: String,
+  default: 'center', // start end center
+ },
+ title: {
+  type: String,
+  default: 'center', // start end center
+ },
+});
+//
+const classObject = computed(() => {
+ return {
+  [`divider-${props.alignment}`]: props.alignment,
+ };
+});
+//
+const styleObject = computed(() => {
+ return {
+  [`--divider-border-width`]: '1px',
+  [`--divider-spacer`]: '1.5em',
+ };
+});
 </script>
 
 <template>
-  <b-span :class="classObject" :style="styleObject">
-    {{ props.title }}
-  </b-span>
+ <b-span
+  :class="classObject"
+  :style="styleObject"
+ >
+  {{ props.title }}
+ </b-span>
 </template>
 
 <style>

@@ -1,7 +1,7 @@
-import { defineComponent, h, ref } from "#imports";
 import { hProps } from "../../../utils/useProps.js";
 import { useBlock, BlockProps } from "../../../composables/base/useBlock.js";
 import { CollapseProps, useCollapse } from "../../../composables/bootstrap/useCollapse.js";
+import { defineComponent, h, ref } from "#imports";
 export default defineComponent({
   name: "BsAccordionCollapse",
   props: {

@@ -1,10 +1,10 @@
-import { defineComponent, h, computed, ref } from "#imports";
 import {
   CloseButtonProps,
   useCloseButton
 } from "../../../composables/bootstrap/useCloseButton.js";
 import { hProps } from "../../../utils/useProps.js";
 import { BlockProps, useBlock } from "../../../composables/base/useBlock.js";
+import { defineComponent, h, computed, ref } from "#imports";
 export default defineComponent({
   name: "BsCloseButton",
   props: {
@@ -38,7 +38,7 @@ export default defineComponent({
         };
       }),
       attr: {
-        type: props.type,
+        "type": props.type,
         "aria-label": props.ariaLabel
       },
       ref: elementRef

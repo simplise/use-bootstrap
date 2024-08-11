@@ -1,7 +1,6 @@
-import { defineComponent, h, computed } from "#imports";
-import { hProps, exposeMethods } from "../../../utils/useProps.js";
+import { hProps, exposeMethods, addProp } from "../../../utils/useProps.js";
 import { useBlock, BlockProps } from "../../../composables/base/useBlock.js";
-import { addProp } from "../../../utils/useProps.js";
+import { defineComponent, h, computed } from "#imports";
 import { Icon } from "#components";
 import "./avatar.scss";
 export default defineComponent({
@@ -58,7 +57,7 @@ export default defineComponent({
     exposeMethods(context, block);
     const current = {
       class: {
-        "avatar": true
+        avatar: true
       },
       style: computed(() => {
         return {

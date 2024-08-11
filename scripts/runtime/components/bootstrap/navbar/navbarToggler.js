@@ -1,4 +1,3 @@
-import { defineComponent, h, ref, computed } from "#imports";
 import { hProps, hSlots } from "../../../utils/useProps.js";
 import {
   useAnchor,
@@ -8,6 +7,7 @@ import { ToggleProps, useToggle } from "../../../composables/bootstrap/useToggle
 import { BlockProps, useBlock } from "../../../composables/base/useBlock.js";
 import { NavbarTogglerProps, useNavbarToggler } from "../../../composables/bootstrap/useNavbarToggler.js";
 import { useDomExists } from "../../../utils/useDomExists.js";
+import { defineComponent, h, ref, computed } from "#imports";
 export default defineComponent({
   name: "BsNavbarToggler",
   props: {

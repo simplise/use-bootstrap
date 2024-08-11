@@ -1,12 +1,12 @@
-import { defineComponent, h, ref } from "#imports";
 import { hProps, hSlots } from "../../../utils/useProps.js";
 import {
   useAnchor,
   AnchorProps
 } from "../../../composables/html/useAnchor.js";
 import { BlockProps, useBlock } from "../../../composables/base/useBlock.js";
-import { Icon } from "#components";
 import BsLink from "../../nuxt/bslink.js";
+import { Icon } from "#components";
+import { defineComponent, h, ref } from "#imports";
 export default defineComponent({
   name: "BsIconLink",
   props: {

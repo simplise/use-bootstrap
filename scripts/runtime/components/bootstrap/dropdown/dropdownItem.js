@@ -1,4 +1,3 @@
-import { defineComponent, h, ref } from "#imports";
 import { useBlock, BlockProps } from "../../../composables/base/useBlock.js";
 import { hProps } from "../../../utils/useProps.js";
 import { useScrollSpyItem } from "../../../composables/bootstrap/useScrollSpyItem.js";
@@ -10,6 +9,7 @@ import {
 } from "../../../composables/html/useAnchor.js";
 import { ToggleProps, useToggle } from "../../../composables/bootstrap/useToggle.js";
 import BsLink from "../../nuxt/bsActiveLink.js";
+import { defineComponent, h, ref } from "#imports";
 export default defineComponent({
   name: "BsDropdownItem",
   props: {

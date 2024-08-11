@@ -76,7 +76,7 @@ export function useCarouselControl(props, elementRef) {
     },
     renderControl: () => [
       h("span", {
-        class: {
+        "class": {
           [`carousel-control-${props.slide}-icon`]: true
         },
         "aria-hidden": "true"

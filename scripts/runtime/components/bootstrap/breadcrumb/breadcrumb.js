@@ -1,6 +1,6 @@
-import { defineComponent, h } from "#imports";
 import { useBlock, BlockProps } from "../../../composables/base/useBlock.js";
 import { hProps, addProp } from "../../../utils/useProps.js";
+import { defineComponent, h } from "#imports";
 const defaultDivider = "/";
 export default defineComponent({
   name: "BsBreadcrumb",

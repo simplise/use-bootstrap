@@ -1,6 +1,6 @@
-import { defineComponent, h } from "#imports";
 import { hProps } from "../../../utils/useProps.js";
 import { GridRowProps, useGridRow } from "../../../composables/bootstrap/useGridRow.js";
+import { defineComponent, h } from "#imports";
 export default defineComponent({
   name: "BsGridRow",
   props: {

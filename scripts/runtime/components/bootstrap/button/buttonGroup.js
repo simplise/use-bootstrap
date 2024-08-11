@@ -1,8 +1,8 @@
-import { defineComponent, h, computed, ref } from "#imports";
 import { useBlock, BlockProps } from "../../../composables/base/useBlock.js";
 import { hProps } from "../../../utils/useProps.js";
 import { useID, IDProps } from "../../../composables/attributes/useID.js";
 import { DropdownProps, useDropdown } from "../../../composables/bootstrap/useDropdown.js";
+import { defineComponent, h, computed, ref } from "#imports";
 export default defineComponent({
   name: "BsButtonGroup",
   props: {

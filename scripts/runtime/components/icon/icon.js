@@ -1,7 +1,7 @@
-import { defineComponent, h, ref, onMounted } from "#imports";
 import { hProps } from "../../utils/useProps.js";
 import { BlockProps, useBlock } from "../../composables/base/useBlock.js";
 import { useDirective } from "../../composables/directive/useDirective.js";
+import { defineComponent, h, ref, onMounted } from "#imports";
 import { Icon } from "#components";
 export default defineComponent({
   name: "BsIcon",

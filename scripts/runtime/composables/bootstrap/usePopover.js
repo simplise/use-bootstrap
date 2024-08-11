@@ -1,6 +1,6 @@
 import { computed, ref, h, Teleport, watch } from "vue";
-import { addProp } from "../../utils/useProps.js";
 import { useFloating, arrow, flip, shift, offset } from "@floating-ui/vue";
+import { addProp } from "../../utils/useProps.js";
 import {
   useElementVisibility
 } from "../../utils/helpers.js";
@@ -67,15 +67,15 @@ export function usePopover(props, elementRef) {
           h(
             "div",
             {
-              class: {
-                popover: true,
+              "class": {
+                "popover": true,
                 "bs-popover-auto": true,
-                fade: true,
-                show: true
+                "fade": true,
+                "show": true
               },
-              style: floatingStyles.value,
+              "style": floatingStyles.value,
               "data-popper-placement": placement.value,
-              ref: popoverRef
+              "ref": popoverRef
             },
             [
               h(

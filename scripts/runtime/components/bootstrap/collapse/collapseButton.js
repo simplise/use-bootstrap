@@ -1,4 +1,3 @@
-import { defineComponent, h, ref } from "#imports";
 import { hProps } from "../../../utils/useProps.js";
 import { BlockProps, useBlock } from "../../../composables/base/useBlock.js";
 import {
@@ -6,6 +5,7 @@ import {
   ButtonProps
 } from "../../../composables/html/useButton.js";
 import { ToggleProps, useToggle } from "../../../composables/bootstrap/useToggle.js";
+import { defineComponent, h, ref } from "#imports";
 export default defineComponent({
   name: "BsCollapseButton",
   props: {

@@ -1,8 +1,8 @@
-import { defineComponent, h, ref } from "#imports";
 import { hProps, exposeMethods } from "../../../utils/useProps.js";
 import { useBlock, BlockProps } from "../../../composables/base/useBlock.js";
 import { useCollapse, CollapseProps } from "../../../composables/bootstrap/useCollapse.js";
 import { IDProps, useID } from "../../../composables/attributes/useID.js";
+import { defineComponent, h, ref } from "#imports";
 export default defineComponent({
   name: "BsCollapse",
   props: {

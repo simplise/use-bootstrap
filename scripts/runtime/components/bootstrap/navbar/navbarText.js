@@ -1,6 +1,6 @@
-import { defineComponent, h } from "#imports";
 import { InlineProps, useInline } from "../../../composables/base/useInline.js";
 import { hProps } from "../../../utils/useProps.js";
+import { defineComponent, h } from "#imports";
 export default defineComponent({
   name: "BsNavbarText",
   props: {

@@ -1,12 +1,13 @@
 <template>
-  <slot :name="name" />
+ <slot :name="name" />
 </template>
+
 <script setup lang="ts">
-import { useDynamicRouteParam } from "../../../composables/extend/dynamicRoute/useDynamicRouteParam"
+import { useDynamicRouteParam } from '../../../composables/extend/dynamicRoute/useDynamicRouteParam';
 //
 const props = defineProps({
-  paramName: { type: String, default: "" }
-})
+ paramName: { type: String, default: '' },
+});
 //
-const name = useDynamicRouteParam(props.paramName)
+const name = useDynamicRouteParam(props.paramName);
 </script>

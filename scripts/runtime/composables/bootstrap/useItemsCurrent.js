@@ -21,11 +21,14 @@ export function useItemsCurrent(props, context, elementRef, eventSuffix) {
   watch(current, () => {
     context.emit("currentChanged", current.value);
   });
-  watch(() => props.current, () => {
-    if (props.current) {
-      current.value = props.current;
+  watch(
+    () => props.current,
+    () => {
+      if (props.current) {
+        current.value = props.current;
+      }
     }
-  });
+  );
   return {
     attr: computed(() => {
       return {

@@ -1,6 +1,6 @@
-import { defineComponent, h } from "#imports";
 import { hProps } from "../../utils/useProps.js";
 import { useBlock, BlockProps } from "../../composables/base/useBlock.js";
+import { defineComponent, h } from "#imports";
 export default defineComponent({
   name: "HtmlParagraph",
   props: {

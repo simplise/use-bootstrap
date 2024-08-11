@@ -1,4 +1,3 @@
-import { defineComponent, h } from "#imports";
 import {
   AnchorProps,
   useAnchor
@@ -6,6 +5,7 @@ import {
 import { InlineProps, useInline } from "../../../composables/base/useInline.js";
 import { hProps } from "../../../utils/useProps.js";
 import BsLink from "../../nuxt/bslink.js";
+import { defineComponent, h } from "#imports";
 export default defineComponent({
   name: "BsAlertLink",
   props: {

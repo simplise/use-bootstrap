@@ -5,9 +5,7 @@ export const SelectModelProps = {
     type: [String, Number, Array]
   }
 };
-export const SelectModelEmits = [
-  "update:modelValue"
-];
+export const SelectModelEmits = ["update:modelValue"];
 export function useSelectModel(props, emit, elementRef) {
   const refresh = () => {
     if (elementRef.value && props.modelValue) {
@@ -31,12 +29,15 @@ export function useSelectModel(props, emit, elementRef) {
   onMounted(() => {
     refresh();
   });
-  watch(() => props.modelValue, () => {
-    refresh();
-  });
+  watch(
+    () => props.modelValue,
+    () => {
+      refresh();
+    }
+  );
   return {
     event: {
-      "onChange": (event) => {
+      onChange: (event) => {
         const { target } = event;
         if (target instanceof HTMLSelectElement) {
           if (target.multiple) {

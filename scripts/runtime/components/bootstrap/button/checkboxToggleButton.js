@@ -1,4 +1,3 @@
-import { defineComponent, h, ref, computed } from "#imports";
 import { addProp, hProps } from "../../../utils/useProps.js";
 import { BlockProps, useBlock } from "../../../composables/base/useBlock.js";
 import {
@@ -11,6 +10,7 @@ import {
   useInputModel
 } from "../../../composables/base/useInputModel.js";
 import { useID, IDProps, useIDRef } from "../../../composables/attributes/useID.js";
+import { defineComponent, h, ref, computed } from "#imports";
 export default defineComponent({
   name: "BsCheckboxToggleButton",
   props: {

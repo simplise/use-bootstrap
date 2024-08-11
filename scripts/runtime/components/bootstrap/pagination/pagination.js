@@ -1,10 +1,10 @@
-import { defineComponent, h } from "#imports";
 import { useBlock, BlockProps } from "../../../composables/base/useBlock.js";
 import {
   usePagination,
   PaginationProps
 } from "../../../composables/bootstrap/usePagination.js";
 import { hProps } from "../../../utils/useProps.js";
+import { defineComponent, h } from "#imports";
 export default defineComponent({
   name: "BsPagination",
   props: {

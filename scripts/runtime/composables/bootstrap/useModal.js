@@ -1,4 +1,14 @@
-import { computed, unref, ref, h, nextTick } from "vue";
+import {
+  computed,
+  unref,
+  ref,
+  h,
+  nextTick
+} from "vue";
+import {
+  defaultDocument,
+  promiseTimeout
+} from "@vueuse/core";
 import {
   useMagicKeys,
   useWindowSize,
@@ -14,7 +24,6 @@ import { useScrollbar } from "../../utils/useScrollbar.js";
 import { useSettings } from "../../utils/useSettings.js";
 import { waitAfterTransition } from "../../utils/useDOM.js";
 import backdrop from "../../components/bootstrap/backdrop/backdrop.js";
-import { defaultDocument, promiseTimeout } from "@vueuse/core";
 export const ModalProps = {
   fade: {
     type: Boolean,
@@ -81,7 +90,8 @@ export function useModal(props, context, elementRef, options = {}) {
     if (isShown.value) {
       return;
     }
-    context.emit("show.modal");
+    context.emit("show");
+    await nextTick();
     isShown.value = true;
     isTransitioning.value = true;
     adjustDialog();
@@ -90,13 +100,16 @@ export function useModal(props, context, elementRef, options = {}) {
     isShowBackdrop.value = true;
     await nextTick();
     await backdropRef.value?.show();
+    await waitAfterTransition(elementRef, props.fade);
     isShow.value = true;
     focused.value = props.focus || false;
     isTransitioning.value = false;
+    await nextTick();
+    context.emit("shown");
   };
   const hide = async () => {
-    context.emit("hide.modal");
-    escapeKeyWatch.pause;
+    context.emit("hide");
+    escapeKeyWatch.pause();
     windowSizeWatch.pause();
     isShow.value = false;
     isTransitioning.value = true;
@@ -106,9 +119,14 @@ export function useModal(props, context, elementRef, options = {}) {
     isShown.value = false;
     isTransitioning.value = false;
     await nextTick();
+    context.emit("hidden");
   };
   const toggle = async () => {
-    isShown.value ? await hide() : await show();
+    if (isShown.value) {
+      await hide();
+    } else {
+      await show();
+    }
   };
   function adjustDialog() {
     const element = unref(elementRef);
@@ -161,9 +179,9 @@ export function useModal(props, context, elementRef, options = {}) {
   return {
     class: computed(() => {
       return {
-        modal: true,
-        show: isShow.value,
-        fade: props.fade,
+        "modal": true,
+        "show": isShow.value,
+        "fade": props.fade,
         "pe-none": true,
         "modal-static": isStatic.value
       };

@@ -1,5 +1,4 @@
-import { defineComponent, h, ref, computed } from "#imports";
-import { hProps, exposeMethods } from "../../../utils/useProps.js";
+import { hProps, exposeMethods, addProp } from "../../../utils/useProps.js";
 import { useBlock, BlockProps } from "../../../composables/base/useBlock.js";
 import {
   useAccordion,
@@ -9,7 +8,7 @@ import {
   CurrentProps,
   useItemsCurrent
 } from "../../../composables/bootstrap/useItemsCurrent.js";
-import { addProp } from "../../../utils/useProps.js";
+import { defineComponent, h, ref, computed } from "#imports";
 export default defineComponent({
   name: "BsAccordion",
   props: {

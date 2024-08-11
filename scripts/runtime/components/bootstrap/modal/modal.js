@@ -1,10 +1,10 @@
-import { defineComponent, h, ref } from "#imports";
 import { Teleport } from "vue";
 import { hProps, hSlots, exposeMethods } from "../../../utils/useProps.js";
 import { useBlock, BlockProps } from "../../../composables/base/useBlock.js";
 import { useAreaLabelledby } from "../../../composables/attributes/useAreaLabel.js";
 import { useModal, ModalProps } from "../../../composables/bootstrap/useModal.js";
 import { IDProps, useID } from "../../../composables/attributes/useID.js";
+import { defineComponent, h, ref } from "#imports";
 export default defineComponent({
   name: "BsModal",
   props: {

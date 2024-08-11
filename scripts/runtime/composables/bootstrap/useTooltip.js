@@ -1,7 +1,7 @@
 import { computed, ref, watch, h, Teleport } from "vue";
-import { addProp } from "../../utils/useProps.js";
 import { useElementHover } from "@vueuse/core";
 import { useFloating, arrow, autoUpdate, flip, shift, offset } from "@floating-ui/vue";
+import { addProp } from "../../utils/useProps.js";
 export const TooltipProps = {
   title: {
     type: [String],
@@ -52,14 +52,14 @@ export function useTooltip(props, elementRef) {
           h(
             "div",
             {
-              class: {
-                tooltip: true,
+              "class": {
+                "tooltip": true,
                 "bs-tooltip-auto": true,
-                show: isShow.value
+                "show": isShow.value
               },
-              style: floatingStyles.value,
+              "style": floatingStyles.value,
               "data-popper-placement": placement.value,
-              ref: tooltipRef
+              "ref": tooltipRef
             },
             [
               h(

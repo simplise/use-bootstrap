@@ -1,8 +1,8 @@
-import { computed, defineComponent, h, ref } from "#imports";
 import { useBlock, BlockProps } from "../../../composables/base/useBlock.js";
 import { hProps, exposeMethods } from "../../../utils/useProps.js";
 import { useID, IDProps } from "../../../composables/attributes/useID.js";
 import { DropdownProps, useDropdown } from "../../../composables/bootstrap/useDropdown.js";
+import { computed, defineComponent, h, ref } from "#imports";
 export default defineComponent({
   name: "BsNavItemDropdown",
   props: {
@@ -26,10 +26,10 @@ export default defineComponent({
     const current = {
       class: computed(() => {
         return {
-          dropdown: true,
+          "dropdown": true,
           "nav-item": true,
           "list-inline-item": props.inline,
-          active: active.value
+          "active": active.value
         };
       })
     };

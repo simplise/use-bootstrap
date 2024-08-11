@@ -1,8 +1,7 @@
-import { isArray, keys, startsWith, forOwn, isEmpty, set, pickBy, pick, has, camelCase, isString, isNumber, isBoolean } from "lodash-es";
+import { isArray, keys, forOwn, isEmpty, set, pickBy, pick, has, camelCase, isString, isNumber, isBoolean } from "lodash-es";
 import { breakpointsBootstrapV5 } from "@vueuse/core";
 export {
   isArray,
-  startsWith,
   forOwn,
   isEmpty,
   set,

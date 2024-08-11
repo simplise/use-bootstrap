@@ -1,7 +1,7 @@
-import { defineComponent, h } from "#imports";
 import { useImage, ImageProps } from "../../../composables/html/useImage.js";
 import { BlockProps, useBlock } from "../../../composables/base/useBlock.js";
 import { hProps } from "../../../utils/useProps.js";
+import { defineComponent, h } from "#imports";
 import { NuxtImg } from "#components";
 export default defineComponent({
   name: "BsCardImgTop",

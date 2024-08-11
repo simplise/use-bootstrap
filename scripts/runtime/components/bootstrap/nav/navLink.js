@@ -1,4 +1,3 @@
-import { defineComponent, h, ref } from "#imports";
 import { hProps, hSlots } from "../../../utils/useProps.js";
 import { BlockProps, useBlock } from "../../../composables/base/useBlock.js";
 import { ActiveProps, useActive } from "../../../composables/bootstrap/useItemsActive.js";
@@ -13,6 +12,7 @@ import {
 } from "../../../composables/html/useAnchor.js";
 import { IDProps, useID } from "../../../composables/attributes/useID.js";
 import BsLink from "../../nuxt/bslink.js";
+import { defineComponent, h, ref } from "#imports";
 export default defineComponent({
   name: "BsNavLink",
   props: {

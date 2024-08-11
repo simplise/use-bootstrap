@@ -16,9 +16,7 @@ export const InputModelProps = {
     type: [String, Boolean, Number, Object]
   }
 };
-export const InputModelEmits = [
-  "update:modelValue"
-];
+export const InputModelEmits = ["update:modelValue"];
 export function useInputModel(props, emit, elementRef) {
   const refresh = () => {
     if (elementRef.value && props.modelValue !== void 0 && props.modelValue !== false) {
@@ -52,12 +50,15 @@ export function useInputModel(props, emit, elementRef) {
   onMounted(() => {
     refresh();
   });
-  watch(() => props.modelValue, () => {
-    refresh();
-  });
+  watch(
+    () => props.modelValue,
+    () => {
+      refresh();
+    }
+  );
   return {
     event: {
-      "onInput": (event) => {
+      onInput: (event) => {
         const { target } = event;
         if (target instanceof HTMLInputElement) {
           if (target.type == "checkbox") {

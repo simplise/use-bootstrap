@@ -1,5 +1,5 @@
-import { defineComponent, reactive } from "#imports";
 import { useMouse } from "@vueuse/core";
+import { defineComponent, reactive } from "#imports";
 export default defineComponent({
   name: "UseMouse",
   props: ["touch", "resetOnTouchEnds", "initialValue"],

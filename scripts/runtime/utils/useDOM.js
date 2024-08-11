@@ -1,10 +1,10 @@
+import { nextTick, onMounted, ref } from "vue";
 import {
   unrefElement,
   defaultWindow,
   defaultDocument,
   promiseTimeout
 } from "../utils/helpers.js";
-import { nextTick, onMounted, ref } from "vue";
 const MILLISECONDS_MULTIPLIER = 1e3;
 export function findOneSelectorRef(selector, options = {}) {
   const { document = defaultDocument } = options;

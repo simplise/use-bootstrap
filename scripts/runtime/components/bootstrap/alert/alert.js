@@ -1,8 +1,7 @@
-import { defineComponent, h, ref, computed } from "#imports";
 import { useBlock, BlockProps } from "../../../composables/base/useBlock.js";
-import { hProps, exposeMethods } from "../../../utils/useProps.js";
+import { hProps, exposeMethods, addProp } from "../../../utils/useProps.js";
 import { useFadeShow, FadeShowProps } from "../../../composables/bootstrap/useFadeShow.js";
-import { addProp } from "../../../utils/useProps.js";
+import { defineComponent, h, ref, computed } from "#imports";
 export default defineComponent({
   name: "BsAlerts",
   props: {
@@ -33,7 +32,7 @@ export default defineComponent({
     const current = {
       class: computed(() => {
         return {
-          alert: true,
+          "alert": true,
           [`alert-${props.theme}`]: props.theme,
           "alert-dismissible": props.dismissible
         };

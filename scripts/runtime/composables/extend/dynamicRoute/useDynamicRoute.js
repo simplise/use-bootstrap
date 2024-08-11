@@ -1,6 +1,6 @@
-import { useRoute, computed } from "#imports";
 import { defu } from "defu";
 import { useModuleOptions } from "./useModuleOptions.js";
+import { useRoute, computed } from "#imports";
 export function useDynamicRoute(path) {
   const options = useModuleOptions();
   const route = useRoute();

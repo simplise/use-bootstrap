@@ -1,8 +1,8 @@
-import { defineComponent, h, nextTick, ref } from "#imports";
 import { waitAfterTransition } from "../../../utils/useDOM.js";
 import { useScrollbar } from "../../../utils/useScrollbar.js";
 import { unrefElement } from "../../../utils/helpers.js";
 import { exposeMethods } from "../../../utils/useProps.js";
+import { defineComponent, h, nextTick, ref } from "#imports";
 export default defineComponent({
   name: "BsBackdrop",
   props: {

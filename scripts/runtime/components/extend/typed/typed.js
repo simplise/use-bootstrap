@@ -1,5 +1,5 @@
-import { h, ref, defineComponent, onMounted, onUnmounted } from "#imports";
 import Typed from "typed.js";
+import { h, ref, defineComponent, onMounted, onUnmounted } from "#imports";
 export default defineComponent({
   name: "Typed",
   props: {

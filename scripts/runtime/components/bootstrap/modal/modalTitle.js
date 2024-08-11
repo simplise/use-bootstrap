@@ -1,8 +1,8 @@
-import { defineComponent, h, ref } from "#imports";
 import { hProps } from "../../../utils/useProps.js";
 import { useAreaLabel } from "../../../composables/attributes/useAreaLabel.js";
 import { BlockProps, useBlock } from "../../../composables/base/useBlock.js";
 import { useID, IDProps } from "../../../composables/attributes/useID.js";
+import { defineComponent, h, ref } from "#imports";
 export default defineComponent({
   name: "BsModalTitle",
   props: {

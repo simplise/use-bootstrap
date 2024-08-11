@@ -25,14 +25,14 @@ export function useGridRow(props) {
   return {
     class: computed(() => {
       return {
-        row: props.row,
+        "row": props.row,
         "row-cols-auto": props.auto,
         "flex-row-reverse": props.rowreverse,
         [`align-${props.align}`]: props.align,
         ...addClassNames(props.columns, (n) => `row-cols-${n}`),
         ...addClassNames(
           props.gutter,
-          (n) => `g${isString(props.gutter) && ["x", "y"].indexOf(n.substring(0, 1)) > -1 ? `${n}` : `-${n}`}`
+          (n) => `g${isString(props.gutter) && ["x", "y"].includes(n.substring(0, 1)) ? `${n}` : `-${n}`}`
         ),
         ...block.class.value
       };

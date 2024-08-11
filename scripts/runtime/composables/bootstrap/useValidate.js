@@ -2,18 +2,16 @@ import { computed, ref } from "vue";
 import { unrefElement } from "../../utils/helpers.js";
 import { addProp } from "../../utils/useProps.js";
 export const ValidateProps = {
-  validation: {
+  novalidate: {
     type: Boolean
   },
   wasVlidated: {
-    type: Boolean
+    type: Boolean,
+    default: false
   }
 };
 export function useValidate(props, elementRef) {
-  if (!props.validation) {
-    return {};
-  }
-  const validated = ref(false);
+  const validated = ref(props.wasVlidated);
   const validate = (event) => {
     const element = unrefElement(elementRef);
     if (element && !element.checkValidity()) {
@@ -30,7 +28,7 @@ export function useValidate(props, elementRef) {
     }),
     attr: computed(() => {
       return {
-        ...addProp(props.validation, "novalidate", "novalidate")
+        ...addProp(props.novalidate, "novalidate", "novalidate")
       };
     }),
     event: {

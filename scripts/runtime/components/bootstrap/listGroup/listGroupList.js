@@ -1,4 +1,3 @@
-import { defineComponent, h, computed, ref } from "#imports";
 import { useBlock, BlockProps } from "../../../composables/base/useBlock.js";
 import { hProps, hasValue, addProp } from "../../../utils/useProps.js";
 import {
@@ -9,6 +8,7 @@ import {
   ScrollSpyProps,
   useScrollSpy
 } from "../../../composables/bootstrap/useScrollSpy.js";
+import { defineComponent, h, computed, ref } from "#imports";
 export default defineComponent({
   name: "BsListGroupList",
   props: {
@@ -52,7 +52,7 @@ export default defineComponent({
           ...addProp(props.color, "--bs-list-group-action-active-bg", `var(--bs-${props.color})`),
           ...addProp(props.color, "--bs-list-group-active-bg", `var(--bs-${props.color})`),
           ...addProp(props.color, "--bs-list-group-active-border-color", `var(--bs-${props.color})`),
-          //...addProp(!props.textColor && props.color, "--bs-list-group-color", `var(--bs-contrast-${props.color})`),
+          // ...addProp(!props.textColor && props.color, "--bs-list-group-color", `var(--bs-contrast-${props.color})`),
           ...addProp(!props.textColor && props.color, "--bs-list-group-action-color", `var(--bs-contrast-${props.color})`),
           ...addProp(!props.textColor && props.color, "--bs-list-group-action-hover-color", `var(--bs-contrast-${props.color})`),
           ...addProp(!props.textColor && props.color, "--bs-list-group-action-active-color", `var(--bs-contrast-${props.color})`),

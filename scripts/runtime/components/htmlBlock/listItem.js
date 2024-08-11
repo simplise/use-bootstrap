@@ -1,10 +1,10 @@
-import { defineComponent, h, ref } from "#imports";
 import { hProps } from "../../utils/useProps.js";
 import { useListItem, ListItemProps } from "../../composables/html/useListItem.js";
 import { BlockProps, useBlock } from "../../composables/base/useBlock.js";
 import { ActiveProps, useActive } from "../../composables/bootstrap/useItemsActive.js";
 import { IDProps, useID } from "../../composables/attributes/useID.js";
 import { ToggleProps, useToggle } from "../../composables/bootstrap/useToggle.js";
+import { defineComponent, h, ref } from "#imports";
 export default defineComponent({
   name: "HtmlListItem",
   props: {

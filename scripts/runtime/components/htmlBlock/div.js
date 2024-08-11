@@ -1,4 +1,4 @@
-import { defineComponent, h } from "#imports";
+import { defineComponent, h } from "vue";
 import { hProps } from "../../utils/useProps.js";
 import { useBlock, BlockProps } from "../../composables/base/useBlock.js";
 export default defineComponent({

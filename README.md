@@ -37,6 +37,9 @@ use-bootstrap is the front-end framework based on Nuxt3 and Bootstrap5.
 - _Correspondence to UnoCSS , nuxt-link , nuxt-image and nuxt-icon_
 - _Animation support_
 - _Moderate Abstraction and Automation_
+- _Moderate Abstraction and Automation_
+- _Seamless Integration of UI and Data_
+
 
 **For a detailed description click [here](https://usebootstrap.org/lang-en/getting-started/concept/).**
 

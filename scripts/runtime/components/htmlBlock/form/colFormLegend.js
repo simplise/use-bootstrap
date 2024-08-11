@@ -1,6 +1,6 @@
-import { defineComponent, h } from "#imports";
 import { useInline, InlineProps } from "../../../composables/base/useInline.js";
 import { hProps } from "../../../utils/useProps.js";
+import { defineComponent, h } from "#imports";
 export default defineComponent({
   name: "BsColFormLegend",
   props: {

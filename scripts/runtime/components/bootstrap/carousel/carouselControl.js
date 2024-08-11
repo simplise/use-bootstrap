@@ -1,10 +1,10 @@
-import { defineComponent, h, ref } from "#imports";
 import { hProps, hSlots } from "../../../utils/useProps.js";
 import { useBlock, BlockProps } from "../../../composables/base/useBlock.js";
 import {
   CarouselControlProps,
   useCarouselControl
 } from "../../../composables/bootstrap/useCarouselControl.js";
+import { defineComponent, h, ref } from "#imports";
 export default defineComponent({
   name: "BsCarouselControl",
   props: {

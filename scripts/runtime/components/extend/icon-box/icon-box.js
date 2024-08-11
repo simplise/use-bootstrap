@@ -1,7 +1,6 @@
-import { defineComponent, h, ref, computed } from "#imports";
-import { hProps, exposeMethods } from "../../../utils/useProps.js";
+import { hProps, exposeMethods, addProp } from "../../../utils/useProps.js";
 import { useBlock, BlockProps } from "../../../composables/base/useBlock.js";
-import { addProp } from "../../../utils/useProps.js";
+import { defineComponent, h, ref, computed } from "#imports";
 import { Icon } from "#components";
 export default defineComponent({
   name: "IconBox",

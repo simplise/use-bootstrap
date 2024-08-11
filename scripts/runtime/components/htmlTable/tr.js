@@ -1,6 +1,6 @@
-import { defineComponent, h, computed } from "#imports";
 import { useBlock, BlockProps } from "../../composables/base/useBlock.js";
 import { hProps } from "../../utils/useProps.js";
+import { defineComponent, h, computed } from "#imports";
 export default defineComponent({
   name: "HtmlTableRow",
   props: {

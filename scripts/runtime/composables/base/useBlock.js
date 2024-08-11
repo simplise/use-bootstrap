@@ -1,7 +1,7 @@
-import { InlineProps, useInline } from "./useInline.js";
+import { computed } from "vue";
 import { addClassNames, hasValue, isPropDefined, addProp } from "../../utils/useProps.js";
 import { isNumber, isString } from "../../utils/helpers.js";
-import { computed } from "vue";
+import { InlineProps, useInline } from "./useInline.js";
 export const BlockProps = {
   ...InlineProps,
   overlay: {
@@ -34,7 +34,7 @@ export const BlockProps = {
   },
   flex: {
     type: [Boolean, String, Array]
-    //inline, {breakPoint}, {breakPoint}-inline
+    // inline, {breakPoint}, {breakPoint}-inline
   },
   flexDirection: {
     type: [String, Array]
@@ -86,7 +86,7 @@ export const BlockProps = {
   },
   overflow: {
     type: [String, Array]
-    //auto , hidden , visible , scroll
+    // auto , hidden , visible , scroll
   },
   tableResponsive: {
     type: String
@@ -148,17 +148,17 @@ export function useBlock(props) {
         [`shadow${hasValue(props.shadow) ? `-${props.shadow}` : ""}`]: isPropDefined(
           props.shadow
         ),
-        ratio: props.ratio,
+        "ratio": props.ratio,
         [`ratio-${props.ratio}`]: isString(props.ratio),
         [`fixed-${props.fixed}`]: props.fixed,
         [`sticky-${props.sticky}`]: props.sticky,
-        clearfix: props.clearfix,
+        "clearfix": props.clearfix,
         ...addClassNames(props.overflow, (n) => `overflow-${n}`),
         // [`overflow-${props.overflow}`]: props.overflow,
         [`table-responsive${hasValue(props.tableResponsive) ? `-${props.tableResponsive}` : ""}`]: props.tableResponsive,
         [`justify-content-${props.justifyContent}`]: props.justifyContent,
-        vstack: props.vstack,
-        hstack: props.hstack,
+        "vstack": props.vstack,
+        "hstack": props.hstack,
         [`align-${props.align}`]: props.align,
         [`order-${props.order}`]: props.order,
         ...addClassNames(props.offset, (n) => `offset-${n}`),

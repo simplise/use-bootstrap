@@ -1,6 +1,6 @@
-import { computed, defineComponent, h, provide, ref } from "#imports";
 import { useBlock, BlockProps } from "../../../composables/base/useBlock.js";
 import { hProps } from "../../../utils/useProps.js";
+import { computed, defineComponent, h, provide, ref } from "#imports";
 export default defineComponent({
   name: "BsFormInputGroup",
   props: {

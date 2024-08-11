@@ -1,8 +1,8 @@
-import { defineComponent, h } from "#imports";
 import { useInline, InlineProps } from "../../../composables/base/useInline.js";
 import { useFormLabel } from "../../../composables/bootstrap/useFormLabel.js";
 import { ForProps } from "../../../composables/attributes/useFor.js";
 import { hProps } from "../../../utils/useProps.js";
+import { defineComponent, h } from "#imports";
 export default defineComponent({
   name: "BsFormCheckLabel",
   props: {

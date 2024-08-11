@@ -30,9 +30,9 @@ export function useAnchor(props) {
     class: computed(() => {
       return {
         "stretched-link": props.stretchedLink,
-        disabled: props.disabled,
+        "disabled": props.disabled,
         [`link-${props.link}`]: props.link,
-        btn: props.button,
+        "btn": props.button,
         [`btn-${props.button}`]: hasValue(props.button),
         [`btn-${props.size}`]: props.size
       };

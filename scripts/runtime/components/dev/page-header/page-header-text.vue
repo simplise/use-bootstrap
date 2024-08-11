@@ -2,7 +2,7 @@
 </script>
 
 <template>
-  <b-div class="page-header-text">
-    <slot />
-  </b-div>
+ <b-div class="page-header-text">
+  <slot />
+ </b-div>
 </template>

@@ -1,7 +1,7 @@
-import { defineComponent, h } from "#imports";
 import { HeadingsProps, useHeadings } from "../../../composables/html/useHeadings.js";
 import { InlineProps, useInline } from "../../../composables/base/useInline.js";
 import { hProps } from "../../../utils/useProps.js";
+import { defineComponent, h } from "#imports";
 export default defineComponent({
   name: "BsCardSubTitle",
   props: {

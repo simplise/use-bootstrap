@@ -1,7 +1,7 @@
-import { defineComponent, h } from "#imports";
 import { useBlock, BlockProps } from "../../../composables/base/useBlock.js";
 import { hProps, hSlots } from "../../../utils/useProps.js";
 import span from "../../htmlInline/inline.js";
+import { defineComponent, h } from "#imports";
 export default defineComponent({
   name: "BsSpinner",
   props: {

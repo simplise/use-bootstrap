@@ -67,7 +67,7 @@ export function isPropDefined(value) {
   return !isPropUndefined(value);
 }
 export function isNumrable(value) {
-  return !isNaN(parseInt(value));
+  return !isNaN(Number.parseInt(value));
 }
 export function hasValue(value) {
   return isString(value) && value || isNumber(value) || isArray(value);
@@ -88,7 +88,7 @@ export function toNum(value) {
     return value;
   }
   if (isNumrable(value)) {
-    return parseInt(value);
+    return Number.parseInt(value);
   }
   return 0;
 }

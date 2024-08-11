@@ -1,6 +1,4 @@
 import { computed, inject, ref, watch } from "vue";
-import { addProp } from "../../utils/useProps.js";
-import { delay, onClickOutside } from "../../utils/helpers.js";
 import {
   useFloating,
   autoUpdate,
@@ -8,6 +6,8 @@ import {
   offset,
   shift
 } from "@floating-ui/vue";
+import { addProp } from "../../utils/useProps.js";
+import { delay, onClickOutside } from "../../utils/helpers.js";
 export const DropdownMenuProps = {
   floating: {
     type: Object
@@ -36,17 +36,18 @@ export const DropdownMenuProps = {
     type: String
   }
   // 動作不良のためカット
-  // animateClose: { 
+  // animateClose: {
   //   type: String,
   // }
 };
 export function useDropdownMenu(props, elementRef) {
-  DropdownMenuProps.autoClose;
   const tipPlacement = ref(props.floating?.placement);
   const isShow = ref(false);
-  const isShown = ref(false);
   const active = inject("active.dropdown", ref(false));
-  const toggleRef = inject("toggleRef.dropdown", ref());
+  const toggleRef = inject(
+    "toggleRef.dropdown",
+    ref()
+  );
   const placement = inject("placement.dropdown", ref(""));
   const animation = ref();
   const hasMega = inject("hasMega", ref(false));
@@ -94,11 +95,7 @@ export function useDropdownMenu(props, elementRef) {
   const { floatingStyles } = useFloating(toggleRef, elementRef, {
     placement: floatingPlace.value,
     whileElementsMounted: autoUpdate,
-    middleware: [
-      flip(),
-      shift(),
-      offset(2)
-    ]
+    middleware: [flip(), shift(), offset(2)]
   });
   if ([true, "", "outside", "true"].includes(props.autoClose)) {
     onClickOutside(elementRef, (_event) => {
@@ -126,19 +123,23 @@ export function useDropdownMenu(props, elementRef) {
   const hide = async () => {
     isShow.value = false;
   };
-  watch(active, (value) => {
-    if (value) {
-      show();
-    } else {
-      hide();
-    }
-  }, { immediate: true });
+  watch(
+    active,
+    (value) => {
+      if (value) {
+        show();
+      } else {
+        hide();
+      }
+    },
+    { immediate: true }
+  );
   return {
     class: computed(() => {
       return {
         "dropdown-menu": true,
         "dropdown-menu-dark": props.dark,
-        show: isShow.value,
+        "show": isShow.value,
         "animate__animated": props.animateOpen,
         ...animation.value && { [`animate__${animation.value}`]: true }
       };
