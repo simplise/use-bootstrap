@@ -32,7 +32,7 @@ use-bootstrap is the front-end framework based on Nuxt3 and Bootstrap5.
 
 - _Extended Bootstrap5 SCSS_
 - _Pure Vue.js Scripts_
-- _Correspondence to UnoCSS , nuxt-link , nuxt-image , nuxt-icon_ and more...
+- _Support for UnoCSS, nuxt-link, nuxt-image, nuxt-icon, and more..._
 - _Seamless Integration of UI and Data_
 - _Unified Color Management_
 - _Static_Fragment_Generator_
@@ -53,7 +53,7 @@ use-bootstrap is the front-end framework based on Nuxt3 and Bootstrap5.
 - List group
 - Modal
 - Navbar
-- Navs Tabs
+- Navs and Tabs
 - Offcanvas
 - Pagination
 - Placeholders
@@ -72,7 +72,7 @@ use-bootstrap is the front-end framework based on Nuxt3 and Bootstrap5.
 - Fonts
 - Animate.css
 - Sitemap
-- Robot
+- Robots
 - UnoCSS
 - Leaflet Map
 - Markdown
@@ -83,7 +83,7 @@ use-bootstrap is the front-end framework based on Nuxt3 and Bootstrap5.
 - Color mode
 - Localization
 - Sidebar
-- Toc
+- Table of Contents (Toc)
 - Code highlighter
 - Intro
 - Typed
