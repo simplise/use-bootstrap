@@ -32,14 +32,77 @@ use-bootstrap is the front-end framework based on Nuxt3 and Bootstrap5.
 
 - _Extended Bootstrap5 SCSS_
 - _Pure Vue.js Scripts_
-- _Pure Components_
-- _Flexible Property Specification_
-- _Correspondence to UnoCSS , nuxt-link , nuxt-image and nuxt-icon_
-- _Animation support_
-- _Moderate Abstraction and Automation_
-- _Moderate Abstraction and Automation_
+- _Correspondence to UnoCSS , nuxt-link , nuxt-image , nuxt-icon_ and more...
 - _Seamless Integration of UI and Data_
+- _Unified Color Management_
+- _Static_Fragment_Generator_
 
+## Components
+
+- Accordion
+- Alerts
+- Badge
+- Breadcrumb
+- Buttons
+- Button group
+- Card
+- Carousel
+- Close button
+- Collapse
+- Dropdown
+- List group
+- Modal
+- Navbar
+- Navs Tabs
+- Offcanvas
+- Pagination
+- Placeholders
+- Popovers
+- Progress
+- Scrollspy
+- Spinners
+- Toasts
+- Tooltips
+- Range
+
+## Modules
+
+- VueUse
+- Icons
+- Fonts
+- Animate.css
+- Sitemap
+- Robot
+- UnoCSS
+- Leaflet Map
+- Markdown
+
+## Extend Components
+
+- Grid template
+- Color mode
+- Localization
+- Sidebar
+- Toc
+- Code highlighter
+- Intro
+- Typed
+- Swiper
+- Divider
+- Status Indicator
+- Icon Box
+- Avatar
+- Intersection Animate
+- Back to top
+- Responsive Divider
+- Json View
+- Password Strength
+- Tiptap Editor
+
+## Integration Components
+
+- ViewState
+- ActionState
 
 **For a detailed description click [here](https://usebootstrap.org/lang-en/getting-started/concept/).**
 
