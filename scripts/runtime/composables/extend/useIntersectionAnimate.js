@@ -1,7 +1,6 @@
-import { computed, ref, nextTick } from "vue";
-import { useIntersectionObserver, watchOnce } from "@vueuse/core";
-import { delay } from "../../utils/helpers.js";
+import { delay, useIntersectionObserver, watchOnce } from "../../utils/helpers.js";
 import { findOneSelectorRef } from "../../utils/useDOM.js";
+import { computed, ref, nextTick } from "#imports";
 export const IntersectionAnimateProps = {
   intersection: {
     type: Boolean
@@ -13,9 +12,6 @@ export const IntersectionAnimateProps = {
   intersectionTarget: {
     type: String
   },
-  //  intersectionOptions: {
-  //   type: Object as PropType<UseIntersectionObserverOptions>
-  //  },
   animateIn: {
     type: String,
     default: "fadeIn"

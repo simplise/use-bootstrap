@@ -1,9 +1,9 @@
-import { computed } from "vue";
 import { addProp } from "../../utils/useProps.js";
 import {
   useVisuallyHiddenContent,
   VisuallyHiddenContentProps
 } from "./useVisuallyHiddenContent.js";
+import { computed } from "#imports";
 export const BadgeProps = {
   ...VisuallyHiddenContentProps,
   rounded: {

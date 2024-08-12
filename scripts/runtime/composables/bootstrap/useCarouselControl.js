@@ -1,9 +1,9 @@
-import { ref, computed, inject, h, watch } from "vue";
 import {
   useEventEmitter,
   EventEmitProps
 } from "../../utils/useEventEmitter.js";
 import { addProp, hasValue } from "../../utils/useProps.js";
+import { ref, computed, inject, h, watch } from "#imports";
 export const CarouselControlProps = {
   slide: {
     type: String

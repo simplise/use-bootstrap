@@ -1,7 +1,7 @@
-import { h } from "vue";
 import { hSlots } from "../../utils/useProps.js";
 import { useAnchor, AnchorProps } from "../html/useAnchor.js";
 import BsLink from "../../nuxt/bslink";
+import { h } from "#imports";
 export const DropdownItemProps = {
   ...AnchorProps,
   divider: {

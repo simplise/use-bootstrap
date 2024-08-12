@@ -1,6 +1,4 @@
-import {
-  useEventBus
-} from "@vueuse/core";
+import { useEventBus } from "../utils/helpers.js";
 import { querySelectorToID } from "./useDOM.js";
 function toFn(fnArray) {
   return () => {

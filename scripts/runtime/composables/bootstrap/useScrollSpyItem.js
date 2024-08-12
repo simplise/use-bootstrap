@@ -1,6 +1,6 @@
-import { computed, inject, ref, watch, nextTick } from "vue";
 import { useIntersectionObserver, unrefElement } from "../../utils/helpers.js";
 import { findOneSelectorRef } from "../../utils/useDOM.js";
+import { computed, inject, ref, watch, nextTick } from "#imports";
 export function useScrollSpyItem(props, elementRef) {
   const spy = inject("spy.spy", void 0);
   if (!spy) {

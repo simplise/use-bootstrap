@@ -1,7 +1,6 @@
-import { provide, computed, onMounted } from "vue";
-import { useEventBus } from "@vueuse/core";
 import { useIDRef } from "../composables/attributes/useID.js";
-import { forOwn } from "./helpers.js";
+import { forOwn, useEventBus } from "./helpers.js";
+import { provide, computed, onMounted } from "#imports";
 export function useEvent(props, elementRef, eventSuffix) {
   const eid = useIDRef(props, elementRef);
   const exposeEventBus = computed(

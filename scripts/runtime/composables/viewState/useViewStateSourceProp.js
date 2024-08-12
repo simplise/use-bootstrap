@@ -1,5 +1,4 @@
-import { trimEnd, uniqueId } from "lodash-es";
-import { parseURL, stringifyParsedURL } from "ufo";
+import { trimEnd, uniqueId, parseURL, stringifyParsedURL } from "../../utils/helpers.js";
 import { useRuntimeConfig } from "#app";
 export function useViewStateSourceProp(props) {
   const uboptions = useRuntimeConfig().public.usebootstrap;

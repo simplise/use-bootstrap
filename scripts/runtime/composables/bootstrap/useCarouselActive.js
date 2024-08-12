@@ -1,7 +1,7 @@
-import { ref, inject, watch, computed, onMounted } from "vue";
 import { addProp, toNum } from "../../utils/useProps.js";
 import { useIDRef } from "../attributes/useID.js";
 import { useEvent } from "../../utils/useEvent.js";
+import { ref, inject, watch, computed, onMounted } from "#imports";
 export const CarouselActiveProps = {
   active: {
     type: Boolean,
@@ -60,7 +60,11 @@ export function useCarouselActive(props, elementRef, eventSuffix) {
     }
   };
   const toggle = () => {
-    active.value ? hide() : show();
+    if (active.value) {
+      hide();
+    } else {
+      show();
+    }
   };
   onMounted(() => {
   });

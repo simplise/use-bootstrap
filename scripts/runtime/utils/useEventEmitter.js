@@ -1,6 +1,6 @@
-import { inject } from "vue";
 import { useIDRef } from "../composables/attributes/useID.js";
 import { useEventHandler } from "./useEventHandler.js";
+import { inject } from "#imports";
 export const EventEmitProps = {
   target: {
     type: String

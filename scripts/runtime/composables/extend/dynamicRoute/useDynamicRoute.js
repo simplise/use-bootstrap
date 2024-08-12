@@ -1,4 +1,4 @@
-import { defu } from "defu";
+import { defu } from "../../../utils/helpers.js";
 import { useModuleOptions } from "./useModuleOptions.js";
 import { useRoute, computed } from "#imports";
 export function useDynamicRoute(path) {

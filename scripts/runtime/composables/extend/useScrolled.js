@@ -1,4 +1,4 @@
-import { computed } from "vue";
+import { computed } from "#imports";
 import { useWindowScroll } from "../../utils/helpers.js";
 export const ScrolledProps = {
   scrolledPosition: {

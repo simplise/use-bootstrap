@@ -1,9 +1,9 @@
-import { ref } from "vue";
 import {
   unrefElement,
   useEventListener,
   defaultWindow
 } from "../utils/helpers.js";
+import { ref } from "#imports";
 export function onClickOutsideFixed(target, handler, options = {}) {
   const { window = defaultWindow, ignore } = options;
   if (!window) return;

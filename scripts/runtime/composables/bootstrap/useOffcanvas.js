@@ -1,4 +1,3 @@
-import { computed, ref, h, nextTick, onMounted, watch } from "vue";
 import {
   useMagicKeys,
   pausableWatch,
@@ -12,6 +11,7 @@ import { addProp } from "../../utils/useProps.js";
 import { useEvent } from "../../utils/useEvent.js";
 import { waitAfterTransition } from "../../utils/useDOM.js";
 import backdrop from "../../components/bootstrap/backdrop/backdrop.js";
+import { computed, ref, h, nextTick, onMounted, watch } from "#imports";
 import { useRoute } from "#app";
 export const OffcanvasProps = {
   type: {
@@ -72,7 +72,7 @@ export function useOffcanvas(props, context, elementRef) {
   });
   escapeKeyWatch.pause();
   if (props.backdrop && props.backdrop != "static") {
-    onClickOutside(elementRef, () => {
+    onClickOutside(elementRef, (_event) => {
       if (isShown.value) {
         hide();
       }

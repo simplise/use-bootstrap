@@ -1,7 +1,8 @@
-import { computed, ref, watch, h, Teleport } from "vue";
-import { useElementHover } from "@vueuse/core";
 import { useFloating, arrow, autoUpdate, flip, shift, offset } from "@floating-ui/vue";
+import { Teleport } from "vue";
+import { useElementHover } from "../../utils/helpers.js";
 import { addProp } from "../../utils/useProps.js";
+import { computed, ref, watch, h } from "#imports";
 export const TooltipProps = {
   title: {
     type: [String],

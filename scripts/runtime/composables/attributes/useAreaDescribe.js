@@ -1,6 +1,6 @@
-import { ref, inject, computed, provide, onMounted } from "vue";
 import { useEvent } from "../../utils/useEvent.js";
 import { useIDRef } from "../../composables/attributes/useID.js";
+import { ref, inject, computed, provide, onMounted } from "#imports";
 export function useProvideAreaDescribe() {
   const areaDescribe = ref("");
   provide("areaDescribe", areaDescribe);

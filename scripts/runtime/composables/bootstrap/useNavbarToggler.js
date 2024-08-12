@@ -1,4 +1,4 @@
-import { h } from "vue";
+import { h } from "#imports";
 import { Icon } from "#components";
 export const NavbarTogglerProps = {
   icon: {

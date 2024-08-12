@@ -1,5 +1,5 @@
-import { onMounted, watch } from "vue";
 import { isArray } from "../../utils/helpers.js";
+import { onMounted, watch } from "#imports";
 export const SelectModelProps = {
   modelValue: {
     type: [String, Number, Array]

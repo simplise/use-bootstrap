@@ -1,4 +1,4 @@
-import { useMouse } from "@vueuse/core";
+import { useMouse } from "../../utils/helpers.js";
 import { defineComponent, reactive } from "#imports";
 export default defineComponent({
   name: "UseMouse",

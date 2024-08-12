@@ -35,12 +35,7 @@ export default defineComponent({
     const elementRef = ref();
     const block = useBlock(props);
     const itemsCurrent = useItemsCurrent(props, context, elementRef, "list");
-    const spy = useScrollSpy(
-      props,
-      context,
-      elementRef
-      /* , "list" */
-    );
+    const spy = useScrollSpy(props, context, elementRef);
     const current = {
       class: {
         "list-group": true,

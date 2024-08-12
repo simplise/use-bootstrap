@@ -1,4 +1,4 @@
-import { get, isString } from "lodash-es";
+import { get, isString } from "../../../utils/helpers.js";
 import { ref, unref, watch, computed } from "#imports";
 export const StateComponentProps = {
   stateSrc: {

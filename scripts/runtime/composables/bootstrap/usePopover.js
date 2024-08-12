@@ -1,9 +1,10 @@
-import { computed, ref, h, Teleport, watch } from "vue";
+import { Teleport } from "vue";
 import { useFloating, arrow, flip, shift, offset } from "@floating-ui/vue";
 import { addProp } from "../../utils/useProps.js";
 import {
   useElementVisibility
 } from "../../utils/helpers.js";
+import { computed, ref, h, watch } from "#imports";
 export const PopoverProps = {
   title: {
     type: [String],

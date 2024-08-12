@@ -26,13 +26,6 @@ export async function useViewStateFetch(prop) {
         async onResponse(context) {
           currentStatus.value = context?.response?.status || 400;
         }
-        // server: prop.server,
-        // timeout: 1000,
-        // ignoreResponseError: true
-        // lazy: prop.lazy,
-        // server: prop.server,
-        // immediate: prop.immediate,
-        // default: () => prop.default ?? {}
       });
       model.value = response;
       status.value = currentStatus.value;

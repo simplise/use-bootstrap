@@ -8,11 +8,6 @@ export async function fetchAction(method, params, actionProp, status, data) {
     async onResponse(context) {
       status.value = context.response?.status || 400;
     }
-    // timeout: 1000,
-    // lazy: prop.lazy,
-    // server: prop.server,
-    // immediate: prop.immediate,
-    // default: () => prop.default ?? {}
   });
   data.value = response;
 }

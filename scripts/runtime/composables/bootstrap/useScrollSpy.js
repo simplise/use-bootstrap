@@ -1,10 +1,10 @@
-import { ref, computed } from "vue";
 import { useEventTarget } from "../../utils/useEventTarget.js";
 import { useEvent } from "../../utils/useEvent.js";
 import {
   unrefElement,
   useDebounceFn
 } from "../../utils/helpers.js";
+import { ref, computed } from "#imports";
 export const ScrollSpyProps = {
   spy: {
     type: String

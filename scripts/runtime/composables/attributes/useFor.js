@@ -1,6 +1,6 @@
-import { ref, computed } from "vue";
 import { injectID } from "../../composables/attributes/useID.js";
 import { addProp } from "../../utils/useProps.js";
+import { ref, computed } from "#imports";
 export const ForProps = {
   for: {
     type: String

@@ -1,4 +1,4 @@
-import { isClient } from "@vueuse/core";
+import { isClient } from "../../utils/helpers.js";
 import { useViewStateFetch } from "./source/useViewStateFetch.js";
 import { useViewStateStorage } from "./source/useViewStateStorage.js";
 import { useViewStateState } from "./source/useViewStateState.js";

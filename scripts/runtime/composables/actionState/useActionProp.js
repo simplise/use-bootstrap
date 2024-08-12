@@ -1,5 +1,4 @@
-import { trimEnd } from "lodash-es";
-import { parseURL, stringifyParsedURL } from "ufo";
+import { trimEnd, parseURL, stringifyParsedURL } from "../../utils/helpers.js";
 import { useRuntimeConfig } from "#app";
 export function useActionProp(props) {
   const uboptions = useRuntimeConfig().public.usebootstrap;

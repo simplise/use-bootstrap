@@ -1,4 +1,4 @@
-import { ref, nextTick } from "vue";
+import { ref, nextTick } from "#imports";
 export async function useHiddenElementSize(target) {
   const height = ref(0);
   const width = ref(0);

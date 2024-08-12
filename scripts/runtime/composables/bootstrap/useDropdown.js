@@ -1,10 +1,10 @@
+import { useEvent } from "../../utils/useEvent.js";
 import {
   computed,
   ref,
   watch,
   provide
-} from "vue";
-import { useEvent } from "../../utils/useEvent.js";
+} from "#imports";
 import { useRoute } from "#app";
 export const DropdownProps = {
   placement: {

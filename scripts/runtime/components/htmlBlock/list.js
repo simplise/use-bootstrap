@@ -30,12 +30,7 @@ export default defineComponent({
     const list = useList(props);
     const id = useID(props, "list");
     const itemsCurrent = useItemsCurrent(props, context, elementRef, "list");
-    const spy = useScrollSpy(
-      props,
-      context,
-      elementRef
-      /* , "list" */
-    );
+    const spy = useScrollSpy(props, context, elementRef);
     const current = {
       ref: elementRef
     };

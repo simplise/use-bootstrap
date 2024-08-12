@@ -1,12 +1,11 @@
-import { computed } from "vue";
-import { toString } from "lodash-es";
 import {
   addClassNames,
   addProp,
   hasValue,
   spacing
 } from "../../utils/useProps.js";
-import { isNumber, isString } from "../../utils/helpers.js";
+import { isNumber, isString, toString } from "../../utils/helpers.js";
+import { computed } from "#imports";
 export const ElementProps = {
   tag: {
     type: String
@@ -274,7 +273,6 @@ export function useInline(props) {
         "focus-ring": props.focusRing,
         "border": !hasValue(props.border) && (props.borderColor || props.borderWidth || props.borderSubtractive),
         ...addClassNames(hasValue(props.border), (n) => `border-${n}`),
-        // [`border${hasValue(props.border) ? `-${props.border}` : ""}`]:  props.border || props.borderColor || props.borderWidth,
         [`border-${props.borderColor}`]: props.borderColor,
         [`border-${props.borderWidth}`]: props.borderWidth,
         [`border-${hasValue(props.borderSubtractive) ? `${props.borderSubtractive}-` : ""}0`]: props.borderSubtractive,

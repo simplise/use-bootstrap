@@ -1,14 +1,14 @@
+import { addProp } from "../../utils/useProps.js";
+import { useEvent } from "../../utils/useEvent.js";
+import { waitAfterTransition } from "../../utils/useDOM.js";
+import { unrefElement } from "../../utils/helpers.js";
 import {
   ref,
   inject,
   computed,
   watch,
   nextTick
-} from "vue";
-import { addProp } from "../../utils/useProps.js";
-import { useEvent } from "../../utils/useEvent.js";
-import { waitAfterTransition } from "../../utils/useDOM.js";
-import { unrefElement } from "../../utils/helpers.js";
+} from "#imports";
 export const CollapseProps = {
   horizontal: {
     type: Boolean

@@ -1,4 +1,3 @@
-import { computed, inject, ref, watch } from "vue";
 import {
   useFloating,
   autoUpdate,
@@ -8,6 +7,7 @@ import {
 } from "@floating-ui/vue";
 import { addProp } from "../../utils/useProps.js";
 import { delay, onClickOutside } from "../../utils/helpers.js";
+import { computed, inject, ref, watch } from "#imports";
 export const DropdownMenuProps = {
   floating: {
     type: Object

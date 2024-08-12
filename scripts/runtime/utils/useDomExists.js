@@ -1,7 +1,7 @@
-import { ref, watch, onMounted } from "vue";
 import {
   defaultDocument
 } from "./helpers.js";
+import { ref, watch, onMounted } from "#imports";
 import { useRoute } from "#app";
 export function useDomExists(selector) {
   const isExists = ref(false);

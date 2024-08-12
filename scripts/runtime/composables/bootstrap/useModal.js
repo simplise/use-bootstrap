@@ -1,21 +1,12 @@
 import {
-  computed,
-  unref,
-  ref,
-  h,
-  nextTick
-} from "vue";
-import {
-  defaultDocument,
-  promiseTimeout
-} from "@vueuse/core";
-import {
   useMagicKeys,
   useWindowSize,
   pausableWatch,
   throttleFilter,
   useFocus,
-  onClickOutside
+  onClickOutside,
+  defaultDocument,
+  promiseTimeout
 } from "../../utils/helpers.js";
 import { addProp } from "../../utils/useProps.js";
 import { useEvent } from "../../utils/useEvent.js";
@@ -24,6 +15,13 @@ import { useScrollbar } from "../../utils/useScrollbar.js";
 import { useSettings } from "../../utils/useSettings.js";
 import { waitAfterTransition } from "../../utils/useDOM.js";
 import backdrop from "../../components/bootstrap/backdrop/backdrop.js";
+import {
+  computed,
+  unref,
+  ref,
+  h,
+  nextTick
+} from "#imports";
 export const ModalProps = {
   fade: {
     type: Boolean,
@@ -75,7 +73,7 @@ export function useModal(props, context, elementRef, options = {}) {
     triggerBackdropTransition();
   });
   escapeKeyWatch.pause();
-  onClickOutside(elementRef, async () => {
+  onClickOutside(elementRef, async (_event) => {
     if (isShown.value) {
       if (props.backdrop != "static") {
         hide();

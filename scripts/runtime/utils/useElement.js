@@ -1,6 +1,5 @@
-import { watch, unref } from "vue";
-import { defaultDocument } from "@vueuse/core";
-import { forOwn, pick, set, has } from "./helpers.js";
+import { forOwn, pick, set, has, defaultDocument } from "./helpers.js";
+import { watch, unref } from "#imports";
 export function useElement(elementProps, options = {}) {
   const { element = defaultDocument?.body } = options;
   if (!element) {
@@ -43,10 +42,7 @@ export function useElement(elementProps, options = {}) {
         });
       }
     },
-    {
-      /* deep: true, */
-      immediate: true
-    }
+    { immediate: true }
     // https://v3.ja.vuejs.org/api/instance-methods.html#watch
   );
 }

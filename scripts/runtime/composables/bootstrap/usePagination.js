@@ -1,4 +1,4 @@
-import { provide, inject, computed } from "vue";
+import { provide, inject, computed } from "#imports";
 import { addProp } from "../../utils/useProps.js";
 export const PaginationProps = {
   size: {

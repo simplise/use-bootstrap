@@ -1,7 +1,7 @@
-import { computed } from "vue";
 import { addClassNames, hasValue, isPropDefined, addProp } from "../../utils/useProps.js";
 import { isNumber, isString } from "../../utils/helpers.js";
 import { InlineProps, useInline } from "./useInline.js";
+import { computed } from "#imports";
 export const BlockProps = {
   ...InlineProps,
   overlay: {
@@ -127,7 +127,6 @@ export function useBlock(props) {
         ...inline.class.value,
         "text-break": props.textBreak,
         ...addClassNames(props.textAlignment, (n) => `text-${n}`),
-        // [`text-${props.textAlignment}`]: props.textAlignment,
         [`text-${props.textWrap}`]: props.textWrap,
         [`align-self-${props.alignSelf}`]: props.alignSelf,
         [`align-items-${props.alignItems}`]: props.alignItems,
@@ -154,7 +153,6 @@ export function useBlock(props) {
         [`sticky-${props.sticky}`]: props.sticky,
         "clearfix": props.clearfix,
         ...addClassNames(props.overflow, (n) => `overflow-${n}`),
-        // [`overflow-${props.overflow}`]: props.overflow,
         [`table-responsive${hasValue(props.tableResponsive) ? `-${props.tableResponsive}` : ""}`]: props.tableResponsive,
         [`justify-content-${props.justifyContent}`]: props.justifyContent,
         "vstack": props.vstack,

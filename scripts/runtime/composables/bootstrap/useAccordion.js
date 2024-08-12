@@ -1,4 +1,4 @@
-import { computed } from "vue";
+import { computed } from "#imports";
 export const AccordionProps = {
   flush: {
     type: Boolean

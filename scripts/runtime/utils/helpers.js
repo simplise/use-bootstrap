@@ -1,9 +1,13 @@
-import { isArray, keys, forOwn, isEmpty, set, pickBy, pick, has, camelCase, isString, isNumber, isBoolean } from "lodash-es";
+import { keys } from "lodash-es";
 import { breakpointsBootstrapV5 } from "@vueuse/core";
+export {
+  normalizeClass
+} from "vue";
 export {
   isArray,
   forOwn,
   isEmpty,
+  get,
   set,
   pickBy,
   pick,
@@ -11,8 +15,27 @@ export {
   camelCase,
   isString,
   isNumber,
-  isBoolean
-};
+  isBoolean,
+  map,
+  join,
+  uniqueId,
+  trimEnd,
+  toString,
+  trimStart,
+  omit,
+  toPlainObject,
+  includes,
+  isObject,
+  remove
+} from "lodash-es";
+export {
+  defu
+} from "defu";
+export {
+  parseURL,
+  stringifyParsedURL,
+  withoutTrailingSlash
+} from "ufo";
 export {
   objectPick,
   isDef,
@@ -46,6 +69,13 @@ export {
   useWindowScroll,
   useDebounceFn,
   watchDebounced,
+  useMutationObserver,
+  useMouse,
+  useEventBus,
+  watchOnce,
+  useElementBounding,
+  useStorage,
+  isClient,
   breakpointsBootstrapV5,
   defaultWindow,
   defaultDocument

@@ -1,4 +1,4 @@
-import { onMounted, watch } from "vue";
+import { onMounted, watch } from "#imports";
 export const InputModelProps = {
   modelValue: {
     type: [String, Boolean, Number, Object],

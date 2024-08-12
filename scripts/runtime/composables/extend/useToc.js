@@ -1,5 +1,4 @@
-import { defaultDocument } from "@vueuse/core";
-import { camelCase, uniqueId } from "lodash-es";
+import { camelCase, uniqueId, defaultDocument } from "../../utils/helpers.js";
 import { ref, watch, onMounted, useRoute } from "#imports";
 export function useToc(contentSelector) {
   const route = useRoute();

@@ -1,4 +1,3 @@
-import { defineComponent, h, ref } from "vue";
 import { hProps, hSlots, exposeMethods } from "../../utils/useProps.js";
 import { BlockProps, useBlock } from "../../composables/base/useBlock.js";
 import { ToggleProps, useToggle } from "../../composables/bootstrap/useToggle.js";
@@ -12,6 +11,7 @@ import {
 import { useScrollSpyItem } from "../../composables/bootstrap/useScrollSpyItem.js";
 import { ActiveProps, useActive } from "../../composables/bootstrap/useItemsActive.js";
 import BsLink from "../nuxt/bslink.js";
+import { defineComponent, h, ref } from "#imports";
 export default defineComponent(
   {
     name: "HtmlAnchor",

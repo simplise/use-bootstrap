@@ -8,10 +8,8 @@
 </template>
 
 <script setup lang="ts">
-import { useDark } from '@vueuse/core';
-import { isString } from 'lodash-es';
-import { useSlots, ref } from 'vue';
-import { getShikiHighlighter } from '#imports';
+import { isString, useDark } from '../../../utils/helpers';
+import { getShikiHighlighter, useSlots, ref } from '#imports';
 //
 defineOptions({
  inheritAttrs: false,

@@ -1,4 +1,3 @@
-import { unref } from "vue";
 import {
   set,
   forOwn,
@@ -10,6 +9,7 @@ import {
   isNumber,
   isString
 } from "./helpers.js";
+import { unref } from "#imports";
 export function hProps(...items) {
   const result = {
     class: {},

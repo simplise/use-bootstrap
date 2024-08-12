@@ -1,5 +1,5 @@
-import { computed, ref, toRef, watch } from "vue";
 import { useEvent } from "../../utils/useEvent.js";
+import { computed, ref, toRef, watch } from "#imports";
 export const CurrentProps = {
   current: {
     type: String,

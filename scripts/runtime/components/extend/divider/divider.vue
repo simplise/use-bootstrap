@@ -36,49 +36,5 @@ const styleObject = computed(() => {
 </template>
 
 <style>
-.divider-start {
-  display: flex;
-  align-items: center;
-  color: var(--bs-secondary-color);
-}
-.divider-start::after {
-  flex: 1 1 0%;
-  border-top: var(--divider-border-width) solid var(--bs-border-color);
-  margin-top: var(--divider-border-width);
-  margin-left: var(--divider-spacer);
-  content: "";
-}
-
-.divider-end {
-  display: flex;
-  align-items: center;
-  color: var(--bs-secondary-color);
-}
-.divider-end::before {
-  flex: 1 1 0%;
-  border-top: var(--divider-border-width) solid var(--bs-border-color);
-  margin-top: var(--divider-border-width);
-  content: "";
-}
-.divider-end::before {
-  margin-right: var(--divider-spacer);
-}
-
-.divider-center {
-  display: flex;
-  align-items: center;
-  color: var(--bs-secondary-color);
-}
-.divider-center::before, .divider-center::after {
-  flex: 1 1 0%;
-  border-top: var(--divider-border-width) solid var(--bs-border-color);
-  margin-top: var(--divider-border-width);
-  content: "";
-}
-.divider-center::before {
-  margin-right: var(--divider-spacer);
-}
-.divider-center::after {
-  margin-left: var(--divider-spacer);
-}
+.divider-start{align-items:center;color:var(--bs-secondary-color);display:flex}.divider-start:after{border-top:var(--divider-border-width) solid var(--bs-border-color);content:"";flex:1 1 0%;margin-left:var(--divider-spacer);margin-top:var(--divider-border-width)}.divider-end{align-items:center;color:var(--bs-secondary-color);display:flex}.divider-end:before{border-top:var(--divider-border-width) solid var(--bs-border-color);content:"";flex:1 1 0%;margin-right:var(--divider-spacer);margin-top:var(--divider-border-width)}.divider-center{align-items:center;color:var(--bs-secondary-color);display:flex}.divider-center:after,.divider-center:before{border-top:var(--divider-border-width) solid var(--bs-border-color);content:"";flex:1 1 0%;margin-top:var(--divider-border-width)}.divider-center:before{margin-right:var(--divider-spacer)}.divider-center:after{margin-left:var(--divider-spacer)}
 </style>

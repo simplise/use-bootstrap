@@ -1,8 +1,8 @@
-import { ref, inject } from "vue";
 import { EventEmitProps } from "../../utils/useEventEmitter.js";
 import { toArray } from "../../utils/useProps.js";
 import { useEventHandler } from "../../utils/useEventHandler.js";
 import { useIDRef } from "../../composables/attributes/useID.js";
+import { ref, inject } from "#imports";
 export const TabActiveProps = {
   tab: {
     type: String

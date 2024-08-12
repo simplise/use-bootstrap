@@ -1,6 +1,4 @@
-import { defaultDocument, useMutationObserver, isClient } from "@vueuse/core";
-import { set } from "lodash-es";
-import { normalizeClass } from "vue";
+import { set, defaultDocument, useMutationObserver, isClient, normalizeClass } from "../../../utils/helpers.js";
 import { computed, ref, onMounted, useState } from "#imports";
 export function useViewStateDomAttr(prop) {
   const base = useState(prop.stateKey, () => prop.default ?? {});

@@ -35,12 +35,7 @@ export default defineComponent({
     const id = useID(props, "nav-list");
     const navTab = useNavTab(props);
     const itemsCurrent = useItemsCurrent(props, context, elementRef, "nav");
-    const spy = useScrollSpy(
-      props,
-      context,
-      elementRef
-      /* , "nav" */
-    );
+    const spy = useScrollSpy(props, context, elementRef);
     const current = {
       class: {
         nav: true

@@ -1,7 +1,7 @@
-import { computed, ref, nextTick } from "vue";
 import { addProp } from "../../utils/useProps.js";
 import { useEvent } from "../../utils/useEvent.js";
 import { waitAfterTransition } from "../../utils/useDOM.js";
+import { computed, ref, nextTick } from "#imports";
 export const FadeShowProps = {
   fade: {
     type: Boolean,
@@ -47,7 +47,11 @@ export function useFadeShow(props, context, elementRef, eventSuffix, options = {
     await nextTick();
   };
   const toggle = async () => {
-    isShown.value ? await hide() : await show();
+    if (isShown.value) {
+      await hide();
+    } else {
+      await show();
+    }
   };
   const method = expose({ show, hide, toggle, dismiss: hide });
   exposeState({ isShown });

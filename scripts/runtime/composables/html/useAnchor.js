@@ -1,4 +1,4 @@
-import { computed } from "vue";
+import { computed } from "#imports";
 import { addProp, hasValue } from "../../utils/useProps.js";
 import { EventEmitProps } from "../../utils/useEventEmitter.js";
 export const AnchorProps = {

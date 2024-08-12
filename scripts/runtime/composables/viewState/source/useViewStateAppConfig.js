@@ -1,4 +1,4 @@
-import { get } from "lodash-es";
+import { get } from "../../../utils/helpers.js";
 import { useAppConfig } from "#app";
 import { ref, computed } from "#imports";
 export function useViewStateAppConfig(prop) {

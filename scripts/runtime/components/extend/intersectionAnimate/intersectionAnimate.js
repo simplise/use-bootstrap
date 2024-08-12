@@ -14,9 +14,6 @@ export default defineComponent({
     intersection: {
       default: true
     }
-    // intersectionOptions: {
-    //   type: Object as PropType<UseIntersectionObserverOptions>
-    // }
   },
   setup(props, context) {
     const elementRef = ref();

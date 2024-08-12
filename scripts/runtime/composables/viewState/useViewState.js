@@ -1,6 +1,4 @@
-import { useDebounceFn, useIntervalFn } from "@vueuse/core";
-import defu from "defu";
-import { get, isNumber, set } from "lodash-es";
+import { get, isNumber, set, defu, useDebounceFn, useIntervalFn } from "../../utils/helpers.js";
 import { useViewStateValidate } from "../viewState/useViewStateValidate.js";
 import { useViewStateSource } from "../viewState/useViewStateSource.js";
 import { useViewStateSourceProp } from "../viewState/useViewStateSourceProp.js";

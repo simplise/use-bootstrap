@@ -1,7 +1,7 @@
 import {
   Validator
 } from "@cfworker/json-schema";
-import { trimStart } from "lodash-es";
+import { trimStart } from "../../utils/helpers.js";
 export function useViewStateValidate(validate, schema, options) {
   if (!schema) {
     return void 0;

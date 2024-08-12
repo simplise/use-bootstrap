@@ -1,5 +1,4 @@
-import { trimStart } from "lodash-es";
-import { defu } from "defu";
+import { trimStart, defu } from "../../../utils/helpers.js";
 import { useRoute, useRouter } from "#app";
 import { computed, ref } from "#imports";
 export function useViewStateRouteHash() {

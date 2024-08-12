@@ -1,6 +1,5 @@
-import { provide, ref, inject, computed, onMounted } from "vue";
 import { unrefElement } from "../../utils/helpers.js";
-import { useId } from "#imports";
+import { provide, ref, inject, computed, onMounted, useId } from "#imports";
 export const IDProps = {
   id: {
     type: String,

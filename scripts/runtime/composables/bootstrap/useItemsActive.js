@@ -1,8 +1,8 @@
-import { ref, inject, watch, computed, onMounted, nextTick } from "vue";
 import { addProp } from "../../utils/useProps.js";
 import { useIDRef } from "../../composables/attributes/useID.js";
 import { useEvent } from "../../utils/useEvent.js";
 import { unrefElement } from "../../utils/helpers.js";
+import { ref, inject, watch, computed, onMounted, nextTick } from "#imports";
 export const ActiveProps = {
   active: {
     type: Boolean,

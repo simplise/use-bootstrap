@@ -1,10 +1,10 @@
-import { computed, inject, onMounted } from "vue";
 import {
   useEventEmitter,
   EventEmitProps
 } from "../../utils/useEventEmitter.js";
 import { useIDRef } from "../../composables/attributes/useID.js";
 import { isPropUndefined, toArray } from "../../utils/useProps.js";
+import { computed, inject, onMounted } from "#imports";
 export const ToggleProps = {
   toggle: {
     type: String

@@ -1,6 +1,6 @@
-import { ref, inject, computed, onMounted } from "vue";
 import { useEvent } from "../../utils/useEvent.js";
 import { useIDRef } from "../../composables/attributes/useID.js";
+import { ref, inject, computed, onMounted } from "#imports";
 export function useAreaLabelledby(props, elementRef) {
   const areaLabel = ref("");
   const { exposeState } = useEvent(props, elementRef, "label");

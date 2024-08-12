@@ -1,4 +1,3 @@
-import { computed, nextTick, ref, onMounted, watch, h } from "vue";
 import { useEvent } from "../../utils/useEvent.js";
 import {
   querySelectorToID,
@@ -19,6 +18,7 @@ import {
   whenever,
   isArray
 } from "../../utils/helpers.js";
+import { computed, nextTick, ref, onMounted, watch, h } from "#imports";
 export const CarouselProps = {
   current: {
     type: String

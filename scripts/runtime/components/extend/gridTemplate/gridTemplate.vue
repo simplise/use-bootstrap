@@ -8,7 +8,7 @@
 
 <script setup lang="ts">
 //
-import { map, join } from 'lodash-es';
+import { map, join } from '../../../utils/helpers';
 import { BlockProps } from '../../../composables/base/useBlock';
 //
 const props = defineProps({
@@ -66,8 +66,6 @@ const props = defineProps({
   type: String,
  },
 });
-//
-// const block = useBlock(props);
 //
 const createAreas = (p: string) => {
  const a1 = map(p.split(' '), n => join(n, ' ')); // ['t t t', 's c e', 's b e']
