@@ -1,0 +1,68 @@
+import { computed, ref, useHeadSafe, onMounted, useState } from "#imports";
+import type { IViewStateSourceResult, IViewStateSourceProps } from "../useViewState";
+import { set,defaultDocument } from '../../../utils/helpers'
+//
+export function useViewStateHead(prop: IViewStateSourceProps): IViewStateSourceResult {
+  //
+  const base = useState(prop.stateKey, () => prop.default ?? {})
+  const keyItems = prop.key.split('/')
+  const status = ref(100)
+  //
+  onMounted(() => {
+    switch (keyItems[0]) {
+      case "body-attrs":
+        {
+          const body = defaultDocument?.querySelector("body")
+          switch (keyItems[1]) {
+            case "class":
+              {
+                const result = {}
+                body?.classList.forEach(item => {
+                  set(result, item, true)
+                });
+                base.value = result
+                status.value = 200
+              }
+              break
+          }
+        }
+        break
+    }
+  })
+  //
+  const model = computed({
+    // getter 関数
+    get() {
+      return base.value
+    },
+    // setter 関数
+    set(newValue) {
+      base.value = newValue
+      switch (keyItems[0]) {
+        case "body-attrs":
+          {
+            switch (keyItems[1]) {
+              case "class":
+                {
+                  useHeadSafe({
+                    bodyAttrs: {
+                      class: base.value
+                    }
+                  })
+                }
+                break
+            }
+          }
+          break
+      }
+
+    }
+  })
+  //
+  return {
+    model,
+    updated: ref(false),
+    status
+  };
+}
+

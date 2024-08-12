@@ -1,0 +1,49 @@
+<template>
+ <input
+  v-bind="attrs"
+  :value="value"
+  :class="classObject"
+  @input="updateValue"
+ />
+</template>
+
+<script setup lang="ts">
+import { useBlock, BlockProps } from '../../../composables/base/useBlock';
+import { useStateInput, StateInputProps } from '../../../composables/viewState/useState/useStateInput';
+import { hProps } from '../../../utils/useProps';
+import { computed } from '#imports';
+//
+const props = defineProps({
+ ...BlockProps,
+ ...StateInputProps,
+ tag: {
+  type: String,
+  default: 'input',
+ },
+ size: {
+  type: String, // sm, lg
+  default: undefined,
+ },
+ readonly: {
+  type: Boolean,
+ },
+});
+const emits = defineEmits(['update:modelValue']);
+//
+const block = useBlock(props);
+const { value, updateValue, classObject } = useStateInput(props, emits);
+//
+const current = {
+ class: computed(() => {
+  return {
+   [`form-control-color`]: true,
+   [`form-control`]: !props.readonly,
+   [`form-control-${props.size}`]: props.size,
+  };
+ }),
+ attr: {
+  type: 'color',
+ },
+};
+const attrs = hProps(current, block);
+</script>
