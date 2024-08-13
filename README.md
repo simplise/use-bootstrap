@@ -99,6 +99,8 @@ use-bootstrap is the front-end framework based on Nuxt3 and Bootstrap5.
 - Password Strength
 - Tiptap Editor
 - Sortable
+- Calendar
+- Date Picker
 
 ## Integration Components
 
