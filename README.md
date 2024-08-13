@@ -102,6 +102,10 @@ use-bootstrap is the front-end framework based on Nuxt3 and Bootstrap5.
 - Calendar
 - Date Picker
 
+## Server
+
+- Static HTML Fragment Rendering
+
 ## Integration Components
 
 - ViewState
