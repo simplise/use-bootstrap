@@ -1,0 +1,8 @@
+blank_issues_enabled: true
+contact_links:
+  - name: 📚 use-bootstrap Documentation
+    url: https://usebootstrap.org/
+    about: Check the documentation for usage of Nuxt
+  - name: 💬 Project
+    url: https://github.com/orgs/simplise/projects/1
+    about:  We have listed the currently identified bugs and future plans.
