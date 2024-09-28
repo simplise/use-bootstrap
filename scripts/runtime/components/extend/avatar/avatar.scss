@@ -1,0 +1,101 @@
+.avatar {
+  position: relative;
+  display: inline-block;
+  width: calc(var(--bs-font-size-base) * 3);
+  height: calc(var(--bs-font-size-base) * 3);
+  border-radius: var(--bs-border-radius-lg);
+}
+
+.avatar-img {
+  max-width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: var(--bs-border-radius-lg);
+}
+
+.avatar-icon {
+  display: flex;
+  width: calc(var(--bs-font-size-base) * 1.5);
+  height: calc(var(--bs-font-size-base) * 3);
+  margin: auto;
+}
+
+.avatar-initials {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: calc(var(--bs-font-size-base) * 3);
+  height: calc(var(--bs-font-size-base) * 3);
+  pointer-events: none;
+  text-transform: uppercase;
+}
+
+.avatar-status {
+  position: absolute;
+  bottom: calc(var(--bs-font-size-base) / -2);
+  right: calc(var(--bs-font-size-base) / -2);
+  display: inline-flex;
+  flex-shrink: 0;
+  justify-content: center;
+  align-items: center;
+  white-space: nowrap;
+  text-align: center;
+  vertical-align: baseline;
+  border-width: 1px;
+  border-style: solid;
+  border-radius: var(--bs-border-radius-pill);
+  width: var(--bs-font-size-base);
+  height: var(--bs-font-size-base);
+}
+
+.avatar-container {
+  display: inline-block;
+}
+
+.avatar-divider {
+  display: inline-block;
+}
+
+.avatar-divider::after {
+  top: calc(var(--avatar-base-size) * 0.5);
+  left: calc(var(--avatar-base-size) * 0.5);
+  width: calc(100% - calc(var(--avatar-base-size) * 4));
+  height: 1em;
+  border-left: .125rem solid rgba(33, 50, 91, .1);
+  position: relative;
+  content: "";
+  display: inline-block;
+}
+
+@media (min-width:576px) {
+
+}
+
+@media (min-width:768px) {
+  .avatar-divider-md {
+    width: 100%;
+  }
+  
+  .avatar-divider-md::after {
+    top: calc(var(--avatar-base-size) * 0.5);
+    left: calc(var(--avatar-base-size) * 0.5);
+    width: calc(100% - calc(var(--avatar-base-size) * 4));
+    height: 1em;
+    border-top: .125rem solid rgba(33, 50, 91, .1);
+    position: relative;
+    content: "";
+    display: inline-block;
+  }
+}
+
+@media (min-width: 992px) {
+
+}
+
+@media (min-width: 1200px) {
+
+}
+
+@media (min-width: 1400px) {
+
+}

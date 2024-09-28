@@ -1,8 +1,10 @@
 <template>
  <BsLink
-  :id="`${props.idPrefix}${target}`"
+  :id="`${idPrefix}${target}`"
+  :ref="elementRef"
   :to="target"
   :hreflang="lang"
+  v-bind="attrs"
  >
   <slot />
  </BsLink>
@@ -13,8 +15,15 @@
 import { useDynamicRoute } from '../../../composables/extend/dynamicRoute/useDynamicRoute';
 import { useDynamicRouteParam } from '../../../composables/extend/dynamicRoute/useDynamicRouteParam';
 import BsLink from '../../nuxt/bslink';
+import {
+ CloseButtonProps,
+ useCloseButton,
+} from '../../../composables/bootstrap/useCloseButton';
+import { hProps } from '../../../composables/utils/useProps';
+import { ref } from '#imports';
 //
 const props = defineProps({
+ ...CloseButtonProps,
  to:
   {
    type: String,
@@ -26,6 +35,9 @@ const props = defineProps({
  },
 });
 //
+const elementRef = ref<HTMLElement>();
 const target = useDynamicRoute(props.to);
 const lang = useDynamicRouteParam('lang');
+const close = useCloseButton(props, elementRef);
+const attrs = hProps(close);
 </script>

@@ -8,7 +8,7 @@
 
 <script setup lang="ts">
 //
-import { map, join } from '../../../utils/helpers';
+import { map, join } from '../../../composables/utils/helpers';
 import { BlockProps } from '../../../composables/base/useBlock';
 //
 const props = defineProps({
@@ -94,5 +94,38 @@ const columnsXxl = props.columnsXxl || columnsXl;
 </script>
 
 <style scoped>
-.grid-template{display:grid;grid-template-areas:v-bind(areasDefault);grid-template-columns:v-bind(columnsDefault);grid-template-rows:v-bind(rowsDefault)}@media (min-width:768px){.grid-template{grid-template-areas:v-bind(areasMd);grid-template-columns:v-bind(columnsMd);grid-template-rows:v-bind(rowsMd)}}@media (min-width:992px){.grid-template{grid-template-areas:v-bind(areasLg);grid-template-columns:v-bind(columnsLg);grid-template-rows:v-bind(rowsLg)}}@media (min-width:1200px){.grid-template{grid-template-areas:v-bind(areasXl);grid-template-columns:v-bind(columnsXl);grid-template-rows:v-bind(rowsXl)}}@media (min-width:1400px){.grid-template{grid-template-areas:v-bind(areasXxl);grid-template-columns:v-bind(columnsXxl);grid-template-rows:v-bind(rowsXxl)}}
+.grid-template {
+    display: grid;
+    grid-template-areas: v-bind(areasDefault);
+    grid-template-rows:  v-bind(rowsDefault);
+    grid-template-columns:v-bind(columnsDefault);
+  }
+  @media (min-width:768px) {
+    .grid-template {
+      grid-template-areas: v-bind(areasMd);
+      grid-template-rows:  v-bind(rowsMd);
+      grid-template-columns:v-bind(columnsMd);
+    }
+  }
+  @media (min-width: 992px) {
+    .grid-template {
+      grid-template-areas: v-bind(areasLg);
+      grid-template-rows:  v-bind(rowsLg);
+      grid-template-columns:v-bind(columnsLg);
+    }
+  }
+  @media (min-width: 1200px) {
+    .grid-template {
+      grid-template-areas: v-bind(areasXl);
+      grid-template-rows:  v-bind(rowsXl);
+      grid-template-columns:v-bind(columnsXl);
+    }
+  }
+  @media (min-width: 1400px) {
+    .grid-template {
+      grid-template-areas: v-bind(areasXxl);
+      grid-template-rows:  v-bind(rowsXxl);
+      grid-template-columns:v-bind(columnsXxl);
+    }
+  }
 </style>

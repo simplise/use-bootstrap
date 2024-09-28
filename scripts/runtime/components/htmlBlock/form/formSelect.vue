@@ -1,10 +1,9 @@
 <template>
  <select
   v-bind="attrs"
-  ref="elementRef"
-
+  v-model="model"
   :multiple="multiple"
-  @change="changeValue"
+  :class="classObject"
  >
   <slot />
  </select>
@@ -12,13 +11,13 @@
 
 <script setup lang="ts">
 import { useBlock, BlockProps } from '../../../composables/base/useBlock';
-import { useStateSelect, StateSelectProps } from '../../../composables/viewState/useState/useStateSelect';
-import { addProp, hProps } from '../../../utils/useProps';
-import { computed, ref } from '#imports';
+import { useStateComponent, StateComponentProps } from '../../../composables/viewState/useState/useStateComponent';
+import { addProp, hProps } from '../../../composables/utils/useProps';
+import { computed } from '#imports';
 //
 const props = defineProps({
  ...BlockProps,
- ...StateSelectProps,
+ ...StateComponentProps,
  tag: { // for useBlock
   type: String,
   default: 'select',
@@ -31,12 +30,16 @@ const props = defineProps({
   type: [Number, String],
   default: undefined,
  },
+ multiple: {
+  type: Boolean,
+  default: undefined,
+ },
 });
-const elementRef = ref<HTMLSelectElement>();
-const emits = defineEmits(['update:modelValue']);
+
+const model = defineModel<string | Array<string>>();
 //
 const block = useBlock(props);
-const { value, changeValue } = useStateSelect(props, elementRef, emits);
+const { classObject } = useStateComponent(props, model);
 //
 const current = {
  class: computed(() => {

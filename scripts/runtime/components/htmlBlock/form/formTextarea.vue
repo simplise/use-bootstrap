@@ -1,16 +1,15 @@
 <template>
  <textarea
   v-bind="attrs"
-  :value="value"
+  v-model="model"
   :class="classObject"
-  @input="updateValue"
  />
 </template>
 
 <script setup lang="ts">
 import { useBlock, BlockProps } from '../../../composables/base/useBlock';
-import { useStateInput, StateInputProps } from '../../../composables/viewState/useState/useStateInput';
-import { hProps } from '../../../utils/useProps';
+import { useStateComponent, StateComponentProps } from '../../../composables/viewState/useState/useStateComponent';
+import { hProps } from '../../../composables/utils/useProps';
 import { useFormItem } from '../../../composables/bootstrap/useFormLabel';
 import { IDProps } from '../../../composables/attributes/useID';
 import {
@@ -22,16 +21,16 @@ const props = defineProps({
  ...BlockProps,
  ...FormControlProps,
  ...IDProps,
- ...StateInputProps,
+ ...StateComponentProps,
  tag: {
   type: String,
   default: 'textarea',
  },
 });
-const emits = defineEmits(['update:modelValue']);
+const model = defineModel<string>();
 //
 const block = useBlock(props);
-const { value, updateValue, classObject } = useStateInput(props, emits);
+const { classObject } = useStateComponent(props, model);
 const formControl = useFormControl(props);
 const formItem = useFormItem(props);
 const attrs = hProps(formControl, formItem, block);

@@ -1,6 +1,6 @@
 <script setup lang="ts">
 //
-import { uniqueId, withoutTrailingSlash } from '../../../utils/helpers';
+import { uniqueId, withoutTrailingSlash } from '../../../composables/utils/helpers';
 import { useRoute, onMounted } from '#imports';
 //
 defineProps({

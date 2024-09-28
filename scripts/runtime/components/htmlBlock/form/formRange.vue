@@ -1,37 +1,37 @@
 <template>
  <input
   v-bind="attrs"
-  :value="value"
+  v-model="model"
   :class="classObject"
-  @input="updateValue"
+  type="range"
  />
 </template>
 
 <script setup lang="ts">
 import { useBlock, BlockProps } from '../../../composables/base/useBlock';
-import { useStateInput, StateInputProps } from '../../../composables/viewState/useState/useStateInput';
-import { hProps } from '../../../utils/useProps';
+import { useStateComponent, StateComponentProps } from '../../../composables/viewState/useState/useStateComponent';
+import { hProps } from '../../../composables/utils/useProps';
 //
 const props = defineProps({
  ...BlockProps,
- ...StateInputProps,
+ ...StateComponentProps,
  tag: {
   type: String,
   default: 'input',
  },
 });
-const emits = defineEmits(['update:modelValue']);
+const model = defineModel<boolean | number | string[] | number[]>();
 //
 const block = useBlock(props);
-const { value, updateValue, classObject } = useStateInput(props, emits);
+const { classObject } = useStateComponent(props, model);
 
 const current = {
  class: {
   [`form-range`]: true,
  },
- attr: {
-  type: 'range',
- },
+ // attr: {
+ //  type: 'range',
+ // },
 };
 const attrs = hProps(current, block);
 </script>

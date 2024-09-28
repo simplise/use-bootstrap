@@ -1,6 +1,6 @@
 <template>
  <b-div
-  padding="t-2 s-lg-2"
+  padding="t-2"
   class="bd-intro"
  >
   <b-h

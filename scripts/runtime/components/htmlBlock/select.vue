@@ -2,9 +2,8 @@
  <select
   v-bind="attrs"
   ref="elementRef"
-  :value="value"
+  v-model="model"
   :multiple="multiple"
-  @change="changeValue"
  >
   <slot />
  </select>
@@ -12,22 +11,22 @@
 
 <script setup lang="ts">
 import { useBlock, BlockProps } from '../../composables/base/useBlock';
-import { useStateSelect, StateSelectProps } from '../../composables/viewState/useState/useStateSelect';
-import { hProps } from '../../utils/useProps';
+import { useStateComponent, StateComponentProps } from '../../composables/viewState/useState/useStateComponent';
+import { hProps } from '../../composables/utils/useProps';
 import { ref } from '#imports';
 //
 const props = defineProps({
  ...BlockProps,
- ...StateSelectProps,
+ ...StateComponentProps,
  tag: { // for useBlock
   type: String,
   default: 'select',
  },
 });
 const elementRef = ref<HTMLSelectElement>();
-const emits = defineEmits(['update:modelValue']);
+const model = defineModel<string>();
 //
 const block = useBlock(props);
-const { value, changeValue } = useStateSelect(props, elementRef, emits);
+useStateComponent(props, model);
 const attrs = hProps(block);
 </script>

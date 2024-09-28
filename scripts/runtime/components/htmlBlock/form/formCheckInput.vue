@@ -1,64 +1,61 @@
 <template>
  <input
   v-bind="attrs"
-  ref="elementRef"
-  :value="value"
-  :checked="checked"
+  v-model="model"
   :class="classObject"
-  @change="changeValue"
+  :indeterminate="indeterminate"
+  :type="type"
  />
 </template>
 
 <script setup lang="ts">
 import { useBlock, BlockProps } from '../../../composables/base/useBlock';
-import { useStateInput, StateInputProps } from '../../../composables/viewState/useState/useStateInput';
-import { addProp, hProps } from '../../../utils/useProps';
+import { useStateComponent, StateComponentProps } from '../../../composables/viewState/useState/useStateComponent';
+import { addProp, hProps } from '../../../composables/utils/useProps';
 import { useFormItem } from '../../../composables/bootstrap/useFormLabel';
 import { IDProps } from '../../../composables/attributes/useID';
-import { inject, onMounted, ref } from '#imports';
+import { inject } from '#imports';
 //
 const props = defineProps({
  ...BlockProps,
  ...IDProps,
- ...StateInputProps,
+ ...StateComponentProps,
  tag: {
   type: String,
   default: 'input',
- },
- type: {
-  type: String,
-  default: 'checkbox',
  },
  indeterminate: {
   type: Boolean,
   default: false,
  },
+ type: {
+  type: String,
+  default: 'checkbox',
+ },
 });
-const emits = defineEmits(['update:modelValue']);
+const model = defineModel<string | boolean | string[]>();
 //
-const elementRef = ref<HTMLSelectElement>();
 const block = useBlock(props);
 const formItem = useFormItem(props);
-const { value, classObject, changeValue, checked } = useStateInput(props, emits);
+const { classObject } = useStateComponent(props, model);
 
 //
 const isSwitch = inject<boolean>('switch', false);
 const current = {
- ref: elementRef,
  class: {
   [`form-check-input`]: true,
  },
  attr: {
-  type: props.type,
+  // type: props.type,
   ...addProp(isSwitch, 'role', 'switch'),
  },
 };
-if (props.indeterminate) {
- onMounted(() => {
-  if (elementRef.value instanceof HTMLInputElement) {
-   elementRef.value.indeterminate = true;
-  }
- });
-}
+// if (props.indeterminate) {
+//  onMounted(() => {
+//   if (elementRef.value instanceof HTMLInputElement) {
+//    elementRef.value.indeterminate = true;
+//   }
+//  });
+// }
 const attrs = hProps(current, formItem, block);
 </script>

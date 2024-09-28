@@ -19,7 +19,7 @@
 <script setup lang="ts">
 import { useRoute, navigateTo } from '#imports';
 //
-const props = defineProps({
+defineProps({
  locales: {
   type: Array,
   default: () => [],

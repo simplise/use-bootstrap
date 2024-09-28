@@ -54,7 +54,7 @@ const tocs = useToc(props.selector);
   />
   <Collapse
    class="tocContents"
-   display="lg-block"
+   display="lg-block print-none"
    overflow="auto"
   >
    <nav class="TableOfContents">
@@ -103,5 +103,9 @@ const tocs = useToc(props.selector);
 </template>
 
 <style>
-.toc .active{border-color:var(--ub-toc-color);border-style:none none none solid;color:var(--ub-toc-color)!important}
+.toc .active {
+  color: var(--ub-toc-color) !important;
+  border-color: var(--ub-toc-color);
+  border-style: none none none solid;
+}
 </style>

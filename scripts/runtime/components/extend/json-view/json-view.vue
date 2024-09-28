@@ -1,8 +1,8 @@
 <script setup lang="ts">
 defineProps({
  data: {
-  type: Object,
-  required: true,
+  type: [Object, Array, String, Number, Boolean],
+  required: false,
  },
 });
 </script>

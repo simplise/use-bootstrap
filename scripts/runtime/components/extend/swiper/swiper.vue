@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { Swiper as VSwiper } from 'swiper/vue';
-import { Navigation, Pagination, Scrollbar, A11y, Thumbs, Mousewheel, Autoplay } from 'swiper/modules';
+import { Navigation, Pagination, Scrollbar, A11y, Thumbs, Mousewheel, Autoplay, EffectFade } from 'swiper/modules';
 import { ref } from '#imports';
 import 'swiper/scss';
 import 'swiper/scss/a11y';
@@ -27,6 +27,7 @@ import 'swiper/scss/scrollbar';
 
 import 'swiper/scss/virtual';
 import 'swiper/scss/zoom';
+import './swiper.scss';
 
 const props = defineProps({
  navigation: {
@@ -38,20 +39,28 @@ const props = defineProps({
   default: undefined,
  },
  thumbs: {
-  type: [Boolean, Object],
+  type: [Object],
   default: undefined,
  },
  direction: {
-  type: [Boolean, Object, String],
+  type: String as PropType<'horizontal' | 'vertical' | undefined>,
   default: undefined,
  },
  mousewheel: {
-  type: [Boolean, Object, String],
+  type: [Boolean],
   default: undefined,
  },
  autoplay: {
-  type: [Boolean, Object, String],
+  type: [Boolean, Object],
   default: undefined,
+ },
+ effect: {
+  type: [String],
+  default: undefined,
+ },
+ autoHeight: {
+  type: [Boolean],
+  default: false,
  },
 });
 
@@ -72,6 +81,9 @@ if (props.mousewheel) {
 if (props.autoplay) {
  modules.value.push(Autoplay);
 }
+if (props.effect == 'fade') {
+ modules.value.push(EffectFade);
+}
 </script>
 
 <template>
@@ -83,6 +95,8 @@ if (props.autoplay) {
   :direction="direction"
   :mousewheel="mousewheel"
   :autoplay="autoplay"
+  :effect="effect"
+  :auto-height="autoHeight"
  >
   <slot />
  </v-swiper>

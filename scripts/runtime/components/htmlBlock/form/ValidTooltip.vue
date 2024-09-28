@@ -16,7 +16,7 @@
 
 <script setup lang="ts">
 import { useBlock, BlockProps } from '../../../composables/base/useBlock';
-import { hProps } from '../../../utils/useProps';
+import { hProps } from '../../../composables/utils/useProps';
 
 const props = defineProps({
  ...BlockProps,

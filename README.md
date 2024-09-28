@@ -119,7 +119,7 @@ Code released under the **MIT License**.
 
 ## Member 👾
 
-- [✨KoujiSano✨](https://github.com/KoujiSano)
+- [✨KoujiSan✨](https://github.com/KoujiSano)
 - [ITpassport](https://github.com/ITpassport)
 - [Siguretuki](https://github.com/Siguretuki)
 - [yukikimoto](https://github.com/yukikimoto)

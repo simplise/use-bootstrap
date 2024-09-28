@@ -35,50 +35,57 @@ const styleObject = computed(() => {
  </b-span>
 </template>
 
-<style>
+<style lang="scss">
 .divider-start {
-  display: flex;
-  align-items: center;
-  color: var(--bs-secondary-color);
-}
-.divider-start::after {
-  flex: 1 1 0%;
-  border-top: var(--divider-border-width) solid var(--bs-border-color);
-  margin-top: var(--divider-border-width);
-  margin-left: var(--divider-spacer);
-  content: "";
-}
+    display: flex;
+    align-items: center;
+    color: var(--bs-secondary-color);
 
-.divider-end {
-  display: flex;
-  align-items: center;
-  color: var(--bs-secondary-color);
-}
-.divider-end::before {
-  flex: 1 1 0%;
-  border-top: var(--divider-border-width) solid var(--bs-border-color);
-  margin-top: var(--divider-border-width);
-  content: "";
-}
-.divider-end::before {
-  margin-right: var(--divider-spacer);
-}
+    &::after {
+      flex: 1 1 0%;
+      border-top: var(--divider-border-width) solid var(--bs-border-color);
+      margin-top: var(--divider-border-width);
+      margin-left: var(--divider-spacer);
+      content: '';
+    }
+  }
 
-.divider-center {
-  display: flex;
-  align-items: center;
-  color: var(--bs-secondary-color);
-}
-.divider-center::before, .divider-center::after {
-  flex: 1 1 0%;
-  border-top: var(--divider-border-width) solid var(--bs-border-color);
-  margin-top: var(--divider-border-width);
-  content: "";
-}
-.divider-center::before {
-  margin-right: var(--divider-spacer);
-}
-.divider-center::after {
-  margin-left: var(--divider-spacer);
-}
+  .divider-end {
+    display: flex;
+    align-items: center;
+    color: var(--bs-secondary-color);;
+
+    &::before {
+      flex: 1 1 0%;
+      border-top: var(--divider-border-width) solid var(--bs-border-color);
+      margin-top: var(--divider-border-width);
+      content: '';
+    }
+
+    &::before {
+      margin-right: var(--divider-spacer);
+    }
+  }
+
+  .divider-center {
+    display: flex;
+    align-items: center;
+    color: var(--bs-secondary-color);
+
+    &::before,
+    &::after {
+      flex: 1 1 0%;
+      border-top: var(--divider-border-width) solid var(--bs-border-color);
+      margin-top: var(--divider-border-width);
+      content: '';
+    }
+
+    &::before {
+      margin-right: var(--divider-spacer);
+    }
+
+    &::after {
+      margin-left: var(--divider-spacer);
+    }
+  }
 </style>

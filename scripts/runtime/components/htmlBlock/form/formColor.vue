@@ -1,21 +1,21 @@
 <template>
  <input
   v-bind="attrs"
-  :value="value"
+  v-model="model"
   :class="classObject"
-  @input="updateValue"
+  type="color"
  />
 </template>
 
 <script setup lang="ts">
 import { useBlock, BlockProps } from '../../../composables/base/useBlock';
-import { useStateInput, StateInputProps } from '../../../composables/viewState/useState/useStateInput';
-import { hProps } from '../../../utils/useProps';
+import { useStateComponent, StateComponentProps } from '../../../composables/viewState/useState/useStateComponent';
+import { hProps } from '../../../composables/utils/useProps';
 import { computed } from '#imports';
 //
 const props = defineProps({
  ...BlockProps,
- ...StateInputProps,
+ ...StateComponentProps,
  tag: {
   type: String,
   default: 'input',
@@ -28,10 +28,10 @@ const props = defineProps({
   type: Boolean,
  },
 });
-const emits = defineEmits(['update:modelValue']);
+const model = defineModel<string>('#000000');
 //
 const block = useBlock(props);
-const { value, updateValue, classObject } = useStateInput(props, emits);
+const { classObject } = useStateComponent(props, model);
 //
 const current = {
  class: computed(() => {
@@ -41,9 +41,9 @@ const current = {
    [`form-control-${props.size}`]: props.size,
   };
  }),
- attr: {
-  type: 'color',
- },
+ // attr: {
+ //  type: 'color',
+ // },
 };
 const attrs = hProps(current, block);
 </script>

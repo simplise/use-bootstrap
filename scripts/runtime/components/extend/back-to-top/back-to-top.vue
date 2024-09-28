@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { delay, useWindowScroll, defaultWindow } from '../../../utils/helpers';
+import { delay, useWindowScroll, defaultWindow } from '../../../composables/utils/helpers';
 import { ref, computed, watch } from '#imports';
 //
 const props = defineProps({

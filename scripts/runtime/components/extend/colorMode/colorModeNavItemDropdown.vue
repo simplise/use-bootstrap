@@ -2,6 +2,7 @@
  <NavItemDropdown>
   <NavItemDropdownToggle>
    <BIcon
+    :key="colorModeIcon"
     margin="e-2"
     :icon="colorModeIcon"
     aria-hidden="true"
@@ -30,28 +31,15 @@
 
 <script setup lang="ts">
 //
-import { defaultDocument, useDark } from '../../../utils/helpers';
-import { computed, watch } from '#imports';
+import { useDark } from '../../../composables/utils/useDark';
+import { computed } from '#imports';
 //
-const isDark = useDark({
- selector: 'html',
- attribute: 'data-bs-theme',
- valueDark: 'dark',
- valueLight: 'light',
-});
+const isDark = useDark();
 //
 const changeColorMode = (value: boolean) => {
  isDark.value = value;
 };
 const colorModeIcon = computed(() => {
  return isDark.value ? 'bi:moon-stars-fill' : 'bi:sun-fill';
-});
-// for UnoCSS
-// useDark を二回使うとブラウザでエラーが発生したため
-watch(isDark, () => {
- if (isDark)
-  defaultDocument.documentElement.classList.add('dark');
- else
-  defaultDocument.documentElement.classList.add('light');
 });
 </script>

@@ -1,38 +1,43 @@
 <template>
  <input
   v-bind="attrs"
-  :value="value"
+  ref="elementRef"
+  v-model="model"
   :class="classObject"
-  @input="updateValue"
  />
 </template>
 
 <script setup lang="ts">
 import { useBlock, BlockProps } from '../../../composables/base/useBlock';
-import { useStateInput, StateInputProps } from '../../../composables/viewState/useState/useStateInput';
-import { hProps } from '../../../utils/useProps';
+import { useStateComponent, StateComponentProps } from '../../../composables/viewState/useState/useStateComponent';
+import { hProps } from '../../../composables/utils/useProps';
 import { useFormItem } from '../../../composables/bootstrap/useFormLabel';
 import { IDProps } from '../../../composables/attributes/useID';
 import {
  useFormControl,
  FormControlProps,
 } from '../../../composables/bootstrap/useFormControl';
+import { useFocused, FocusedProps } from '../../../composables/utils/useFocused';
 //
 const props = defineProps({
  ...BlockProps,
  ...FormControlProps,
  ...IDProps,
- ...StateInputProps,
+ ...StateComponentProps,
+ ...FocusedProps,
  tag: { // For Block Placeholder
   type: String,
   default: 'input',
  },
 });
-const emits = defineEmits(['update:modelValue']);
+const model = defineModel<string>();
+const elementRef = ref();
 //
 const block = useBlock(props);
-const { value, updateValue, classObject } = useStateInput(props, emits);
+const { classObject } = useStateComponent(props, model);
 const formControl = useFormControl(props);
 const formItem = useFormItem(props);
+useFocused(props, elementRef);
 const attrs = hProps(formControl, formItem, block);
+//
 </script>
