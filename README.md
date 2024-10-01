@@ -74,33 +74,53 @@ use-bootstrap is the front-end framework based on Nuxt3 and Bootstrap5.
 - Sitemap
 - Robots
 - UnoCSS
+- AOS Scroll Animation
 - Leaflet Map
 - Markdown
 
-## Extend Components
+## Extend Layout
 
+- Page Layout
 - Grid template
+
+## Extend Page Components
+
 - Color mode
 - Localization
+- Swiper
 - Sidebar
 - Table of Contents (Toc)
-- Code highlighter
 - Intro
+- Paper
+- Back to top
+
+## Extend UI Components
+
+- Block
+- Code highlighter
 - Typed
-- Swiper
 - Divider
+- Responsive Divider
 - Status Indicator
 - Icon Box
 - Avatar
-- Intersection Animate
-- Back to top
-- Responsive Divider
+- Background
+- Rating
+
+## Chart
+
+- Line Chart
+- Bar Chart
+- Pie Chart
+
+## Form 
+
+- Calendar
+- Date Picker
+- Sortable
 - Json View
 - Password Strength
 - Tiptap Editor
-- Sortable
-- Calendar
-- Date Picker
 
 ## Server
 
