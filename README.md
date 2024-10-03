@@ -142,7 +142,7 @@ Code released under the **MIT License**.
 - [✨KoujiSan✨](https://github.com/KoujiSano)
 - [ITpassport](https://github.com/ITpassport)
 - [Siguretuki](https://github.com/Siguretuki)
-- [yukikimoto](https://github.com/yukikimoto)
+- [yukikimoto](https://github.com/snow7y)
 - [Iris-Fla](https://github.com/Iris-Fla)
 
 
