@@ -6,7 +6,7 @@
   </b-div>
 </template>
 <script setup lang="ts">
-import bDiv from '../../htmlBlock/div';
+import bDiv from '../../html-block/div';
 import { computed } from '#imports'
 
 const props = defineProps({
@@ -52,7 +52,7 @@ const makerMargin = computed(() => {
 
 </script>
 
-<style scoped lang="scss">
+<style scoped>
 .heading-title::before {
   content: "";
   position: absolute;
@@ -68,83 +68,68 @@ const makerMargin = computed(() => {
   border-radius: 50%;
 }
 
-.maker-position-top.maker-style-square,
-.maker-position-top.maker-style-circle {
-  .heading-title {
-    padding-top: 1em;
-  }
-  .heading-title::before {
-    top: 0;
-    left: 2px;
-  }
+.maker-position-top.maker-style-square .heading-title,
+.maker-position-top.maker-style-circle .heading-title {
+  padding-top: 1em;
+}
+.maker-position-top.maker-style-square .heading-title::before,
+.maker-position-top.maker-style-circle .heading-title::before {
+  top: 0;
+  left: 2px;
 }
 
-.maker-position-top.maker-style-square.text-center,
-.maker-position-top.maker-style-circle.text-center {
-  .heading-title::before {
-    left: 50%;
-    margin-left: -6px;
-  }
+.maker-position-top.maker-style-square.text-center .heading-title::before,
+.maker-position-top.maker-style-circle.text-center .heading-title::before {
+  left: 50%;
+  margin-left: -6px;
 }
 
-.maker-position-top.maker-style-square.text-end,
-.maker-position-top.maker-style-circle.text-end {
-  .heading-title::before {
-    left: auto;
-    right: 2px;
-  }
+.maker-position-top.maker-style-square.text-end .heading-title::before,
+.maker-position-top.maker-style-circle.text-end .heading-title::before {
+  left: auto;
+  right: 2px;
 }
 
-.maker-position-side.maker-style-square,
-.maker-position-side.maker-style-circle {
-  .heading-title {
-    padding-left: 1.5em;
-  }
-  .heading-title::before {
-    left: 0;
-    top: 25%;
-  }
+.maker-position-side.maker-style-square .heading-title,
+.maker-position-side.maker-style-circle .heading-title {
+  padding-left: 1.5em;
+}
+.maker-position-side.maker-style-square .heading-title::before,
+.maker-position-side.maker-style-circle .heading-title::before {
+  left: 0;
+  top: 25%;
 }
 
-.maker-position-side.maker-style-square.text-end,
-.maker-position-side.maker-style-circle.text-end {
-  .heading-title {
-    padding-right : 1.5em;
-  }
-  .heading-title::before {
-    left: auto;
-    right: 0;
-    top: 25%;
-  }
+.maker-position-side.maker-style-square.text-end .heading-title,
+.maker-position-side.maker-style-circle.text-end .heading-title {
+  padding-right: 1.5em;
+}
+.maker-position-side.maker-style-square.text-end .heading-title::before,
+.maker-position-side.maker-style-circle.text-end .heading-title::before {
+  left: auto;
+  right: 0;
+  top: 25%;
 }
 
-
-.maker-position-bottom.maker-style-square,
-.maker-position-bottom.maker-style-circle {
-  .heading-title {
-    padding-bottom: 1em;
-  }
-  .heading-title::before {
-    bottom: 0;
-    left: 2px;
-  }
+.maker-position-bottom.maker-style-square .heading-title,
+.maker-position-bottom.maker-style-circle .heading-title {
+  padding-bottom: 1em;
+}
+.maker-position-bottom.maker-style-square .heading-title::before,
+.maker-position-bottom.maker-style-circle .heading-title::before {
+  bottom: 0;
+  left: 2px;
 }
 
-.maker-position-bottom.maker-style-square.text-center,
-.maker-position-bottom.maker-style-circle.text-center {
-  .heading-title::before {
-    left: 50%;
-    margin-left: -6px;
-  }
+.maker-position-bottom.maker-style-square.text-center .heading-title::before,
+.maker-position-bottom.maker-style-circle.text-center .heading-title::before {
+  left: 50%;
+  margin-left: -6px;
 }
 
-.maker-position-bottom.maker-style-square.text-end,
-.maker-position-bottom.maker-style-circle.text-end {
-  .heading-title::before {
-    left: auto;
-    right: 2px;
-  }
+.maker-position-bottom.maker-style-square.text-end .heading-title::before,
+.maker-position-bottom.maker-style-circle.text-end .heading-title::before {
+  left: auto;
+  right: 2px;
 }
-
-
 </style>

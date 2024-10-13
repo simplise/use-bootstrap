@@ -6,7 +6,7 @@
   </b-div>
 </template>
 <script setup lang="ts">
-import bDiv from '../../htmlBlock/div';
+import bDiv from '../../html-block/div';
 import { computed } from '#imports'
 
 const props = defineProps({
@@ -58,59 +58,5 @@ const lineStyle = computed(() => {
 </script>
 
 <style scoped>
-
-.heading-block::before,
-.heading-block::after {
-  content: "";
-  position: absolute;
-  left: auto;
-  right: 0;
-  width: 100%;
-  height: 0;
-  border-top-width: v-bind(lineBorderWidth);
-}
-
-.heading-block.text-center::before,
-.heading-block.text-center::after {
-  left: 0;
-}
-
-.heading-block.text-end::before,
-.heading-block.text-end::after {
-  left: 0;
-}
-
-.heading-title {
-  padding-right: v-bind(lineMargin);
-  background-color: var(--bs-body-bg);
-}
-
-.text-end .heading-title {
-  padding-left: v-bind(lineMargin);
-  padding-right: 0;
-}
-
-.text-center .heading-title {
-  padding-left: v-bind(lineMargin);
-  padding-right: v-bind(lineMargin);
-}
-
-.line-double::before {
-  top: 48%;
-  border-top-style: v-bind(lineStyle);
-  border-top-color: v-bind(lineColor);
-}
-
-.line-double::after {
-  top: 58%;
-  border-top-style: v-bind(lineStyle);
-  border-top-color: v-bind(lineColor);
-}
-
-.line-single::before {
-  top: 50%;
-  border-top-style: v-bind(lineStyle);
-  border-top-color: v-bind(lineColor);
-}
-
+.heading-block:after,.heading-block:before{border-top-width:v-bind(lineBorderWidth);content:"";height:0;left:auto;position:absolute;right:0;width:100%}.heading-block.text-center:after,.heading-block.text-center:before,.heading-block.text-end:after,.heading-block.text-end:before{left:0}.heading-title{background-color:var(--bs-body-bg);padding-right:v-bind(lineMargin)}.text-end .heading-title{padding-left:v-bind(lineMargin);padding-right:0}.text-center .heading-title{padding-left:v-bind(lineMargin);padding-right:v-bind(lineMargin)}.line-double:before{top:48%}.line-double:after,.line-double:before{border-top-color:v-bind(lineColor);border-top-style:v-bind(lineStyle)}.line-double:after{top:58%}.line-single:before{border-top-color:v-bind(lineColor);border-top-style:v-bind(lineStyle);top:50%}
 </style>

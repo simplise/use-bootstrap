@@ -6,7 +6,7 @@
   </b-div>
 </template>
 <script setup lang="ts">
-import bDiv from '../../htmlBlock/div';
+import bDiv from '../../html-block/div';
 import { computed } from '#imports'
 
 const props = defineProps({
@@ -59,8 +59,7 @@ const lineStyle = computed(() => {
 })
 </script>
 
-<style scoped lang="scss">
-
+<style scoped>
 .heading-block .heading-title::after,
 .heading-block.text-center .heading-title::before,
 .heading-block.text-end .heading-title::before {
@@ -74,7 +73,6 @@ const lineStyle = computed(() => {
   border-top-color: v-bind(lineColor);
 }
 
- 
 .line-position-inward.heading-block .heading-title {
   padding-right: calc(v-bind(lineWidth) + v-bind(lineMargin));
 }
@@ -132,5 +130,4 @@ const lineStyle = computed(() => {
 .line-position-outward.heading-block.text-end .heading-title::after {
   display: none;
 }
-
 </style>

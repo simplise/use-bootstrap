@@ -13,9 +13,9 @@ import AccordionHeader from '../../bootstrap/accordion/accordionHeader';
 import AccordionButton from '../../bootstrap/accordion/accordionButton';
 import AccordionCollapse from '../../bootstrap/accordion/accordionCollapse';
 import AccordionBody from '../../bootstrap/accordion/accordionBody';
-import ListGroupList from '../../bootstrap/listGroup/listGroupList';
-import ListGroupItem from '../../bootstrap/listGroup/listGroupItem';
-import Anchor from '../../htmlInline/anchor';
+import ListGroupList from '../../bootstrap/list-group/listGroupList';
+import ListGroupItem from '../../bootstrap/list-group/listGroupItem';
+import Anchor from '../../html-inline/anchor';
 import bIcon from '../../icon/icon';
 import { useDynamicRouteParam } from '../../../composables/extend/dynamicRoute/useDynamicRouteParam';
 

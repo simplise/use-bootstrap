@@ -13,8 +13,5 @@ defineProps({
 </script>
 
 <style scoped>
-.step {
-  display: flex;
-  flex-direction: row;
-}
+.step{display:flex;flex-direction:row}
 </style>

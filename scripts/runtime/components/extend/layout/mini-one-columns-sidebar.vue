@@ -70,16 +70,14 @@ const props = defineProps({
  <BackToTop color="primary-subtle" z="1" />
 </template>
 
-<style lang="scss" scoped>
+<style scoped>
 #content {
- margin-top: v-bind(contentTop);
- margin-bottom: v-bind(contentBottom);
+  margin-top: v-bind(contentTop);
+  margin-bottom: v-bind(contentBottom);
 }
 
 #start {
- margin-top: v-bind(startTop);
- margin-bottom: v-bind(startBottom);
+  margin-top: v-bind(startTop);
+  margin-bottom: v-bind(startBottom);
 }
-
-
 </style>

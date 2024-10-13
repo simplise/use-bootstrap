@@ -7,7 +7,7 @@
 </template>
 
 <script setup lang="ts">
-import bDiv from '../../htmlBlock/div';
+import bDiv from '../../html-block/div';
 import {
   addClassNames,
   hasValue,
@@ -81,47 +81,5 @@ const boxHeight = computed(() => {
 </script>
 
 <style scoped>
-.heading-block {
-  text-align: center;
-  margin-bottom: v-bind(boxHeight);
-}
-
-.heading-block::before {
-  content: "";
-  position: absolute;
-  left: 50%;
-  display: block;
-  margin-left: calc(0px - (v-bind(boxWidth) / 2));
-  width: v-bind(boxWidth);
-  height: v-bind(boxHeight);
-  border-color: v-bind(boxBorderColor);
-  border-width: v-bind(boxBorderWidth);
-  border-style: v-bind(boxBorderStyle);
-}
-
-.heading-block:not(.text-center, .text-end) {
-  padding-left: v-bind(contentMarginX);
-  text-align: left;
-}
-
-.heading-block:not(.text-center, .text-end)::before {
-  left: 0;
-  margin-left: 0;
-}
-
-.heading-block.text-end {
-  padding-right: v-bind(contentMarginX);
-  text-align: right;
-}
-
-.heading-block.text-end::before {
-  left: auto;
-  right: 0;
-  margin-left: 0;
-}
-
-.heading-block * {
-  position: relative;
-  z-index: 1;
-}
+.heading-block{margin-bottom:v-bind(boxHeight);text-align:center}.heading-block:before{border:v-bind(boxBorderWidth) v-bind(boxBorderStyle) v-bind(boxBorderColor);content:"";display:block;height:v-bind(boxHeight);left:50%;margin-left:calc(0px - v-bind(boxWidth)/2);position:absolute;width:v-bind(boxWidth)}.heading-block:not(.text-center,.text-end){padding-left:v-bind(contentMarginX);text-align:left}.heading-block:not(.text-center,.text-end):before{left:0;margin-left:0}.heading-block.text-end{padding-right:v-bind(contentMarginX);text-align:right}.heading-block.text-end:before{left:auto;margin-left:0;right:0}.heading-block *{position:relative;z-index:1}
 </style>

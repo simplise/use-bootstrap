@@ -1,0 +1,14 @@
+@charset "UTF-8";
+.swiper {
+  width: 100%;
+  transform: translate3d(0, 0, 0); /* 3D変換を強制 */
+  backface-visibility: hidden; /* バックフェイスの表示を無効化 */
+}
+
+.swiper-slide {
+  display: flex;
+  height: auto;
+  width: 100%; /* スライドの幅を固定 */
+  transform: translate3d(0, 0, 0); /* 3D変換を強制 */
+  backface-visibility: hidden; /* バックフェイスの表示を無効化 */
+}

@@ -48,9 +48,5 @@ const { tocs, shown } = useToc(props.selector);
 </template>
 
 <style scoped>
-.toc .active {
-  color: var(--ub-toc-color) !important;
-  border-color: var(--ub-toc-color);
-  border-style: none none none solid;
-}
+.toc .active{border-color:var(--ub-toc-color);border-style:none none none solid;color:var(--ub-toc-color)!important}
 </style>

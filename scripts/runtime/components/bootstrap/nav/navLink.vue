@@ -5,5 +5,5 @@
 </template>
 
 <script setup lang="ts">
-import Anchor from '../../htmlInline/anchor'
+import Anchor from '../../html-inline/anchor'
 </script>

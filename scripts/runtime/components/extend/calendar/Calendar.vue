@@ -15,7 +15,5 @@ const isDark = useDarkState();
 </script>
 
 <style>
-.vc-day {
- z-index: 0;
-}
+.vc-day{z-index:0}
 </style>

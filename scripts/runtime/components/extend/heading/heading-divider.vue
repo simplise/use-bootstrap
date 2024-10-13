@@ -9,7 +9,7 @@
   </b-div>
 </template>
 <script setup lang="ts">
-import bDiv from '../../htmlBlock/div';
+import bDiv from '../../html-block/div';
 import { computed } from '#imports'
 
 const props = defineProps({
@@ -73,12 +73,12 @@ const lineStyle = computed(() => {
 
 </script>
 
-<style scoped lang="scss">
+<style scoped>
 .line .heading-divider::after,
 .line .heading-divider::before {
   content: "";
   position: absolute;
-  top: calc(50% - (v-bind(lineBorderWidth) / 2));
+  top: calc(50% - v-bind(lineBorderWidth) / 2);
   display: inline-block;
   width: v-bind(lineWidth);
   border-top-width: v-bind(lineBorderWidth);
@@ -99,7 +99,6 @@ const lineStyle = computed(() => {
 .line.text-center .heading-divider::before {
   left: calc(0px - v-bind(lineWidth) - v-bind(lineMargin));
 }
-
 
 .line.text-end .heading-divider::before {
   left: calc(0px - v-bind(lineWidth) - v-bind(lineMargin));

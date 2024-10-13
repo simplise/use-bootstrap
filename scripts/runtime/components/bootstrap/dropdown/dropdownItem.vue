@@ -6,7 +6,7 @@
  </li>
 </template>
 <script setup>
-import Anchor from '../../htmlInline/anchor'
+import Anchor from '../../html-inline/anchor'
 import { useAttrs } from '#imports';
 const attrs = useAttrs();
 

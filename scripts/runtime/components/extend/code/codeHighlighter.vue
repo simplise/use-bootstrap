@@ -8,7 +8,7 @@
 import { isString, uniqueId } from '../../../composables/utils/helpers';
 import { useDarkState } from '../../../composables/utils/useDarkState';
 import { useSlots, ref, watch } from '#imports';
-import bDiv from '../../htmlBlock/div'
+import bDiv from '../../html-block/div'
 import { createHighlighter } from "shiki";
 //
 defineOptions({
@@ -47,8 +47,5 @@ watch(isDark, () => {
 </script>
 
 <style scoped>
-:deep(pre) {
-  white-space: pre-wrap;
-  margin-bottom: 0;
-}
+:deep(pre){margin-bottom:0;white-space:pre-wrap}
 </style>

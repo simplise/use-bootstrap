@@ -9,7 +9,7 @@
 
 <script  setup  lang="ts">
 //
-import { useStateComponent, StateComponentProps } from '../../../composables/viewState/useState/useStateComponent';
+import { useStateComponent, StateComponentProps } from '../../../composables/view-state/useState/useStateComponent';
 import { defineModel } from '#imports';
 //
 const model = defineModel<unknown[]>();

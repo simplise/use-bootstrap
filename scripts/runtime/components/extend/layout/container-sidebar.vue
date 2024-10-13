@@ -31,9 +31,9 @@ const props = defineProps({
  </div>
 </template>
 
-<style lang="scss" scoped>
+<style scoped>
 #area-s {
- max-height: calc(100vh - (v-bind(contentTop) + v-bind(contentHeightOffset)));
- top: v-bind(contentTop);
+  max-height: calc(100vh - (v-bind(contentTop) + v-bind(contentHeightOffset)));
+  top: v-bind(contentTop);
 }
 </style>

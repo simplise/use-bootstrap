@@ -40,9 +40,9 @@ const props = defineProps({
 </template>
 
 
-<style lang="scss" scoped>
+<style scoped>
 #start {
- max-height: calc(100vh - (v-bind(contentTop) + v-bind(contentHeightOffset)));
- top: v-bind(contentTop);
+  max-height: calc(100vh - (v-bind(contentTop) + v-bind(contentHeightOffset)));
+  top: v-bind(contentTop);
 }
 </style>

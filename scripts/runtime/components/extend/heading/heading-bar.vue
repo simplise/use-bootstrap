@@ -6,7 +6,7 @@
   </b-div>
 </template>
 <script setup lang="ts">
-import bDiv from '../../htmlBlock/div';
+import bDiv from '../../html-block/div';
 import { computed } from '#imports'
 
 const props = defineProps({
@@ -61,29 +61,5 @@ const barStyle = computed(() => {
 </script>
 
 <style scoped>
-
-.heading-block::before,
-.heading-block::after {
-  content: "";
-  display: inline-block;
-  border-top-style: v-bind(barStyle);
-  border-color: v-bind(barColor);
-}
-
-.bar-bottom::after,
-.bar-top::before {
-  width: v-bind(barWidth);
-  border-top-width: v-bind(barBorderWidth);
-}
-
-.bar-bottom::after {
-  margin-top: v-bind(barMargin);
-  margin-bottom: v-bind(barMargin);
-}
-
-.bar-top::before {
-  margin-top: v-bind(barMargin);
-  margin-bottom: v-bind(barMargin);
-}
-
+.heading-block:after,.heading-block:before{border-color:v-bind(barColor);border-top-style:v-bind(barStyle);content:"";display:inline-block}.bar-bottom:after,.bar-top:before{border-top-width:v-bind(barBorderWidth);width:v-bind(barWidth)}.bar-bottom:after,.bar-top:before{margin-bottom:v-bind(barMargin);margin-top:v-bind(barMargin)}
 </style>

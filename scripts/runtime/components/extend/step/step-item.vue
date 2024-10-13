@@ -35,20 +35,5 @@ defineProps({
 </script>
 
 <style scoped>
-.step-item {
-  display: flex;
-  align-items: center;
-}
-.step-container {
-  display: flex;
-  align-items: center;
-  position: relative;
-}
-.line {
-  height: 2px;
-  background-color: var(--bs-border-color);
-  flex-grow: 1;
-  margin-left:0.5em;
-  margin-right: 1em;
-}
+.step-container,.step-item{align-items:center;display:flex}.step-container{position:relative}.line{background-color:var(--bs-border-color);flex-grow:1;height:2px;margin-left:.5em;margin-right:1em}
 </style>

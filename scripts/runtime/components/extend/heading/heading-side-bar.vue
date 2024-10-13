@@ -6,7 +6,7 @@
   </b-div>
 </template>
 <script setup lang="ts">
-import bDiv from '../../htmlBlock/div';
+import bDiv from '../../html-block/div';
 import {
  addClassNames,
  hasValue,
@@ -65,21 +65,5 @@ const barStyle = computed(() => {
 </script>
 
 <style scoped>
-.heading-block:not(.text-end) {
-  border-left-style: v-bind(barStyle);
-  padding-left: v-bind(barMargin);
-}
-
-.heading-block.text-end {
-  border-right-style: v-bind(barStyle);
-  padding-right: v-bind(barMargin);
-}
-
-.heading-block{
-  border-left-width: v-bind(barBorderWidth);
-  border-right-width: v-bind(barBorderWidth);
-  border-left-color: v-bind(barColor);
-  border-right-color: v-bind(barColor);
-}
-
+.heading-block:not(.text-end){border-left-style:v-bind(barStyle);padding-left:v-bind(barMargin)}.heading-block.text-end{border-right-style:v-bind(barStyle);padding-right:v-bind(barMargin)}.heading-block{border-left-color:v-bind(barColor);border-left-width:v-bind(barBorderWidth);border-right-color:v-bind(barColor);border-right-width:v-bind(barBorderWidth)}
 </style>

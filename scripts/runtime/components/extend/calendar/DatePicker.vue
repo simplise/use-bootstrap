@@ -10,7 +10,7 @@
 import { DatePicker as VDatePicker } from 'v-calendar';
 import './index.css';
 import type { DatePickerModel } from 'v-calendar/dist/types/src/use/datePicker.js';
-import { useStateComponent, StateComponentProps } from '../../../composables/viewState/useState/useStateComponent';
+import { useStateComponent, StateComponentProps } from '../../../composables/view-state/useState/useStateComponent';
 import { useDarkState } from '../../../composables/utils/useDarkState';
 import { defineModel } from '#imports';
 //

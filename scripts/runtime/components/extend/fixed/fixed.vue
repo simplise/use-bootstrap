@@ -5,7 +5,7 @@
 </template>
 
 <script setup lang="ts">
-import bDiv from '../../htmlBlock/div';
+import bDiv from '../../html-block/div';
 import { onMounted, ref } from 'vue';
 const fixedDiv = useTemplateRef('fixedDiv')
 onMounted(() => {

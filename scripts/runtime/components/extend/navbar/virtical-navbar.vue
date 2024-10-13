@@ -9,24 +9,16 @@
 
 </script>
 
-<style lang="scss" scoped>
-
-.navbar-vertical.navbar {
-
-
-}
-.navbar{
-	align-items: start;
+<style scoped>
+.navbar {
+  align-items: start;
 }
 
 :deep(.navbar-collapse) {
-	flex-direction: column;
+  flex-direction: column;
 }
 
 :deep(.navbar-nav) {
-	flex-direction: column;
+  flex-direction: column;
 }
-
-
-
 </style>

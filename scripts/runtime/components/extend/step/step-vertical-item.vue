@@ -37,26 +37,5 @@ defineProps({
 </script>
 
 <style scoped>
-.step-item {
-  display: flex;
-  align-items: stretch;
-  margin-bottom: 1em;
-}
-.step-container {
-  display: flex;
-  flex-direction: column;
-  flex-grow: 1;
-  align-items: center;
-}
-.step-line {
-  width: 2px;
-  background-color: var(--bs-border-color);
-  margin-top: 1em;
-  height: 100%;
-}
-
-.step-content {
-  margin-left: 20px;
-  flex-grow: 1;
-}
+.step-item{align-items:stretch;display:flex;margin-bottom:1em}.step-container{align-items:center;display:flex;flex-direction:column;flex-grow:1}.step-line{background-color:var(--bs-border-color);height:100%;margin-top:1em;width:2px}.step-content{flex-grow:1;margin-left:20px}
 </style>

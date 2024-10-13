@@ -23,8 +23,8 @@
 <script setup lang="ts">
 //
 import { uniqueId } from '../../composables/utils/helpers';
-import { ViewStateProps, useViewState } from '../../composables/viewState/useViewState';
-// import { usePropsKey } from '../../composables/viewState/usePropsKey'; //Key はViewStateコンポーネント利用時に指定する必要がある 2024/8/10
+import { ViewStateProps, useViewState } from '../../composables/view-state/useViewState';
+// import { usePropsKey } from '../../composables/view-state/usePropsKey'; //Key はViewStateコンポーネント利用時に指定する必要がある 2024/8/10
 import { ref, watch, onUnmounted } from '#imports';
 //
 const props = defineProps({

@@ -9,7 +9,7 @@
 // BubbleMenu 開発失敗 2024/8/10
 import { useEditor, EditorContent, type JSONContent } from '@tiptap/vue-3';
 import TiptapStarterKit from '@tiptap/starter-kit';
-import { useStateComponent, StateComponentProps } from '../../../composables/viewState/useState/useStateComponent';
+import { useStateComponent, StateComponentProps } from '../../../composables/view-state/useState/useStateComponent';
 import { defineModel, unref, computed, watch, type PropType } from '#imports';
 //
 interface ICommand {
