@@ -1,11 +1,5 @@
 <template>
- <BsLink
-  :id="`${idPrefix}${target}`"
-  :ref="elementRef"
-  :to="target"
-  :hreflang="lang"
-  v-bind="attrs"
- >
+ <BsLink :id="`${idPrefix}${target}`" :ref="elementRef" :to="target" :hreflang="lang" v-bind="attrs">
   <slot />
  </BsLink>
 </template>
@@ -20,15 +14,20 @@ import {
  useCloseButton,
 } from '../../../composables/bootstrap/useCloseButton';
 import { hProps } from '../../../composables/utils/useProps';
+// import {
+//  useAnchor,
+//  AnchorProps,
+// } from '../../../composables/html/useAnchor';
 import { ref } from '#imports';
 //
 const props = defineProps({
+ // ...AnchorProps,
  ...CloseButtonProps,
  to:
-  {
-   type: String,
-   default: '/',
-  },
+ {
+  type: String,
+  default: '/',
+ },
  idPrefix: {
   type: String,
   default: 'local-link',
@@ -39,5 +38,5 @@ const elementRef = ref<HTMLElement>();
 const target = useDynamicRoute(props.to);
 const lang = useDynamicRouteParam('lang');
 const close = useCloseButton(props, elementRef);
-const attrs = hProps(close);
+const attrs = hProps(close/*, anchor*/);
 </script>

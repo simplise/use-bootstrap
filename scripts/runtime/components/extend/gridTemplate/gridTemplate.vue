@@ -93,12 +93,14 @@ const columnsXxl = props.columnsXxl || columnsXl;
 //
 </script>
 
-<style scoped>
+<style scoped lang="scss">
 .grid-template {
     display: grid;
+    @media (max-width:768px) {
     grid-template-areas: v-bind(areasDefault);
     grid-template-rows:  v-bind(rowsDefault);
     grid-template-columns:v-bind(columnsDefault);
+    }
   }
   @media (min-width:768px) {
     .grid-template {

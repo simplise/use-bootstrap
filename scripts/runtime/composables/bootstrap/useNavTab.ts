@@ -10,12 +10,16 @@ export const NavTabProps = {
  justified: {
   type: Boolean,
  },
+ card: {
+  type: Boolean,
+ },
 };
 //
 export interface INavTabProps {
  nav?: string;
  fill?: boolean;
  justified?: boolean;
+ card?: boolean;
 }
 //
 export function useNavTab<P extends INavTabProps>(props: P) {
@@ -26,6 +30,7 @@ export function useNavTab<P extends INavTabProps>(props: P) {
     [`nav-${props.nav}`]: props.nav,
     'nav-fill': props.fill,
     'nav-justified': props.justified,
+    'card-header-tabs': props.card,
    };
   }),
  };

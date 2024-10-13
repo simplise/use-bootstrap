@@ -2,18 +2,25 @@ import { addProp, hasValue } from '../../composables/utils/useProps';
 import type { IInlineProps } from '../../composables/base/useInline';
 import { type IEventEmitProps, EventEmitProps } from '../utils/useEventEmitter';
 import { computed } from '#imports';
+import { includesPresets } from '../../composables/utils/usePresets';
 //
 export const ButtonProps = {
  ...EventEmitProps,
  button: {
-  type: [String, Boolean],
-  default: 'primary',
+  type: [Boolean],
+  default: true,
+ },
+ color: {
+  type: [String],
+  default: undefined,
  },
  size: {
   type: String,
+  default: undefined
  },
  disabled: {
   type: Boolean,
+  default: undefined
  },
  type: {
   type: String,
@@ -22,44 +29,49 @@ export const ButtonProps = {
  to: {
   type: String,
  },
- colorGenerate: {
-  type: Boolean,
- },
+ paddingX:{
+  type: String,
+  default: undefined
+ }
 };
 //
 export interface IButtonProps
  extends IInlineProps,
  IEventEmitProps {
- button?: string | boolean;
+ button?: boolean;
+ color?: string;
  size?: string;
  disabled?: boolean;
  type?: string;
  to?: string;
- colorGenerate?: boolean;
+ paddingX?: string;
 }
 //
 export function useButton<P extends IButtonProps>(props: P) {
+
+ const colorIncludePreset = computed(() => includesPresets('button-color', props.color));
  //
  return {
   class: computed(() => {
    return {
     disabled: props.disabled,
     btn: props.button,
-    [`btn-${props.button}`]: hasValue(props.button),
+    [`btn-${props.color}`]: hasValue(props.color) && colorIncludePreset.value ,
     [`btn-${props.size}`]: props.size,
    };
   }),
   style: computed(() => {
    return {
-    ...addProp(props.colorGenerate, '--bs-btn-bg', `var(--bs-${props.button})`),
-    ...addProp(props.colorGenerate, '--bs-btn-hover-bg', `var(--bs-active-${props.button})`),
-    ...addProp(props.colorGenerate, '--bs-btn-active-bg', `var(--bs-active-${props.button})`),
-    ...addProp(props.colorGenerate, '--bs-btn-border-color', `var(--bs-${props.button})`),
-    ...addProp(props.colorGenerate, '--bs-btn-hover-border-color', `var(--bs-${props.button})`),
-    ...addProp(props.colorGenerate, '--bs-btn-active-border-color', `var(--bs-active-${props.button})`),
-    ...addProp(!props.textColor && props.colorGenerate, '--bs-btn-color', `var(--bs-contrast-${props.button})`),
-    ...addProp(!props.textColor && props.colorGenerate, '--bs-btn-hover-color', `var(--bs-contrast-${props.button})`),
-    ...addProp(!props.textColor && props.colorGenerate, '--bs-btn-active-color', `var(--bs-contrast-${props.button})`),
+    ...addProp(props.color && !colorIncludePreset.value, '--bs-btn-bg', `var(--bs-${props.color})`),
+    ...addProp(props.color && !colorIncludePreset.value, '--bs-btn-hover-bg', `var(--bs-active-${props.color})`),
+    ...addProp(props.color && !colorIncludePreset.value, '--bs-btn-active-bg', `var(--bs-active-${props.color})`),
+    ...addProp(props.color && !colorIncludePreset.value, '--bs-btn-border-color', `var(--bs-${props.color})`),
+    ...addProp(props.color && !colorIncludePreset.value, '--bs-btn-hover-border-color', `var(--bs-${props.color})`),
+    ...addProp(props.color && !colorIncludePreset.value, '--bs-btn-active-border-color', `var(--bs-active-${props.color})`),
+    ...addProp(!props.textColor && props.color && !colorIncludePreset.value, '--bs-btn-color', `var(--bs-contrast-${props.color})`),
+    ...addProp(!props.textColor && props.color && !colorIncludePreset.value, '--bs-btn-hover-color', `var(--bs-contrast-${props.color})`),
+    ...addProp(!props.textColor && props.color && !colorIncludePreset.value, '--bs-btn-active-color', `var(--bs-contrast-${props.color})`),
+    ...addProp(props.paddingX , '--bs-btn-padding-x', `${props.paddingX}`),
    };
   }),
   attr: computed(() => {

@@ -32,7 +32,7 @@ export default defineComponent({
   //
   const block = useBlock(props);
   //
-  const current = {
+  const navArea = {
    attr: {
     'aria-label': 'breadcrumb',
    },
@@ -49,19 +49,20 @@ export default defineComponent({
     ),
    },
   };
+  const breadcrumbCurrent = {
+    class: {
+      breadcrumb: true,
+      [`breadcrumb-${props.color}`]: props.color,
+     },
+  }
   //
   return () =>
    h(
     props.tag,
-    hProps(current, block),
+    hProps(navArea),
     h(
      'ol',
-     {
-      class: {
-       breadcrumb: true,
-       [`breadcrumb-${props.color}`]: props.color,
-      },
-     },
+     hProps(breadcrumbCurrent, block),
      context.slots,
     ),
    );

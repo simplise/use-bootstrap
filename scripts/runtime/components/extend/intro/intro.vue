@@ -1,18 +1,18 @@
 <template>
  <b-div
   padding="t-2"
-  class="bd-intro"
+  class="intro"
  >
   <b-h
    level="1"
-   class="bd-title"
+   class="intro-title"
    margin="b-2 t-2 b-lg-4"
    display-headings="3"
    font-weight="bold"
   >
    {{ title }}
   </b-h>
-  <p class="bd-lead">
+  <p class="lead">
    {{ description }}
   </p>
  </b-div>

@@ -2,7 +2,7 @@ import { useBlock, BlockProps } from '../../../composables/base/useBlock';
 import { hProps, exposeMethods, addProp } from '../../../composables/utils/useProps';
 import { useFadeShow, FadeShowProps } from '../../../composables/bootstrap/useFadeShow';
 import { defineComponent, h, ref, computed } from '#imports';
-
+import { includesPresets } from '../../../composables/utils/usePresets';
 //
 export default defineComponent({
  name: 'BsAlerts',
@@ -21,9 +21,6 @@ export default defineComponent({
    type: Boolean,
    default: true,
   },
-  colorGenerate: {
-   type: Boolean,
-  },
  },
  setup(props, context) {
   //
@@ -32,21 +29,22 @@ export default defineComponent({
   const showFade = useFadeShow(props, context, elementRef, 'alert', {
    enabled: props.dismissible,
   });
+  const colorIncludePreset = computed(() => includesPresets('alert-color', props.color));
   //
   const current = {
    class: computed(() => {
     return {
      'alert': true,
-     [`alert-${props.color}`]: props.color,
+     [`alert-${props.color}`]: props.color && colorIncludePreset.value,
      'alert-dismissible': props.dismissible,
     };
    }),
    style: computed(() => {
     return {
-     ...addProp(props.colorGenerate, '--bs-alert-bg', `var(--bs-${props.color})`),
-     ...addProp(props.colorGenerate, '--bs-alert-color', `var(--bs-active-${props.color})`),
-     ...addProp(props.colorGenerate, '--bs-alert-border-color', `var(--bs-active-${props.color})`),
-     ...addProp(props.colorGenerate, '--bs-alert-link-color', `var(--bs-active-${props.color})`),
+     ...addProp(props.color && !colorIncludePreset.value, '--bs-alert-bg', `var(--bs-${props.color})`),
+     ...addProp(props.color && !colorIncludePreset.value, '--bs-alert-color', `var(--bs-active-${props.color})`),
+     ...addProp(props.color && !colorIncludePreset.value, '--bs-alert-border-color', `var(--bs-active-${props.color})`),
+     ...addProp(props.color && !colorIncludePreset.value, '--bs-alert-link-color', `var(--bs-active-${props.color})`),
     };
    }),
    attr: {

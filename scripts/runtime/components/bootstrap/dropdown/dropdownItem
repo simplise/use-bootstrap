@@ -27,7 +27,7 @@ export default defineComponent({
   const id = useID(props, 'dropdown-item'); // for useScrollSpyItem
   const spyItem = useScrollSpyItem(props, elementRef);
   const active = useActive(props, 'nav', elementRef);
-  const Anchor = useAnchor(props);
+  const anchor = useAnchor(props);
   const toggle = useToggle(props, elementRef);
   //
   return () => h(
@@ -42,7 +42,7 @@ export default defineComponent({
       },
       ref: elementRef,
      },
-     Anchor,
+     anchor,
      active,
      spyItem,
      toggle,

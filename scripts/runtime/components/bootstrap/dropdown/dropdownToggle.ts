@@ -1,4 +1,4 @@
-import { hProps } from '../../../composables/utils/useProps';
+import { hProps, hSlots } from '../../../composables/utils/useProps';
 import { useBlock, BlockProps } from '../../../composables/base/useBlock';
 import {
  useButton,
@@ -6,6 +6,7 @@ import {
 } from '../../../composables/html/useButton';
 import { ToggleProps, useToggle } from '../../../composables/bootstrap/useToggle';
 import { defineComponent, h, ref, inject, type Ref } from '#imports';
+import Icon from '../../icon/icon';
 //
 export default defineComponent({
  name: 'BsDropdownToggle',
@@ -21,6 +22,18 @@ export default defineComponent({
    type: String,
    default: 'dropdown',
   },
+  icon: {
+    type: String,
+    default: undefined,
+   },
+   iconEnd: {
+    type: Boolean,
+    default: false,
+   },
+   iconColor: {
+    type: String,
+    default: undefined,
+   }
  },
  setup(props, context) {
   //
@@ -37,7 +50,11 @@ export default defineComponent({
    h(
     'button',
     hProps(current, toggle, Button, block),
-    context.slots,
+    [
+      !props.iconEnd && props.icon ? h(Icon, { icon: props.icon, color: props.iconColor }) : undefined,
+      ...hSlots(context.slots.default,),
+      props.iconEnd && props.icon ? h(Icon, { icon: props.icon, color: props.iconColor, class: { bi: true } }) : undefined,
+    ]
    );
  },
 });

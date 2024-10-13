@@ -11,7 +11,7 @@ import { DatePicker as VDatePicker } from 'v-calendar';
 import './index.css';
 import type { DatePickerModel } from 'v-calendar/dist/types/src/use/datePicker.js';
 import { useStateComponent, StateComponentProps } from '../../../composables/viewState/useState/useStateComponent';
-import { useDark } from '../../../composables/utils/useDark';
+import { useDarkState } from '../../../composables/utils/useDarkState';
 import { defineModel } from '#imports';
 //
 const props = defineProps({
@@ -19,6 +19,6 @@ const props = defineProps({
 });
 const date = defineModel<DatePickerModel>();
 //
-const isDark = useDark();
+const isDark = useDarkState();
 const { classObject } = useStateComponent(props, date);
 </script>

@@ -1,53 +1,54 @@
 <template>
- <ClientOnly>
-  <b-div
-   :key="key"
-   v-bind="$attrs"
-   v-html="html"
-  />
- </ClientOnly>
+  <b-div v-bind="$attrs">
+    <b-div :key="key" v-html="html" />
+  </b-div>
 </template>
 
 <script setup lang="ts">
 import { isString, uniqueId } from '../../../composables/utils/helpers';
-import { useDark } from '../../../composables/utils/useDark';
-import { getShikiHighlighter, useSlots, ref, watch } from '#imports';
-
+import { useDarkState } from '../../../composables/utils/useDarkState';
+import { useSlots, ref, watch } from '#imports';
+import bDiv from '../../htmlBlock/div'
+import { createHighlighter } from "shiki";
 //
 defineOptions({
- inheritAttrs: false,
+  inheritAttrs: false,
 });
 //
-export interface Props {
- lang?: string;
-}
-const props = withDefaults(defineProps<Props>(), {
- lang: 'shellscript',
+const props = defineProps({
+  lang: {
+    type: String,
+    default: 'shellscript'
+  },
 });
 //
+const nuxtApp = useNuxtApp()
 const slots = useSlots();
-//
-const isDark = useDark();
-
+const isDark = useDarkState();
 const html = ref('');
-const highlighter = await getShikiHighlighter();
+// const highlighter = await createHighlighter({
+//   themes: ['snazzy-light', 'min-dark'],
+//   langs: ['vue', 'shellscript', 'scss'],
+// });
+const codeToHtml = nuxtApp.$shiki;
 const key = ref('');
 // 反応しない
 watch(isDark, () => {
- key.value = uniqueId();
- if (slots.default) {
-  const code = slots.default()[0].children;
+  key.value = uniqueId();
+  if (slots.default) {
+    const code = slots.default()[0].children;
 
-  if (code && isString(code)) {
-   html.value = highlighter.highlight(code, { lang: props.lang, theme: isDark.value ? 'min-dark' : 'snazzy-light' });
+    if (code && isString(code) && codeToHtml) {
+      // html.value = code;  
+      html.value = codeToHtml(code, { lang: props.lang, theme: isDark.value ? 'min-dark' : 'snazzy-light' });
+    }
   }
- }
 }, { immediate: true });
 </script>
 
-<style>
-  pre {
-    white-space: pre-wrap;
-    margin-bottom: 0;
-  }
+<style scoped>
+:deep(pre) {
+  white-space: pre-wrap;
+  margin-bottom: 0;
+}
 </style>

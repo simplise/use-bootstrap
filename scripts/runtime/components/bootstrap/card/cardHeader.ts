@@ -9,7 +9,7 @@ export default defineComponent({
   tag: {
    type: String,
    default: 'div',
-  },
+  }
  },
  setup(props, context) {
   //

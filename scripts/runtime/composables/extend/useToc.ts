@@ -1,13 +1,25 @@
-import { camelCase, uniqueId, defaultDocument } from '../utils/helpers';
+import { defaultDocument, delay } from '../utils/helpers';
 import { ref, watch, onMounted, useRoute } from '#imports';
+import { generateId } from '../utils/useDOM';
+//
+interface TocItem {
+ id: string;
+ content: string | null;
+ items: TocItem[];
+ level: number;
+}
 
 export function useToc(contentSelector: string) {
  //
  const route = useRoute();
+
  //
- const tocs = ref<unknown[]>([]);
+ const tocs = ref<TocItem[]>([]);
+ const targets = ref<string[]>([]); //idList
+ const shown = ref(false);
  //
  const render = () => {
+  // await reflow(); // Local 変更に対応させるための一時的な措置
   tocs.value = [];
   // 2024/7/5
   // await nextTick()
@@ -15,66 +27,59 @@ export function useToc(contentSelector: string) {
   if (!content) {
    return;
   }
-  const headings = content.querySelectorAll(':scope > h2');
-  headings.forEach((h2) => {
-   if (!h2.id) {
-    h2.id = camelCase(h2.textContent || `h2_${uniqueId()}`);
+  const headings = content.querySelectorAll('h2:not(.toc-ignore *),h3:not(.toc-ignore *)');
+  let current: TocItem | undefined = undefined;
+  headings.forEach((heading) => {
+   if (!heading.id) {
+    heading.id = generateId(heading.textContent, targets.value);
    }
-   if (!h2.querySelector('.anchor-link')) {
-    const h2Anchor = document.createElement('a');
-    h2Anchor.className = 'anchor-link';
-    h2Anchor.href = `#${h2.id}`;
-    h2Anchor.ariaLabel = `Link to this section: ${h2.textContent}`;
-    h2.append(h2Anchor);
+   targets.value.push(heading.id);
+   if (!heading.querySelector('.anchor-link')) {
+    const headingAnchor = document.createElement('a');
+    headingAnchor.className = 'anchor-link';
+    headingAnchor.href = `#${heading.id}`;
+    headingAnchor.ariaLabel = `Link to this section: ${heading.textContent}`;
+    heading.append(headingAnchor);
    }
-   const heading3s = content.querySelectorAll(`#${h2.id} ~ h3,h2`);
-   const h3s: unknown[] = [];
-   let start = false;
-   let stop = false;
-   heading3s.forEach((h3) => {
-    if (h3.id == h2.id) {
-     start = true;
-    }
-    else if (start && h3.tagName == 'H2') {
-     stop = true;
-    }
-    else if (!stop && start) {
-     if (!h3.id) {
-      h3.id = camelCase(h3.textContent || `h3_${uniqueId()}`);
-     }
-     if (!h3.querySelector('.anchor-link')) {
-      const h3Anchor = document.createElement('a');
-      h3Anchor.className = 'anchor-link';
-      h3Anchor.href = `#${h3.id}`;
-      h3Anchor.ariaLabel = `Link to this section: ${h3.textContent}`;
-      h3.append(h3Anchor);
-     }
-     h3s.push({
-      id: h3.id,
-      content: h3.textContent,
-      level: 3,
-     });
-    }
-   });
-   tocs.value.push({
-    id: h2.id,
-    content: h2.textContent,
-    items: h3s,
-    level: 2,
-   });
+   if (heading.tagName == 'H2') {
+    current = {
+     id: heading.id,
+     content: heading.textContent,
+     items: [],
+     level: 2,
+    };
+    tocs.value.push(current);
+   }
+   else if (current && heading.tagName == 'H3') {
+    current.items.push({
+     id: heading.id,
+     content: heading.textContent,
+     items: [],
+     level: 2,
+    });
+   }
   });
-  // 2024-7-5 Test
-  // await nextTick()
  };
  // 2024-7-5 Test
  // onMounted(async () =>await render())
  //
  watch(
-  () => route.query,
-  () => render(),
+  () => route.path,
+  async () => {
+   // Local 変更に対応させるための一時的な措置
+   // await nextTick();
+   shown.value = false;
+   await delay(300);
+   render()
+   await delay(500);
+   shown.value = true;
+  },
   { deep: true, immediate: false },
  );
  onMounted(() => render());
  //
- return tocs;
+ return {
+  shown,
+  tocs
+ };
 }

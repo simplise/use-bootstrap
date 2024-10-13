@@ -4,10 +4,10 @@
 
 <script setup lang="ts">
 import { Calendar as VCalendar } from 'v-calendar';
-import { useDark } from '../../../composables/utils/useDark';
+import { useDarkState } from '../../../composables/utils/useDarkState';
 import './index.css';
 //
-const isDark = useDark();
+const isDark = useDarkState();
 // 反応しない
 // const key = computed(() => {
 //  return isDark.value;

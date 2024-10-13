@@ -25,6 +25,10 @@ export default defineComponent({
    type: Boolean,
    default: false,
   },
+  iconHover: {
+    type: Boolean,
+    default: false,
+   },
  },
  setup(props, context) {
   //
@@ -35,6 +39,7 @@ export default defineComponent({
   const current = {
    class: {
     'icon-link': true,
+    'icon-link-hover': props.iconHover,
    },
    ref: elementRef,
   };

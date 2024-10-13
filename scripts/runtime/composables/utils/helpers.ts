@@ -1,5 +1,5 @@
 import { keys } from 'lodash-es';
-import { breakpointsBootstrapV5 } from '@vueuse/core';
+import { breakpointsBootstrapV5  } from '@vueuse/core';
 
 export {
  cloneDeep,
@@ -53,6 +53,8 @@ export {
  includes,
  isObject,
  remove,
+ trim,
+ snakeCase
 } from 'lodash-es';
 
 export {
@@ -104,7 +106,7 @@ export {
  useMouse,
  useEventBus,
  watchOnce,
- useElementBounding,
+ useElementBounding, 
  useStorage,
  useVModel,
  toValue,
@@ -113,7 +115,7 @@ export {
  isClient,
  breakpointsBootstrapV5,
  defaultWindow,
- defaultDocument,
+ defaultDocument 
 } from '@vueuse/core';
 
 // export { onClickOutsideFixed } from './onClickOutsideFixed';
@@ -131,6 +133,7 @@ export function delay(ms: number) {
   setTimeout(resolve, ms);
  });
 }
+
 // export function useDark() {
 //  return vueUseDark({
 //   selector: 'html',

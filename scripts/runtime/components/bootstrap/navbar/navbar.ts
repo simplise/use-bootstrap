@@ -4,7 +4,7 @@ import { ActiveProps, useActive } from '../../../composables/bootstrap/useItemsA
 import { IDProps, useID } from '../../../composables/attributes/useID';
 import { ScrolledProps, useScrolled } from '../../../composables/extend/useScrolled';
 import { defineComponent, h, computed, ref } from '#imports';
-
+import { includesPresets } from '../../../composables/utils/usePresets';
 //
 export default defineComponent({
  name: 'BsNavbar',
@@ -21,13 +21,13 @@ export default defineComponent({
    type: [Boolean, String], // Empty , tabs , pills
    default: undefined,
   },
-  color: {
-   type: String, // light, dark
-   default: undefined,
-  },
-  colorGenerate: {
-   type: Boolean,
-  },
+  // color: {
+  //  type: String, // light, dark
+  //  default: undefined,
+  // },
+  // colorGenerate: {
+  //  type: Boolean,
+  // },
  },
  setup(props, context) {
   //
@@ -36,18 +36,19 @@ export default defineComponent({
   const elementRef = ref<HTMLElement>();
   const active = useActive(props, 'collapse', elementRef);
   const scrolled = useScrolled(props);
+  const bgIncludePreset = computed(() => includesPresets('background-color', props.backgroundColor));
   //
   const current = {
    class: computed(() => {
     return {
      navbar: true,
      [`navbar-expand-${props.expand}`]: props.expand,
-     [`navbar-${props.color}`]: props.color,
+     // [`navbar-${props.color}`]: props.color,
     };
    }),
    style: computed(() => {
     return {
-     ...addProp(props.colorGenerate, '--bs-navbar-brand-color', `var(--bs-contrast-${props.backgroundColor})`),
+     ...addProp(props.backgroundColor && !bgIncludePreset, '--bs-navbar-brand-color', `var(--bs-contrast-${props.backgroundColor})`),
     };
    }),
    ref: elementRef,

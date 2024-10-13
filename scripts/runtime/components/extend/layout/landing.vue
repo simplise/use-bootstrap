@@ -6,7 +6,3 @@
   <BackToTop color="primary-subtle" />
  </div>
 </template>
-
-<style>
-
-</style>

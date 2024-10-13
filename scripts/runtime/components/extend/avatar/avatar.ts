@@ -53,6 +53,9 @@ export default defineComponent({
    type: [Boolean, String],
    default: false,
   },
+  objectFit: {
+    type: [String],
+   },
  },
  setup(props, context) {
   //
@@ -100,7 +103,10 @@ export default defineComponent({
       [
        ...(props.imgSrc
         ? [h('img', {
-          class: { 'avatar-img': true },
+          class: { 
+            'avatar-img': true, 
+            [`object-fit-${props.objectFit}`]: props.objectFit,
+          },
           style: {
            ...addProp(props.circle, 'border-radius', `var(--bs-border-radius-pill)`),
           },
