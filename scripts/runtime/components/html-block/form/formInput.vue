@@ -8,6 +8,7 @@
 </template>
 
 <script setup lang="ts">
+import { ref } from 'vue';
 import { useBlock, BlockProps } from '../../../composables/base/useBlock';
 import { useStateComponent, StateComponentProps } from '../../../composables/view-state/useState/useStateComponent';
 import { hProps } from '../../../composables/utils/useProps';
