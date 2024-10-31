@@ -1,69 +1,69 @@
 
-// scss-docs-start import-stack
+// scss-docs-start use-stack
 // Configuration
 
 // 1. Include functions first (so you can manipulate colors, SVGs, calc, etc)
-@import "bootstrap/scss/functions";
+@use "bootstrap/scss/functions";
 
 // 2. Include any default variable overrides here
 $enable-cssgrid:              true !default;
-@import "./extend_2";
+@use "./extend_2";
 
 // 3. Include remainder of required Bootstrap stylesheets (including any separate color mode stylesheets)
-@import "bootstrap/scss/variables";
-@import "bootstrap/scss/variables-dark";
+@use "bootstrap/scss/variables";
+@use "bootstrap/scss/variables-dark";
 
 // 4. Include any default map overrides here
 
 
 // 5. Include remainder of required parts
-@import "bootstrap/scss/maps";
-@import "bootstrap/scss/mixins";
-@import "bootstrap/scss/root";
+@use "bootstrap/scss/maps";
+@use "bootstrap/scss/mixins";
+@use "bootstrap/scss/root";
 // 6. Optionally include any other parts as needed
-@import "./extend_6";
-@import "bootstrap/scss/utilities";
-@import "./extend_6";
+@use "./extend_6";
+@use "bootstrap/scss/utilities";
+@use "./extend_6";
 
 // Layout & components
-@import "bootstrap/scss/reboot";
-@import "bootstrap/scss/type";
-@import "bootstrap/scss/images";
-@import "bootstrap/scss/containers";
-@import "bootstrap/scss/grid";
-@import "bootstrap/scss/tables";
-@import "bootstrap/scss/forms";
-@import "bootstrap/scss/buttons";
-@import "bootstrap/scss/transitions";
-@import "bootstrap/scss/dropdown";
-@import "bootstrap/scss/button-group";
-@import "bootstrap/scss/nav";
-@import "bootstrap/scss/navbar";
-@import "bootstrap/scss/card";
-@import "bootstrap/scss/accordion";
-@import "bootstrap/scss/breadcrumb";
-@import "bootstrap/scss/pagination";
-@import "bootstrap/scss/badge";
-@import "bootstrap/scss/alert";
-@import "bootstrap/scss/progress";
-@import "bootstrap/scss/list-group";
-@import "bootstrap/scss/close";
-@import "bootstrap/scss/toasts";
-@import "bootstrap/scss/modal";
-@import "bootstrap/scss/tooltip";
-@import "bootstrap/scss/popover";
-@import "bootstrap/scss/carousel";
-@import "bootstrap/scss/spinners";
-@import "bootstrap/scss/offcanvas";
-@import "bootstrap/scss/placeholders";
+@use "bootstrap/scss/reboot";
+@use "bootstrap/scss/type";
+@use "bootstrap/scss/images";
+@use "bootstrap/scss/containers";
+@use "bootstrap/scss/grid";
+@use "bootstrap/scss/tables";
+@use "bootstrap/scss/forms";
+@use "bootstrap/scss/buttons";
+@use "bootstrap/scss/transitions";
+@use "bootstrap/scss/dropdown";
+@use "bootstrap/scss/button-group";
+@use "bootstrap/scss/nav";
+@use "bootstrap/scss/navbar";
+@use "bootstrap/scss/card";
+@use "bootstrap/scss/accordion";
+@use "bootstrap/scss/breadcrumb";
+@use "bootstrap/scss/pagination";
+@use "bootstrap/scss/badge";
+@use "bootstrap/scss/alert";
+@use "bootstrap/scss/progress";
+@use "bootstrap/scss/list-group";
+@use "bootstrap/scss/close";
+@use "bootstrap/scss/toasts";
+@use "bootstrap/scss/modal";
+@use "bootstrap/scss/tooltip";
+@use "bootstrap/scss/popover";
+@use "bootstrap/scss/carousel";
+@use "bootstrap/scss/spinners";
+@use "bootstrap/scss/offcanvas";
+@use "bootstrap/scss/placeholders";
 
 // Helpers
-@import "bootstrap/scss/helpers";
+@use "bootstrap/scss/helpers";
 
 // Utilities
 // 7. Optionally include utilities API last to generate classes based on the Sass map in `_utilities.scss
-@import "bootstrap/scss/utilities/api";
-// scss-docs-end import-stack
+@use "bootstrap/scss/utilities/api";
+// scss-docs-end use-stack
 
 // 8. Add additional custom code here
-@import "./extend_8";
+@use "./extend_8";
